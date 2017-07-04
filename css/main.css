@@ -1047,6 +1047,15 @@ span {
 .sell-re .contact-info {
   padding: 1.8em;
   background-color: #fcfcfc;
+  position: relative;
+}
+.contact-info .close-contact {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  font-size: 1.35em;
+  color: #a5a5a5;
+  cursor: pointer;
 }
 .contact-info .collapse-section__title {
   margin-bottom: 0.35em;
