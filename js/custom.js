@@ -117,11 +117,22 @@ $(function(){
 
 	// Bootstrap Lightbox
 
-	$(document).on('click', '[data-toggle="lightbox"]', function(event) {
-    	event.preventDefault();
-	    $(this).ekkoLightbox();
-	});
+	// $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+ //    	event.preventDefault();
+	//     $(this).ekkoLightbox();
+	// });
+		$(document).ready(function() {
+		  $('.image-link').magnificPopup({type:'image'});
+		});
 
+
+		$('.photo-gallery__thumbnails').magnificPopup({
+			delegate: 'a',
+			type: 'image',
+			gallery:{
+			enabled:true
+			}
+		});
 
 	if ($(window).width() <= 768) {
     	var coreCat = $('.detach-col-1').detach();
