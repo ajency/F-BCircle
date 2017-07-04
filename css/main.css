@@ -494,6 +494,11 @@ span {
   height: 33px;
   width: 40px;
 }
+.fnb-icons.note {
+  background-position: -162px -225px;
+  height: 60px;
+  width: 69px;
+}
 .fnb-icons.cat-icon {
   border-radius: 50%;
   height: 50px;
@@ -883,6 +888,7 @@ span {
 .blocked {
   overflow: hidden;
   margin-left: 280px;
+  position: fixed;
 }
 @media screen and (max-width: 769px) {
   .mobile-hide {
@@ -973,7 +979,7 @@ span {
   }
 }
 .card {
-  padding: 1.5em;
+  padding: 2em;
   background-color: #fff;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.17);
 }
@@ -1036,6 +1042,9 @@ span {
 .seller-info .c-title span {
   color: #000;
 }
+.seller-info .location {
+  margin-bottom: -5px;
+}
 .seller-info .map-link {
   cursor: pointer;
 }
@@ -1059,7 +1068,7 @@ span {
   color: #11a44a;
 }
 .seller-info .verified .c-title {
-  font-size: 1.2em;
+  font-size: 1.15em;
 }
 .seller-info .operations {
   border-bottom: 1px solid #e6e6e6;
@@ -1099,7 +1108,7 @@ span {
   color: #4a4a4a;
 }
 .seller-info .contact__date .contact__title {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 .sell-re {
   padding: 0;
@@ -1217,6 +1226,7 @@ span {
   }
   .seller-info .cities {
     padding-left: 15px;
+    margin-top: 5px;
   }
   .seller-info .cities__title {
     font-size: 0.95em;
@@ -1253,6 +1263,7 @@ span {
   .seller-info .contact__enquiry .outline {
     display: block;
     margin: 0 auto;
+    padding: 0.8em 1.8em;
   }
   .seller-info .contact .fnb-btn {
     width: 100%;
@@ -1272,6 +1283,14 @@ span {
   }
   .sell-re .contact-info .message__title {
     font-size: 0.95em;
+  }
+  .sell-re .contact-info .exclamation {
+    width: 53px;
+  }
+  .sell-re .contact-info .close-contact {
+    top: -0.5em;
+    right: 0.5em;
+    font-size: 1.25em;
   }
   .fnb-label {
     font-size: 0.85em;
@@ -1381,7 +1400,7 @@ span {
   width: 100%;
   -webkit-transition: all 0.8s ease;
           transition: all 0.8s ease;
-  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.18);
+  box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.32);
 }
 .nav-info .sticky-section .fnb-btn {
   padding: 0.65em 1.8em;
@@ -1407,6 +1426,7 @@ span {
   }
   .nav-info .sticky-section {
     top: -200px;
+    padding: 0.4em 0 0.8em 0;
   }
   .nav-info .enquiry-btn {
     display: none;
@@ -1633,9 +1653,19 @@ span {
   -webkit-flex: 1 0 calc(50% - 3em);
       -ms-flex: 1 0 calc(50% - 3em);
           flex: 1 0 calc(50% - 3em);
+  max-width: calc(53% - 3em);
+  margin-bottom: 3em;
 }
 .article-col:first-child {
   margin-right: 3em;
+}
+.similar-business__section {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.similar-business .business-card {
+  padding: 1.5em;
 }
 .similar-business .business-card__header {
   -webkit-box-pack: justify;
@@ -1728,6 +1758,7 @@ span {
     white-space: normal;
     display: inline-block;
     width: 300px;
+    max-width: inherit;
   }
   .article-col:first-child {
     margin-right: 0;
@@ -1747,6 +1778,11 @@ span {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
   }
+}
+.related-article__section {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .related-article .fnb-article {
   -webkit-transition: all 0.5s ease;
@@ -2113,6 +2149,10 @@ span {
   .mobile-top .fnb-btn {
     padding: 0.6em 1.8em;
   }
+  .mobile-top .fnb-btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
   .city-select {
     margin-top: 0;
     border-bottom: 1px solid #eee;
@@ -2155,7 +2195,7 @@ span {
     height: 100%;
     background-color: rgba(197, 197, 197, 0.43);
     top: 0;
-    z-index: 0;
+    z-index: 1;
     display: none;
     left: 0;
     -webkit-transition: all 0.5s ease;

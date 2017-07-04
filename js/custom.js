@@ -71,6 +71,7 @@ $(function(){
 	    }, 2000);
 	});
 
+
 	// Go to map
 
 	$(".map-link").click(function() {
@@ -125,6 +126,12 @@ $(function(){
 	if ($(window).width() <= 768) {
     	var coreCat = $('.detach-col-1').detach();
 		$('.sell-re').after(coreCat);
+
+		$(".show-info").click(function() {
+		    $('html, body').animate({
+		        scrollTop: '+=200px'
+		    }, 1000);
+		});
 	}
 
 	// mobile side-menu
