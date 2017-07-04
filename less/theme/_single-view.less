@@ -287,6 +287,7 @@
 	}
 	&__text{
     	margin-top: 0.5em;
+    	line-height: 1.5;
     	a{
     		color: @accent-secondary;
     		font-weight: 500;
@@ -428,12 +429,6 @@
 	.fnb-label{
 		font-size: 0.85em;
     	font-weight: 400;
-	}
-	.share{
-		width: 40px;
-    	height: 40px;
-    	line-height: 40px;
-    	font-size: 1.1em;
 	}
 	.main-heading{
 		font-size: 1.35em;
@@ -623,6 +618,7 @@
 	.time{
 		font-weight: 300;
 		margin-bottom: 0;
+		opacity: 0.5;
 	}
 }
 
@@ -663,13 +659,14 @@
 		padding-bottom: 0;
 		&__section{
 			display: inherit;
-    		margin-top: 0.5em;
+    		margin-top: 1em;
 		}
 		.parent-cat{
 			width: 40%;
     		display: inline-block;
-    		img,.cat-size{
+    		.cat-icon,.cat-size{
     			display: inline-block;
+    			vertical-align: middle;
     		}
 		}
 		.child-cat{
@@ -730,7 +727,7 @@
     		overflow-y: hidden;
 		}
 		li{
-			padding-right: 3.2em;
+			padding-right: 1.2em;
 		}
 	}
 }
@@ -858,6 +855,9 @@
     		justify-content: space-between;
 		}
 	}
+	.verified-icon{
+		width: 26px;
+	}
 	.rating{
 		width: 98px;
     	height: 23px;
@@ -896,6 +896,7 @@
 	.address{
 		.sub-title{
 			margin-bottom: 0;
+			margin-top: 2px;
 			&:not(.address-title){
 				color: @text-darker;
 			}
@@ -981,7 +982,7 @@
 			height: 130px;
     		border-top-left-radius: 5px;
     		border-top-right-radius: 5px;
-    		margin: -1em -1em auto -1em;
+    		margin: 0;
 		}
 		.banner-2{
 			background-image: url('../img/article-2.png');
@@ -993,14 +994,14 @@
 		&__caption{
 			color: @grey-darker;
 		}
-		&:hover{
-			box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
+		.date{
+			opacity: 0.5;
+			font-size: 1em;
 		}
 	}
 	.article-link{
 		color: inherit;
 		display: block;
-    	padding: 1em;
 		&:hover{
 			text-decoration: none;
 		}
@@ -1022,9 +1023,6 @@
     		flex: 1 0 80%;
     		&:first-child{
     			margin-right: 0.3em;
-    		}
-    		&__content{
-    			margin: 15px -10px;
     		}
     		&:hover{
     			box-shadow: none;
@@ -1081,15 +1079,11 @@
 			position: relative;
 			margin-right: 1.8em;
 		}
-		img{
-			margin: 0 auto;
-		}
 		.option{
-			border-radius: 50%;
-    		height: 40px;
-    		width: 40px;
-    		line-height: 40px;
-    		box-shadow: 0px 0px 0px 6px #ddd;
+			.cat-icon{
+				box-shadow: 0px 0px 0px 4px rgba(236, 109, 75, 0.45);
+				filter: grayscale(1);
+			}
 		}
 		.radio{
 			position: absolute;
@@ -1099,9 +1093,10 @@
     		-webkit-appearance: none;
     		-moz-appearance: none;
     		outline: 0;
+    		z-index: 1;
 			&:checked{
-				& + .option{
-					box-shadow: 0px 0px 0px 6px #fadad3;
+				& + .option .cat-icon{
+					filter: grayscale(0);
 				}
 			}
 		}
@@ -1148,7 +1143,11 @@
 	}
 }
 
-
+@media screen and (max-width: 600px){
+	.form-toggle{
+		right: 0.5em;
+	}
+}
 
 // Browse category
 
@@ -1167,16 +1166,8 @@
 	.sub-title{
 		margin-bottom: 0;
 	}
-	.icon{
+	.cat-icon{
 		margin-right: 20px;
-    	border-radius: 50%;
-    	height: 50px;
-    	width: 50px;
-    	line-height: 50px;
-    	box-shadow: 0px 0px 0px 2px rgba(17, 164, 74, 0.29);
-    	img{
-    		margin: 0 auto;
-    	}
 	}
 	.total{
 		color: @text-lighter;
@@ -1230,9 +1221,24 @@
 // why fnb
 
 .why-fnb{
-	.icons{
-		margin-left: auto;
-		margin-right: auto;
+	.why-icon{
+		background-image: url('../img/sprite.png');
+		display: block;
+		height: 66px;
+    	width: 76px;
+    	margin: 0 auto 0.8em auto;
+    	&.quote{
+    		background-position: -48px -31px;
+    	}
+    	&.supplier{
+    		background-position: -134px -36px;
+    	}
+    	&.jobs{
+    		background-position: -248px -31px;
+    	}
+    	&.news{
+    		background-position: -358px -36px;
+    	}
 	}
 	.element-title{
 		font-weight: 500;
@@ -1254,7 +1260,7 @@
     	margin-bottom: 10px;
 		.main-title{
 			font-size: 1.7em;
-    		margin-bottom: 0;
+    		margin-bottom: 20px;
 		}
 		.points{
 			margin-top: 0;

@@ -453,6 +453,67 @@ span {
 .fnb-cat__title:hover {
   text-decoration: none;
 }
+.fnb-icons {
+  background-image: url('../img/sprite.png');
+  height: 27px;
+  width: 31px;
+  display: block;
+}
+.fnb-icons.map-icon {
+  background-position: -42px -161px;
+}
+.fnb-icons.eye-icon {
+  background-position: -135px -161px;
+}
+.fnb-icons.verified-icon {
+  background-position: -265px -249px;
+  height: 30px;
+}
+.fnb-icons.enquiry {
+  background-position: -47px -239px;
+  height: 45px;
+  width: 48px;
+}
+.fnb-icons.enquiry-white {
+  background-position: -96px -238px;
+  height: 45px;
+  width: 48px;
+}
+.fnb-icons.exclamation {
+  background-position: -265px -156px;
+  height: 35px;
+}
+.fnb-icons.share {
+  background-position: -325px -154px;
+}
+.fnb-icons.download {
+  background-position: -437px -161px;
+}
+.fnb-icons.tags {
+  background-position: -195px -155px;
+  height: 33px;
+  width: 40px;
+}
+.fnb-icons.cat-icon {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  box-shadow: 0px 0px 0px 2px rgba(236, 109, 75, 0.45);
+  background-size: 700%;
+}
+.fnb-icons.veg {
+  background-position: -3px -341px;
+}
+.fnb-icons.drinks {
+  background-position: -581px -341px;
+}
+.fnb-icons.grocery {
+  background-position: -978px -341px;
+}
+.fnb-icons.meat {
+  background-position: -55px -344px;
+}
 .fnb-header .navbar {
   padding: 1em 0;
   border: 0;
@@ -1081,6 +1142,7 @@ span {
 }
 .claim__text {
   margin-top: 0.5em;
+  line-height: 1.5;
 }
 .claim__text a {
   color: #27b7b0;
@@ -1214,12 +1276,6 @@ span {
   .fnb-label {
     font-size: 0.85em;
     font-weight: 400;
-  }
-  .share {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    font-size: 1.1em;
   }
   .main-heading {
     font-size: 1.35em;
@@ -1390,6 +1446,7 @@ span {
 .update-sec .time {
   font-weight: 300;
   margin-bottom: 0;
+  opacity: 0.5;
 }
 .listed .parent-cat {
   -webkit-box-flex: 0.5;
@@ -1431,15 +1488,16 @@ span {
   }
   .listed__section {
     display: inherit;
-    margin-top: 0.5em;
+    margin-top: 1em;
   }
   .listed .parent-cat {
     width: 40%;
     display: inline-block;
   }
-  .listed .parent-cat img,
+  .listed .parent-cat .cat-icon,
   .listed .parent-cat .cat-size {
     display: inline-block;
+    vertical-align: middle;
   }
   .listed .child-cat {
     display: inline-block;
@@ -1491,7 +1549,7 @@ span {
     overflow-y: hidden;
   }
   .brands li {
-    padding-right: 3.2em;
+    padding-right: 1.2em;
   }
 }
 .highlights li:not(:first-child) {
@@ -1594,6 +1652,9 @@ span {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.similar-business .verified-icon {
+  width: 26px;
+}
 .similar-business .rating {
   width: 98px;
   height: 23px;
@@ -1628,6 +1689,7 @@ span {
 }
 .similar-business .address .sub-title {
   margin-bottom: 0;
+  margin-top: 2px;
 }
 .similar-business .address .sub-title:not(.address-title) {
   color: #4a4a4a;
@@ -1697,7 +1759,7 @@ span {
   height: 130px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  margin: -1em -1em auto -1em;
+  margin: 0;
 }
 .related-article .fnb-article .banner-2 {
   background-image: url('../img/article-2.png');
@@ -1709,13 +1771,13 @@ span {
 .related-article .fnb-article__caption {
   color: #686565;
 }
-.related-article .fnb-article:hover {
-  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
+.related-article .fnb-article .date {
+  opacity: 0.5;
+  font-size: 1em;
 }
 .related-article .article-link {
   color: inherit;
   display: block;
-  padding: 1em;
 }
 .related-article .article-link:hover {
   text-decoration: none;
@@ -1740,9 +1802,6 @@ span {
   }
   .related-article .fnb-article:first-child {
     margin-right: 0.3em;
-  }
-  .related-article .fnb-article__content {
-    margin: 15px -10px;
   }
   .related-article .fnb-article:hover {
     box-shadow: none;
@@ -1794,15 +1853,10 @@ span {
   position: relative;
   margin-right: 1.8em;
 }
-.enquiry-form .interested-options img {
-  margin: 0 auto;
-}
-.enquiry-form .interested-options .option {
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  line-height: 40px;
-  box-shadow: 0px 0px 0px 6px #ddd;
+.enquiry-form .interested-options .option .cat-icon {
+  box-shadow: 0px 0px 0px 4px rgba(236, 109, 75, 0.45);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 .enquiry-form .interested-options .radio {
   position: absolute;
@@ -1812,9 +1866,11 @@ span {
   -webkit-appearance: none;
   -moz-appearance: none;
   outline: 0;
+  z-index: 1;
 }
-.enquiry-form .interested-options .radio:checked + .option {
-  box-shadow: 0px 0px 0px 6px #fadad3;
+.enquiry-form .interested-options .radio:checked + .option .cat-icon {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 @media screen and (max-width: 768px) {
   .form-toggle {
@@ -1869,6 +1925,11 @@ span {
             transform: translateX(0);
   }
 }
+@media screen and (max-width: 600px) {
+  .form-toggle {
+    right: 0.5em;
+  }
+}
 .browse-cat li {
   margin-top: 15px;
   padding-bottom: 15px;
@@ -1883,16 +1944,8 @@ span {
 .browse-cat .sub-title {
   margin-bottom: 0;
 }
-.browse-cat .icon {
+.browse-cat .cat-icon {
   margin-right: 20px;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  box-shadow: 0px 0px 0px 2px rgba(17, 164, 74, 0.29);
-}
-.browse-cat .icon img {
-  margin: 0 auto;
 }
 .browse-cat .total {
   color: #9b9ea0;
@@ -1928,9 +1981,24 @@ span {
     padding: 5px 0;
   }
 }
-.why-fnb .icons {
-  margin-left: auto;
-  margin-right: auto;
+.why-fnb .why-icon {
+  background-image: url('../img/sprite.png');
+  display: block;
+  height: 66px;
+  width: 76px;
+  margin: 0 auto 0.8em auto;
+}
+.why-fnb .why-icon.quote {
+  background-position: -48px -31px;
+}
+.why-fnb .why-icon.supplier {
+  background-position: -134px -36px;
+}
+.why-fnb .why-icon.jobs {
+  background-position: -248px -31px;
+}
+.why-fnb .why-icon.news {
+  background-position: -358px -36px;
 }
 .why-fnb .element-title {
   font-weight: 500;
@@ -1952,7 +2020,7 @@ span {
   }
   .why-fnb .main-title {
     font-size: 1.7em;
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
   .why-fnb .points {
     margin-top: 0;
