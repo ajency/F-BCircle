@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Single View</title>
+    <!-- Google font cdn -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet">
+    <!-- Font awesome cdn -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- Main styles -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="fnb-header">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid nav-gap">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header mobile-head mobile-flex">
+                    <div class="mobile-head__left mobile-flex">
+                        <i class="fa fa-bars sideMenu" aria-hidden="true"></i>
+                        <a class="navbar-brand" href="#">F&amp;BCircle.in</a>
+                    </div>
+                    <div class="mobile-head__right mobile-flex">
+                        <button class="btn fnb-btn outline mini quote-btn half-border">Get Multiple quotes</button>
+                         <a href="" class="login">
+                            <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse m-side-bar" id="bs-example-navbar-collapse-1">
+                    <ul class="mobile-top mobile-flex">
+                        <li><p class="mobile-top__text">Sign in to get a personalised feed!</p></li>
+                        <li><button type="button" class="fnb-btn outline bnw">Login</button></li>
+                    </ul>
+                    <ul class="nav navbar-nav city-select">
+                        <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
+                        <li>
+                            <select class="form-control fnb-select">
+                                <option>--Change city--</option>
+                                <option selected="">Pune</option>
+                                <option>Delhi</option>
+                                <option>Mumbai</option>
+                                <option>Goa</option>
+                            </select>
+                        </li>
+                    </ul>
+                    <p class="mobile-side-title">Browse</p>
+                    <ul class="nav navbar-nav navbar-right side-section">
+                        <li>
+                            <a href="" class="nav-title-size">Directory</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-title-size">Jobs</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-title-size">News</a>
+                        </li>
+                        <li class="mobile-hide">
+                            <button class="btn fnb-btn outline mini quote-btn half-border">Get Multiple quotes</button>
+                        </li>
+                        <li class="mobile-hide">
+                            <a href="" class="login">
+                                <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
+                                <p class="login__title nav-title-size p-l-10">Login</p>
+                            </a>
+                        </li>
+                        <li class="mobile-hide">
+                            <a href="" class="side-menu">
+                                <i class="fa fa-bars ham" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="mobile-side-title">Explore</p>
+                    <ul class="nav navbar-nav explore side-section">
+                        <li>
+                            <a href="" class="nav-title-size">About us</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-title-size">Blogs</a>
+                        </li>
+                        <li>
+                            <a href="" class="nav-title-size">How it works</a>
+                        </li>
+                        <li>
+                           <a href="" class="nav-title-size">Terms of use</a>
+                        </li>
+                        <li>
+                             <a href="" class="nav-title-size">FAQ</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    </header>
+    <!-- header ends -->
+    <!-- content -->
+    <!-- Container -->
+    <div class="container">
+        <div class="row m-t-30 m-b-30 mobile-flex breadcrums-container">
+            <div class="col-sm-8  flex-col">
+                <!-- Breadcrums -->
+                <ul class="fnb-breadcrums flex-row">
+                    <li class="fnb-breadcrums__section">
+                        <a href="">
+                            <i class="fa fa-home home-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="fnb-breadcrums__section">
+                        <a href="">
+                            <p class="fnb-breadcrums__title">/</p>
+                        </a>
+                    </li>
+                    <li class="fnb-breadcrums__section">
+                        <a href="">
+                            <p class="fnb-breadcrums__title">Pune</p>
+                        </a>
+                    </li>
+                    <li class="fnb-breadcrums__section">
+                        <a href="">
+                            <p class="fnb-breadcrums__title">/</p>
+                        </a>
+                    </li>
+                    <li class="fnb-breadcrums__section">
+                        <a href="">
+                            <p class="fnb-breadcrums__title main-name">Mystical the meat and fish store</p>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Breadcrums ends -->
+            </div>
+            <div class="col-sm-4 flex-col">
+                <!-- Slide navigation -->
+                <div class="slide-nav flex-row">
+                    <div class="slide-nav__prev">
+                        <a href="" class="slide-nav__link flex-row hvr-backward">
+                            <i class="fa fa-long-arrow-left arrow-icon p-r-10" aria-hidden="true"></i>
+                            <span class="slide-nav__title">Prev list</span>
+                        </a>
+                    </div>
+                    <div class="slide-nav__next">
+                        <a href="" class="slide-nav__link flex-row hvr-forward">
+                            <span class="slide-nav__title">Next list</span>
+                            <i class="fa fa-long-arrow-right arrow-icon p-l-10" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- slide navigation ends -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="spacer">
+                    <!-- Card Info starts -->
+                    <div class="seller-info card">
+                        <div class="seller-info__header flex-row">
+                            <label class="fnb-label wholesaler">
+                                Wholesaler
+                            </label>
+                            <div class="share flex-row">
+                                <a href="">
+                                    <i class="fa fa-share-alt share__icon" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="seller-info__body">
+                            <h3 class="seller-info__title main-heading">Mystical the meat and fish store</h3>
+                            <div class="location flex-row">
+                                <i class="fa fa-map-marker map-icon seller-icon" aria-hidden="true"></i>
+                                <p class="location__title c-title">Mumbai <span class="map-link">(Map)</span></h6>
+                            </div>
+                            <div class="stats flex-row m-t-15">
+                                <div class="rating-view flex-row">
+                                    <div class="rating">
+                                        <div class="bg"></div>
+                                        <div class="value" style="width: 80%;"></div>
+                                    </div>
+                                    <div class="views p-l-20 flex-row">
+                                        <i class="fa fa-eye view-icon seller-icon" aria-hidden="true"></i>
+                                        <p class="views__title c-title"><span>126</span> Views</p>
+                                    </div>
+                                </div>
+                                <div class="verified flex-row">
+                                    <img src="img/verified.png" class="img-responsive p-r-5">
+                                    <p class="c-title">Verified</p>
+                                </div>
+                            </div>
+                            <div class="operations p-t-10 p-b-20">
+                                <h6 class="operations__title">Areas of operation:</h6>
+                                <div class="opertaions__container flex-row">
+                                    <div class="location flex-row">
+                                        <i class="fa fa-map-marker map-icon seller-icon" aria-hidden="true"></i>
+                                        <p class="location__title c-title">Mumbai</h6>
+                                    </div>
+                                    <ul class="cities flex-row p-l-30">
+                                        <li>
+                                            <p class="cities__title">Bandra, </p>
+                                        </li>
+                                        <li>
+                                            <p class="cities__title">Andheri, </p>
+                                        </li>
+                                        <li>
+                                            <p class="cities__title">Juhu, </p>
+                                        </li>
+                                        <li>
+                                            <p class="cities__title">Worli, </p>
+                                        </li>
+                                        <li>
+                                            <p class="cities__title">Powai</p>
+                                        </li>
+                                        <li class="remain">
+                                            <a href="" class="secondary-link remain__number">+10</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-info__footer p-t-25">
+                            <div class="contact flex-row">
+                                <div class="contact__info">
+                                    <button class="btn fnb-btn primary-btn full border-btn" data-toggle="collapse" href="#collapseExample">Show contact info</button>
+                                    <p class="contact__title"><b>20</b> Contact Request</p>
+                                </div>
+                                <div class="contact__enquiry">
+                                    <button class="btn fnb-btn outline full border-btn">Send enquiry</button>
+                                    <p class="contact__title"><b>10</b> Enquiries</p>
+                                </div>
+                                <div class="contact__date">
+                                    <p class="contact__title"><i>Published on 20 Dec 2016</i></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card info ends -->
+                    <!-- contact info -->
+                    <div class="card seller-info sell-re collapse" id="collapseExample">
+                        <div class="contact-info">
+                            <div class="phone collapse-section m-b-20">
+                                <h6 class="collapse-section__title">Phone no:</h6>
+                                <div class="number flex-row">
+                                    <a class="number__real text-secondary" href="callto:+919293939393">+91 9293939393, </a>
+                                    <a class="number__real text-secondary" href="callto:+919293939393">+91 9293939393</a>
+                                </div>
+                            </div>
+                            <div class="mail-us collapse-section m-t-20 m-b-20">
+                                <h6 class="collapse-section__title">Mail us at:</h6>
+                                <div class="number flex-row">
+                                    <a class="number__real text-secondary" href="mailto:mysticalinfo@gmail.com">mysticalinfo@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="message flex-row">
+                                <img src="img/exclamation.png" class="img-reponsive p-r-10">
+                                <p class="message__title">When you contact, don't forget to mention that you found this listing on FnBcircle</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- contact info ends -->
+                    <!-- tabs structure -->
+                    <div class="nav-info m-t-20 p-t-20">
+                        <div class="sticky-section">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <ul class="nav-info__tabs flex-row">
+                                            <li class="nav-section"><a class="active" href="#updates">Updates</a></li>
+                                            <li class="nav-section"><a href="#listed">Listed In</a></li>
+                                            <li class="nav-section"><a href="#overview">Overview</a></li>
+                                            <li class="nav-section"><a href="#business">Similar Businesses</a></li>
+                                            <li class="nav-section"><a href="#article">Article</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="text-center">
+                                            <button class="btn fnb-btn primary-btn full border-btn enquiry-btn">Send enquiry</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                        </div>
+	                    <ul class="nav-info__tabs flex-row">
+	                        <li class="nav-section"><a class="active" href="#updates">Updates</a></li>
+	                        <li class="nav-section"><a href="#listed">Listed In</a></li>
+	                        <li class="nav-section"><a href="#overview">Overview</a></li>
+	                        <li class="nav-section"><a href="#business">Similar Businesses</a></li>
+	                        <li class="nav-section"><a href="#article">Article</a></li>
+	                    </ul>
+                    </div>
+                    <!-- tabs structure ends -->
+
+                    <!-- updates section -->
+                    <div class="update-sec p-t-30 p-b-20" id="updates">
+                        <div class="update-sec__header flex-row update-space">
+                            <h6 class="element-title m-t-5 m-b-5">Recent Updates</h6>
+                            <a href="" class="text-secondary update-sec__link secondary-link">View More</a>
+                        </div>
+                        <div class="update-sec__body update-space">
+                            <h6 class="element-title update-sec__heading m-t-15">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, alias.
+                            </h6>
+                            <p class="update-sec__caption sub-title">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem obcaecati voluptate debitis, quaerat eum expedita quia veritatis repellendus quod aliquid!
+                            </p>
+                            <p class="update-sec__caption time">8 hrs ago</p>           
+                        </div>
+                    </div>
+                    <!-- update section ends -->
+
+					<!-- listed -->
+
+					<div class="listed p-t-20 p-b-10" id="listed">
+						<h6 class="element-title">Also listed In</h6>
+						<div class="listed__section flex-row">
+							<div class="parent-cat flex-row">
+								<img src="img/meat.png" class="img-responsive p-r-10">
+								<p class="parent-cat__title cat-size">Meat</p>
+							</div>
+							<div class="child-cat">
+								<p class="child-cat__title cat-size">Chicken</p>
+							</div>
+							<ul class="fnb-cat flex-row">
+		                        <li><a href="" class="fnb-cat__title">Chicken Retailer</a></li>
+		                        <li><a href="" class="fnb-cat__title">Mutton</a></li>
+		                        <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+		                        <li><a href="" class="fnb-cat__title">Egg</a></li>
+		                        <li><a href="" class="fnb-cat__title">Pork Wholesaler</a></li>
+		                        <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+		                    </ul>
+						</div>
+						<hr>
+						<div class="listed__section flex-row">
+							<div class="parent-cat flex-row">
+								<img src="img/veg.png" class="img-responsive p-r-10">
+								<p class="parent-cat__title cat-size sub-title">Vegetable</p>
+							</div>
+							<div class="child-cat">
+								<p class="child-cat__title cat-size sub-title">Fresh Vegetables</p>
+							</div>
+							<ul class="fnb-cat flex-row">
+		                        <li><a href="" class="fnb-cat__title">Chicken Retailer</a></li>
+		                        <li><a href="" class="fnb-cat__title">Mutton</a></li>
+		                        <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+		                        <li><a href="" class="fnb-cat__title">Egg</a></li>
+		                        <li><a href="" class="fnb-cat__title">Pork Wholesaler</a></li>
+		                        <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+		                    </ul>
+						</div>
+					</div>
+					<hr>
+					<!-- listed ends -->
+
+					<!-- brands -->
+					<div class="brands p-t-20 p-b-20" id="overview">
+						<h6 class="element-title m-b-20">Brands</h6>
+						<ul class="brands__list flex-row">
+							<li class="flex-row">
+								<img src="img/tags.png" alt="" class="tags img-responsive">
+								<p class="sub-title">Real Goods</p>
+							</li>
+							<li class="flex-row">
+								<img src="img/tags.png" alt="" class="tags img-responsive">
+								<p class="sub-title">Yummiez</p>
+							</li>
+							<li class="flex-row">
+								<img src="img/tags.png" alt="" class="tags img-responsive">
+								<p class="sub-title">Wendy's Food</p>
+							</li>
+							<li class="flex-row">
+								<img src="img/tags.png" alt="" class="tags img-responsive">
+								<p class="sub-title">Venkys</p>
+							</li>
+						</ul>
+					</div>
+					<!-- Brands ends -->
+					
+					<!-- Highlights -->
+					<div class="highlights p-t-20 p-b-20">
+						<h6 class="element-title m-b-20">Highlights</h6>
+						<ul class="highlights__points">
+							<li class="flex-row">
+								<img src="img/check.png" alt="" class="img-responsive check p-r-10">
+								<p class="sub-title">To maintain the freshness and quality</p>
+							</li>
+							<li class="flex-row">
+								<img src="img/check.png" alt="" class="img-responsive check p-r-10">
+								<p class="sub-title">Processed hygienically and are stored under desired temperature</p>
+							</li>
+							<li class="flex-row">
+								<img src="img/check.png" alt="" class="img-responsive check p-r-10">
+								<p class="sub-title">Strict quality measures are followed while packaging to prevent damage and outside contamination</p>
+							</li>
+						</ul>
+					</div>
+					<!-- highlights ends -->
+
+					<!-- Description -->
+					<div class="description p-t-20 p-b-20">
+						<h6 class="element-title m-b-20">Description</h6>
+						<p class="sub-title description__detail">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta modi ut cupiditate iste quia aperiam ab quibusdam nesciunt temporibus magnam nobis, dolore dicta eum libero quaerat ipsam perferendis culpa deleniti incidunt ex nemo. Ab temporibus enim, voluptatibus. Ullam impedit fugit sapiente vitae temporibus nulla quisquam reprehenderit officiis, amet consequatur accusantium quis quo velit, earum animi aut tenetur modi praesentium optio ratione ipsam. Quis pariatur debitis sequi dolorum atque eius laboriosam ullam beatae. Corporis sint eum, totam placeat recusandae error a nihil repudiandae. Quae nobis rerum amet laboriosam incidunt est consequatur, iste repudiandae harum maiores hic corporis iusto dolores repellat et cumque minima adipisci expedita, dignissimos, placeat, reiciendis aut temporibus consectetur optio? Quasi expedita nesciunt molestias, sunt ducimus. Optio quisquam magni molestias porro. Expedita deserunt esse neque ipsa.</p>
+					</div>
+					<!-- Description ends -->
+					
+					<!-- more-details -->
+					<div class="more-details p-t-20 p-b-20">
+						<h3 class="main-heading p-b-15">More details of Mystical The Meat And Fish Store</h3>
+						<div class="detail-1 flex-row m-t-25 m-b-25">
+							<div class="year">
+								<p class="sub-title heavier m-b-10">Year of establishment</p>
+								<p class="sub-title lighter">1998</p>
+							</div>
+							<div class="site">
+								<p class="sub-title heavier m-b-10">Website</p>
+								<p class="sub-title lighter "><a href="http://www.mystical.com" target="_blank" class="link-click">www.mystical.com <i class="fa fa-external-link new-link p-l-5" aria-hidden="true"></i></a></p>
+							</div>
+						</div>
+						<div class="detail-2 flex-row m-t-25 m-b-25">
+							<div class="operation">
+								<p class="sub-title heavier m-b-10">Hours of operation <span class="text-danger">(Closed now)</span></p>
+								<p class="sub-title lighter">Today 07:30 am - 02:00 pm <a href="" class="secondary-link heavier p-l-10">See more</a></p>
+							</div>
+						</div>
+						<div class="detail-3 flex-row m-t-25 m-b-25">
+							<div class="address">
+								<p class="sub-title heavier m-b-10">Address</p>
+								<p class="sub-title lighter">Shop No 1, Navjeevan Building, Evershine Nagar-Malad West, Mumbai - 400064.</p>
+							</div>
+						</div>
+						<div class="detail-4 flex-row m-t-25">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15380.091383021922!2d73.81245283848914!3d15.483203277923609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc0a93361ccd9%3A0xdd98120b24e5be61!2sPanjim%2C+Goa!5e0!3m2!1sen!2sin!4v1498804405360" width="600" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+					<!-- more details ends -->
+
+					<!-- Similar businesses -->
+
+					<div class="similar-business p-t-20 p-b-20" id="business">
+						<div class="section-start-head m-b-15 flex-row">
+							<h6 class="element-title">Similar Businesses</h6>
+							<a href="" class="secondary-link view-more sub-title heavier">View More</a>
+						</div>
+						<div class="similar-business__section flex-row">
+							<div class="card business-card article-col">
+								<div class="business-card__header flex-row">
+									<div class="rating">
+                                        <div class="bg"></div>
+                                        <div class="value" style="width: 80%;"></div>
+                                    </div>
+                                    <img src="img/verified.png" class="img-responsive verified">
+								</div>
+								<div class="business-card__body m-t-10 m-b-15">
+									<ul class="fnb-cat flex-row">
+				                        <li><a href="" class="fnb-cat__title">Chicken Retailer</a></li>
+				                        <li><a href="" class="fnb-cat__title">Mutton</a></li>
+				                        <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+				                        <li><a href="" class="fnb-cat__title">Pork Wholesaler</a></li>
+				                        <li><a href="" class="fnb-cat__title">Egg</a></li>
+				                        <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+				                    </ul>
+				                    <div class="operations m-t-20 m-b-20">
+				                    	<span class="dis-block lighter">Area of operations</span>
+				                    	<ul class="areas flex-row">
+				                    		<li>
+				                    			<p class="sub-title">Thane, </p>
+				                    		</li>
+				                    		<li>
+				                    			<p class="sub-title">Navi-mumbai, </p>
+				                    		</li>
+				                    		<li>
+				                    			<p class="sub-title">Dadar, </p>
+				                    		</li>
+				                    		<li>
+				                    			<p class="sub-title">Matunga</p>
+				                    		</li>
+				                    	</ul>
+				                    </div>
+				                    <div class="address">
+				                    	<p class="sub-title heavier">Kasam quershi sons pvt ltd</p>
+				                    	<p class="sub-title lighter address-title"><i class="fa fa-map-marker p-r-5 loc-icon" aria-hidden="true"></i> Andheri Mumbai</p>
+				                    </div>
+								</div>
+								<div class="business-card__footer flex-row">
+									<p class="sub-title heavier footer-text"><a href="">Get Details <i class="fa fa-caret-right p-l-5" aria-hidden="true"></i></a></p>
+									<span class="date lighter">Published on 20 Dec</span>
+								</div>
+							</div>
+							<div class="card business-card article-col">
+								<div class="business-card__header flex-row">
+									<div class="rating">
+                                        <div class="bg"></div>
+                                        <div class="value" style="width: 80%;"></div>
+                                    </div>
+                                    <img src="img/verified.png" class="img-responsive verified">
+								</div>
+								<div class="business-card__body m-t-10 m-b-15">
+									<ul class="fnb-cat flex-row">
+				                        <li><a href="" class="fnb-cat__title">Chicken Retailer</a></li>
+				                        <li><a href="" class="fnb-cat__title">Mutton</a></li>
+				                        <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+				                        <li><a href="" class="fnb-cat__title">Pork Wholesaler</a></li>
+				                        <li><a href="" class="fnb-cat__title">Egg</a></li>
+				                        <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+				                    </ul>
+				                    <div class="operations m-t-20 m-b-20">
+				                    	<span class="dis-block lighter">Area of operations</span>
+				                    	<ul class="areas flex-row">
+				                    		<li>
+				                    			<p class="sub-title">Thane, </p>
+				                    		</li>
+				                    		<li>
+				                    			<p class="sub-title">Navi-mumbai, </p>
+				                    		</li>
+				                    		<li>
+				                    			<p class="sub-title">Dadar, </p>
+				                    		</li>
+				                    		<li>
+				                    			<p class="sub-title">Matunga</p>
+				                    		</li>
+				                    	</ul>
+				                    </div>
+				                    <div class="address">
+				                    	<p class="sub-title heavier">Kasam quershi sons pvt ltd</p>
+				                    	<p class="sub-title lighter address-title"><i class="fa fa-map-marker p-r-5 loc-icon" aria-hidden="true"></i> Andheri Mumbai</p>
+				                    </div>
+								</div>
+								<div class="business-card__footer flex-row">
+									<p class="sub-title heavier footer-text"><a href="">Get Details <i class="fa fa-caret-right p-l-5" aria-hidden="true"></i></a></p>
+									<span class="date lighter">Published on 20 Dec</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- similar business ends -->
+					
+					<!-- Related article section -->
+					
+					<div class="related-article p-t-20 p-b-20" id="article">
+						<div class="section-start-head m-b-15 flex-row">
+							<h6 class="element-title">Related Articles</h6>
+							<a href="" class="secondary-link view-more sub-title heavier">View More</a>
+						</div>
+						<div class="related-article__section flex-row">
+							<div class="related-article__col article-col fnb-article">
+								<a href="" class="article-link">
+									<div class="fnb-article__banner"></div>
+									<div class="fnb-article__content m-t-20">
+										<h6 class="element-title fnb-article__title">There could be Ketamine in your 'natural' chicken</h6>
+										<p class="fnb-article__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolores, perferendis possimus nostrum atque ex enim obcaecati harum facilis id.</p>
+										<span class="dis-block fnb-article__caption lighter date">Posted on 20 Dec</span>
+									</div>
+								</a>
+							</div>
+							<div class="related-article__col article-col fnb-article">
+								<a href="" class="article-link">
+									<div class="fnb-article__banner banner-2"></div>
+									<div class="fnb-article__content m-t-20">
+										<h6 class="element-title fnb-article__title">There could be Ketamine in your 'natural' chicken</h6>
+										<p class="fnb-article__caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam dolores, perferendis possimus nostrum atque ex enim obcaecati harum facilis id.</p>
+										<span class="dis-block fnb-article__caption lighter date">Posted on 20 Dec</span>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <!-- core categories -->
+                <div class="detach-col-1">
+                    <div class="core-cat">
+                        <h6 class="element-title m-t-0 m-b-15">Core Categories</h6>
+                        <ul class="fnb-cat flex-row">
+                            <li><a href="" class="fnb-cat__title">Chicken Retailer</a></li>
+                            <li><a href="" class="fnb-cat__title">Mutton</a></li>
+                            <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+                            <li><a href="" class="fnb-cat__title">Pork Wholesaler</a></li>
+                            <li><a href="" class="fnb-cat__title">Egg</a></li>
+                            <li><a href="" class="fnb-cat__title">Meat Retailer</a></li>
+                        </ul>
+                    </div>
+                    <!-- Claim -->
+                    <div class="claim p-t-30 p-b-10">
+                        <!-- <i class="fa fa-commenting claim__icon" aria-hidden="true"></i> -->
+                        <img src="img/exclamation.png" class="img-reponsive">
+                        <p class="claim__text sub-title">Is this your business? <a href="">Claim it now.</a> or <a href="">Report Now</a></p>
+                    </div>
+                    <!-- Photos and documents -->
+                    <div class="docs p-t-20 p-b-20">
+                        <h6 class="element-title m-b-15">Photos &amp; Documents</h6>
+                        <div class="photo-gallery">
+                            <div class="photo-gallery__banner">
+                                <a href="img/gallery-1.png" data-toggle="lightbox">
+                                  <img src="img/gallery-1.png" class="img-responsive main-img">
+                                </a>
+                            </div>
+                            <ul class="photo-gallery__thumbnails flex-row m-t-5 m-b-20">
+                                <li>
+                                    <a href="img/gallery-1.png" data-toggle="lightbox" class="thumb-click">
+                                        <img src="img/gallery-1.png" alt="" class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="img/gallery-1.png" data-toggle="lightbox" class="thumb-click">
+                                        <img src="img/gallery-1.png" alt="" class="img-responsive">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="img/gallery-1.png" data-toggle="lightbox" class="thumb-click">
+                                        <img src="img/gallery-1.png" alt="" class="img-responsive">
+                                    </a>
+                                </li>
+                                <li class="flex-row count">
+                                    <a href="" class="thumb-click">
+                                        <p class="sub-title">+ 2 More</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="catalogue flex-row p-t-20 p-b-20">
+                            <p class="sub-title flex-row"><i class="fa fa-file file-icon p-r-10" aria-hidden="true"></i>
+                                Chicken- Catalogue.pdf
+                            </p>
+                            <a href=""><i class="fa fa-download catalogue-download" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="catalogue flex-row p-t-20 p-b-20">
+                            <p class="sub-title flex-row"><i class="fa fa-file file-icon p-r-10" aria-hidden="true"></i>
+                                Chicken- Catalogue.pdf
+                            </p>
+                            <a href=""><i class="fa fa-download catalogue-download" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                    <!-- documents ends -->                    
+                </div>
+
+				<!-- enquiry form -->
+                
+                <div class="form-toggle desk-hide">
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </div>
+                
+                <div class="pos-fixed fly-out">
+                    <div class="mobile-back desk-hide">
+                        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                    </div>
+    				<div class="enquiry-form card m-t-30 m-b-20">
+    					<form method="">
+    						<div class="enquiry-form__header flex-row">
+    							<img src="img/enquiry.png" class="img-responsive p-r-10">
+    							<div class="enquiry-title">
+    								<h6 class="element-title m-t-0 m-b-0">Send Enquiry To</h6>
+    								<p class="sub-title">Mystical the meat and fish store</p>
+    							</div>
+    						</div>
+    						<div class="enquiry-form__body m-t-20">
+    							<div class="form-group p-t-10 p-b-10">
+    								<input type="text" class="form-control fnb-input" placeholder="Name">
+    							</div>
+    							<div class="form-group p-t-10 p-b-10">
+    								<input type="email" class="form-control fnb-input" placeholder="Email">
+    							</div>
+    							<div class="form-group p-t-10 p-b-10">
+    								<input type="number" class="form-control fnb-input" placeholder="Phone no">
+    							</div>
+    							<div class="form-group p-t-10 p-b-10">
+        							<label class="" for="describe">What describe you the best</label>
+        							<select class="form-control fnb-select" id="describe">
+    	                                <option>--Select--</option>
+    	                                <option>I work in the F&amp;B industry</option>
+    	                                <option>I work in the F&amp;B industry</option>
+    	                                <option>I work in the F&amp;B industry</option>
+    	                                <option>I work in the F&amp;B industry</option>
+    	                            </select>
+      							</div>
+      							<div class="form-group p-t-10 p-b-10">
+      								<label class="">Interested in</label>
+      								<ul class="interested-options flex-row m-t-15">
+      									<li>
+      										<input type="radio" class="radio" name="interests">
+      										<div class="meat option flex-row">
+      											<img src="img/meat-option.png" class="img-responsive">
+      										</div>
+      									</li>
+      									<li>
+      										<input type="radio" class="radio" name="interests">
+      										<div class="veg option flex-row">
+      											<img src="img/veg-option.png" class="img-responsive">
+      										</div>
+      									</li>
+      								</ul>
+      							</div>
+      							<div class="form-group p-t-10 p-b-10">
+      								<label>Message</label>
+      								<textarea class="form-control fnb-textarea" col="2"></textarea>
+      							</div>
+      							<div class="form-group p-t-10 m-b-0">
+      								<button class="btn fnb-btn outline full border-btn">Send enquiry</button>
+      							</div>
+    						</div>
+    					</form>
+    				</div>
+                </div>
+				<!-- enquiry form ends -->
+
+				<!-- browse category -->
+
+				<div class="browse-cat p-t-20 p-b-20">
+					<h6 class="element-title">Browse Categories</h6>
+					<ul class="browse-cat__list m-t-30">
+						<li>
+							<a href="">
+								<p class="sub-title flex-row">
+									<span class="icon flex-row">
+										<img src="img/veg-option.png">
+									</span>
+									Vegetables <span class="total p-l-10">(218)</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<p class="sub-title flex-row">
+									<span class="icon flex-row">
+										<img src="img/veg-option.png">
+									</span>
+									Cold Drinks <span class="total p-l-10">(28)</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<p class="sub-title flex-row">
+									<span class="icon flex-row">
+										<img src="img/veg-option.png">
+									</span>
+									Grocery <span class="total p-l-10">(56)</span>
+								</p>
+							</a>
+						</li>
+						<li>
+							<a href="">
+								<p class="sub-title flex-row">
+									<span class="icon flex-row">
+										<img src="img/veg-option.png">
+									</span>
+									Cold Drinks <span class="total p-l-10">(28)</span>
+								</p>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- Browse category ends-->
+				
+				<!-- Advertisement ends -->
+
+				<div class="advertisement flex-row m-t-20 m-b-20">
+					<h6 class="element-title">Advertisement</h6>
+				</div>
+				<!-- advertisement ends -->
+
+				<!-- business listing -->
+
+				<div class="business-listing p-t-20 p-b-20 text-center">
+					<img src="img/note.png" class="img-responsive note m-t-15 m-b-15">
+					<div class="business-listing__content m-b-15">
+						<h6 class="element-title">Create a Business Listing</h6>
+						<p class="sub-title">Post your listing on F&amp;BCircle for free</p>
+					</div>
+					<button class="btn fnb-btn outline full">Create Listing</button>
+				</div>
+
+
+            </div>
+        </div>
+        <div class="row m-t-30 m-b-30 why-row">
+        	<div class="col-sm-12">
+        		<!-- why fnb -->
+        		<div class="why-fnb text-center m-b-30 p-b-30">
+        			<h3 class="main-title">Why F&amp;B Circle?</h3>
+        			<ul class="points m-t-30 flex-row">
+        				<li>
+        					<img src="img/quotes.png" class="img-responsive m-t-20 m-b-20 icons" alt="">
+        					<p class="element-title">Get quotes from multiple suppliers</p>
+        					<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ipsum distinctio, numquam sit! Molestias, aliquid?</p>
+        				</li>
+        				<li>
+        					<img src="img/suppliers.png" class="img-responsive m-t-20 m-b-20 icons" alt="">
+        					<p class="element-title">Browse and find suppliers</p>
+        					<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ipsum distinctio, numquam sit! Molestias, aliquid?</p>
+        				</li>
+        				<li>
+        					<img src="img/jobs.png" class="img-responsive m-t-20 m-b-20 icons" alt="">
+        					<p class="element-title">Post &amp; Apply to jobs</p>
+        					<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ipsum distinctio, numquam sit! Molestias, aliquid?</p>
+        				</li>
+        				<li>
+        					<img src="img/updates.png" class="img-responsive m-t-20 m-b-20 icons" alt="">
+        					<p class="element-title">Get updates in F&amp;B news</p>
+        					<p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi ipsum distinctio, numquam sit! Molestias, aliquid?</p>
+        				</li>
+        			</ul>
+        		</div>
+        	</div>
+        </div>
+        <div class="site-overlay"></div>
+    </div>
+    <!-- jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- BS Script -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Smooth Mouse scroll -->
+    <script type="text/javascript" src="js/jquery.easeScroll.min.js"></script>
+    <!-- BS lightbox -->
+    <script type="text/javascript" src="bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+    <!-- Read more -->
+    <script type="text/javascript" src="js/readmore.min.js"></script>
+    <!-- custom script -->
+    <script type="text/javascript" src="js/custom.js"></script>
+</body>
+
+</html>

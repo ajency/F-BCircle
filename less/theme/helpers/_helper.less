@@ -1,0 +1,140 @@
+// ---------------------------
+// HELPERS STYLES -----------
+// ---------------------------
+
+
+// ---------------------------
+// MISCELLANEOUS STYLES IMPORT -----------
+// ---------------------------
+
+@import "_misc";
+
+.container{
+  @media screen and (min-width: 1500px) {
+    width: 1300px;
+  }
+}
+
+
+// Margin/Padding classes
+// -------------------------
+
+@from : 0;
+@to : 50;
+
+.loop(@index) when(@index =< @to) {
+  .m-t-@{index} {
+    margin-top: unit(@index, px);
+  }
+  .m-b-@{index} {
+    margin-bottom: unit(@index, px);
+  }
+  .m-r-@{index} {
+    margin-right: unit(@index, px);
+  }
+  .m-l-@{index} {
+    margin-left: unit(@index, px);
+  }
+  .p-t-@{index} {
+    padding-top: unit(@index, px);
+  }
+  .p-b-@{index} {
+    padding-bottom: unit(@index, px);
+  }
+  .p-r-@{index} {
+    padding-right: unit(@index, px);
+  }
+  .p-l-@{index} {
+    padding-left: unit(@index, px);
+  }
+  .loop(@index + 5);
+}
+.loop(@from);
+
+
+//Utility classes
+
+.dis-block{
+  display: block;
+}
+
+.dis-inline{
+  display: inline-block;
+}
+
+.flex-row{
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: @tab){
+  .mobile-flex{
+    display: flex;
+    align-items: center;
+    float: none;
+  }
+}
+.text-primary{
+  color: @accent-primary;
+}
+
+.text-secondary{
+  color: @accent-secondary;
+}
+
+.text-danger{
+  color: @danger;
+}
+
+.primary-link{
+  &:hover{
+    color: lighten(@accent-primary,10%);
+    text-decoration: none;
+  }
+}
+
+.secondary-link{
+  color: @accent-secondary;
+  &:hover{
+    color: lighten(@accent-secondary,10%);
+    text-decoration: none;
+  }
+}
+
+.lighter{
+  font-weight: 300;
+}
+
+.heavier{
+  font-weight: 500;
+}
+
+.blocked{
+  overflow: hidden;
+  margin-left: 280px;
+}
+
+@media screen and (max-width: @tab){
+  .mobile-hide{
+    display: none !important;
+  }
+  .pos-fixed{
+    position: fixed;
+    background-color: #fff;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    left: 0;
+    overflow-y: auto;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: @tab){
+  .desk-hide{
+    display: none !important;
+  }
+}
+
+
