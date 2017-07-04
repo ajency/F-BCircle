@@ -1083,6 +1083,9 @@ span {
 .seller-info .operations .map-icon {
   font-size: 1.5em;
 }
+.seller-info .cities {
+  margin-top: 5px;
+}
 .seller-info .cities__title {
   margin-bottom: 0;
   padding-right: 0.3em;
