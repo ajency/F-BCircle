@@ -1085,9 +1085,6 @@ span {
 .seller-info .operations .map-icon {
   font-size: 1.5em;
 }
-.seller-info .cities {
-  margin-top: 5px;
-}
 .seller-info .cities__title {
   margin-bottom: 0;
   padding-right: 0.3em;
@@ -1231,7 +1228,6 @@ span {
   }
   .seller-info .cities {
     padding-left: 15px;
-    margin-top: 5px;
   }
   .seller-info .cities__title {
     font-size: 0.95em;
