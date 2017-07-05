@@ -472,7 +472,7 @@
 		padding-top: 20px;
 	}
 	.element-title{
-		font-size: 1.25em;
+		font-size: 1.2em;
 	}
 	.sub-title{
 		font-size: 1em;
@@ -616,19 +616,17 @@
 // nav tabs details
 
 .update-sec{
+	border: 1px solid #e2e2e2;
 	.update-space{
 		padding: 1em 1.5em;
 	}
 	&__header{
 		background-color: @highlight;
     	justify-content: space-between;
+    	border-bottom: 1px solid #e2e2e2;
 	}
 	&__link{
 		font-size: 1.1em;
-	}
-	&__body{
-		border: 1px solid #e2e2e2;
-    	border-top: 0;
 	}
 	&__heading{
 		color: @text-darker;
@@ -1509,9 +1507,53 @@
 }
 
 
+// recent updates form
+
+.updatesForm{
+	.fnb-input{
+		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	      font-size: 1.1em;
+	    }
+	    &::-moz-placeholder { /* Firefox 19+ */
+	      font-size: 1.1em;
+	    }
+	}
+	.title-label{
+		font-size: 1.1em;
+	}
+	.attach{
+		font-size: 1.1em;
+		text-decoration: underline;
+		&:hover{
+			color: lighten(@text-lighter,5%);
+		}
+	}
+}
 
 
-
+@media screen and (max-width: @mobile){
+	.updatesForm{
+		.fnb-input{
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+		      font-size: 1em;
+		    }
+		    &::-moz-placeholder { /* Firefox 19+ */
+		      font-size: 1em;
+		    }
+		}
+		.title-label{
+			font-size: 1em;
+		}
+		.attach{
+			font-size: 1em;
+			display: block;
+			text-align: center;
+		}
+		.post-update{
+			text-align: center;
+		}
+	}
+}
 
 
 

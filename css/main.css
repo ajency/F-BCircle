@@ -568,7 +568,7 @@ span {
   background-color: transparent;
   border-bottom: 1px solid #ddd;
   border-radius: 0;
-  font-size: 1.1em;
+  font-size: 1.05em;
   padding-left: 0;
   color: #6b6b6b;
 }
@@ -580,6 +580,26 @@ span {
   border-color: inherit;
   box-shadow: none;
   border-bottom: 1px solid #ddd;
+}
+.fnb-input::-webkit-input-placeholder,
+.fnb-textarea::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-weight: 400;
+}
+.fnb-input::-moz-placeholder,
+.fnb-textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  font-weight: 400;
+}
+.fnb-input:-ms-input-placeholder,
+.fnb-textarea:-ms-input-placeholder {
+  /* IE 10+ */
+  font-weight: 400;
+}
+.fnb-input:-moz-placeholder,
+.fnb-textarea:-moz-placeholder {
+  /* Firefox 18- */
+  font-weight: 400;
 }
 .title-label {
   display: block;
@@ -1362,7 +1382,7 @@ span {
     padding-top: 20px;
   }
   .element-title {
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
   .sub-title {
     font-size: 1em;
@@ -1485,6 +1505,9 @@ span {
     padding-right: 0;
   }
 }
+.update-sec {
+  border: 1px solid #e2e2e2;
+}
 .update-sec .update-space {
   padding: 1em 1.5em;
 }
@@ -1494,13 +1517,10 @@ span {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  border-bottom: 1px solid #e2e2e2;
 }
 .update-sec__link {
   font-size: 1.1em;
-}
-.update-sec__body {
-  border: 1px solid #e2e2e2;
-  border-top: 0;
 }
 .update-sec__heading {
   color: #4a4a4a;
@@ -2317,6 +2337,45 @@ span {
   .status-listing .title-label,
   .status-listing .select-variant {
     font-size: 1.05em;
+  }
+}
+.updatesForm .fnb-input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 1.1em;
+}
+.updatesForm .fnb-input::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 1.1em;
+}
+.updatesForm .title-label {
+  font-size: 1.1em;
+}
+.updatesForm .attach {
+  font-size: 1.1em;
+  text-decoration: underline;
+}
+.updatesForm .attach:hover {
+  color: #a8abac;
+}
+@media screen and (max-width: 768px) {
+  .updatesForm .fnb-input::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-size: 1em;
+  }
+  .updatesForm .fnb-input::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 1em;
+  }
+  .updatesForm .title-label {
+    font-size: 1em;
+  }
+  .updatesForm .attach {
+    font-size: 1em;
+    display: block;
+    text-align: center;
+  }
+  .updatesForm .post-update {
+    text-align: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
