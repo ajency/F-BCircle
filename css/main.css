@@ -1415,6 +1415,7 @@ span {
   position: relative;
   display: block;
   padding: 10px 15px 2px 15px;
+  margin-bottom: 10px;
 }
 .nav-info__tabs li a:hover,
 .nav-info__tabs li a:active {
@@ -1460,7 +1461,7 @@ span {
 .nav-info .sticky-section {
   position: fixed;
   background-color: #fff;
-  padding: 0.8em 0;
+  padding: 0.5em 0;
   margin: 0;
   top: -100px;
   left: 0;
@@ -1491,6 +1492,7 @@ span {
   }
   .nav-info li a {
     font-size: 1.1em;
+    margin-bottom: 0;
   }
   .nav-info .sticky-section {
     top: -200px;
