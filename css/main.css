@@ -92,6 +92,10 @@ body {
   -webkit-transition: all 0.8s cubic-bezier(0.44, -0.25, 0.75, 1);
           transition: all 0.8s cubic-bezier(0.44, -0.25, 0.75, 1);
 }
+body.no-transition {
+  -webkit-transition: initial;
+          transition: initial;
+}
 a {
   text-decoration: none;
 }
@@ -132,7 +136,7 @@ span {
   font-size: 0.6em;
 }
 .fnb-btn {
-  font-size: 1.15em;
+  font-size: 1.05em;
   -webkit-transition: all 0.6s ease;
           transition: all 0.6s ease;
   font-weight: 500;
@@ -884,6 +888,15 @@ span {
   color: #3cd5ce;
   text-decoration: none;
 }
+.text-lighter {
+  color: #9b9ea0;
+}
+.text-darker {
+  color: #4a4a4a;
+}
+.text-color {
+  color: #6b6b6b;
+}
 .lighter {
   font-weight: 300;
 }
@@ -996,6 +1009,9 @@ span {
 }
 .main-heading {
   font-size: 2em;
+}
+.section-title {
+  font-size: 1.3em;
 }
 .spacer {
   padding-right: 3em;
@@ -2205,5 +2221,23 @@ span {
   .site-overlay.active {
     display: block;
   }
+}
+.pre-benefits {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.3em 1.5em;
+  border: 1px solid rgba(0, 0, 0, 0.34);
+  margin-bottom: 2.5em;
+}
+.pre-benefits__content {
+  padding-left: 1.2em;
+}
+.pre-benefits__title {
+  margin-top: 0;
+}
+.pre-benefits .upgrade {
+  padding: 0.7em 1.2em;
 }
 /*# sourceMappingURL=main.css.map */
