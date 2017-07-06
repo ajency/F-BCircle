@@ -9,6 +9,7 @@
 	position: relative;
     top: 2em;
     z-index: 1;
+    padding: 0 3.5em;
     &__title{
     	color: #fff;
     	font-weight: 400;
@@ -51,3 +52,294 @@
 	    }
     }
 }
+
+
+//filter sections
+.bg-card{
+	background-color: #fff;
+	border: 2px solid #ddd;
+}
+
+
+.filter-sidebar{
+	.filter-row{
+		padding: 1.2em 1.5em;
+	}
+	.contents{
+		.node{
+			padding-left: 3em;
+			&__child{
+				.flex-row{
+					justify-content: space-between;
+				}
+			}
+		}
+		a{
+			text-decoration: none;
+		}
+		.arrow{
+			font-size: 1.5em;
+    		vertical-align: bottom;
+		}
+	}
+}
+
+.results{
+	&__header{
+		border-bottom: 1px solid #eee;
+	}
+	.element-title{
+		font-size: 1.2em;
+		margin: 0;
+	}
+}
+
+.filter-group{
+	&__header{
+		cursor: pointer;
+	    background-color: #f7f7f7;
+	    .sub-title{
+	    	margin: 0;
+    		justify-content: space-between;
+	    }
+	    .arrow{
+	    	font-size: 1.4em;
+	    	transition: all 0.5s ease;
+	    	&.active{
+	    		transform: rotate(180deg);
+	    	}
+	    }
+	}
+	.search-area{
+		padding: 0.5em 0;
+    	border-bottom: 1px solid #eee;
+    	padding-top: 0;
+	}
+	.search-icon{
+		font-size: 1.25em;
+	}
+	.search-input{
+		border-bottom: 0;
+    	font-size: 1.15em;
+    	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	      color: @text-color;
+	    }
+	    &::-moz-placeholder { /* Firefox 19+ */
+	      color: @text-color;
+	    }
+	    &:-ms-input-placeholder { /* IE 10+ */
+	      color: @text-color;
+	    }
+	}
+	.check-section{
+		padding: 1.5em 0 0 0;
+		.sub-title{
+			margin-bottom: 0.8em;
+			font-weight: 400;
+			span{
+				white-space: nowrap;
+    			text-overflow: ellipsis;
+    			overflow: hidden;
+    			width: 200px;
+			}
+		}
+		.checkbox{
+			margin-right: 1.2em;
+			margin-top: 0;
+			&:checked{
+				& + span{
+					color: #000;
+					font-weight: 500;
+				}
+			}
+		}
+		.rating{
+			width: 117px;
+			.bg,.value{
+				&:before{
+					font-size: 1.25em;
+				}
+			}
+		}
+	}
+	&:first-child{
+		margin-top: 20px;
+	}
+	&.no-gap{
+		.check-section{
+			padding-top: 0;
+		}
+	}
+}
+
+.more-area{
+	cursor: pointer;
+}
+
+.whyFnb{
+	cursor: initial;
+	.check{
+		color: @accent-secondary;
+		font-size: 1.4em;
+	}
+	.filter-row{
+    	background-color: #f7f7f7;
+    	.check-section{
+    		padding: 0;
+    		.sub-title{
+    			align-items: flex-start;
+    			span{
+    				white-space: normal;
+    				overflow: inherit;
+    				width: auto;
+    			}
+    		}
+    	}
+	}
+}
+
+
+// filter cards
+
+.white-space{
+	padding: 1.2em 1.5em;
+}
+
+.filter-cards{
+	&__header{
+		padding: 0.85em 1.5em;
+    	border-bottom: 1px solid #eee;
+    	.rating{
+    		width: 113px;
+    		.bg,.value{
+    			&:before{
+    				font-size: 1.4em;
+    			}
+    		}
+    	}
+	}
+	&__body{
+    	border-bottom: 1px solid #eee;
+    	align-items: inherit;
+	}
+	.flex-cols{
+		flex: 1 0 50%;
+		max-width: 50%;
+		display: flex;
+    	flex-direction: column;
+    	justify-content: space-between;
+		&.body-right{
+			padding-left: 5em;
+		}
+	}
+	.location{
+		.map-icon{
+			width: 26px;
+		}
+	}
+	.main-heading{
+		margin-top: 0;
+    	margin-bottom: 10px;
+    	font-size: 1.6em;
+	}
+	.stats{
+		border-bottom: 0;
+		justify-content: flex-start;
+	}
+	.fnb-cat{
+		li{
+			padding: 0.4em 1em;
+			a{
+				font-size: 1em;
+			}
+		}
+		.cat-more{
+			border: 0;
+	    	background-color: transparent;
+	    	padding: 0;
+	    	a{
+	    		&:hover{
+	    			text-decoration: none;
+	    		}
+	    	}
+	    	&:hover{
+	    		background-color: transparent;
+	    	}
+		}
+	}
+	.operations{
+		border-bottom: 0;
+	}
+	.cities__title{
+		color: #9b9ea0;
+		font-weight: 400;
+	}
+	.cities .remain__number{
+		font-weight: 400;
+		font-size: 1.1em;
+	}
+	.enquiries{
+		&__count{
+			flex: 0.6;
+		}
+		&__request{
+			flex: 1;
+		}
+		.bars{
+			flex: 0.3;
+			font-size: 1.4em;
+		}
+	}
+	.get-details{
+		.fnb-btn{
+			padding: 1em 1.8em;
+		}
+	}
+	.recent-updates{
+		&__text{
+			flex: 0.25;
+    		padding-right: 1em;
+		}
+		&__content{
+			flex: 1
+		}
+	}
+}
+
+.featured{
+	&__icon{
+		font-size: 1.3em;
+    	transform: rotate(-20deg);
+    	padding-right: 0.1em;
+    	padding-bottom: 0.3em;
+	}
+}
+
+//advertisment card
+
+.add-card{
+	&__content{
+		flex: 1 0 40%;
+    	padding-right: 2em;
+    	.title{
+    		line-height: 1.2;
+    		align-items: flex-end;
+    	}
+	}
+	&__form{
+		flex: 1 0 55%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
