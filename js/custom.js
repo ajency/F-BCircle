@@ -90,7 +90,7 @@ $(function(){
 
 	$('.description').readmore({
 	   speed: 25,
-	   collapsedHeight: 180,
+	   collapsedHeight: 170,
 	   moreLink: '<a href="#" class="more vm text-secondary">View more</a>',
 	   lessLink: '<a href="#" class="vm less text-secondary">View Less</a>'
 	 });

@@ -14,5 +14,24 @@
 	.nav-gap{
 		padding: 0 30px;
 	}
+	&.trans-header{
+		position: relative;
+		z-index: 1;
+		.navbar{
+			background-color: transparent;
+			box-shadow: none;
+			.nav-color{
+				color: #fff;
+				&:hover{
+					color: #c5c5c5;
+				}
+				&.quote-btn{
+					background-color: transparent;
+    				border-color: @accent-primary;
+				}
+			}
+		}
+
+	}
 }
 
