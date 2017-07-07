@@ -1521,6 +1521,11 @@ input[type=checkbox].disabled:before {
   .seller-info .verified img {
     padding: 0;
   }
+  .seller-info .verified-icon {
+    width: 20px;
+    background-size: 450px;
+    background-position: -154px -664px;
+  }
   .seller-info .verified .c-title {
     display: none;
   }
@@ -3117,6 +3122,8 @@ input[type=checkbox].disabled:before {
   }
   .filter-sidebar .filter-group__header {
     background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
   }
   .filter-sidebar .filter-group .check-section .rating {
     width: 104px;
@@ -3196,6 +3203,7 @@ input[type=checkbox].disabled:before {
   .filter-cards .verified .c-title {
     display: block;
     font-size: 1em;
+    font-weight: 400;
   }
   .filter-cards .cat-holder {
     margin-top: 0;
