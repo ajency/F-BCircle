@@ -5,7 +5,7 @@ $(function(){
 	    if($('.sticky-section').length){
 		    $('.sticky-section').toggleClass('fixed',
 		     //add 'ok' class when div position match or exceeds else remove the 'ok' class.
-		      scroll >= $('.update-sec').offset().top
+		      scroll >= $('.update-sec').offset().top - 100
 		    );
 	    }
 	 //    if($('.sticky-section').hasClass('fixed')){
@@ -62,7 +62,7 @@ $(function(){
 	// Custom menu click and scroll to particular ID
 
 	var topMenu = jQuery(".nav-info__tabs"),
-        offset = 40,
+        offset = 15,
         topMenuHeight = topMenu.outerHeight()+offset,
         // All list items
         menuItems =  topMenu.find('a[href*="#"]'),
@@ -189,7 +189,7 @@ $(function(){
 		});
 
 
-		$('.photo-gallery__thumbnails').magnificPopup({
+		$('.photo-gallery').magnificPopup({
 			delegate: 'a',
 			type: 'image',
 			gallery:{
@@ -228,6 +228,15 @@ $(function(){
 			$('.m-side-bar').addClass('active');
 			$('.site-overlay').addClass('active');
 			$('body').addClass('blocked');
+		});
+
+		// remaning number click reveal
+
+		$('.remain__number').click(function(){
+			event.preventDefault();
+			$(this).parent().addClass('hidden');
+			$('.cities').addClass('expand-more');
+
 		});
 
 		// Fly out toggles

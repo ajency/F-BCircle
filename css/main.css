@@ -214,6 +214,7 @@ span {
 }
 .navbar .nav-title-size.nav-title-size {
   font-size: 1.15em;
+  font-weight: 500;
   margin-bottom: 0;
   color: #4a4a4a;
   padding-top: 8px;
@@ -222,6 +223,9 @@ span {
 }
 .navbar .nav-title-size.nav-title-size:hover {
   color: #8a8a8a;
+}
+.navbar .fnb-select {
+  font-weight: 500;
 }
 .navbar .login {
   display: -webkit-box;
@@ -305,7 +309,8 @@ span {
   }
 }
 .fnb-breadcrums__section {
-  padding: 0 0.3em;
+  padding-left: 0;
+  padding-right: 0.6em;
 }
 .fnb-breadcrums .home-icon {
   font-size: 1.15em;
@@ -1350,7 +1355,7 @@ input[type=checkbox].disabled:before {
 }
 .seller-info .c-title {
   margin-bottom: 0;
-  color: #9b9ea0;
+  color: #6b6b6b;
   font-weight: 300;
 }
 .seller-info .c-title span {
@@ -1394,16 +1399,33 @@ input[type=checkbox].disabled:before {
 .seller-info .operations .map-icon {
   font-size: 1.5em;
 }
+.seller-info .cities {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
 .seller-info .cities__title {
   margin-bottom: 0;
   padding-right: 0.3em;
   color: #6b6b6b;
   font-weight: 300;
 }
+.seller-info .cities li {
+  display: none;
+}
+.seller-info .cities li:nth-child(-n+5) {
+  display: block;
+}
+.seller-info .cities .remain {
+  display: block;
+}
 .seller-info .cities .remain__number {
   font-size: 1.2em;
   font-weight: 500;
   padding-left: 5px;
+}
+.seller-info .cities.expand-more li {
+  display: block;
 }
 .seller-info .contact__info,
 .seller-info .contact__enquiry {
@@ -1540,14 +1562,26 @@ input[type=checkbox].disabled:before {
   .seller-info .map-icon {
     font-size: 1.2em;
   }
-  .seller-info .cities {
+  .seller-info .cities.cities {
     padding-left: 15px;
   }
-  .seller-info .cities__title {
+  .seller-info .cities.cities .cities__title {
     font-size: 0.95em;
   }
-  .seller-info .cities .remain__number {
+  .seller-info .cities.cities .remain__number {
     font-size: 0.95em;
+  }
+  .seller-info .cities.cities li {
+    display: none;
+  }
+  .seller-info .cities.cities li:nth-child(-n+4) {
+    display: block;
+  }
+  .seller-info .cities.cities li.remain {
+    display: block;
+  }
+  .seller-info .cities.cities.expand-more li {
+    display: block;
   }
   .seller-info__footer {
     padding-top: 10px;
@@ -2298,9 +2332,12 @@ input[type=checkbox].disabled:before {
 }
 .browse-cat li a {
   color: inherit;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
 }
 .browse-cat li a:hover {
   text-decoration: none;
+  color: #ec6d4b;
 }
 .browse-cat .sub-title {
   margin-bottom: 0;
