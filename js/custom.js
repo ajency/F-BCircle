@@ -2,10 +2,12 @@ $(function(){
 
 	$(window).scroll(function (event) {
 	    var scroll = $(window).scrollTop();
-	    $('.sticky-section').toggleClass('fixed',
-	     //add 'ok' class when div position match or exceeds else remove the 'ok' class.
-	      scroll >= $('.update-sec').offset().top
-	    );
+	    if($('.sticky-section').length){
+		    $('.sticky-section').toggleClass('fixed',
+		     //add 'ok' class when div position match or exceeds else remove the 'ok' class.
+		      scroll >= $('.update-sec').offset().top
+		    );
+	    }
 	 //    if($('.sticky-section').hasClass('fixed')){
 			
 		// 	$('.enquiry-btn').show(300);
@@ -14,6 +16,21 @@ $(function(){
 		// 	$('.enquiry-btn').hide(300);	
 		// }
 	});
+
+	if ($(window).width() >= 769) {
+		$(window).scroll(function() {    
+			var scroll = $(window).scrollTop();
+			 //console.log(scroll);
+			if (scroll >= 100) {
+			    //console.log('a');
+			    $(".trans-header").addClass("change");
+			} else {
+			    //console.log('a');
+			    $(".trans-header").removeClass("change");
+			}
+		});
+	}
+
 
 	// Custom menu click and scroll to particular ID
 	var topMenu = jQuery(".nav-info__tabs"),
@@ -79,6 +96,23 @@ $(function(){
 	        scrollTop: $(".detail-3").offset().top
 	    }, 2000);
 	});
+
+	// Go to enquiry form
+
+	$(".send-enq").click(function() {
+	    $('html, body').animate({
+	        scrollTop: $(".send-enquiry-section").offset().top - 100
+	    }, 2000);
+	});
+
+	// modify search click
+
+	$(".modify-search").click(function() {
+	    $('html, body').animate({
+	        scrollTop: 0 
+	    }, 2000);
+	});
+
 
 	// if($('.sticky-section').hasClass('fixed')){
 	// 	alert();
@@ -172,6 +206,16 @@ $(function(){
 	    jQuery('.m-side-bar,.site-overlay').removeClass('active');
 	    jQuery('body').removeClass('blocked');
 	  }
+	});
+
+	// toggle icon
+
+	$('.filter-group__header').click(function(){
+		$(this).find('.arrow').toggleClass('active');
+	});
+
+	$('.more-area').click(function(){
+		$(this).addClass('hidden');
 	});
 
 });
