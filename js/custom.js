@@ -31,15 +31,16 @@ $(function(){
 			    $('.sticky-bottom').removeClass('active');
 			}
 		});
+		
+		// Check if height is equal or greater then actual scroll
+
+		var scrollHeader = $(window).scrollTop();
+
+	    if(scrollHeader  > 100) {
+	        $(".trans-header").addClass("change");
+	    }
 	}
 
-	// Check if height is equal or greater then actual scroll
-
-	var scrollHeader = $(window).scrollTop();
-
-    if(scrollHeader  > 100) {
-        $(".trans-header").addClass("change");
-    }
 
     // sticky bottom scroll
 
@@ -212,7 +213,14 @@ $(function(){
 				var detailrow = $(this).find('.detail-move').closest('.seller-info');
 				var detailbtn = $(this).find('.detail-move').detach();
 				$(detailrow).find('.recent-updates__content').append(detailbtn);
+
+				// var recentrow = $(this).find('.recent-data').closest('.seller-info');
+				// var recentData = $(this).find('.recent-data').detach();
+				// $(recentrow).find('.updates-dropDown').append(recentData);
+
 			});
+
+
 			// $('.recent-updates__content').append(detailbtn);
 
 			var recentData = $('.recent-data').detach();
