@@ -84,3 +84,35 @@
 	}
 }
 
+@media screen and (max-width: @mobile){
+	.fnb-header{
+		&.trans-header{
+			position: relative;
+			z-index: inherit;
+			.navbar{
+				background-color: #fff;
+				.nav-color{
+					color: inherit;
+				}
+				&-brand{
+					color: @accent-secondary;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: @sm-tab) and (max-width: 1200px){
+	.fnb-header{
+		&.trans-header{
+			&.change{
+				.navbar{
+					li{
+						padding: 0 0.5em;
+					}
+				}
+			}
+		}
+	}
+}
+
