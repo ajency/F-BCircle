@@ -9,16 +9,16 @@ $(function(){
 		    );
 	    }
 	 //    if($('.sticky-section').hasClass('fixed')){
-			
+
 		// 	$('.enquiry-btn').show(300);
 		// }
 		// else{
-		// 	$('.enquiry-btn').hide(300);	
+		// 	$('.enquiry-btn').hide(300);
 		// }
 	});
 
 	if ($(window).width() >= 769) {
-		$(window).scroll(function() {    
+		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();
 			 //console.log(scroll);
 			if (scroll >= 100) {
@@ -44,7 +44,7 @@ $(function(){
     // sticky bottom scroll
 
 	if ($(window).width() < 769) {
-		$(window).scroll(function() {    
+		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();
 			if (scroll >= 400) {
 			    $('.sticky-bottom').addClass('active');
@@ -80,7 +80,7 @@ $(function(){
       var href = jQuery(this).attr("href"),
         id = href.substring(href.indexOf('#'));
           offsetTop = href === "#" ? 0 : jQuery(id).offset().top-topMenuHeight+1;
-      jQuery('html, body').stop().animate({ 
+      jQuery('html, body').stop().animate({
           scrollTop: offsetTop
       }, 1000);
       e.preventDefault();
@@ -99,13 +99,13 @@ $(function(){
 
        // Get the id of the current element
        cur = cur[cur.length-1];
-       var id = cur && cur.length ? cur[0].id : "";               
-       
+       var id = cur && cur.length ? cur[0].id : "";
+
        menuItems.removeClass("active");
        if(id){
             menuItems.parent().end().filter("[href*='#"+id+"']").addClass("active");
        }
-       
+
     });
 
 
@@ -138,7 +138,7 @@ $(function(){
 
 	$(".modify-search").click(function() {
 	    $('html, body').animate({
-	        scrollTop: 0 
+	        scrollTop: 0
 	    }, 2000);
 	});
 
@@ -148,7 +148,7 @@ $(function(){
 	// 	$('.enquiry-btn').show(300);
 	// }
 	// else{
-	// 	$('.enquiry-btn').hide(300);	
+	// 	$('.enquiry-btn').hide(300);
 	// }
 
 	$('.description').readmore({
@@ -207,9 +207,12 @@ $(function(){
 	    	var coreCat = $('.detach-col-1').detach();
 			$('.sell-re').after(coreCat);
 
-			var detailbtn = $('.detail-move').detach();
-			var detailrow = $('.detail-move');
-			$(detailrow).closest('.seller-info').find('.recent-updates__content').append(detailbtn);
+			$('.filter-data').each(function(){
+
+				var detailrow = $(this).find('.detail-move').closest('.seller-info');
+				var detailbtn = $(this).find('.detail-move').detach();
+				$(detailrow).find('.recent-updates__content').append(detailbtn);
+			});
 			// $('.recent-updates__content').append(detailbtn);
 
 			var recentData = $('.recent-data').detach();
