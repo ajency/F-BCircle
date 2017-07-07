@@ -3149,6 +3149,9 @@ input[type=checkbox].disabled:before {
   .filter-data {
     margin-top: 0;
   }
+  .filter-data:last-child {
+    margin-bottom: 0;
+  }
   .filter-sidebar {
     border: 0;
     margin-top: 0.35em;
