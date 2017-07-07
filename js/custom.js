@@ -33,6 +33,16 @@ $(function(){
 		});
 	}
 
+	// Check if height is equal or greater then actual scroll
+
+	var scrollHeader = $(window).scrollTop();
+
+    if(scrollHeader  > 100) {
+        $(".trans-header").addClass("change");
+    }
+
+    // sticky bottom scroll
+
 	if ($(window).width() < 769) {
 		$(window).scroll(function() {    
 			var scroll = $(window).scrollTop();
@@ -49,8 +59,8 @@ $(function(){
 	}
 
 
-
 	// Custom menu click and scroll to particular ID
+
 	var topMenu = jQuery(".nav-info__tabs"),
         offset = 40,
         topMenuHeight = topMenu.outerHeight()+offset,
@@ -97,6 +107,7 @@ $(function(){
        }
        
     });
+
 
     // Form id scroll
 
@@ -190,6 +201,8 @@ $(function(){
 			}
 		});
 
+		// detaching sections
+
 		if ($(window).width() <= 768) {
 	    	var coreCat = $('.detach-col-1').detach();
 			$('.sell-re').after(coreCat);
@@ -216,6 +229,8 @@ $(function(){
 			$('.site-overlay').addClass('active');
 			$('body').addClass('blocked');
 		});
+
+		// Fly out toggles
 
 		$('.form-toggle').click(function(){
 			$('.fly-out').addClass('active');
