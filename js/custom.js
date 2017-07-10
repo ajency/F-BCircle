@@ -202,6 +202,14 @@ $(function(){
 			}
 		});
 
+
+		// orientationchange reload
+
+		if (window.DeviceOrientationEvent) {
+		    window.addEventListener('orientationchange', function() { location.reload(); }, false);
+		}
+
+
 		// detaching sections
 
 		if ($(window).width() <= 768) {
