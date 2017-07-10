@@ -262,6 +262,77 @@
 }
 
 
+
+
+@media screen and (max-width: @mobile){
+	.category-modal{
+		.tab-content{
+			.collapse{
+				display: none;
+				&.in{
+					display: block;
+				}
+			}
+			.nodes{
+				height: 300px;
+    			padding: 0.5em 1em;
+    			margin-bottom: 1em;
+    			li{
+    				flex: 1 0 100%;
+    				padding: 0.5em 0;
+    			}
+    			label{
+    				margin-bottom: 0;
+    			}
+			}
+		}
+		.toggle-collapse{
+			width: 100%;
+    		background-color: transparent;
+    		color: #000;
+    		border-radius: 0;
+    		text-align: left;
+    		border: 1px solid #eee;
+    		font-size: 1.05em;
+    		padding: 1em;
+    		display: flex;
+    		align-items: center;
+    		justify-content: space-between;
+    		&[aria-expanded='true']{
+    			background-color: #27b7b0; 
+    			color: #fff;
+    			i{
+					transform: rotate(180deg);
+    			}
+    		}
+    		i{
+    			font-size: 1.3em;
+    			transition: all 0.5s ease;
+    		}
+		}
+		.instructions{
+			padding: 1em;
+			&__title{
+				font-size: 1em;
+			}
+			.fnb-icons{
+				&.meat{
+					width: 40px;
+    				height: 40px;
+    				background-position: -44px -439px;
+				}
+			}
+			.cat-title{
+				font-size: 1.25em;
+			}
+		}
+	}
+}	
+
+
+
+
+
 // ---------------------------
 // DUPLICATE LISTING  -----------
 // ---------------------------
