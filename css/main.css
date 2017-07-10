@@ -1402,12 +1402,6 @@ input[type=checkbox].disabled:before {
 .seller-info .views .c-title span {
   color: inherit;
 }
-.seller-info .verified .verify-icon {
-  color: #11a44a;
-}
-.seller-info .verified .c-title {
-  font-size: 1.15em;
-}
 .seller-info .operations {
   border-bottom: 1px solid #e6e6e6;
 }
@@ -1464,6 +1458,12 @@ input[type=checkbox].disabled:before {
 }
 .seller-info .contact__date .contact__title {
   margin-bottom: 3em;
+}
+.verified .verify-icon {
+  color: #11a44a;
+}
+.verified .c-title {
+  font-size: 1.15em;
 }
 .expand-more li:not(:last-child):not(.line) {
   display: block !important;
@@ -2313,16 +2313,16 @@ input[type=checkbox].disabled:before {
   border-radius: 0;
   font-size: 1.05em;
 }
-.enquiry-form .interested-options li {
+.interested-options li {
   position: relative;
   margin-right: 1.8em;
 }
-.enquiry-form .interested-options .option .cat-icon {
+.interested-options .option .cat-icon {
   box-shadow: 0px 0px 0px 4px rgba(236, 109, 75, 0.45);
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
-.enquiry-form .interested-options .radio {
+.interested-options .radio {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -2332,9 +2332,12 @@ input[type=checkbox].disabled:before {
   outline: 0;
   z-index: 1;
 }
-.enquiry-form .interested-options .radio:checked + .option .cat-icon {
+.interested-options .radio:checked + .option .cat-icon {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
+}
+.interested-options .radio:focus {
+  outline: 0;
 }
 @media screen and (max-width: 768px) {
   .fly-out {

@@ -210,14 +210,6 @@
 			}
 		}
 	}
-	.verified{
-		.verify-icon{
-			color: @success;
-		}
-		.c-title{
-			font-size: 1.15em;
-		}
-	}
 	.operations{
 		border-bottom: 1px solid #e6e6e6;
 		&__title{
@@ -277,6 +269,15 @@
 				margin-bottom: 3em;
 			}
 		}
+	}
+}
+
+.verified{
+	.verify-icon{
+		color: @success;
+	}
+	.c-title{
+		font-size: 1.15em;
 	}
 }
 
@@ -1240,34 +1241,41 @@
     	border-radius: 0;
     	font-size: 1.05em;
 	}
-	.interested-options{
-		li{
-			position: relative;
-			margin-right: 1.8em;
+}
+
+// Interested toggle
+
+.interested-options{
+	li{
+		position: relative;
+		margin-right: 1.8em;
+	}
+	.option{
+		.cat-icon{
+			box-shadow: 0px 0px 0px 4px rgba(236, 109, 75, 0.45);
+			filter: grayscale(1);
 		}
-		.option{
-			.cat-icon{
-				box-shadow: 0px 0px 0px 4px rgba(236, 109, 75, 0.45);
-				filter: grayscale(1);
+	}
+	.radio{
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		cursor: pointer;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		outline: 0;
+		z-index: 1;
+		&:checked{
+			& + .option .cat-icon{
+				filter: grayscale(0);
 			}
 		}
-		.radio{
-			position: absolute;
-    		height: 100%;
-    		width: 100%;
-			cursor: pointer;
-    		-webkit-appearance: none;
-    		-moz-appearance: none;
-    		outline: 0;
-    		z-index: 1;
-			&:checked{
-				& + .option .cat-icon{
-					filter: grayscale(0);
-				}
-			}
+		&:focus{
+			outline: 0;
 		}
 	}
 }
+
 
 @media screen and (max-width: @mobile){
 	// .form-toggle{
