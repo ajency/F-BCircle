@@ -223,6 +223,9 @@
 			&:nth-child(-n+5){
 				display: block;
 			}
+			&.line{
+				display: block;
+			}
 		}
 		.remain{
 			display: block;
@@ -230,11 +233,6 @@
 				font-size: 1.2em;
     			font-weight: 500;
     			padding-left: 5px;
-			}
-		}
-		&.expand-more{
-			li{
-				display: block;
 			}
 		}
 	}
@@ -259,6 +257,12 @@
 	}
 }
 
+
+.expand-more{
+	li:not(:last-child):not(.line){
+		display: block !important;
+	}
+}
 
 
 .sell-re{

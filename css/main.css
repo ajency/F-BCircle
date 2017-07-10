@@ -1416,6 +1416,9 @@ input[type=checkbox].disabled:before {
 .seller-info .cities li:nth-child(-n+5) {
   display: block;
 }
+.seller-info .cities li.line {
+  display: block;
+}
 .seller-info .cities .remain {
   display: block;
 }
@@ -1423,9 +1426,6 @@ input[type=checkbox].disabled:before {
   font-size: 1.2em;
   font-weight: 500;
   padding-left: 5px;
-}
-.seller-info .cities.expand-more li {
-  display: block;
 }
 .seller-info .contact__info,
 .seller-info .contact__enquiry {
@@ -1442,6 +1442,9 @@ input[type=checkbox].disabled:before {
 }
 .seller-info .contact__date .contact__title {
   margin-bottom: 3em;
+}
+.expand-more li:not(:last-child):not(.line) {
+  display: block !important;
 }
 .sell-re {
   padding: 0;
@@ -3114,6 +3117,9 @@ input[type=checkbox].disabled:before {
       -ms-flex: 1;
           flex: 1;
 }
+.filter-cards .recent-data {
+  font-size: 1.1em;
+}
 .featured__icon {
   font-size: 1.3em;
   -webkit-transform: rotate(-20deg);
@@ -3269,6 +3275,12 @@ input[type=checkbox].disabled:before {
         -ms-flex-align: center;
             align-items: center;
   }
+  .filter-cards .operations .cities {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
   .filter-cards .operations .cities .remain__number {
     font-size: 0.95em;
   }
@@ -3318,6 +3330,13 @@ input[type=checkbox].disabled:before {
     border: 0;
     font-size: 1.05em;
     text-align: right;
+  }
+  .filter-cards .recent-updates__content .fnb-btn:active,
+  .filter-cards .recent-updates__content .fnb-btn:focus {
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    color: #ec6d4b;
   }
   .filter-cards .updates-dropDown {
     padding: 1em 15px;

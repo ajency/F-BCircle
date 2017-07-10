@@ -210,21 +210,21 @@ $(function(){
 
 			$('.filter-data').each(function(){
 
-				var detailrow = $(this).find('.detail-move').closest('.seller-info');
+				var detailrow = $(this).find('.recent-updates__content');
 				var detailbtn = $(this).find('.detail-move').detach();
-				$(detailrow).find('.recent-updates__content').append(detailbtn);
+				$(detailrow).append(detailbtn);
 
-				// var recentrow = $(this).find('.recent-data').closest('.seller-info');
-				// var recentData = $(this).find('.recent-data').detach();
-				// $(recentrow).find('.updates-dropDown').append(recentData);
+				var recentrow = $(this).find('.updates-dropDown');
+				var recentData = $(this).find('.recent-data').detach();
+				$(recentrow).append(recentData);
 
 			});
 
 
 			// $('.recent-updates__content').append(detailbtn);
 
-			var recentData = $('.recent-data').detach();
-			$('.updates-dropDown').append(recentData);
+			// var recentData = $('.recent-data').detach();
+			// $('.updates-dropDown').append(recentData);
 
 			$(".show-info").click(function() {
 			    $('html, body').animate({
@@ -243,10 +243,11 @@ $(function(){
 
 		// remaning number click reveal
 
-		$('.remain__number').click(function(){
+		$('.more-show').click(function(){
 			event.preventDefault();
-			$(this).parent().addClass('hidden');
-			$('.cities').addClass('expand-more');
+			$(this).addClass('hidden');
+			$('.line').addClass('hidden');
+			$(this).parent().addClass('expand-more');
 
 		});
 

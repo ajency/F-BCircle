@@ -407,6 +407,9 @@
 			flex: 1
 		}
 	}
+	.recent-data{
+		font-size: 1.1em;
+	}
 }
 
 .featured{
@@ -565,6 +568,7 @@
 				align-items: center;
 			}
 			.cities{
+				flex: 1;
 				.remain__number{
 					font-size: 0.95em;
 				}
@@ -609,6 +613,12 @@
     				border: 0;
     				font-size: 1.05em;
     				text-align: right;
+    				&:active,&:focus{
+    					background-color: transparent;
+    					border: 0;
+    					outline: 0;
+    					color: @accent-primary;
+    				}
 				}
 			}
 		}
