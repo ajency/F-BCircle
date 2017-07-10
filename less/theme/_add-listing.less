@@ -79,10 +79,38 @@
 		}
 	}
 	&__footer{
-		background-color: #f7f7f7;
+		background-color: @highlight;
 		padding: 20px;
 		.save-btn{
 			margin: 0 0 0 auto;
+		}
+	}
+}
+
+.single-category{
+	background-color: @highlight;
+	padding: 10px;
+	position: relative;
+	.cat-label{
+		color: @accent-primary;
+		font-weight: 500;
+		margin-left: 10px;
+	}
+	.delete-cat{
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		border-radius: 50%;
+		border: 2px solid @accent-primary;
+		background-color: #fff;
+		color: @accent-primary;
+		cursor: pointer;
+		&:hover{
+			background-color: @accent-primary;
+			color: #fff;
 		}
 	}
 }
