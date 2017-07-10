@@ -35,7 +35,7 @@
 		.flex-col{
 			padding: 0;
 			&:first-child{
-				flex: 1;	
+				flex: 1;
 			}
 			&:last-child{
 				flex: 0.25;
@@ -328,7 +328,7 @@
 		&__title{
 			margin-bottom: 0;
     		// font-size: 1.25em;
-    		color: @text-lighter;	
+    		color: @text-lighter;
 		}
 	}
 }
@@ -593,8 +593,8 @@
     			color: @text-lighter;
     			position: relative;
     			display: block;
-    			padding: 10px 15px 2px 15px;    
-    			margin-bottom: 10px;		
+    			padding: 10px 15px 2px 15px;
+    			margin-bottom: 10px;
     			&:hover,&:active{
     				border: 0;
     				background-color: transparent;
@@ -691,7 +691,7 @@
 		&__tabs{
 			white-space: nowrap;
     		overflow-x: auto;
-    		overflow-y: hidden;	
+    		overflow-y: hidden;
 		}
     	li{
     		padding-right: 0.5em;
@@ -881,7 +881,7 @@
 .highlights{
 	li{
 		&:not(:first-child){
-			margin-top: 1em;	
+			margin-top: 1em;
 		}
 	}
 	.sub-title{
@@ -1246,11 +1246,13 @@
 // Interested toggle
 
 .interested-options{
+	align-items: flex-start;
 	li{
 		position: relative;
 		margin-right: 1.8em;
 	}
 	.option{
+		justify-content: center;
 		.cat-icon{
 			box-shadow: 0px 0px 0px 4px rgba(236, 109, 75, 0.45);
 			filter: grayscale(1);
@@ -1269,10 +1271,20 @@
 			& + .option .cat-icon{
 				filter: grayscale(0);
 			}
+			& + .option + .interested-label{
+				color: @accent-primary;
+			}
 		}
 		&:focus{
 			outline: 0;
 		}
+	}
+	.interested-label{
+		margin-top: 15px;
+		max-width: 100px;
+		text-align: center;
+		font-size: 0.9em;
+		font-weight: 500;
 	}
 }
 
@@ -1475,7 +1487,7 @@
 	&__thumbnails{
 		li{
 			flex: 1 0 25%;
-	    	padding-right: 0.4em;	
+	    	padding-right: 0.4em;
 	    	a{
 	    		color: inherit;
 				&:hover{
@@ -1516,7 +1528,7 @@
 	    &.active{
 	    	transform: translate3d(0, 0, 0);
 	    }
-	}	
+	}
 
 	.mobile-top{
 		margin: 0 -15px;
