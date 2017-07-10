@@ -2307,6 +2307,9 @@ input[type=checkbox].disabled:before {
     font-size: 1.25em;
     padding-right: 10px;
   }
+  .fly-out .mobile-back .element-title {
+    font-size: 1.05em;
+  }
   .fly-out .mobile-back .left {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
