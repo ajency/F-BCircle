@@ -108,11 +108,39 @@
 
     <!-- content -->
     <div class="container">
+
+        <div class="row p-t-30 mobile-flex breadcrums-container mobile-hide">
+            <div class="col-sm-8 flex-col">
+                <!-- Breadcrums -->
+                <ul class="fnb-breadcrums flex-row">
+                    <li class="fnb-breadcrums__section">
+                        <a href="">
+                            <i class="fa fa-home home-icon" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li class="fnb-breadcrums__section">
+                        <a href="">
+                            <p class="fnb-breadcrums__title">/</p>
+                        </a>
+                    </li>
+                    <li class="fnb-breadcrums__section">
+                        <a href="">
+                            <p class="fnb-breadcrums__title">Add a listing</p>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Breadcrums ends -->
+            </div>
+            <div class="col-sm-4 flex-col">
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-xs-12">
                 <div class="flex-row page-intro m-t-20">
                     <div>
-                        <img src="img/steps.png">
+                        <img src="img/steps.png" class="desk-hide">
+                        <img src="img/steps-orange.png" class="mobile-hide">
                     </div>
                     <div>
                         You are a few steps away from creating a listing on F&amp;B Circle
@@ -121,43 +149,93 @@
 
                 <h3 class="main-heading">Let's get started!</h3>
 
-                <div class="flex-row white-box gray-border get-started">
-                    <img src="img/bulb.png">
-                    <select class="form-control fnb-select">
-                        <option>
-                            6 tips for an effective business listing
-                        </option>
-                    </select>
+                <div class="white-box gray-border get-started">
+                    <div class="desk-hide mobile-flex ">
+                        <img src="img/bulb.png">
+                        <select class="form-control fnb-select">
+                            <option>
+                                6 tips for an effective business listing
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="mobile-hide">
+                        <div class="row">
+                            <div class="col-sm-2 tips">
+                                <span>6</span> tips <br>for an effective <br>business listing
+                            </div>
+                            <div class="col-sm-5">
+                                <ol>
+                                    <li>1) Fill in all the details and complete your listing</li>
+                                    <li>2) Ensure your contact details are correct</li>
+                                    <li>3) An accurate address is required for local customers</li>
+                                </ol>
+                            </div>
+                            <div class="col-sm-5">
+                                <ol>
+                                    <li>4) Describe your business well, highlight your USPs</li>
+                                    <li>5) Use outlined categories wisely</li>
+                                    <li>6) Photos/brochures drive interest - fact!</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="white-box gray-border m-t-10 m-b-10">
-                    <div class="gs-steps">
-                        <a href="#" class="active">Business Information <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        <a href="#" class="">Business Categories <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        <a href="#" class="">Location &amp; Hours of Operation <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        <a href="#" class="">Business Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        <a href="#" class="">Photos &amp; Documents <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                        <a href="#" class="">Go Premium <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <div class="gs-steps">
+                                <a href="#" class="active">Business Information <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a href="#" class="">Business Categories <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a href="#" class="">Location &amp; Hours of Operation <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a href="#" class="">Business Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a href="#" class="">Photos &amp; Documents <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                <a href="#" class="">Go Premium <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+
+                            <div class="view-sample m-t-20 m-b-20">
+                                View what a sample business listing would look like once created.
+                                <div class="m-t-10">
+                                    <a href="#">View the sample</a>
+                                </div>
+                            </div>
+
+                            <div class="why-premium">
+                                <div class="text-darker">
+                                    <strong>Go PREMIUM!</strong> Read why...
+                                </div>
+                                <div class="text-lighter m-t-15">
+                                    More contacts &amp; enquiries from seekers, indirectly more leads.
+                                </div>
+                                <div class="text-lighter m-t-15">
+                                    Premium listings have priority over non premium as they are displayed first on the list view of listings.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-8">
+                            <div class="gs-form">
+                                <h5 class="">Business Information</h5>
+
+                                <div class="m-t-30">
+                                    <label>Tell us the name of your business <span class="text-primary">*</span></label>
+                                    <input type="text" class="form-control fnb-input" placeholder="">
+                                    <div class="text-lighter m-t-5">
+                                        This will be the display name of your listing.
+                                    </div>
+                                </div>
+
+                                <div class="m-t-50">
+                                    <label>Who are you? <span class="text-primary">*</span></label>
+                                    <div class="text-lighter m-t-5">
+                                        The right business type will get you the right enquiries. A listing can be only of one type.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="view-sample m-t-20 m-b-20">
-                        View what a sample business listing would look like once created.
-                        <div class="m-t-10">
-                            <a href="#">View the sample</a>
-                        </div>
-                    </div>
-
-                    <div class="why-premium">
-                        <div class="text-darker">
-                            <strong>Go PREMIUM!</strong> Read why...
-                        </div>
-                        <div class="text-lighter m-t-15">
-                            More contacts &amp; enquiries from seekers, indirectly more leads.
-                        </div>
-                        <div class="text-lighter m-t-15">
-                            Premium listings have priority over non premium as they are displayed first on the list view of listings.
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
