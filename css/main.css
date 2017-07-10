@@ -3619,6 +3619,9 @@ input[type=checkbox].disabled:before {
 .gs-form__footer .save-btn {
   margin: 0 0 0 auto;
 }
+.gs-form__footer .save-btn.center {
+  margin: auto;
+}
 .single-category {
   background-color: #f9f9f9;
   padding: 10px;
@@ -3645,6 +3648,16 @@ input[type=checkbox].disabled:before {
 .single-category .delete-cat:hover {
   background-color: #ec6d4b;
   color: #fff;
+}
+.payment-modes {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.payment-modes li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 33%;
+          flex: 0 0 33%;
+  padding: 5px 10px;
 }
 .view-sample {
   padding: 15px;

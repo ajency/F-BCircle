@@ -83,6 +83,9 @@
 		padding: 20px;
 		.save-btn{
 			margin: 0 0 0 auto;
+			&.center{
+				margin: auto;
+			}
 		}
 	}
 }
@@ -112,6 +115,14 @@
 			background-color: @accent-primary;
 			color: #fff;
 		}
+	}
+}
+
+.payment-modes{
+	flex-wrap: wrap;
+	li{
+		flex: 0 0 33%;
+		padding: 5px 10px;
 	}
 }
 
@@ -213,7 +224,7 @@
 						border-color: rgba(39, 183, 176, 0);
 						border-left-color: @accent-secondary;
 						border-width: 11px;
-						margin-top: -11px;		
+						margin-top: -11px;
 					}
     			}
     		}
