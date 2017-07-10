@@ -1294,6 +1294,14 @@ input[type=checkbox].disabled:before {
     padding: 0 15px;
   }
 }
+@media screen and (max-width: 320px) {
+  .fnb-breadcrums .main-name {
+    width: 138px;
+  }
+  .slide-nav__link {
+    padding: 0 0.1em;
+  }
+}
 .card {
   padding: 2em;
   background-color: #fff;
@@ -1707,6 +1715,12 @@ input[type=checkbox].disabled:before {
   }
   .docs {
     padding-top: 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  .contact .fnb-btn {
+    padding: 0.8em 0.8em;
+    font-size: 0.85em;
   }
 }
 .nav-info__tabs {
@@ -3431,6 +3445,28 @@ input[type=checkbox].disabled:before {
     -webkit-flex: 0.35;
         -ms-flex: 0.35;
             flex: 0.35;
+  }
+}
+@media screen and (max-width: 320px) {
+  .sticky-bottom .element-title {
+    padding-right: 1em;
+    font-size: 1.05em;
+  }
+  .more-details .year {
+    padding-right: 0em;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .article-col {
+    width: 270px;
+  }
+  .similar-business .address-title {
+    font-size: 1em;
+  }
+  .seller-info .cities.cities {
+    padding-left: 10px;
   }
 }
 /*# sourceMappingURL=main.css.map */
