@@ -3883,9 +3883,7 @@ input[type=checkbox].disabled:before {
   .category-modal .tab-content .nodes label {
     margin-bottom: 0;
   }
-  .category-modal .toggle-collapse,
-  .category-modal .toggle-collapse:active,
-  .category-modal .toggle-collapse:hover {
+  .category-modal .toggle-collapse {
     width: 100%;
     background-color: transparent;
     color: #000;
@@ -3894,12 +3892,32 @@ input[type=checkbox].disabled:before {
     border: 1px solid #eee;
     font-size: 1.05em;
     padding: 1em;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
-  .category-modal .toggle-collapse[aria-expanded='true'],
-  .category-modal .toggle-collapse:active[aria-expanded='true'],
-  .category-modal .toggle-collapse:hover[aria-expanded='true'] {
+  .category-modal .toggle-collapse[aria-expanded='true'] {
     background-color: #27b7b0;
     color: #fff;
+  }
+  .category-modal .toggle-collapse[aria-expanded='true'] i {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .category-modal .toggle-collapse i {
+    font-size: 1.3em;
+    -webkit-transition: all 0.5s ease;
+            transition: all 0.5s ease;
   }
   .category-modal .instructions {
     padding: 1em;

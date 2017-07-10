@@ -275,7 +275,7 @@
     			}
 			}
 		}
-		.toggle-collapse,.toggle-collapse:active,.toggle-collapse:hover{
+		.toggle-collapse{
 			width: 100%;
     		background-color: transparent;
     		color: #000;
@@ -284,9 +284,19 @@
     		border: 1px solid #eee;
     		font-size: 1.05em;
     		padding: 1em;
+    		display: flex;
+    		align-items: center;
+    		justify-content: space-between;
     		&[aria-expanded='true']{
     			background-color: #27b7b0; 
     			color: #fff;
+    			i{
+					transform: rotate(180deg);
+    			}
+    		}
+    		i{
+    			font-size: 1.3em;
+    			transition: all 0.5s ease;
     		}
 		}
 		.instructions{
