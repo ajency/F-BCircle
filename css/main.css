@@ -1180,6 +1180,14 @@ input[type=checkbox].disabled:before {
   color: #3cd5ce;
   text-decoration: none;
 }
+.dark-link {
+  color: #4a4a4a;
+  text-decoration: underline;
+}
+.dark-link:hover {
+  color: #646464;
+  text-decoration: none;
+}
 .text-lighter {
   color: #9b9ea0;
 }
@@ -3515,6 +3523,20 @@ input[type=checkbox].disabled:before {
 }
 .gs-form {
   padding: 15px;
+}
+.gs-form .verified .c-title {
+  margin: 0;
+  font-size: 1em;
+}
+.gs-form .verified-toggle p {
+  font-size: 0.9em;
+}
+.gs-form__footer {
+  background-color: #f7f7f7;
+  padding: 20px;
+}
+.gs-form__footer .save-btn {
+  margin: 0 0 0 auto;
 }
 .view-sample {
   padding: 15px;

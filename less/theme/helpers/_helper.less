@@ -103,6 +103,14 @@
     text-decoration: none;
   }
 }
+.dark-link{
+  color: @text-darker;
+  text-decoration: underline;
+  &:hover{
+    color: lighten(@text-darker,10%);
+    text-decoration: none;
+  }
+}
 
 .text-lighter{
   color: @text-lighter;
