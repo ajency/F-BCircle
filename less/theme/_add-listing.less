@@ -7,3 +7,46 @@
 .page-intro{
 	font-size: 0.85em;
 }
+
+.get-started{
+	font-size: 0.8em;
+	padding: 5px;
+}
+
+.gs-steps{
+	a{
+		display: flex;
+		padding: 15px 10px;
+		justify-content: space-between;
+		font-weight: 500;
+		color: lighten(@grey-darker, 10%);
+		i{
+			display: none;
+		}
+		&.active{
+			color: @accent-secondary;
+			i{
+				display: block;
+			}
+		}
+		&.hover{
+			color: @accent-secondary;
+		}
+	}
+}
+
+.view-sample{
+	padding: 15px;
+	font-weight: bold;
+	color: @grey-darker;
+	a{
+		color: @accent-primary;
+	}
+}
+
+.why-premium{
+	padding: 15px;
+	.go-premium{
+		// color: @grey-darker;
+	}
+}

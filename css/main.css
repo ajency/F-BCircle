@@ -1198,6 +1198,9 @@ input[type=checkbox].disabled:before {
 .white-box {
   background-color: #fff;
 }
+.gray-border {
+  border: 1px solid #d8d8d8;
+}
 .slide-nav {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -2901,5 +2904,43 @@ input[type=checkbox].disabled:before {
 }
 .page-intro {
   font-size: 0.85em;
+}
+.get-started {
+  font-size: 0.8em;
+  padding: 5px;
+}
+.gs-steps a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 500;
+  color: #827e7e;
+}
+.gs-steps a i {
+  display: none;
+}
+.gs-steps a.active {
+  color: #27b7b0;
+}
+.gs-steps a.active i {
+  display: block;
+}
+.gs-steps a.hover {
+  color: #27b7b0;
+}
+.view-sample {
+  padding: 15px;
+  font-weight: bold;
+  color: #686565;
+}
+.view-sample a {
+  color: #ec6d4b;
+}
+.why-premium {
+  padding: 15px;
 }
 /*# sourceMappingURL=main.css.map */
