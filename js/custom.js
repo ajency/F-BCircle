@@ -63,7 +63,7 @@ $(function(){
 	// Custom menu click and scroll to particular ID
 
 	var topMenu = jQuery(".nav-info__tabs"),
-        offset = 15,
+        offset = 10,
         topMenuHeight = topMenu.outerHeight()+offset,
         // All list items
         menuItems =  topMenu.find('a[href*="#"]'),

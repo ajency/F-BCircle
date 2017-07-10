@@ -1377,8 +1377,7 @@ input[type=checkbox].disabled:before {
   color: #4a4a4a;
 }
 .seller-info .views .c-title span {
-  color: #4a4a4a;
-  font-weight: 400;
+  color: inherit;
 }
 .seller-info .verified .verify-icon {
   color: #11a44a;
@@ -1970,6 +1969,12 @@ input[type=checkbox].disabled:before {
 .more-details .link-click {
   color: #686565;
 }
+.more-details .operation .data-show {
+  display: none;
+}
+.more-details .operation .expand-more .data-show {
+  display: block;
+}
 .more-details iframe {
   width: 100%;
 }
@@ -2002,13 +2007,18 @@ input[type=checkbox].disabled:before {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  .section-start-head {
+    margin-bottom: 0;
+  }
+}
 .article-col {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 calc(50% - 3em);
       -ms-flex: 1 0 calc(50% - 3em);
           flex: 1 0 calc(50% - 3em);
   max-width: calc(53% - 3em);
-  margin-bottom: 3em;
+  margin-bottom: 1.5em;
 }
 .article-col:first-child {
   margin-right: 3em;
@@ -2464,10 +2474,10 @@ input[type=checkbox].disabled:before {
           flex: 1 0 25%;
   padding-right: 0.4em;
 }
-.photo-gallery__thumbnails li .thumb-click {
+.photo-gallery__thumbnails li a {
   color: inherit;
 }
-.photo-gallery__thumbnails li .thumb-click:hover {
+.photo-gallery__thumbnails li a:hover {
   text-decoration: none;
 }
 .photo-gallery .sub-title {
@@ -2531,7 +2541,7 @@ input[type=checkbox].disabled:before {
   .city-select .fnb-select {
     font-weight: 400;
     font-size: 1em;
-    padding: 0 5px;
+    padding: 0 9px;
   }
   .mobile-side-title {
     margin: 1.5em -15px 0 -15px;
@@ -2556,6 +2566,7 @@ input[type=checkbox].disabled:before {
   .navbar .side-section li .nav-title-size {
     padding: 8px 0;
     font-size: 1em;
+    font-weight: 400;
   }
   .site-overlay {
     position: fixed;
