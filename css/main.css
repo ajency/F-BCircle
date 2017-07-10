@@ -1536,6 +1536,15 @@ input[type=checkbox].disabled:before {
   color: #ffc12b;
   content: "\f005 \f005 \f005 \f005 \f005";
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .seller-info .contact__date .contact__title {
+    margin-bottom: 2em;
+  }
+  .seller-info .contact__info,
+  .seller-info .contact__enquiry {
+    padding-right: 1em;
+  }
+}
 @media screen and (max-width: 768px) {
   .spacer {
     padding: 0;
@@ -1605,7 +1614,7 @@ input[type=checkbox].disabled:before {
   }
   .seller-info .contact__title {
     font-size: 0.95em;
-    text-align: left;
+    text-align: center;
   }
   .seller-info .contact {
     display: inherit;
@@ -1774,6 +1783,21 @@ input[type=checkbox].disabled:before {
 }
 .nav-info .sticky-section.fixed {
   top: 0;
+}
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+  .nav-info li a:hover:after {
+    width: 0;
+  }
+  .nav-info li a.active {
+    border-bottom: 0;
+  }
+  .nav-info li a.active:hover {
+    border-bottom: 0;
+  }
+  .nav-info li a.active:after {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .nav-info {

@@ -366,6 +366,20 @@
 }
 
 
+@media screen and (min-width: @mobile) and (max-width: @sm-tab){
+	.seller-info{
+		.contact__date{
+			.contact__title{
+				margin-bottom: 2em;
+			}
+		}
+		.contact__info,.contact__enquiry{
+			padding-right: 1em;
+		}
+	}
+}
+
+
 @media screen and (max-width: @mobile){
 	.spacer{
 		padding: 0;
@@ -439,7 +453,7 @@
 		}
 		.contact__title{
 			font-size: 0.95em;
-			text-align: left;
+			text-align: center;
 		}
 		.contact{
 			display: inherit;
@@ -624,6 +638,30 @@
 	}
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+	.nav-info{
+    	li{
+    		a{
+    			&:hover{
+    				&:after{
+    					width: 0;
+    				}
+    			}
+    			&.active{
+    				border-bottom: 0;
+    				&:hover{
+    					border-bottom: 0;
+    				}
+    				&:after{
+    					width: 100%;
+    				}
+    			}
+    		}
+    	}
+	}
+}
+
 
 @media screen and (max-width: @mobile){
 	.nav-info{
@@ -663,6 +701,7 @@
 		}
 	}
 }
+
 
 @media screen and (max-width: @sm-tab){
 	.nav-info{
