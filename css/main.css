@@ -1432,7 +1432,7 @@ input[type=checkbox].disabled:before {
 .seller-info .cities li:nth-child(-n+5) {
   display: block;
 }
-.seller-info .cities li.line {
+.seller-info .cities li.line.line {
   display: block;
 }
 .seller-info .cities .remain {
@@ -2904,6 +2904,22 @@ input[type=checkbox].disabled:before {
     background-color: #f9f9f9;
   }
 }
+@media screen and (max-width: 320px) {
+  .search-actions__btn .trigger-section {
+    padding: 1.2em 0.5em;
+    font-size: 0.95em;
+  }
+  .search-actions__btn .trigger-section i {
+    font-size: 1.15em;
+    vertical-align: baseline;
+  }
+  .seller-info.seller-info .cities.cities li:not(.line):not(.more-show) {
+    display: none;
+  }
+  .seller-info.seller-info .cities.cities li:not(.line):not(.more-show):nth-child(-n+2) {
+    display: block;
+  }
+}
 .bg-card {
   background-color: #fff;
   border: 2px solid #ddd;
@@ -3470,6 +3486,15 @@ input[type=checkbox].disabled:before {
   }
   .seller-info .cities.cities {
     padding-left: 10px;
+  }
+  .filter-cards .recent-updates__text {
+    -webkit-box-flex: 0.65;
+    -webkit-flex: 0.65;
+        -ms-flex: 0.65;
+            flex: 0.65;
+  }
+  .filter-cards .recent-updates__text .sub-title {
+    font-size: 1em;
   }
 }
 /*# sourceMappingURL=main.css.map */
