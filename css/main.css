@@ -3823,6 +3823,61 @@ input[type=checkbox].disabled:before {
   cursor: pointer;
   padding-left: 3px;
 }
+@media screen and (max-width: 768px) {
+  .category-modal .tab-content .collapse {
+    display: none;
+  }
+  .category-modal .tab-content .collapse.in {
+    display: block;
+  }
+  .category-modal .tab-content .nodes {
+    height: 300px;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+  }
+  .category-modal .tab-content .nodes li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%;
+    padding: 0.5em 0;
+  }
+  .category-modal .tab-content .nodes label {
+    margin-bottom: 0;
+  }
+  .category-modal .toggle-collapse,
+  .category-modal .toggle-collapse:active,
+  .category-modal .toggle-collapse:hover {
+    width: 100%;
+    background-color: transparent;
+    color: #000;
+    border-radius: 0;
+    text-align: left;
+    border: 1px solid #eee;
+    font-size: 1.05em;
+    padding: 1em;
+  }
+  .category-modal .toggle-collapse[aria-expanded='true'],
+  .category-modal .toggle-collapse:active[aria-expanded='true'],
+  .category-modal .toggle-collapse:hover[aria-expanded='true'] {
+    background-color: #27b7b0;
+    color: #fff;
+  }
+  .category-modal .instructions {
+    padding: 1em;
+  }
+  .category-modal .instructions__title {
+    font-size: 1em;
+  }
+  .category-modal .instructions .fnb-icons.meat {
+    width: 40px;
+    height: 40px;
+    background-position: -44px -439px;
+  }
+  .category-modal .instructions .cat-title {
+    font-size: 1.25em;
+  }
+}
 .duplicate-listing .modal-header,
 .duplicate-listing .modal-body {
   padding: 0;

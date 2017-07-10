@@ -359,7 +359,7 @@
                 <!-- categories select modal -->
 
                 <!-- Button trigger modal -->
-            <!--     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#duplicate-listing">
+                <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#category-select">
                   Launch demo modal
                 </button> -->
 
@@ -367,7 +367,7 @@
                   <div class="modal fnb-modal category-modal fade" id="category-select" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
-                            <div class="modal-header flex-row">
+                            <div class="modal-header flex-row mobile-hide">
                                 <div class="back">
                                      <button class="btn fnb-btn outline full border-btn no-border back-btn" data-dismiss="modal" aria-label="Close"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
                                 </div>
@@ -383,7 +383,7 @@
                                 </div>
                                 <div class="node-select flex-row">
                                     <!-- Nav tabs -->
-                                    <ul class="nav nav-tabs flex-row" role="tablist">
+                                    <ul class="nav nav-tabs flex-row mobile-hide" role="tablist">
                                         <li role="presentation" class="active"><a href="#chicken" aria-controls="chicken" role="tab" data-toggle="tab">Chicken</a></li>
                                         <li role="presentation"><a href="#mutton" aria-controls="mutton" role="tab" data-toggle="tab">Mutton</a></li>
                                         <li role="presentation"><a href="#pork" aria-controls="pork" role="tab" data-toggle="tab">Pork</a></li>
@@ -396,7 +396,11 @@
                                     </ul>
                                     <!-- Tab panes -->
                                     <div class="tab-content">
-                                        <div role="tabpanel" class="tab-pane active" id="chicken">
+                                        <!-- mobile collapse -->
+                                        <button class="btn toggle-collapse fnb-btn outline full border-btn no-border desk-hide" type="button" data-toggle="collapse" data-target="#chicken" aria-expanded="false" aria-controls="chicken">
+                                            Chicken
+                                        </button>
+                                        <div role="tabpanel" class="tab-pane active collapse" id="chicken">
                                             <ul class="nodes">
                                                 <li>
                                                     <label class="flex-row">
@@ -694,9 +698,22 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div role="tabpanel" class="tab-pane" id="mutton">Mutton</div>
-                                        <div role="tabpanel" class="tab-pane" id="pork">Pork</div>
-                                        <div role="tabpanel" class="tab-pane" id="beef">Beef</div>
+
+                                        <button class="btn toggle-collapse fnb-btn outline full border-btn no-border desk-hide" type="button" data-toggle="collapse" data-target="#mutton" aria-expanded="false" aria-controls="mutton">
+                                            Mutton
+                                        </button>
+                                        <div role="tabpanel" class="tab-pane collapse" id="mutton">Mutton</div>
+
+                                        <button class="btn toggle-collapse fnb-btn outline full border-btn no-border desk-hide" type="button" data-toggle="collapse" data-target="#pork" aria-expanded="false" aria-controls="pork">
+                                            Pork
+                                        </button>
+                                        <div role="tabpanel" class="tab-pane collapse" id="pork">Pork</div>
+                                        
+                                        <button class="btn toggle-collapse fnb-btn outline full border-btn no-border desk-hide" type="button" data-toggle="collapse" data-target="#beef" aria-expanded="false" aria-controls="beef">
+                                            Beef
+                                        </button>
+                                        <div role="tabpanel" class="tab-pane collapse" id="beef">Beef</div>
+
                                         <div role="tabpanel" class="tab-pane" id="halal">Halal</div>
                                         <div role="tabpanel" class="tab-pane" id="rabbit">Rabbit</div>
                                         <div role="tabpanel" class="tab-pane" id="sheep">Sheep</div>
@@ -705,7 +722,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="modal-footer">
+                            <div class="modal-footer mobile-hide">
                                 <button class="btn fnb-btn outline full border-btn">save</button>
                             </div>
                         </div>
