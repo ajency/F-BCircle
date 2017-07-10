@@ -193,6 +193,15 @@ span {
   display: block;
   width: 100%;
 }
+.fnb-btn.no-border {
+  border: 0;
+}
+.fnb-btn.no-border:hover,
+.fnb-btn.no-border:active {
+  background-color: transparent;
+  border: 0;
+  color: #ec6d4b;
+}
 .navbar-default .navbar-brand {
   font-size: 2.2em;
   color: #ec6d4b;
