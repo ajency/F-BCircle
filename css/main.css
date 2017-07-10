@@ -3683,6 +3683,10 @@ input[type=checkbox].disabled:before {
 .category-modal .back-btn {
   padding-left: 0;
 }
+.category-modal .back-btn:active {
+  outline: 0;
+  border: 0;
+}
 .category-modal .instructions {
   background-color: #f9f9f9;
   padding: 1.5em;
@@ -3691,7 +3695,7 @@ input[type=checkbox].disabled:before {
   margin-bottom: 10px;
 }
 .category-modal .instructions .cat-title {
-  margin-bottom: 0;
+  margin: 0;
 }
 .node-select {
   margin-top: 2.5em;
