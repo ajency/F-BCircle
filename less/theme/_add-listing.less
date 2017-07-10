@@ -223,6 +223,113 @@
 }
 
 
+// ---------------------------
+// DUPLICATE LISTING  -----------
+// ---------------------------
+
+.duplicate-listing{
+	.modal-header,.modal-body{
+		padding: 0;
+	}
+	.modal-footer{
+		text-align: center;
+		.skip{
+			color: #777474;
+    		font-size: 1.2em;
+    		&:active{
+    			outline: 0;
+    		}
+		}
+	}
+	hr{
+		margin: 10px 0;
+	}
+}
+
+.listing-details{
+	&__title{
+		margin: 0.8em 0;
+	}
+	&__caption{
+		line-height: 1.5;
+	}
+}
+
+.list-entries{
+	padding: 1.3em;
+    border: 1px solid #ddd;
+    margin: 1.5em 3.5em;
+    .left{
+    	flex: 1;
+    }
+}
+
+.capsule-btn{
+	border: 1px solid #ddd;
+    border-radius: 25px;
+    .fnb-btn{
+    	outline: 0;
+    	border-radius: 0;
+    	padding: 0.8em 1.5em;
+    	&:first-child{
+    		border-right: 1px solid #ddd;
+    	}
+    	&:active,&:focus{
+    		outline: 0;
+    	}
+    }
+    .claim{
+    	color: @danger;
+    	&:hover{
+    		color: lighten(@danger,5%);
+    	}
+    }
+    .delete{
+    	color: #000;
+    	&:hover{
+    		color: lighten(#000,5%);
+    	}
+    }
+}
+
+
+@media screen and (max-width: @mobile){
+	.duplicate-listing{
+		hr{
+			margin: 10px 0 0px;
+		}
+	}
+	.listing-details{
+		&__title{
+			font-size: 1.3em;
+    		line-height: 1.5;
+		}
+		&__caption{
+			br{
+				display: none;
+			}
+		}
+	}
+	.list-entries{
+		margin: 0;
+    	padding: 0.8em;
+    	.list-row{
+    		flex-direction: column;
+    		text-align: center;
+    	}
+    	.list-title{
+    		font-size: 1.3em;
+    	}
+	}
+	.capsule-btn{
+		.fnb-btn{
+			padding: 0.6em 1.5em;
+		}
+	}
+}
+
+
+
 
 
 
