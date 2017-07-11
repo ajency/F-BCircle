@@ -606,7 +606,7 @@ input[type=checkbox].disabled:before {
   content: '\f10c';
   color: #ccc;
 }
-@media screen and (device-aspect-ratio: 2/3) {
+@media screen and (device-aspect-ratio: 2/3) and (-webkit-min-device-pixel-ratio: 2) {
   input[type=checkbox] {
     border: 0;
   }
