@@ -189,14 +189,26 @@
                 <div class="white-box gray-border m-t-10 m-b-10">
                     <div class="row">
                         <div class="col-xs-12 col-sm-3">
-                            <div class="gs-steps">
-                                <a href="#" class="active">Business Information <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                <a href="#" class="">Business Categories <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                <a href="#" class="">Location &amp; Hours of Operation <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                <a href="#" class="">Business Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                <a href="#" class="">Photos &amp; Documents <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                                <a href="#" class="">Go Premium <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-                            </div>
+                            <ul class="gs-steps" role="tablist">
+                                <li class="active">
+                                    <a href="#business-info" class="" role="tab" data-toggle="tab">Business Information <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#business-cats" class="" role="tab" data-toggle="tab">Business Categories <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#location-hours" class="" role="tab" data-toggle="tab">Location &amp; Hours of Operation <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#business-details" class="" role="tab" data-toggle="tab">Business Details <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#photos" class="" role="tab" data-toggle="tab">Photos &amp; Documents <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#premium" class="" role="tab" data-toggle="tab">Go Premium <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                                </li>
+                            </ul>
 
                             <div class="view-sample m-t-20 m-b-20">
                                 View what a sample business listing would look like once created.
@@ -219,9 +231,9 @@
                         </div>
 
                         <div class="col-sm-9">
-                            <div class="gs-form">
+                            <div class="gs-form tab-content">
                                 <!-- Business Information -->
-                                <div class="business-info hidden">
+                                <div class="business-info tab-pane fade in active" id="business-info">
                                     <h5 class="">Business Information</h5>
 
                                     <div class="m-t-30">
@@ -303,7 +315,7 @@
                                 <!-- Business Information End -->
 
                                 <!-- Business Categories -->
-                                <div class="business-cats hidden">
+                                <div class="business-cats tab-pane fade" id="business-cats">
                                     <h5 class="">Business Categories</h5>
 
                                     <div class="m-t-30 add-container">
@@ -396,7 +408,7 @@
                                 <!-- Business Categories End -->
 
                                 <!-- Business Details -->
-                                <div class="business-details hidden">
+                                <div class="business-details tab-pane fade" id="business-details">
                                     <h5 class="">Business Details</h5>
 
                                     <div class="m-t-30">
@@ -500,7 +512,7 @@
                                 <!-- Business Details End-->
 
                                 <!-- Location & hours -->
-                                <div class="location-hours">
+                                <div class="location-hours tab-pane fade" id="location-hours">
                                     <h5 class="">Location &amp; Hours of Operation</h5>
 
                                     <div class="m-t-30">
@@ -718,7 +730,7 @@
                                 <!-- Location & hours End -->
 
                                 <!-- Photos -->
-                                <div class="photos hidden">
+                                <div class="photos tab-pane fade" id="photos">
                                     <h5 class="">Photos &amp; Documents</h5>
 
                                     <div class="m-t-30 add-container">
@@ -759,7 +771,7 @@
                                 <!-- Photos End -->
 
                                 <!-- Go Premium -->
-                                <div class="premium hidden">
+                                <div class="premium tab-pane fade" id="premium">
                                     <h5 class="">Go Premium</h5>
                                     <div class="row">
                                         <div class="col-sm-4">

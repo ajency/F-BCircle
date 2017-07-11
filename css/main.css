@@ -3952,18 +3952,19 @@ input[type=radio].fnb-radio.disabled:before {
           justify-content: space-between;
   font-weight: 500;
   color: #827e7e;
+  text-decoration: none;
 }
 .gs-steps a i {
   display: none;
 }
-.gs-steps a.active {
+.gs-steps a:hover {
   color: #27b7b0;
 }
-.gs-steps a.active i {
+.gs-steps li.active a {
+  color: #27b7b0;
+}
+.gs-steps li.active a i {
   display: block;
-}
-.gs-steps a.hover {
-  color: #27b7b0;
 }
 @media (min-width: 768px) {
   .gs-steps {
