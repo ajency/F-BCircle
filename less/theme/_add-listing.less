@@ -212,6 +212,34 @@
 }
 
 
+// ---------------------------
+// PHOTOS  -----------
+// ---------------------------
+
+@media screen and (max-width: @mobile){
+	.image-grid{
+		display: flex;
+    	flex-wrap: wrap;
+    	margin: 0;
+    	&__cols{
+    		flex: 1 0 calc(50% - 1.6em);
+    		padding: 0.5em;
+    	}
+	}
+	.upload-container{
+		margin-top: 2em;
+	}
+	.add-container{
+		margin-top: 1em;
+	}
+	.gs-form__footer{
+		padding: 1em 0;
+	}
+}
+
+
+
+
 
 // ---------------------------
 // CATEGORY MODAL -----------
