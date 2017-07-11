@@ -231,9 +231,9 @@ $(function(){
 				$(publishedAdd).append(publisherow);
 
 			});
-
+			
 			var advAdd = $('.advertisement').detach();
-			$('.filter-data:nth-child(2n)').append(advAdd);
+			$('.adv-after').append(advAdd);
 
 
 			// $('.recent-updates__content').append(detailbtn);
