@@ -4019,6 +4019,34 @@ input[type=radio].fnb-radio.disabled:before {
     padding: 1em 0;
   }
 }
+@media screen and (max-width: 768px) {
+  .cat-select {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .cat-select li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 33.33%;
+            flex: 1 0 33.33%;
+    max-width: 33.33%;
+    margin-right: 0;
+    margin-top: 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  .select-all .checkbox,
+  .payment-modes .checkbox {
+    margin-top: -2px;
+    margin-right: 12px;
+  }
+  .payment-modes li {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    padding: 8px 5px 8px 10px;
+  }
+}
 .category-modal .modal-header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
