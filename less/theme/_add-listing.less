@@ -6,14 +6,45 @@
 
 .page-intro{
 	font-size: 0.85em;
-	@media(min-width: 768px){
+	background-color: #fff;
+	@media(min-width: @mobile){
 		justify-content: center;
 		border: 1px solid @accent-primary;
-		background-color: #fff;
 		font-size: 1.2em;
 		padding: 5px;
 	}
 }
+
+.note-row{
+	justify-content: space-between;
+	&__text{
+		font-size: 0.6em;
+    	font-weight: 400;
+    	margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: @mobile){
+	.page-intro{
+		border: 2px solid @accent-primary;
+    	padding: 0.5em;
+    	&__title{
+    		font-size: 1.1em;
+    		padding-left: 0.5em;
+    	}
+	}
+	.note-row{
+		flex-direction: column;
+		align-items: flex-start;
+		&__text{
+		    font-size: 0.7em;
+		    margin-top: 5px;
+    		margin-bottom: 0.8em;	
+		}
+    
+	}
+}
+
 
 .get-started{
 	font-size: 0.8em;
