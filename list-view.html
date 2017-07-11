@@ -19,14 +19,14 @@
 
 <body class="highlight-color">
     <!-- header -->
-    <header class="fnb-header">
+    <header class="fnb-header trans-header">
         <nav class="navbar navbar-default">
             <div class="container-fluid nav-gap">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header mobile-head mobile-flex">
                     <div class="mobile-head__left mobile-flex">
                         <i class="fa fa-bars sideMenu" aria-hidden="true"></i>
-                        <a class="navbar-brand" href="#">F&amp;BCircle.in</a>
+                        <a class="navbar-brand nav-color" href="#">F&amp;BCircle.in</a>
                     </div>
                     <div class="mobile-head__right mobile-flex">
                         <button class="btn fnb-btn outline mini quote-btn half-border">Get Multiple quotes</button>
@@ -44,7 +44,7 @@
                     <ul class="nav navbar-nav city-select">
                         <!-- <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li> -->
                         <li>
-                            <select class="form-control fnb-select">
+                            <select class="form-control fnb-select nav-color">
                                 <option>--Change city--</option>
                                 <option selected="">Pune</option>
                                 <option>Delhi</option>
@@ -54,31 +54,46 @@
                         </li>
                     </ul>
                     <p class="mobile-side-title">Browse</p>
-                    <ul class="nav navbar-nav navbar-right side-section">
-                        <li>
-                            <a href="" class="nav-title-size">Directory</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav-title-size">Jobs</a>
-                        </li>
-                        <li>
-                            <a href="" class="nav-title-size">News</a>
-                        </li>
-                        <li class="mobile-hide">
-                            <button class="btn fnb-btn outline mini quote-btn half-border">Get Multiple quotes</button>
-                        </li>
-                        <li class="mobile-hide">
-                            <a href="" class="login">
-                                <i class="fa fa-user-circle user-icon" aria-hidden="true"></i>
-                                <p class="login__title nav-title-size p-l-10">Login</p>
-                            </a>
-                        </li>
-                        <li class="mobile-hide">
-                            <a href="" class="side-menu">
-                                <i class="fa fa-bars ham" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="fixed-show">
+                        <ul class="nav navbar-nav navbar-right side-section">
+                            <li class="fixed-section">
+                                <a href="" class="nav-title-size nav-color">
+                                    <i class="fa fa-home home-icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-title-size nav-color">Directory</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-title-size nav-color">Jobs</a>
+                            </li>
+                            <li>
+                                <a href="" class="nav-title-size nav-color">News</a>
+                            </li>
+                            <li class="mobile-hide">
+                                <button class="btn fnb-btn outline mini quote-btn half-border nav-color">Get Multiple quotes</button>
+                            </li>
+                            <li class="mobile-hide">
+                                <a href="" class="login">
+                                    <i class="fa fa-user-circle user-icon nav-color" aria-hidden="true"></i>
+                                    <p class="login__title nav-title-size p-l-10 nav-color">Login</p>
+                                </a>
+                            </li>
+                            <li class="mobile-hide">
+                                <a href="" class="side-menu">
+                                    <i class="fa fa-bars ham nav-color" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right side-section fixed-section">
+                            <li>
+                                <button class="btn fnb-btn outline full border-btn modify-search"><i class="fa fa-search p-r-5" aria-hidden="true"></i> Modify Search</button>
+                            </li>
+                            <li>
+                                <button class="btn fnb-btn primary-btn full border-btn send-enq">Send an Enquiry</button>
+                            </li>
+                        </ul>
+                    </div>
                     <p class="mobile-side-title">Explore</p>
                     <ul class="nav navbar-nav explore side-section">
                         <li>
@@ -115,10 +130,10 @@
                         <div class="mobile-back desk-hide mobile-flex">
                             <div class="left mobile-flex">
                                 <i class="fa fa-arrow-left text-primary" aria-hidden="true"></i>
-                                <p class="element-title heavier m-b-0">Search by</p>
+                                <p class="element-title heavier m-b-0">Search By</p>
                             </div>
                             <div class="right">
-                                <!-- <a href="" class="text-primary heavier element-title">Clear All</a> -->
+                                <a href="" class="text-primary heavier element-title">Clear All</a>
                             </div>
                         </div>
                          <div class="search-section">
@@ -149,7 +164,6 @@
                                     <li role="presentation"><a href="#business" aria-controls="profile" role="tab" data-toggle="tab">Business Name</a></li>
                                 </ul>
 
-
                                   <div class="tab-con flex-row">
                                     <div role="tabpanel" class="tab-pane active" id="category">
                                         <div class="category search-boxes flex-row">
@@ -160,7 +174,7 @@
                                     <div role="tabpanel" class="tab-pane" id="business">
                                         <div class="business search-boxes flex-row">
                                             <i class="fa fa-search p-r-5 icons" aria-hidden="true"></i>
-                                            <input type="text" class="form-control fnb-input" placeholder="Start for a specific business">
+                                            <input type="text" class="form-control fnb-input" placeholder="Search for a specific business">
                                         </div>
                                     </div>
                                   </div>
@@ -313,7 +327,7 @@
                         <!-- results ends -->
                         <div class="filter-group area">
                             <div class="filter-group__header filter-row" data-toggle="collapse" href="#section-area" aria-expanded="false" aria-controls="section-area">
-                                <h6 class="sub-title flex-row">Search by area <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+                                <h6 class="sub-title flex-row">Search by Area <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
                                 </h6>
                             </div>
                             <div class="filter-group__body filter-row collapse in" id="section-area">
@@ -367,7 +381,7 @@
                         <!-- Type of business -->
                         <div class="filter-group business-type no-gap">
                             <div class="filter-group__header filter-row" data-toggle="collapse" href="#section-business" aria-expanded="false" aria-controls="section-business">
-                                <h6 class="sub-title flex-row">Type of business <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
+                                <h6 class="sub-title flex-row">Type of Business <i class="fa fa-angle-down arrow" aria-hidden="true"></i>
                                 </h6>
                             </div>
                             <div class="filter-group__body filter-row collapse in" id="section-business">
@@ -759,7 +773,7 @@
                                 Find Suppliers at<br> lowest rate
                             </p>
                             <p class="m-b-0 sub-title p-t-10 text-color">
-                                Stripe is the best software platfrom for running an internet business.
+                                To get best deals, send your enquiry now.
                             </p>
                         </div>
                         <div class="add-card__form">
@@ -799,7 +813,7 @@
                                     </div>
                                     <div class="col-sm-12">
                                         <div class="form-group p-t-10 p-b-0 m-b-0">
-                                            <button class="btn fnb-btn primary-btn full border-btn send-enquiry">Send Enquiry</button>
+                                            <button class="btn fnb-btn primary-btn full border-btn send-enquiry">Send an Enquiry</button>
                                         </div>
                                     </div>
                                 </div>
@@ -811,7 +825,7 @@
                             <p class="m-b-0 element-title text-capitalise bolder">Get best deals in "Meat &amp; poultry"</p>
                         </div>
                         <div class="actions">
-                            <button class="btn fnb-btn primary-btn full border-btn send-enquiry">Send Enquiry</button>
+                            <button class="btn fnb-btn primary-btn full border-btn send-enquiry">Send an Enquiry</button>
                         </div>
                     </div>
                 </div>

@@ -3518,7 +3518,7 @@ input[type=checkbox].disabled:before {
   }
   .sticky-bottom .element-title {
     font-size: 1.1em;
-    padding-right: 3em;
+    padding-right: 2em;
     line-height: 1.2;
   }
   .sticky-bottom.active {
@@ -3554,6 +3554,9 @@ input[type=checkbox].disabled:before {
   .sticky-bottom .element-title {
     padding-right: 1em;
     font-size: 1.05em;
+  }
+  .sticky-bottom .send-enquiry {
+    padding: 0.85em 1.4em;
   }
   .more-details .year {
     padding-right: 0em;
