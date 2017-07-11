@@ -587,6 +587,33 @@ input[type=checkbox].disabled:before {
   content: '\f10c';
   color: #ccc;
 }
+input[type=radio].fnb-radio {
+  margin-right: 8px;
+  position: relative;
+}
+input[type=radio].fnb-radio:before {
+  content: "\f10c";
+  font-family: 'FontAwesome';
+  background-color: #fff;
+  padding: 0;
+  position: absolute;
+  top: -7px;
+  left: -1px;
+  color: #dcdcdc;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+input[type=radio].fnb-radio:checked:before {
+  content: "\f05d";
+  color: #27b7b0;
+}
+input[type=radio].fnb-radio.disabled {
+  pointer-events: none;
+}
+input[type=radio].fnb-radio.disabled:before {
+  content: '\f10c';
+  color: #ccc;
+}
 .fnb-modal .modal-content {
   border-radius: 0px;
   padding: 1.5em;
@@ -734,7 +761,8 @@ input[type=checkbox].disabled:before {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.fnb-select.select-variant {
+.fnb-select.select-variant,
+.fnb-select.border-bottom {
   border-bottom: 1px solid #ddd;
   font-size: 1.1em;
   font-weight: 400;
@@ -3658,6 +3686,9 @@ input[type=checkbox].disabled:before {
       -ms-flex: 0 0 33%;
           flex: 0 0 33%;
   padding: 5px 10px;
+}
+.hours_day {
+  min-width: 100px;
 }
 .view-sample {
   padding: 15px;
