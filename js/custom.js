@@ -47,7 +47,7 @@ $(function(){
 	if ($(window).width() < 769) {
 		$(window).scroll(function() {
 			var scroll = $(window).scrollTop();
-			if (scroll >= 400) {
+			if (scroll >= 100) {
 			    $('.sticky-bottom').addClass('active');
 			} else {
 			    $('.sticky-bottom').removeClass('active');
@@ -273,7 +273,7 @@ $(function(){
 			$('.searchBy').addClass('active');
 		});
 
-		$('.mobile-back').click(function(){
+		$('.back-icon').click(function(){
 			$('.fly-out').removeClass('active');
 		});
 

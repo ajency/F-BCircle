@@ -604,11 +604,16 @@ input[type=checkbox]:before {
   background-color: #fff;
   padding: 0;
   position: absolute;
-  top: -4px;
-  left: -1px;
+  top: -2px;
+  left: 0;
   color: #dcdcdc;
   font-size: 1.35em;
   cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  input[type=checkbox]:before {
+    top: -4px;
+  }
 }
 input[type=checkbox]:checked:before {
   content: "\f046";
@@ -620,6 +625,14 @@ input[type=checkbox].disabled {
 input[type=checkbox].disabled:before {
   content: '\f10c';
   color: #ccc;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  input[type=checkbox] {
+    border: 0;
+  }
+  input[type=checkbox]:before {
+    font-size: 1.5em;
+  }
 }
 input[type=radio].fnb-radio {
   margin-right: 8px;
@@ -825,8 +838,10 @@ input[type=radio].fnb-radio.disabled:before {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-.fnb-select.select-variant,
-.fnb-select.border-bottom {
+.fnb-select:hover {
+  color: #6b6b6b;
+}
+.fnb-select.select-variant {
   border-bottom: 1px solid #ddd;
   font-size: 1.1em;
   font-weight: 400;
@@ -2722,6 +2737,7 @@ input[type=radio].fnb-radio.disabled:before {
     margin: 0;
     z-index: 2;
     padding: 15px;
+    padding-bottom: 0;
     overflow-y: auto;
     margin-top: -1px;
     -webkit-transform: translate3d(-500px, 0, 0);
@@ -2734,6 +2750,9 @@ input[type=radio].fnb-radio.disabled:before {
   .collapse.m-side-bar.active {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+  }
+  .collapse.m-side-bar .fnb-select.fnb-select:hover {
+    color: inherit;
   }
   .mobile-top {
     margin: 0 -15px;
@@ -3637,6 +3656,11 @@ input[type=radio].fnb-radio.disabled:before {
   }
   .filter-cards .recent-updates__text .sub-title {
     font-size: 1em;
+  }
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .filter-cards__body {
+    display: initial;
   }
 }
 .home-text {
