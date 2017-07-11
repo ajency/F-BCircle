@@ -39,9 +39,9 @@
 		&__text{
 		    font-size: 0.7em;
 		    margin-top: 5px;
-    		margin-bottom: 0.8em;	
+    		margin-bottom: 0.8em;
 		}
-    
+
 	}
 }
 
@@ -75,17 +75,20 @@
 		justify-content: space-between;
 		font-weight: 500;
 		color: lighten(@grey-darker, 10%);
+		text-decoration: none;
 		i{
 			display: none;
 		}
-		&.active{
+		&:hover{
+			color: @accent-secondary;
+		}
+	}
+	li.active{
+		a{
 			color: @accent-secondary;
 			i{
 				display: block;
 			}
-		}
-		&.hover{
-			color: @accent-secondary;
 		}
 	}
 	@media(min-width: 768px){
