@@ -768,6 +768,9 @@ input[type=checkbox].disabled:before {
 .fnb-select:focus {
   box-shadow: none;
 }
+.fnb-select:hover {
+  color: #6b6b6b;
+}
 .fnb-select.select-variant {
   border-bottom: 1px solid #ddd;
   font-size: 1.1em;
@@ -2629,6 +2632,7 @@ input[type=checkbox].disabled:before {
     margin: 0;
     z-index: 2;
     padding: 15px;
+    padding-bottom: 0;
     overflow-y: auto;
     margin-top: -1px;
     -webkit-transform: translate3d(-500px, 0, 0);
@@ -2640,6 +2644,9 @@ input[type=checkbox].disabled:before {
   .collapse.m-side-bar.active {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
+  }
+  .collapse.m-side-bar .fnb-select.fnb-select:hover {
+    color: inherit;
   }
   .mobile-top {
     margin: 0 -15px;

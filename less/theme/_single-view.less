@@ -1508,6 +1508,7 @@
 		margin: 0;
 		z-index: 2;
 		padding: 15px;
+		padding-bottom: 0;
 	    overflow-y: auto;
 	    margin-top: -1px;
 	    transform: translate3d(-500px, 0, 0);
@@ -1515,6 +1516,11 @@
 	    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
 	    &.active{
 	    	transform: translate3d(0, 0, 0);
+	    }
+	    .fnb-select.fnb-select{
+	    	&:hover{
+	    		color: inherit;
+	    	}
 	    }
 	}	
 
