@@ -31,7 +31,7 @@ $(function(){
 			    $('.sticky-bottom').removeClass('active');
 			}
 		});
-		
+
 		// Check if height is equal or greater then actual scroll
 
 		var scrollHeader = $(window).scrollTop();
@@ -299,6 +299,12 @@ $(function(){
 		$(".recent-updates__text").click(function() {
 		    $(this).parent('.recent-updates').siblings('.updates-dropDown').slideToggle('slow');
 		    $(this).toggleClass('active');
+		});
+
+		$('.dropify').dropify({
+			messages: {
+		        'default': 'Add Photo'
+		    }
 		});
 
 
