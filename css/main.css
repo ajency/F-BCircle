@@ -606,7 +606,7 @@ input[type=checkbox].disabled:before {
   content: '\f10c';
   color: #ccc;
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   input[type=checkbox] {
     border: 0;
   }
