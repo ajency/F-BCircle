@@ -841,7 +841,8 @@ input[type=radio].fnb-radio.disabled:before {
 .fnb-select:hover {
   color: #6b6b6b;
 }
-.fnb-select.select-variant {
+.fnb-select.select-variant,
+.fnb-select.border-bottom {
   border-bottom: 1px solid #ddd;
   font-size: 1.1em;
   font-weight: 400;
@@ -3914,6 +3915,25 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .inputfile + label {
   cursor: pointer;
+}
+.plan {
+  padding: 2em 3em;
+  border: 2px solid #d8d8d8;
+}
+.plan__title {
+  font-size: 1.2em;
+}
+.plan__price {
+  font-size: 0.85em;
+  margin-bottom: 2em;
+}
+.plan__details {
+  font-size: 0.9em;
+}
+.plan .fa {
+  font-size: 2em;
+  color: #11a44a;
+  margin-top: 1em;
 }
 .category-modal .modal-header {
   -webkit-box-pack: justify;
