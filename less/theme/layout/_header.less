@@ -37,6 +37,11 @@
     				border-color: @accent-primary;
 				}
 			}
+			.fnb-select{
+				&:active{
+					color: @text-color;
+				}
+			}
 		}
 		&.change{
     		background-color: #fff;
@@ -121,7 +126,7 @@
 	.fnb-header{
 		&.trans-header{
 			position: relative;
-			z-index: inherit;
+			z-index: initial;
 			.navbar{
 				background-color: #fff;
 				.nav-color{

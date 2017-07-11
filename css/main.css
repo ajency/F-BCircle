@@ -712,6 +712,9 @@ input[type=radio].fnb-radio.disabled:before {
   background-color: transparent;
   border-color: #ec6d4b;
 }
+.fnb-header.trans-header .navbar .fnb-select:active {
+  color: #6b6b6b;
+}
 .fnb-header.trans-header.change {
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.32);
@@ -797,7 +800,7 @@ input[type=radio].fnb-radio.disabled:before {
 @media screen and (max-width: 768px) {
   .fnb-header.trans-header {
     position: relative;
-    z-index: inherit;
+    z-index: initial;
   }
   .fnb-header.trans-header .navbar {
     background-color: #fff;
@@ -1402,6 +1405,11 @@ input[type=radio].fnb-radio.disabled:before {
   overflow: hidden;
   margin-left: 280px;
   position: fixed;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .blocked {
+    cursor: pointer;
+  }
 }
 @media screen and (max-width: 769px) {
   .mobile-hide {
@@ -3489,6 +3497,10 @@ input[type=radio].fnb-radio.disabled:before {
     font-size: 1em;
     font-weight: 400;
   }
+  .filter-cards .published-date {
+    font-size: 0.9em;
+    padding-left: 1em;
+  }
   .filter-cards .cat-holder {
     margin-top: 0;
     padding-top: 10px;
@@ -3607,6 +3619,9 @@ input[type=radio].fnb-radio.disabled:before {
   .row-margin {
     margin-top: 15px;
   }
+  .advertisement {
+    margin-bottom: 1.5em;
+  }
 }
 @media screen and (min-width: 1024px) and (max-width: 1200px) {
   .custom-col-3 {
@@ -3658,8 +3673,17 @@ input[type=radio].fnb-radio.disabled:before {
   .filter-cards .recent-updates__text .sub-title {
     font-size: 1em;
   }
+  .filter-cards .fnb-label {
+    padding: 0.3em 0.8em;
+  }
+  .filter-cards .verified .c-title {
+    font-size: 0.9em;
+  }
+  .filter-cards .published-date {
+    padding-left: 0.8em;
+  }
 }
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .filter-cards__body {
     display: initial;
   }
