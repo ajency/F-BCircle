@@ -14,11 +14,14 @@ input[type=checkbox] {
         background-color: #fff;
         padding: 0;
         position: absolute;
-        top: -4px;
-        left: -1px;
+        top: -2px;
+        left: 0;
         color: #dcdcdc;
         font-size: 1.35em;
         cursor: pointer;
+        @media screen and (min-width: @sm-tab){
+        	top: -4px;
+        }
     }
     &:checked {
         &:before {

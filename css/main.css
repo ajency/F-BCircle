@@ -584,11 +584,16 @@ input[type=checkbox]:before {
   background-color: #fff;
   padding: 0;
   position: absolute;
-  top: -4px;
-  left: -1px;
+  top: -2px;
+  left: 0;
   color: #dcdcdc;
   font-size: 1.35em;
   cursor: pointer;
+}
+@media screen and (min-width: 1024px) {
+  input[type=checkbox]:before {
+    top: -4px;
+  }
 }
 input[type=checkbox]:checked:before {
   content: "\f046";
