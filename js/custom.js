@@ -226,7 +226,14 @@ $(function(){
 				var recentData = $(this).find('.recent-data').detach();
 				$(recentrow).append(recentData);
 
+				var publishedAdd = $(this).find('.stats');
+				var publisherow = $(this).find('.published-date').detach();
+				$(publishedAdd).append(publisherow);
+
 			});
+			
+			var advAdd = $('.advertisement').detach();
+			$('.adv-after').append(advAdd);
 
 
 			// $('.recent-updates__content').append(detailbtn);
