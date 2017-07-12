@@ -231,7 +231,7 @@ $(function(){
 				$(publishedAdd).append(publisherow);
 
 			});
-			
+
 			var advAdd = $('.advertisement').detach();
 			$('.adv-after').append(advAdd);
 
@@ -307,12 +307,5 @@ $(function(){
 		    $(this).parent('.recent-updates').siblings('.updates-dropDown').slideToggle('slow');
 		    $(this).toggleClass('active');
 		});
-
-		$('.dropify').dropify({
-			messages: {
-		        'default': 'Add Photo'
-		    }
-		});
-
 
 });
