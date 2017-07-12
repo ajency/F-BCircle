@@ -95,6 +95,7 @@
 		padding: 15px 10px;
 		justify-content: space-between;
 		font-weight: 500;
+		font-size: 1.1em;
 		color: lighten(@grey-darker, 10%);
 		text-decoration: none;
 		i{
@@ -187,7 +188,8 @@
 
 .view-sample{
 	padding: 15px;
-	font-weight: bold;
+	font-weight: 500;
+	font-size: 1.05em;
 	color: @grey-darker;
 	a{
 		color: @accent-primary;
@@ -196,6 +198,7 @@
 
 .why-premium{
 	padding: 15px;
+	font-size: 1.05em;
 	.go-premium{
 		// color: @grey-darker;
 	}
@@ -238,6 +241,17 @@
 .hours-section{
 	width: 100%;
 }
+
+
+@media screen and (max-width: @mobile){
+	.gs-steps{
+		a{
+			font-size: 1.05em;
+		}
+	}
+}
+
+
 
 
 // ---------------------------
@@ -344,7 +358,7 @@
 	.business-email{
 		margin: 1em 0;
 		.fnb-input{
-			margin: 0.8em 0;
+			margin: 0 0 0.8em 0;
 			text-indent: 10px;
 			font-size: 0.9em;
 		}
