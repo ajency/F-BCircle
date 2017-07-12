@@ -3969,6 +3969,7 @@ input[type=radio].fnb-radio.disabled:before {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-weight: 500;
+  font-size: 1.1em;
   color: #827e7e;
   text-decoration: none;
 }
@@ -4056,7 +4057,8 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .view-sample {
   padding: 15px;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.05em;
   color: #686565;
 }
 .view-sample a {
@@ -4064,6 +4066,7 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .why-premium {
   padding: 15px;
+  font-size: 1.05em;
 }
 .inputfile {
   width: 0.1px;
@@ -4097,6 +4100,11 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .hours-section {
   width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .gs-steps a {
+    font-size: 1.05em;
+  }
 }
 @media screen and (max-width: 768px) {
   .image-grid {
@@ -4194,7 +4202,7 @@ input[type=radio].fnb-radio.disabled:before {
     margin: 1em 0;
   }
   .business-email .fnb-input {
-    margin: 0.8em 0;
+    margin: 0 0 0.8em 0;
     text-indent: 10px;
     font-size: 0.9em;
   }
