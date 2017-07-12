@@ -40,4 +40,9 @@
 
   $('.flexdatalist').flexdatalist();
 
+  $('body').on('click', '.tips', function() {
+    $(this).toggleClass('open');
+    return $('.tips__steps.collapse').collapse('toggle');
+  });
+
 }).call(this);

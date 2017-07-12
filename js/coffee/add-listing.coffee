@@ -36,3 +36,8 @@ if $(window).width() <= 768
 #jQuery flexdatalist
 
 $('.flexdatalist').flexdatalist()    
+
+# Tips Toggle
+$('body').on 'click', '.tips', ->
+	$(this).toggleClass 'open'
+	$('.tips__steps.collapse').collapse('toggle')

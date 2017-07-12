@@ -57,6 +57,7 @@ $(function(){
    			}
 		});
 		$('.tab-con').addClass('tab-content');
+		$('.mobile-collapse').addClass('collapse');
 	}
 
 
