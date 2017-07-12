@@ -4044,6 +4044,9 @@ input[type=radio].fnb-radio.disabled:before {
 .hours-section {
   width: 100%;
 }
+.flexdatalist-multiple {
+  border-bottom: 1px solid #ddd !important;
+}
 @media screen and (max-width: 768px) {
   .gs-steps a {
     font-size: 1.05em;
