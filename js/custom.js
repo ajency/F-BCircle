@@ -232,6 +232,16 @@ $(function(){
 
 			});
 
+
+			$('.single-category').each(function(){
+
+				var branchAdd = $(this).find('.branch-row');
+				var branchrow = $(this).find('.branch').detach();
+				$(branchAdd).append(branchrow);
+
+			});
+
+
 			var advAdd = $('.advertisement').detach();
 			$('.adv-after').append(advAdd);
 
