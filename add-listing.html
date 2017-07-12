@@ -409,7 +409,7 @@
                                                 </div>
                                             </div>
                                             <div class="m-t-20">
-                                               <a href="#" class="dark-link heavier">+ Edit or Add more categories</a>
+                                               <a href="#category-select" data-toggle="modal" data-target="#category-select" class="dark-link heavier">+ Edit or Add more categories</a>
                                             </div>
                                         </div>
                                     </div>
@@ -848,9 +848,9 @@
                                     <!-- Go Premium End -->
 
                                     <div class="gs-form__footer flex-row m-t-40">
-                                        <button class="btn fnb-btn outline no-border"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+                                        <button class="btn fnb-btn outline no-border gs-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
                                         <button class="btn fnb-btn primary-btn full save-btn center">Save &amp; Continue</button>
-                                        <button class="btn fnb-btn outline no-border">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                        <button class="btn fnb-btn outline no-border gs-next">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -867,7 +867,7 @@
                 </button> -->
 
                 <!-- Modal -->
-                  <div class="modal fnb-modal category-modal fade" id="category-select" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal fnb-modal category-modal fade" id="category-select" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
                             <div class="modal-header flex-row mobile-hide">
@@ -1283,8 +1283,6 @@
                     </div>
                 </div>
 
-
-
             </div>
         </div>
     </div>
@@ -1306,6 +1304,8 @@
     <script type="text/javascript" src="js/dropify.js"></script>
     <!-- Custom file input -->
     <script type="text/javascript" src="js/jquery.custom-file-input.js"></script>
+    <!-- Add listing -->
+    <script type="text/javascript" src="js/add-listing.js"></script>
     <!-- custom script -->
     <script type="text/javascript" src="js/custom.js"></script>
 </body>
