@@ -215,6 +215,7 @@
 }
 
 
+
 // ---------------------------
 // PHOTOS  -----------
 // ---------------------------
@@ -261,10 +262,71 @@
 
 
 // ---------------------------
+// BUSINESS INFO -----------
+// ---------------------------
+
+@media screen and (max-width: @mobile){
+	.fly-out{
+		&.highlight-color{
+			background-color: #f9f9f9;
+		}
+	}
+	.gs-form{
+		background-color: #fff;
+    	margin: 15px;
+    	border: 1px solid #eee;
+	}
+	.c-gap{
+		margin-top: 2em;
+	}
+	.no-m-l{
+		margin-left: 0;
+	}
+	.no-m-t-{
+		margin-top: 0;
+	}
+	.business-email{
+		margin: 1em 0;
+		.fnb-input{
+			margin: 0.8em 0;
+			text-indent: 10px;
+			font-size: 0.9em;
+		}
+		.verified-toggle{
+			flex-direction: row-reverse;
+			.toggle{
+				margin-right: 0;
+			}
+		}
+	}
+	.add-another{
+		color: @accent-secondary;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.no-m-b{
+		margin-bottom: 0;
+	}
+}
+
+
+
+// ---------------------------
 // BUSINESS DETAILS -----------
 // ---------------------------
 
 @media screen and (max-width: @mobile){
+	.fly-out{
+		[class*='col-'].col-xs-6{
+			width: 50%;
+		}
+		[class*='col-'].col-xs-4{
+			width: 33.33%;
+		}
+		[class*='col-'].col-xs-8{
+			width: 66.66%;
+		}
+	}
 	.select-all,.payment-modes{
 		.checkbox{
 			margin-top: -2px;
