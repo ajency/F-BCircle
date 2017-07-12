@@ -24,3 +24,8 @@ $('body').on 'click', 'input:radio[name=\'categories\']', ->
 $('body').on 'click', '.sub-category-back', ->
 	$('.main-category').removeClass 'hidden'
 	$('.sub-category').addClass 'hidden'
+
+# Tips Toggle
+$('body').on 'click', '.tips', ->
+	$(this).toggleClass 'open'
+	$('.tips__steps.collapse').collapse('toggle')

@@ -3865,7 +3865,7 @@ input[type=radio].fnb-radio.disabled:before {
   }
 }
 .get-started {
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 5px;
 }
 @media (min-width: 768px) {
@@ -3884,6 +3884,25 @@ input[type=radio].fnb-radio.disabled:before {
   }
   .get-started li {
     line-height: 2em;
+  }
+}
+@media (max-width: 767px) {
+  .get-started .tips .fa {
+    margin-top: 8px;
+    margin-right: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .get-started .tips.open .fa {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  .get-started .tips__steps {
+    padding: 0 25px;
+    line-height: 25px;
+  }
+  .get-started .tips__steps li {
+    padding: 8px 0;
   }
 }
 .gs-steps a {
