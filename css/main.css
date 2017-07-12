@@ -4141,7 +4141,7 @@ input[type=radio].fnb-radio.disabled:before {
   }
 }
 @media screen and (max-width: 768px) {
-  .fly-out.highlight-color {
+  .fly-out.slide-bg {
     background-color: #f9f9f9;
   }
   .gs-form {
