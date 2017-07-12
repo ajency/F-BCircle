@@ -395,6 +395,66 @@
 }
 
 
+// ---------------------------
+// PREMIUM -----------
+// ---------------------------
+
+@media screen and (max-width: @mobile){
+	.plan{
+		padding: 1em;
+    	box-shadow: @high-shadow-1;
+    	border: 0;
+    	text-align: left;
+    	&__container{
+    		justify-content: space-between;
+    	}
+    	&__title{
+    		font-weight: 500;
+    	}
+    	&__price{
+    		margin-bottom: 0;
+    		font-size: 1em;
+    		color: @text-color;
+    	}
+    	.fa{
+    		margin-top: 0;
+    	}
+    	&__details{
+    		color: @text-color;
+    		font-size: 1.05em;
+    		margin-top: 1em;
+    	}
+	}
+	.duration-choose{
+		display: flex;
+    	align-items: center;
+    	.dur-col{
+    		padding: 0;
+    		padding-left: 0.8em;
+    	}
+    	.col-text{
+    		flex: 1;
+    		&__title{
+    			padding-left: 0.2em;
+    		}
+    		.fnb-select{
+    			font-size: 0.95em;
+    			padding-left: 0.4em;
+    		}
+    	}
+    	.col-btn{
+    		flex: 0.6;
+    		text-align: center;
+    		.fnb-btn{
+    			padding: 0.8em 1.3em;
+    			font-size: 0.9em;
+    		}
+    	}
+	}
+}
+
+
+
 
 // ---------------------------
 // CATEGORY MODAL -----------
