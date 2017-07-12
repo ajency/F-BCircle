@@ -12,7 +12,7 @@ $('.dropify').dropify messages: 'default': 'Add Photo'
 $('body').on 'click', 'input:radio[name=\'categories\']', ->
 	# Toggle wrappers
 	$('.main-category').addClass 'hidden'
-	$('.sub-category').removeClass 'hidden'
+	$('.sub-category').addClass 'shown'
 	# Update category name
 	cat_name = $(this).data('name')
 	$('.main-cat-name').html(cat_name)
@@ -23,7 +23,7 @@ $('body').on 'click', 'input:radio[name=\'categories\']', ->
 
 $('body').on 'click', '.sub-category-back', ->
 	$('.main-category').removeClass 'hidden'
-	$('.sub-category').addClass 'hidden'
+	$('.sub-category').removeClass 'shown'
 
 # Tips Toggle
 $('body').on 'click', '.tips', ->
