@@ -252,14 +252,46 @@
 
 @media screen and (max-width: @mobile){
 	.cat-select{
-		flex-wrap: wrap;
+		margin-top: 0;
+	    white-space: nowrap;
+	    overflow-x: scroll;
+	    overflow-y: hidden;
     	margin-top: 0;
     	li{
-    		flex: 1 0 33.33%;
-    		max-width: 33.33%;
-    		margin-right: 0;
-    		margin-top: 1.5em;
+		    flex: 1 0 40%;
+		    margin-right: 0;
+		    margin-top: 1.5em;
+		    white-space: normal;
+		    padding-right: 0.5em;
     	}
+	}
+	.categoryContainer{
+		flex-direction: column;
+		.fnb-cat{
+			margin-top: 1em;
+			li{
+				display: none;
+				&:nth-child(-n+3),&.more-show{
+					display: block;
+				}
+			}
+		}
+	}
+	.branch-row{
+		padding-left: 1em;
+		.cat-label{
+			margin-left: 0;
+		}
+	}
+}
+
+@media screen and (max-width: @xs-mobile){
+	.business-cats{
+		.interested-options{
+			.interested-label{
+				font-size: 0.8em;
+			}
+		}
 	}
 }
 
@@ -285,7 +317,7 @@
 	.no-m-l{
 		margin-left: 0;
 	}
-	.no-m-t-{
+	.no-m-t{
 		margin-top: 0;
 	}
 	.business-email{
@@ -309,6 +341,31 @@
 	}
 	.no-m-b{
 		margin-bottom: 0;
+	}
+}
+
+@media screen and (max-width: @xs-mobile){
+	.business-email{
+		.verified{
+			width: 100px;
+    		margin-bottom: 0.5em;
+    		.c-title,a{
+    			font-size: 0.9em;
+    		}
+		}
+		.verified-toggle{
+			margin-top: 5px;
+			p{
+				font-size: 0.85em;
+			}
+			&.no-m-t{
+				margin-top: 0;
+				margin-left: -15px;
+			}
+		}
+	}
+	.save-btn{
+		font-size: 0.8em;
 	}
 }
 
@@ -362,7 +419,13 @@
 	}
 }
 
-
+@media screen and (max-width: @xs-mobile){
+	.hours-section{
+		.fnb-select{
+			font-size: 0.8em;
+		}
+	}
+}
 
 // ---------------------------
 // BUSINESS DETAILS -----------
@@ -387,9 +450,17 @@
 		}
 	}
 	.payment-modes{
+		align-items: baseline;
 		li{
 			flex: 1 0 50%;
 			padding: 8px 5px 8px 10px;
+		}
+		label{
+			align-items: baseline;
+			font-size: 0.9em;
+		}
+		.checkbox{
+			top: 2px;
 		}
 	}
 }
@@ -453,7 +524,18 @@
 	}
 }
 
-
+@media screen and (max-width: @xs-mobile){
+	.duration-choose{
+    	.col-btn{
+    		flex: 0.6;
+    		text-align: center;
+    		.fnb-btn{
+    			padding: 0.8em 1.2em;
+    			font-size: 0.8em;
+    		}
+    	}
+	}
+}
 
 
 // ---------------------------
