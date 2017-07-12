@@ -24,3 +24,15 @@ $('body').on 'click', 'input:radio[name=\'categories\']', ->
 $('body').on 'click', '.sub-category-back', ->
 	$('.main-category').removeClass 'hidden'
 	$('.sub-category').addClass 'hidden'
+
+# detaching sections
+if $(window).width() <= 768
+  $('.single-category').each ->
+    branchAdd = $(this).find('.branch-row')
+    branchrow = $(this).find('.branch').detach()
+    $(branchAdd).append branchrow
+    return
+
+#jQuery flexdatalist
+
+$('.flexdatalist').flexdatalist()    

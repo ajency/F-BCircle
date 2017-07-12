@@ -29,4 +29,15 @@
     return $('.sub-category').addClass('hidden');
   });
 
+  if ($(window).width() <= 768) {
+    $('.single-category').each(function() {
+      var branchAdd, branchrow;
+      branchAdd = $(this).find('.branch-row');
+      branchrow = $(this).find('.branch').detach();
+      $(branchAdd).append(branchrow);
+    });
+  }
+
+  $('.flexdatalist').flexdatalist();
+
 }).call(this);
