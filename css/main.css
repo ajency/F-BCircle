@@ -2600,6 +2600,10 @@ input[type=radio].fnb-radio.disabled:before {
     background-color: #fff;
     color: #000;
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
   }
   .fly-out .mobile-back i {
     font-size: 1.25em;
@@ -2628,6 +2632,11 @@ input[type=radio].fnb-radio.disabled:before {
     -webkit-transform: translateX(0);
         -ms-transform: translateX(0);
             transform: translateX(0);
+  }
+  .fly-out__content {
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 50px;
   }
 }
 .browse-cat li {

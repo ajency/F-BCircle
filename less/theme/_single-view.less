@@ -1316,6 +1316,10 @@
     		background-color: #fff;
     		color: #000;
     		box-shadow: @high-shadow-1;
+    		position: fixed;
+    		top: 0;
+    		width: 100%;
+    		z-index: 2;
     		i{
     			font-size: 1.25em;
     			padding-right: 10px;
@@ -1339,6 +1343,11 @@
 		}
 		&.active{
 			transform: translateX(0);
+		}
+		&__content{
+			height: 100vh;
+			overflow-y: auto;
+			padding-top: 50px;
 		}
 	}
 }
@@ -1537,7 +1546,7 @@
 	    		color: inherit;
 	    	}
 	    }
-	}	
+	}
 
 	.mobile-top{
 		margin: 0 -15px;
