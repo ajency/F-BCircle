@@ -148,6 +148,10 @@
   color: inherit;
 }
 
+.text-decor{
+  text-decoration: underline;
+}
+
 .bat-color{
   color: #000;
 }
@@ -157,6 +161,15 @@
     white-space: nowrap;
     overflow: hidden;
 }
+
+@media screen and (max-width: @mobile){
+   .link-center{
+      display: flex;
+      justify-content: center;
+  } 
+}
+
+
 
 .blocked{
   overflow: hidden;
