@@ -16,7 +16,9 @@ ul,ol{
 // For mobile sidemenu to work smoothly
 body{
 	width: 100%;
-  	transition: all 0.8s cubic-bezier(0.44, -0.25, 0.75, 1);
+	@media screen and (max-width: @mobile){
+  		transition: all 0.8s cubic-bezier(0.44, -0.25, 0.75, 1);
+	}
   	&.no-transition{
   		transition: initial;
   	}

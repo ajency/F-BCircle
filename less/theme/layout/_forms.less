@@ -26,7 +26,7 @@
     &:hover{
       color: @text-color;
     }
-    &.select-variant{
+    &.select-variant, &.border-bottom{
         border-bottom: 1px solid #ddd;
         font-size: 1.1em;
         font-weight: 400;
@@ -41,47 +41,47 @@
 
 .fnb-input,.fnb-textarea{
 	border: 0;
-    box-shadow: none;
-    background-color: transparent;
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
-    font-size: 1.05em;
-    padding-left: 0;
-    color: @text-color;
-    &:active,&:focus{
-    	border: 0;
-    	border-color: inherit;
-    	box-shadow: none;
-    	border-bottom: 1px solid #ddd;
-    }
-    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      font-weight: 400;
-    }
-    &::-moz-placeholder { /* Firefox 19+ */
-      font-weight: 400;
-    }
-    &:-ms-input-placeholder { /* IE 10+ */
-      font-weight: 400;
-    }
-    &:-moz-placeholder { /* Firefox 18- */
-      font-weight: 400;
-    }
+  box-shadow: none;
+  background-color: transparent;
+  border-bottom: 1px solid #ddd;
+  border-radius: 0;
+  font-size: 1.05em;
+  padding-left: 0;
+  color: @text-color;
+  &:active,&:focus{
+  	border: 0;
+  	border-color: inherit;
+  	box-shadow: none;
+  	border-bottom: 1px solid #ddd;
+  }
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    font-weight: 400;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    font-weight: 400;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    font-weight: 400;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    font-weight: 400;
+  }
 }
 
 // Labels
 
 .title-label{
-    display: block;
-    font-size: 1.05em;
-    font-weight: 400;
-    margin: 0.8em 0;
+  display: block;
+  font-size: 1.05em;
+  font-weight: 400;
+  margin: 0.8em 0;
 }
 
 // form lables
 .form-label{
-    font-weight: 400;
-    color: #9b9ea0;
-    font-size: 1.1em;
+  font-weight: 400;
+  color: #9b9ea0;
+  font-size: 1.1em;
 }
 
 
@@ -95,29 +95,29 @@
   background-color: #fff;
   overflow: hidden;
   box-shadow: inset 0 0 2px 1px rgba(0,0,0,.16);
-      &__check {
-      position: absolute;
-      display: block;
-      cursor: pointer;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: 0;
-      z-index: 6;
-      &:checked{
-        & ~ .track{
-            box-shadow: inset 0 0 0 20px rgb(50, 187, 180);
-        }
-        & ~ .switch{
-            right: 2px;
-            left: 22px;
-            transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
-            transition-property: left, right;
-            transition-delay: .05s, 0s;
-        }
+  &__check {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 6;
+    &:checked{
+      & ~ .track{
+        box-shadow: inset 0 0 0 20px rgb(50, 187, 180);
+      }
+      & ~ .switch{
+        right: 2px;
+        left: 22px;
+        transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+        transition-property: left, right;
+        transition-delay: .05s, 0s;
       }
     }
+  }
 }
 
 

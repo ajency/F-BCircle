@@ -1,0 +1,81 @@
+
+// ---------------------------
+// MODALS STYLES -----------
+// ---------------------------
+
+
+.fnb-modal{
+	.modal-content{
+		border-radius: 0px;
+    	padding: 1.5em;
+	}
+	.modal-header{
+		border: 0;
+	}
+	.modal-body{
+		padding: 1em 0;
+	}
+	.modal-footer{
+		padding: 0;
+		border: 0;
+	}
+}
+
+.multilevel-modal{
+	@media(min-width: 768px){
+		.modal-header{
+			.mobile-back{
+				display: none;
+				&.desk-level-two{
+					display: flex;
+				}
+			}
+		}
+	}
+	@media(max-width: 767px){
+		.modal-header{
+			.mobile-back{
+				box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
+				margin: 0;
+				padding: 10px;
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				background-color: #fff;
+				z-index: 2;
+				.fnb-btn.no-border{
+					color: darken(@text-darker, 10%);
+					font-size: 1.1em;
+					.fa{
+						color: @accent-primary;
+					}
+				}
+			}
+			.level-two{
+				display: none;
+				&.shown{
+					display: block;
+				}
+			}
+		}
+		.modal-body{
+			padding-top: 4em;
+			.level-one{
+				margin: 0;
+			}
+			.level-two{
+				position: absolute;
+				top: 70px;
+				transition: all 0.3s ease;
+				transform: translate(85%, 0);
+				opacity: 0;
+				background-color: #fff;
+				&.shown{
+					transform: translate(0, 0);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

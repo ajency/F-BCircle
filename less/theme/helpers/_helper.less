@@ -103,6 +103,14 @@
     text-decoration: none;
   }
 }
+.dark-link{
+  color: @text-darker;
+  text-decoration: underline;
+  &:hover{
+    color: lighten(@text-darker,10%);
+    text-decoration: none;
+  }
+}
 
 .text-lighter{
   color: @text-lighter;
@@ -140,11 +148,28 @@
   color: inherit;
 }
 
+.text-decor{
+  text-decoration: underline;
+}
+
+.bat-color{
+  color: #000;
+}
+
 .ellipsis{
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
 }
+
+@media screen and (max-width: @mobile){
+   .link-center{
+      display: flex;
+      justify-content: center;
+  } 
+}
+
+
 
 .blocked{
   overflow: hidden;
@@ -182,4 +207,10 @@
   }
 }
 
+.white-box{
+  background-color: #fff;
+}
 
+.gray-border{
+  border: 1px solid @grey-lighter;
+}
