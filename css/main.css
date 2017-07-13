@@ -4198,20 +4198,27 @@ input[type=radio].fnb-radio.disabled:before {
     font-size: 1.05em;
   }
 }
+.image-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 20px -0.5em 0;
+}
+.image-grid__cols {
+  width: 20%;
+  padding: 0.5em;
+}
 @media screen and (max-width: 768px) {
-  .image-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: 0;
-  }
   .image-grid__cols {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 0 calc(48.4%);
-            flex: 1 0 calc(48.4%);
-    padding: 0.5em;
+    width: 50%;
+  }
+  .image-grid__cols.main-image {
+    width: 100%;
   }
   .upload-container {
     margin-top: 2em;
