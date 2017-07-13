@@ -569,6 +569,30 @@ span {
 .fnb-icons.meat {
   background-position: -55px -344px;
 }
+.fnb-icons.wholesaler {
+  background-image: url('../img/sprite-na.png');
+  background-position: -32px -544px;
+  height: 100px;
+  width: 100px;
+}
+.fnb-icons.retailer {
+  background-image: url('../img/sprite-na.png');
+  background-position: -162px -544px;
+  height: 100px;
+  width: 100px;
+}
+.fnb-icons.manufacturer {
+  background-image: url('../img/sprite-na.png');
+  background-position: -282px -544px;
+  height: 100px;
+  width: 100px;
+}
+.fnb-icons.contact {
+  background-image: url('../img/sprite-na.png');
+  background-position: -425px -540px;
+  height: 100px;
+  width: 100px;
+}
 .icon-theme {
   background-image: url('../img/theme-icon.png');
   height: 70px;
@@ -3957,6 +3981,70 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .gs-form__footer .save-btn.center {
   margin: auto;
+}
+.business-type {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.business-type li {
+  position: relative;
+  margin-right: 1.8em;
+  margin-bottom: 1.5em;
+}
+.business-type .option {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.business-type .option .business-icon {
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.business-type .option .fa {
+  display: none;
+}
+.business-type .radio {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+  z-index: 1;
+}
+.business-type .radio:checked + .option .business-icon {
+  -webkit-box-shadow: 0px 0px 0px 3px rgba(236, 109, 75, 0.45);
+          box-shadow: 0px 0px 0px 3px rgba(236, 109, 75, 0.45);
+}
+.business-type .radio:checked + .option .fa {
+  display: block;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #fff;
+  color: #ec6d4b;
+  font-size: 1.2em;
+  height: 20px;
+  width: 25px;
+  text-align: center;
+}
+.business-type .radio:checked + .option + .business-label {
+  color: #ec6d4b;
+}
+.business-type .radio:focus {
+  outline: 0;
+}
+.business-type .business-label {
+  margin-top: 10px;
+  max-width: 100px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 500;
 }
 .single-category {
   background-color: #f9f9f9;
