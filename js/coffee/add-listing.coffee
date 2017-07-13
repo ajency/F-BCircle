@@ -11,8 +11,8 @@ $('.dropify').dropify messages: 'default': 'Add Photo'
 # Add/Edit categories
 $('body').on 'click', 'input:radio[name=\'categories\']', ->
 	# Toggle wrappers
-	$('.main-category').addClass 'hidden'
-	$('.sub-category').addClass 'shown'
+	# $('.main-category').addClass 'hidden'
+	# $('.sub-category').addClass 'shown'
 	# Update category name
 	cat_name = $(this).data('name')
 	$('.main-cat-name').html(cat_name)
@@ -35,9 +35,24 @@ if $(window).width() <= 768
 
 #jQuery flexdatalist
 
-$('.flexdatalist').flexdatalist()    
+$('.flexdatalist').flexdatalist()
 
 # Tips Toggle
 $('body').on 'click', '.tips', ->
 	$(this).toggleClass 'open'
 	$('.tips__steps.collapse').collapse('toggle')
+
+$('.sample-img').magnificPopup
+	items:
+		src: 'img/sample_listing.png'
+	type: 'image'
+	mainClass: 'mfp-fade'
+
+# All cities select
+$('body').on 'change', 'input:checkbox.all-cities', ->
+	if $(this).is(':checked')
+		$(this).closest('.tab-pane').find('input:checkbox').prop('checked', true)
+	else
+		$(this).closest('.tab-pane').find('input:checkbox').prop('checked', false)
+
+$('[data-toggle="tooltip"]').tooltip()

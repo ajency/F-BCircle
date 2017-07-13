@@ -15,8 +15,6 @@
 
   $('body').on('click', 'input:radio[name=\'categories\']', function() {
     var cat_icon, cat_name;
-    $('.main-category').addClass('hidden');
-    $('.sub-category').addClass('shown');
     cat_name = $(this).data('name');
     $('.main-cat-name').html(cat_name);
     cat_icon = $(this).closest('li').find('.cat-icon').clone().addClass('m-r-15');
@@ -44,5 +42,23 @@
     $(this).toggleClass('open');
     return $('.tips__steps.collapse').collapse('toggle');
   });
+
+  $('.sample-img').magnificPopup({
+    items: {
+      src: 'img/sample_listing.png'
+    },
+    type: 'image',
+    mainClass: 'mfp-fade'
+  });
+
+  $('body').on('change', 'input:checkbox.all-cities', function() {
+    if ($(this).is(':checked')) {
+      return $(this).closest('.tab-pane').find('input:checkbox').prop('checked', true);
+    } else {
+      return $(this).closest('.tab-pane').find('input:checkbox').prop('checked', false);
+    }
+  });
+
+  $('[data-toggle="tooltip"]').tooltip();
 
 }).call(this);

@@ -314,4 +314,16 @@ $(function(){
 
 		$('.flexdatalist').flexdatalist();
 
+		$('body').on('click', '.level-two-toggle', function() {
+		  $('.level-one').addClass('hidden');
+		  $('.level-two').addClass('shown');
+		  $('.mobile-back').addClass('desk-level-two');
+		});
+
+		$('body').on('hidden.bs.modal', '.multilevel-modal', function() {
+		  $('.level-one').removeClass('hidden');
+		  $('.level-two').removeClass('shown');
+		  $('.mobile-back').removeClass('desk-level-two');
+		});
+
 });

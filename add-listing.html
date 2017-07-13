@@ -151,9 +151,16 @@
                     </div>
                 </div>
 
-                <h3 class="main-heading flex-row note-row">Let's get started!
-                    <p class="note-row__text text-color text-medium"><span class="text-primary">Note:</span> You can add multiple listings on F&amp;BCircle.</p>
-                </h3>
+                <div class="flex-row note-row m-b-10">
+                    <h3 class="main-heading m-b-0">Let's get started!</h3>
+                    <p class="note-row__text text-medium">
+                        <!-- <span class="text-primary">Note:</span> You can add multiple listings on F&amp;BCircle. -->
+                        <div class="mobile-hide">
+                            The current status of your listing is <span class="text-primary bolder">Draft</span> <i class="fa fa-info-circle text-color m-l-5" data-toggle="tooltip" data-placement="top" title="Info about draft status"></i>
+                        </div>
+                    </p>
+                    <button class="btn fnb-btn outline full border-btn m-t-10 mobile-hide">Submit for review</button>
+                </div>
 
                 <div class="white-box gray-border get-started">
                     <!-- <div class="desk-hide mobile-flex ">
@@ -220,7 +227,8 @@
                             <div class="view-sample m-t-20 m-b-20">
                                 View what a sample business listing would look like once created.
                                 <div class="m-t-10">
-                                    <a href="#">View the sample</a>
+                                    <img src="img/sample_listing.png" class="img-responsive mobile-hide sample-img">
+                                    <a href="img/sample_listing.png" class="desk-hide sample-img">View the sample</a>
                                 </div>
                             </div>
 
@@ -246,630 +254,695 @@
                                     </div>
                                 </div>
                                 <div class="fly-out__content">
-                                <div class="gs-form tab-content">
+                                    <p class="note-row__text--status text-medium desk-hide">
+                                        The current status of your listing is <span class="text-primary bolder">Draft</span> <i class="fa fa-info-circle text-color m-l-5" data-toggle="tooltip" data-placement="top" title="Info about draft status"></i>
+                                    </p>
+                                    <div class="gs-form tab-content">
 
-                                    <!-- Business Information -->
-                                    <div class="business-info tab-pane fade in active" id="business-info">
-                                        <h5 class="no-m-t">Business Information</h5>
+                                        <!-- Business Information -->
+                                        <div class="business-info tab-pane fade in active" id="business-info">
+                                            <h5 class="no-m-t">Business Information</h5>
 
-                                        <div class="m-t-30 c-gap">
-                                            <label>Tell us the name of your business <span class="text-primary">*</span></label>
-                                            <input type="text" class="form-control fnb-input" placeholder="">
-                                            <div class="text-lighter m-t-5">
-                                                This will be the display name of your listing.
+                                            <div class="m-t-30 c-gap">
+                                                <label>Tell us the name of your business <span class="text-primary">*</span></label>
+                                                <input type="text" class="form-control fnb-input" placeholder="">
+                                                <div class="text-lighter m-t-5">
+                                                    This will be the display name of your listing.
+                                                </div>
                                             </div>
-                                        </div>
 
-                                        <div class="m-t-50 c-gap">
-                                            <label>Who are you? <span class="text-primary">*</span></label>
-                                            <div class="text-lighter m-t-5">
-                                                The right business type will get you the right enquiries. A listing can be only of one type.
-                                            </div>
-                                        </div>
-
-                                        <div class="m-t-50 flex-row c-gap">
-                                            <img src="img/enquiry.png" class="mobile-hide">
-                                            <div class="m-l-10 no-m-l">
-                                                <label>Contact Details</label>
+                                            <div class="m-t-50 c-gap">
+                                                <label>Who are you? <span class="text-primary">*</span></label>
+                                                <ul class="business-type flex-row m-t-15">
+                                                    <li>
+                                                        <input type="radio" class="radio" name="business_type">
+                                                        <div class="wholesaler option flex-row">
+                                                            <span class="fnb-icons business-icon wholesaler"></span>
+                                                            <i class="fa fa-check"></i>
+                                                        </div>
+                                                        <div class="business-label">
+                                                            Wholesaler
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" class="radio" name="business_type">
+                                                        <div class="retailer option flex-row">
+                                                            <span class="fnb-icons business-icon retailer"></span>
+                                                            <i class="fa fa-check"></i>
+                                                        </div>
+                                                        <div class="business-label">
+                                                            Retailer
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <input type="radio" class="radio" name="business_type">
+                                                        <div class="manufacturer option flex-row">
+                                                            <span class="fnb-icons business-icon manufacturer"></span>
+                                                            <i class="fa fa-check"></i>
+                                                        </div>
+                                                        <div class="business-label">
+                                                            Manufacturer
+                                                        </div>
+                                                    </li>
+                                                </ul>
                                                 <div class="text-lighter">
-                                                    Seekers would like to contact you or send enquiries. Please share your contact details below. We have perpopulated your email and phone number from your profile details.
+                                                    The right business type will get you the right enquiries. A listing can be only of one type.
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="m-t-20 business-email">
-                                            <label>Enter your business email address <span class="text-primary">*</span></label>
-                                            <div class="row m-t-10 m-b-10 no-m-b">
-                                                <div class="col-sm-5">
-                                                    <input type="email" class="form-control fnb-input" value="quershi@gmail.com" readonly="">
-                                                </div>
-                                                <div class="col-sm-3 col-xs-4">
-                                                    <div class="verified flex-row">
-                                                        <span class="fnb-icons verified-icon"></span>
-                                                        <p class="c-title">Verified</p>
+
+                                            <div class="m-t-50 flex-row c-gap">
+                                                <span class="fnb-icons contact mobile-hide"></span>
+                                                <!-- <img src="img/enquiry.png" class="mobile-hide"> -->
+                                                <div class="m-l-10 no-m-l">
+                                                    <label>Contact Details</label>
+                                                    <div class="text-lighter">
+                                                        Seekers would like to contact you or send enquiries. Please share your contact details below. We have perpopulated your email and phone number from your profile details.
                                                     </div>
                                                 </div>
-                                                <div class="col-sm-4 col-xs-8">
-                                                    <div class="verified-toggle flex-row">
-                                                        <div class="toggle m-l-10 m-r-10">
-                                                          <input type="checkbox" class="toggle__check" checked="true">
-                                                          <b class="switch"></b>
-                                                          <b class="track"></b>
+                                            </div>
+                                            <div class="m-t-20 business-email">
+                                                <label>Enter your business email address <span class="text-primary">*</span></label>
+                                                <div class="row m-t-10 m-b-10 no-m-b">
+                                                    <div class="col-sm-5">
+                                                        <input type="email" class="form-control fnb-input" value="quershi@gmail.com" readonly="">
+                                                    </div>
+                                                    <div class="col-sm-3 col-xs-4">
+                                                        <div class="verified flex-row">
+                                                            <span class="fnb-icons verified-icon"></span>
+                                                            <p class="c-title">Verified</p>
                                                         </div>
-                                                        <p class="m-b-0 text-color toggle-state">Visible on the listing</p>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <a href="#" class="dark-link text-medium add-another">+ Add another email</a>
-                                        </div>
-                                        <div class="m-t-40 business-email">
-                                            <label>Enter your business phone number <span class="text-primary">*</span></label>
-                                            <div class="row m-t-10 m-b-10">
-                                                <div class="col-sm-5">
-                                                    <input type="tel" class="form-control fnb-input" value="+91 9344567888" >
-                                                </div>
-                                                <div class="col-sm-3 col-xs-4">
-                                                    <div class="verified flex-row">
-                                                        <!-- <span class="fnb-icons verified-icon"></span>
-                                                        <p class="c-title">Verified</p> -->
-                                                        <a href="#" class="dark-link">Verify now</a>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-4 col-xs-8">
-                                                    <div class="verified-toggle no-m-t flex-row">
-                                                        <div class="toggle m-l-10 m-r-10">
-                                                          <input type="checkbox" class="toggle__check">
-                                                          <b class="switch"></b>
-                                                          <b class="track"></b>
+                                                    <div class="col-sm-4 col-xs-8">
+                                                        <div class="verified-toggle flex-row">
+                                                            <div class="toggle m-l-10 m-r-10">
+                                                              <input type="checkbox" class="toggle__check" checked="true">
+                                                              <b class="switch"></b>
+                                                              <b class="track"></b>
+                                                            </div>
+                                                            <p class="m-b-0 text-color toggle-state">Visible on the listing</p>
                                                         </div>
-                                                        <p class="m-b-0 text-color toggle-state">Not visible on the listing</p>
                                                     </div>
                                                 </div>
+                                                <a href="#" class="dark-link text-medium add-another">+ Add another email</a>
                                             </div>
-                                            <a href="#" class="dark-link text-medium add-another">+ Add another phone number</a>
-                                        </div>
-                                    </div>
-                                    <!-- Business Information End -->
-
-                                    <!-- Business Categories -->
-                                    <div class="business-cats tab-pane fade" id="business-cats">
-                                        <h5 class="no-m-t">Business Categories</h5>
-
-                                        <div class="m-t-30 add-container c-gap">
-                                            <label>Select categories your listing belongs to <span class="text-primary">*</span></label>
-                                            <div class="text-lighter m-t-5">
-                                                One category at a time
-                                            </div>
-                                        </div>
-                                        <ul class="interested-options cat-select flex-row m-t-30">
-                                            <li>
-                                                <input type="radio" class="radio" name="interests">
-                                                <div class="veg option flex-row">
-                                                    <span class="fnb-icons cat-icon veg"></span>
+                                            <div class="m-t-40 business-email">
+                                                <label>Enter your business phone number <span class="text-primary">*</span></label>
+                                                <div class="row m-t-10 m-b-10">
+                                                    <div class="col-sm-5">
+                                                        <input type="tel" class="form-control fnb-input" value="+91 9344567888" >
+                                                    </div>
+                                                    <div class="col-sm-3 col-xs-4">
+                                                        <div class="verified flex-row">
+                                                            <!-- <span class="fnb-icons verified-icon"></span>
+                                                            <p class="c-title">Verified</p> -->
+                                                            <a href="#" class="dark-link">Verify now</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-xs-8">
+                                                        <div class="verified-toggle no-m-t flex-row">
+                                                            <div class="toggle m-l-10 m-r-10">
+                                                              <input type="checkbox" class="toggle__check">
+                                                              <b class="switch"></b>
+                                                              <b class="track"></b>
+                                                            </div>
+                                                            <p class="m-b-0 text-color toggle-state">Not visible on the listing</p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="interested-label">
-                                                    Cereals &amp; Food Grains
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="radio" name="interests" checked>
-                                                <div class="meat option flex-row">
-                                                    <span class="fnb-icons cat-icon meat"></span>
-                                                </div>
-                                                <div class="interested-label">
-                                                    Meat &amp; Poultry
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <input type="radio" class="radio" name="interests" checked>
-                                                <div class="drinks option flex-row">
-                                                    <span class="fnb-icons cat-icon drinks"></span>
-                                                </div>
-                                                <div class="interested-label">
-                                                    Juices, Soups &amp; Soft Drinks
-                                                </div>
-                                            </li>
-                                        </ul>
-
-                                        <div class="m-t-50 c-gap">
-                                            <label>List some brands that you deal with</label>
-                                            <div class="text-lighter m-t-5">
-                                                Ex: Albertsons, America's Choice, Bashas
-                                            </div>
-                                            <div class="m-t-20">
-                                                <input type="text" class="form-control fnb-input" placeholder="+ Add brands you deal with">
+                                                <a href="#" class="dark-link text-medium add-another">+ Add another phone number</a>
                                             </div>
                                         </div>
+                                        <!-- Business Information End -->
 
-                                        <div class="m-t-50 c-gap">
-                                            <label>Core categories of your listing</label>
-                                            <div class="text-lighter m-t-5">
-                                                Note: Core categories wil be displayed prominently on the listing.<br>
-                                                Maximum 10 core categories allowed
-                                            </div>
-                                            <div class="m-t-20">
-                                                <input type="text" class="form-control fnb-input flexdatalist" placeholder="+ Add more core categories" multiple='multiple' data-min-length='1'>
-                                            </div>
-                                        </div>
+                                        <!-- Business Categories -->
+                                        <div class="business-cats tab-pane fade" id="business-cats">
+                                            <h5 class="no-m-t">Business Categories</h5>
 
-                                        <div class="m-t-50 c-gap">
-                                            <label>List of all the categories for your listing</label>
-                                            <div class="single-category gray-border">
-                                                <div class="row flex-row categoryContainer">
-                                                    <div class="col-sm-4 flex-row">
+                                            <div class="m-t-30 add-container c-gap">
+                                                <label>Select categories your listing belongs to <span class="text-primary">*</span></label>
+                                                <div class="text-lighter m-t-5">
+                                                    One category at a time
+                                                </div>
+                                            </div>
+                                            <ul class="interested-options cat-select flex-row m-t-30">
+                                                <li>
+                                                    <input type="radio" class="radio" name="interests">
+                                                    <div class="veg option flex-row">
                                                         <span class="fnb-icons cat-icon veg"></span>
-                                                        <div class="branch-row">
-                                                            <div class="cat-label">Meat &amp; Poultry</div>
-                                                        </div>
                                                     </div>
-                                                    <div class="col-sm-2">
-                                                        <strong class="branch">Mutton</strong>
+                                                    <div class="interested-label">
+                                                        Cereals &amp; Food Grains
                                                     </div>
-                                                    <div class="col-sm-6">
-                                                        <ul class="fnb-cat small flex-row">
-                                                            <li><span class="fnb-cat__title">Al Kabeer <span class="fa fa-times remove"></span></span></li>
-                                                            <li><span class="fnb-cat__title">Pandiyan <span class="fa fa-times remove"></span></span></li>
-                                                            <li><span class="fnb-cat__title">Ezzy <span class="fa fa-times remove"></span></span></li>
-                                                            <li><span class="fnb-cat__title">Royco <span class="fa fa-times remove"></span></span></li>
-                                                            <li><span class="fnb-cat__title">Venkys <span class="fa fa-times remove"></span></span></li>
-                                                            <li class="more-show desk-hide"><span class="fnb-cat__title text-secondary">+10 more</span></li>
-                                                        </ul>
+                                                </li>
+                                                <li>
+                                                    <input type="radio" class="radio" name="interests" checked>
+                                                    <div class="meat option flex-row">
+                                                        <span class="fnb-icons cat-icon meat"></span>
                                                     </div>
-                                                </div>
-                                                <div class="delete-cat">
-                                                    <span class="fa fa-times remove"></span>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-20">
-                                               <a href="#category-select" data-toggle="modal" data-target="#category-select" class="dark-link heavier">+ Edit or Add more categories</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Business Categories End -->
-
-                                    <!-- Business Details -->
-                                    <div class="business-details tab-pane fade" id="business-details">
-                                        <h5 class="no-m-t">Business Details</h5>
-
-                                        <div class="m-t-30 c-gap">
-                                            <label>Give us some more details about your listing</label>
-                                            <textarea type="text" class="form-control fnb-textarea m-t-20 no-m-t" placeholder="Describe your business here"></textarea>
-                                        </div>
-
-                                        <div class="m-t-30 c-gap">
-                                            <label>What are the highlights of your business?</label>
-                                            <div class="text-lighter">
-                                                Tell your customer about yourself and what makes your business unique
-                                            </div>
-                                            <input type="text" class="form-control fnb-input" placeholder="">
-                                        </div>
-
-                                        <div class="m-t-30 c-gap">
-                                            <div class="row">
-                                                <div class="col-sm-6">
-                                                    <label>When was your business established?</label>
-                                                    <input type="text" class="form-control fnb-input" placeholder="Eg: 1988">
-                                                </div>
-                                                <div class="col-sm-6 c-gap">
-                                                    <label>Do you have a business website?</label>
-                                                    <input type="text" class="form-control fnb-input" placeholder="http://">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="m-t-30 c-gap">
-                                            <label>Payment modes accepted by you:</label>
-                                            <div class="text-lighter">
-                                                Select from the list below or add your own mode
-                                            </div>
-                                            <div class="highlight-color p-t-10 p-l-10 p-r-5 p-b-10 m-t-10 select-all">
-                                                <label class="flex-row heavier">
-                                                    <input type="checkbox" class="checkbox" id="selectall">
-                                                    Select All
-                                                </label>
-                                            </div>
-                                            <ul class="flex-row payment-modes">
-                                                <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="visa">
-                                                        Visa cards
-                                                    </label>
+                                                    <div class="interested-label">
+                                                        Meat &amp; Poultry
+                                                    </div>
                                                 </li>
                                                 <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="debit">
-                                                        Debit Card
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="money_order">
-                                                        Money Order
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="cheque">
-                                                        Cheque
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="credit">
-                                                        Credit Card
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="travelers">
-                                                        Travelers Cheque
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="cash">
-                                                        Cash
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="master">
-                                                        Master Card
-                                                    </label>
-                                                </li>
-                                                <li>
-                                                    <label class="flex-row text-medium">
-                                                        <input type="checkbox" class="checkbox" id="diners">
-                                                        Diner's Club
-                                                    </label>
+                                                    <input type="radio" class="radio" name="interests" checked>
+                                                    <div class="drinks option flex-row">
+                                                        <span class="fnb-icons cat-icon drinks"></span>
+                                                    </div>
+                                                    <div class="interested-label">
+                                                        Juices, Soups &amp; Soft Drinks
+                                                    </div>
                                                 </li>
                                             </ul>
-                                        </div>
 
-                                        <div class="m-t-20 c-gap">
-                                            <input type="text" class="form-control fnb-input" placeholder="+ Add modes of payment &amp; press enter">
-                                        </div>
-                                    </div>
-                                    <!-- Business Details End-->
-
-                                    <!-- Location & hours -->
-                                    <div class="location-hours tab-pane fade" id="location-hours">
-                                        <h5 class="no-m-t">Location &amp; Hours of Operation</h5>
-
-                                        <div class="m-t-30 c-gap">
-                                            <label>Please provide the google map address for your business</label>
-                                            <div class="text-lighter">
-                                                Note: You can drag the pin on the map to point the address
-                                            </div>
-                                        </div>
-
-                                        <div class="m-t-20 c-gap">
-                                            <input type="text" class="form-control fnb-input" placeholder="Ex: Shop no 4, Aarey Milk Colony, Mumbai">
-                                            <div class="m-t-10">
-                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15380.091383021922!2d73.81245283848914!3d15.483203277923609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc0a93361ccd9%3A0xdd98120b24e5be61!2sPanjim%2C+Goa!5e0!3m2!1sen!2sin!4v1498804405360" width="600" height="250" frameborder="0" style="border:0;width:100%;" allowfullscreen></iframe>
-                                            </div>
-                                        </div>
-
-                                        <div class="m-t-30 c-gap">
-                                            <label>What is the address that you want to be displayed to the users?</label>
-                                            <label class="flex-row text-medium baseline">
-                                                <input type="checkbox" class="checkbox" id="">
-                                                Is the display address same as the map address?
-                                            </label>
-                                        </div>
-
-                                        <hr class="m-t-50 m-b-50 separate">
-
-                                        <div class="m-t-20 c-gap">
-                                            <label>Mention the area(s) where you provide your products/services.</label>
-                                            <div>
-                                                <a href="#" class="text-secondary text-decor heavier">+ Add area(s)</a>
-                                            </div>
-                                        </div>
-
-                                        <div class="m-t-40 c-gap">
-                                            <label>Enter the hours of operation for your business</label>
-                                            <div class="row">
-                                                <div class="col-sm-5">
-                                                    <label class="flex-row text-medium">
-                                                        <input type="radio" class="fnb-radio" name="hours" id="display_hours">
-                                                        Display hours of operation
-                                                    </label>
+                                            <div class="m-t-50 c-gap">
+                                                <label>List some brands that you deal with</label>
+                                                <div class="text-lighter m-t-5">
+                                                    Ex: Albertsons, America's Choice, Bashas
                                                 </div>
-                                                <div class="col-sm-5">
-                                                    <label class="flex-row text-medium">
-                                                        <input type="radio" class="fnb-radio" name="hours" id="dont_display_hours">
-                                                        Don't display hours of operation
-                                                    </label>
+                                                <div class="m-t-20">
+                                                    <input type="text" class="form-control fnb-input" placeholder="+ Add brands you deal with">
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="m-t-40 c-gap">
-                                            <div class="flex-row c-gap">
-                                                <div class="flex-row hours-section open-1">
-                                                    <span class="hours_day heavier p-r-20">Monday</span>
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
+                                            <div class="m-t-50 c-gap">
+                                                <label>Core categories of your listing</label>
+                                                <div class="text-lighter m-t-5">
+                                                    Note: Core categories wil be displayed prominently on the listing.<br>
+                                                    Maximum 10 core categories allowed
                                                 </div>
-                                                <span class="p-l-10 p-r-10">To</span>
-                                                <div class="flex-row hours-section open-2">
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                    <label class="flex-row text-medium p-l-20 closed-label">
-                                                        <input type="checkbox" class="checkbox" id="closed">
-                                                        Closed
-                                                    </label>
+                                                <div class="m-t-20">
+                                                    <input type="text" class="form-control fnb-input flexdatalist" placeholder="+ Add more core categories" multiple="multiple" data-min-length="0" value="Al Kabeer, Pandiyan, Ezzy, Royco, Venkys" data-selection-required="1" list="core_categories">
+                                                    <datalist id="core_categories">
+                                                        <option value="Al Kabeer">Al Kabeer</option>
+                                                        <option value="Pandiyan">Pandiyan</option>
+                                                        <option value="Ezzy">Ezzy</option>
+                                                        <option value="Royco">Royco</option>
+                                                    </datalist>
                                                 </div>
-                                            </div>
-                                            <div class="flex-row c-gap">
-                                                <div class="flex-row hours-section open-1">
-                                                    <span class="hours_day heavier p-r-20">Tuesday</span>
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                </div>
-                                                <span class="p-l-10 p-r-10">To</span>
-                                                <div class="flex-row hours-section open-2">
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                    <label class="flex-row text-medium p-l-20 closed-label">
-                                                        <input type="checkbox" class="checkbox" id="closed">
-                                                        Closed
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="flex-row c-gap">
-                                                <div class="flex-row hours-section open-1">
-                                                    <span class="hours_day heavier p-r-20">Wednesday</span>
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                </div>
-                                                <span class="p-l-10 p-r-10">To</span>
-                                                <div class="flex-row hours-section open-2">
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                    <label class="flex-row text-medium p-l-20 closed-label">
-                                                        <input type="checkbox" class="checkbox" id="closed">
-                                                        Closed
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="flex-row c-gap">
-                                                <div class="flex-row hours-section open-1">
-                                                    <span class="hours_day heavier p-r-20">Thursday</span>
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                </div>
-                                                <span class="p-l-10 p-r-10">To</span>
-                                                <div class="flex-row hours-section open-2">
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                    <label class="flex-row text-medium p-l-20 closed-label">
-                                                        <input type="checkbox" class="checkbox" id="closed">
-                                                        Closed
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="flex-row c-gap">
-                                                <div class="flex-row hours-section open-1">
-                                                    <span class="hours_day heavier p-r-20">Friday</span>
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                </div>
-                                                <span class="p-l-10 p-r-10">To</span>
-                                                <div class="flex-row hours-section open-2">
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                    <label class="flex-row text-medium p-l-20 closed-label">
-                                                        <input type="checkbox" class="checkbox" id="closed">
-                                                        Closed
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="flex-row c-gap">
-                                                <div class="flex-row hours-section open-1">
-                                                    <span class="hours_day heavier p-r-20">Saturday</span>
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                </div>
-                                                <span class="p-l-10 p-r-10">To</span>
-                                                <div class="flex-row hours-section open-2">
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                    <label class="flex-row text-medium p-l-20 closed-label">
-                                                        <input type="checkbox" class="checkbox" id="closed">
-                                                        Closed
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="flex-row c-gap">
-                                                <div class="flex-row hours-section open-1">
-                                                    <span class="hours_day heavier p-r-20">Sunday</span>
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                </div>
-                                                <span class="p-l-10 p-r-10">To</span>
-                                                <div class="flex-row hours-section open-2">
-                                                    <select class="fnb-select border-bottom form-control text-lighter">
-                                                        <option>Open 24 hours</option>
-                                                        <option>12 AM</option>
-                                                        <option>12.30 AM</option>
-                                                        <option>1 AM</option>
-                                                        <option>1.30 AM</option>
-                                                    </select>
-                                                    <label class="flex-row text-medium p-l-20 closed-label">
-                                                        <input type="checkbox" class="checkbox" id="closed">
-                                                        Closed
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="m-t-40 c-gap">
-                                            <div>
-                                                <a href="#" class="text-secondary text-decor heavier link-center">Copy timings from Monday to Saturday</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Location & hours End -->
-
-                                    <!-- Photos -->
-                                    <div class="photos tab-pane fade" id="photos">
-                                        <h5 class="no-m-t">Photos &amp; Documents</h5>
-
-                                        <div class="m-t-30 add-container c-gap">
-                                            <label>Add some images for your listing (optional)</label>
-                                            <div class="text-lighter">
-                                                Tip: Photos are the most important feature of your listing. Listing with images in general get 5x more responses.
-                                            </div>
-                                            <img src="img/main-pic-down.png" class="m-t-15 desk-hide">
-                                            <div class="row m-t-20 image-grid">
-                                                <div class="col-sm-3 image-grid__cols">
-                                                    <input type="file" class="dropify" data-height="100" />
-                                                    <img src="img/main_photo.png" class="m-t-10 m-l-25 mobile-hide">
-                                                </div>
-                                                <div class="col-sm-3 image-grid__cols">
-                                                    <input type="file" class="dropify" data-height="100" />
-                                                </div>
-                                                <div class="col-sm-3 image-grid__cols">
-                                                    <input type="file" class="dropify" data-height="100" />
-                                                </div>
-                                                <div class="col-sm-3 image-grid__cols">
-                                                    <input type="file" class="dropify" data-height="100" />
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="m-t-50 upload-container c-gap">
-                                            <label>Do you have some files which you would like to upload for the listing?</label>
-
-                                            <div class="m-t-20">
-                                                <input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
-                                                <label for="file-2" class="btn fnb-btn outline full border-btn"><i class="fa fa-upload" aria-hidden="true"></i> <span>Upload File</span></label>
                                             </div>
 
-                                            <div class="m-t-10 text-lighter">
-                                                Only .jpg, .jpeg &amp; .pdf with a maximum size of 1mb is allowed
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Photos End -->
-
-                                    <!-- Go Premium -->
-                                    <div class="premium tab-pane fade" id="premium">
-                                        <h5 class="no-m-t">Go Premium</h5>
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="plan text-center m-t-10">
-                                                    <div class="mobile-flex plan__container">
-                                                        <div>
-                                                            <div class="plan__title mobile-flex">
-                                                                Free Membership
-                                                            </div>
-                                                            <div class="plan__price">
-                                                                Rs. 0.00/month
+                                            <div class="m-t-50 c-gap">
+                                                <label>List of all the categories for your listing</label>
+                                                <div class="single-category gray-border">
+                                                    <div class="row flex-row categoryContainer">
+                                                        <div class="col-sm-4 flex-row">
+                                                            <span class="fnb-icons cat-icon veg"></span>
+                                                            <div class="branch-row">
+                                                                <div class="cat-label">Meat &amp; Poultry</div>
                                                             </div>
                                                         </div>
-                                                        <i class="fa fa-check-circle desk-hide" aria-hidden="true"></i>
+                                                        <div class="col-sm-2">
+                                                            <strong class="branch">Mutton</strong>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <ul class="fnb-cat small flex-row">
+                                                                <li><span class="fnb-cat__title">Al Kabeer <span class="fa fa-times remove"></span></span></li>
+                                                                <li><span class="fnb-cat__title">Pandiyan <span class="fa fa-times remove"></span></span></li>
+                                                                <li><span class="fnb-cat__title">Ezzy <span class="fa fa-times remove"></span></span></li>
+                                                                <li><span class="fnb-cat__title">Royco <span class="fa fa-times remove"></span></span></li>
+                                                                <li><span class="fnb-cat__title">Venkys <span class="fa fa-times remove"></span></span></li>
+                                                                <li class="more-show desk-hide"><span class="fnb-cat__title text-secondary">+10 more</span></li>
+                                                            </ul>
+                                                        </div>
                                                     </div>
-                                                    <div class="plan__details">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                                    <div class="delete-cat">
+                                                        <span class="fa fa-times remove"></span>
                                                     </div>
-                                                    <i class="fa fa-check-circle mobile-hide" aria-hidden="true"></i>
+                                                </div>
+                                                <div class="m-t-20">
+                                                   <a href="#category-select" data-toggle="modal" data-target="#category-select" class="dark-link heavier">+ Edit or Add more categories</a>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-8 c-gap">
-                                                <h6>Subscribe to our premium plan to get more leads</h6>
-                                                <img src="img/premium_listing.png" class="img-responsive">
-                                                <label>Premium 1</label>
-                                                <div class="row duration-choose">
-                                                    <div class="col-sm-6 dur-col col-text">
-                                                        <div class="col-text__title">
-                                                            Choose a duration
+                                        </div>
+                                        <!-- Business Categories End -->
+
+                                        <!-- Business Details -->
+                                        <div class="business-details tab-pane fade" id="business-details">
+                                            <h5 class="no-m-t">Business Details</h5>
+
+                                            <div class="m-t-30 c-gap">
+                                                <label>Give us some more details about your listing</label>
+                                                <textarea type="text" class="form-control fnb-textarea m-t-20 no-m-t" placeholder="Describe your business here"></textarea>
+                                            </div>
+
+                                            <div class="m-t-30 c-gap">
+                                                <label>What are the highlights of your business?</label>
+                                                <div class="text-lighter">
+                                                    Tell your customer about yourself and what makes your business unique
+                                                </div>
+                                                <input type="text" class="form-control fnb-input" placeholder="">
+                                            </div>
+
+                                            <div class="m-t-30 c-gap">
+                                                <div class="row">
+                                                    <div class="col-sm-6">
+                                                        <label>When was your business established?</label>
+                                                        <input type="text" class="form-control fnb-input" placeholder="Eg: 1988">
+                                                    </div>
+                                                    <div class="col-sm-6 c-gap">
+                                                        <label>Do you have a business website?</label>
+                                                        <input type="text" class="form-control fnb-input" placeholder="http://">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="m-t-30 c-gap">
+                                                <label>Payment modes accepted by you:</label>
+                                                <div class="text-lighter">
+                                                    Select from the list below or add your own mode
+                                                </div>
+                                                <div class="highlight-color p-t-10 p-l-10 p-r-5 p-b-10 m-t-10 select-all">
+                                                    <label class="flex-row heavier">
+                                                        <input type="checkbox" class="checkbox" id="selectall">
+                                                        Select All
+                                                    </label>
+                                                </div>
+                                                <ul class="flex-row payment-modes">
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="visa">
+                                                            Visa cards
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="debit">
+                                                            Debit Card
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="money_order">
+                                                            Money Order
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="cheque">
+                                                            Cheque
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="credit">
+                                                            Credit Card
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="travelers">
+                                                            Travelers Cheque
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="cash">
+                                                            Cash
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="master">
+                                                            Master Card
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row text-medium">
+                                                            <input type="checkbox" class="checkbox" id="diners">
+                                                            Diner's Club
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="m-t-20 c-gap">
+                                                <input type="text" class="form-control fnb-input" placeholder="+ Add modes of payment &amp; press enter">
+                                            </div>
+                                        </div>
+                                        <!-- Business Details End-->
+
+                                        <!-- Location & hours -->
+                                        <div class="location-hours tab-pane fade" id="location-hours">
+                                            <h5 class="no-m-t">Location &amp; Hours of Operation</h5>
+
+                                            <div class="m-t-30 c-gap">
+                                                <label>Please provide the google map address for your business</label>
+                                                <div class="text-lighter">
+                                                    Note: You can drag the pin on the map to point the address
+                                                </div>
+                                            </div>
+
+                                            <div class="m-t-20 c-gap">
+                                                <input type="text" class="form-control fnb-input" placeholder="Ex: Shop no 4, Aarey Milk Colony, Mumbai">
+                                                <div class="m-t-10">
+                                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15380.091383021922!2d73.81245283848914!3d15.483203277923609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bbfc0a93361ccd9%3A0xdd98120b24e5be61!2sPanjim%2C+Goa!5e0!3m2!1sen!2sin!4v1498804405360" width="600" height="250" frameborder="0" style="border:0;width:100%;" allowfullscreen></iframe>
+                                                </div>
+                                            </div>
+
+                                            <div class="m-t-30 c-gap">
+                                                <label>What is the address that you want to be displayed to the users?</label>
+                                                <label class="flex-row text-medium baseline">
+                                                    <input type="checkbox" class="checkbox" id="">
+                                                    Is the display address same as the map address?
+                                                </label>
+                                            </div>
+
+                                            <hr class="m-t-50 m-b-50 separate">
+
+                                            <div class="m-t-20 c-gap">
+                                                <label>Mention the area(s) where you provide your products/services.</label>
+                                                <div class="single-area gray-border m-t-10 m-b-20">
+                                                    <div class="row flex-row areaContainer">
+                                                        <div class="col-sm-3">
+                                                            <strong class="branch">Delhi</strong>
                                                         </div>
-                                                        <select class="form-control fnb-select border-bottom">
-                                                            <option>Rs. 3000.00/month</option>
-                                                            <option>Rs. 5000.00/month</option>
+                                                        <div class="col-sm-9">
+                                                            <ul class="fnb-cat small flex-row">
+                                                                <li><span class="fnb-cat__title">Adarsh nagar <span class="fa fa-times remove"></span></span></li>
+                                                                <li><span class="fnb-cat__title">Babarpur <span class="fa fa-times remove"></span></span></li>
+                                                                <li><span class="fnb-cat__title">Badli <span class="fa fa-times remove"></span></span></li>
+                                                                <li><span class="fnb-cat__title">Dwarka <span class="fa fa-times remove"></span></span></li>
+                                                                <li><span class="fnb-cat__title">Chandni Chowk <span class="fa fa-times remove"></span></span></li>
+                                                                <li class="more-show desk-hide"><span class="fnb-cat__title text-secondary">+10 more</span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="delete-cat">
+                                                        <span class="fa fa-times remove"></span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <a href="#area-select" data-target="#area-select" data-toggle="modal" class="text-secondary text-decor heavier">+ Edit / Add area(s)</a>
+                                                </div>
+                                            </div>
+
+                                            <div class="m-t-40 c-gap">
+                                                <label>Enter the hours of operation for your business</label>
+                                                <div class="row">
+                                                    <div class="col-sm-5">
+                                                        <label class="flex-row text-medium">
+                                                            <input type="radio" class="fnb-radio" name="hours" id="display_hours">
+                                                            Display hours of operation
+                                                        </label>
+                                                    </div>
+                                                    <div class="col-sm-5">
+                                                        <label class="flex-row text-medium">
+                                                            <input type="radio" class="fnb-radio" name="hours" id="dont_display_hours">
+                                                            Don't display hours of operation
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="m-t-40 c-gap">
+                                                <div class="flex-row c-gap">
+                                                    <div class="flex-row hours-section open-1">
+                                                        <span class="hours_day heavier p-r-20">Monday</span>
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
                                                         </select>
                                                     </div>
-                                                    <div class="col-sm-6 dur-col col-btn">
-                                                        <button class="btn fnb-btn outline full">Subscribe</button>
+                                                    <span class="p-l-10 p-r-10">To</span>
+                                                    <div class="flex-row hours-section open-2">
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                        <label class="flex-row text-medium p-l-20 closed-label">
+                                                            <input type="checkbox" class="checkbox" id="closed">
+                                                            Closed
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-row c-gap">
+                                                    <div class="flex-row hours-section open-1">
+                                                        <span class="hours_day heavier p-r-20">Tuesday</span>
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="p-l-10 p-r-10">To</span>
+                                                    <div class="flex-row hours-section open-2">
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                        <label class="flex-row text-medium p-l-20 closed-label">
+                                                            <input type="checkbox" class="checkbox" id="closed">
+                                                            Closed
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-row c-gap">
+                                                    <div class="flex-row hours-section open-1">
+                                                        <span class="hours_day heavier p-r-20">Wednesday</span>
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="p-l-10 p-r-10">To</span>
+                                                    <div class="flex-row hours-section open-2">
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                        <label class="flex-row text-medium p-l-20 closed-label">
+                                                            <input type="checkbox" class="checkbox" id="closed">
+                                                            Closed
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-row c-gap">
+                                                    <div class="flex-row hours-section open-1">
+                                                        <span class="hours_day heavier p-r-20">Thursday</span>
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="p-l-10 p-r-10">To</span>
+                                                    <div class="flex-row hours-section open-2">
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                        <label class="flex-row text-medium p-l-20 closed-label">
+                                                            <input type="checkbox" class="checkbox" id="closed">
+                                                            Closed
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-row c-gap">
+                                                    <div class="flex-row hours-section open-1">
+                                                        <span class="hours_day heavier p-r-20">Friday</span>
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="p-l-10 p-r-10">To</span>
+                                                    <div class="flex-row hours-section open-2">
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                        <label class="flex-row text-medium p-l-20 closed-label">
+                                                            <input type="checkbox" class="checkbox" id="closed">
+                                                            Closed
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-row c-gap">
+                                                    <div class="flex-row hours-section open-1">
+                                                        <span class="hours_day heavier p-r-20">Saturday</span>
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="p-l-10 p-r-10">To</span>
+                                                    <div class="flex-row hours-section open-2">
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                        <label class="flex-row text-medium p-l-20 closed-label">
+                                                            <input type="checkbox" class="checkbox" id="closed">
+                                                            Closed
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-row c-gap">
+                                                    <div class="flex-row hours-section open-1">
+                                                        <span class="hours_day heavier p-r-20">Sunday</span>
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                    </div>
+                                                    <span class="p-l-10 p-r-10">To</span>
+                                                    <div class="flex-row hours-section open-2">
+                                                        <select class="fnb-select border-bottom form-control text-lighter">
+                                                            <option>Open 24 hours</option>
+                                                            <option>12 AM</option>
+                                                            <option>12.30 AM</option>
+                                                            <option>1 AM</option>
+                                                            <option>1.30 AM</option>
+                                                        </select>
+                                                        <label class="flex-row text-medium p-l-20 closed-label">
+                                                            <input type="checkbox" class="checkbox" id="closed">
+                                                            Closed
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="m-t-40 c-gap">
+                                                <div>
+                                                    <a href="#" class="text-secondary text-decor heavier link-center">Copy timings from Monday to Saturday</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Location & hours End -->
+
+                                        <!-- Photos -->
+                                        <div class="photos tab-pane fade" id="photos">
+                                            <h5 class="no-m-t">Photos &amp; Documents</h5>
+
+                                            <div class="m-t-30 add-container c-gap">
+                                                <label>Add some images for your listing (optional)</label>
+                                                <div class="text-lighter">
+                                                    Tip: Photos are the most important feature of your listing. Listing with images in general get 5x more responses.
+                                                </div>
+                                                <img src="img/main-pic-down.png" class="m-t-15 desk-hide">
+                                                <div class="image-grid">
+                                                    <div class="image-grid__cols main-image">
+                                                        <input type="file" class="dropify" data-height="100" />
+                                                        <img src="img/main_photo.png" class="m-t-10 m-l-10 mobile-hide">
+                                                    </div>
+                                                    <div class="image-grid__cols">
+                                                        <input type="file" class="dropify" data-height="100" />
+                                                    </div>
+                                                    <div class="image-grid__cols">
+                                                        <input type="file" class="dropify" data-height="100" />
+                                                    </div>
+                                                    <div class="image-grid__cols">
+                                                        <input type="file" class="dropify" data-height="100" />
+                                                    </div>
+                                                    <div class="image-grid__cols">
+                                                        <input type="file" class="dropify" data-height="100" />
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="m-t-50 upload-container c-gap">
+                                                <label>Do you have some files which you would like to upload for the listing?</label>
+
+                                                <div class="m-t-20">
+                                                    <input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
+                                                    <label for="file-2" class="btn fnb-btn outline full border-btn"><i class="fa fa-upload" aria-hidden="true"></i> <span>Upload File</span></label>
+                                                </div>
+
+                                                <div class="m-t-10 text-lighter">
+                                                    Only .jpg, .jpeg &amp; .pdf with a maximum size of 1mb is allowed
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Photos End -->
+
+                                        <!-- Go Premium -->
+                                        <div class="premium tab-pane fade" id="premium">
+                                            <h5 class="no-m-t">Go Premium</h5>
+                                            <div class="row">
+                                                <div class="col-sm-4">
+                                                    <div class="plan text-center m-t-10">
+                                                        <div class="mobile-flex plan__container">
+                                                            <div>
+                                                                <div class="plan__title mobile-flex">
+                                                                    Free Membership
+                                                                </div>
+                                                                <div class="plan__price">
+                                                                    Rs. 0.00/month
+                                                                </div>
+                                                            </div>
+                                                            <i class="fa fa-check-circle desk-hide" aria-hidden="true"></i>
+                                                        </div>
+                                                        <div class="plan__details">
+                                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                                                        </div>
+                                                        <i class="fa fa-check-circle mobile-hide" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-8 c-gap">
+                                                    <h6>Subscribe to our premium plan to get more leads</h6>
+                                                    <img src="img/premium_listing.png" class="img-responsive">
+                                                    <label>Premium 1</label>
+                                                    <div class="row duration-choose">
+                                                        <div class="col-sm-6 dur-col col-text">
+                                                            <div class="col-text__title">
+                                                                Choose a duration
+                                                            </div>
+                                                            <select class="form-control fnb-select border-bottom">
+                                                                <option>Rs. 3000.00/month</option>
+                                                                <option>Rs. 5000.00/month</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-sm-6 dur-col col-btn">
+                                                            <button class="btn fnb-btn outline full">Subscribe</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- Go Premium End -->
+                                        <!-- Go Premium End -->
 
-                                    <div class="gs-form__footer flex-row m-t-40">
-                                        <button class="btn fnb-btn outline no-border gs-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
-                                        <button class="btn fnb-btn primary-btn full save-btn center">Save &amp; Continue</button>
-                                        <button class="btn fnb-btn outline no-border gs-next">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                        <div class="gs-form__footer flex-row m-t-40">
+                                            <button class="btn fnb-btn outline no-border gs-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
+                                            <button class="btn fnb-btn primary-btn full save-btn center">Save &amp; Continue</button>
+                                            <button class="btn fnb-btn outline no-border gs-next">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                        </div>
                                     </div>
-                                </div>
                                 </div>
                             </div>
                         </div>
@@ -885,19 +958,32 @@
                 </button> -->
 
                 <!-- Modal -->
-                <div class="modal fnb-modal category-modal fade" id="category-select" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal fnb-modal category-modal multilevel-modal fade" id="category-select" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="level-one mobile-hide ">
+                                    <button class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="mobile-back flex-row">
+                                    <div class="back">
+                                        <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
+                                    </div>
+                                    <div class="level-two">
+                                        <button class="btn fnb-btn outline border-btn">save</button>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="modal-body">
 
-                                <div class="main-category m-l-30 m-r-30 m-b-30">
-                                    <div class="mobile-hide">
+                                <div class="main-category level-one m-l-30 m-r-30 m-b-30">
+                                    <!-- <div class="mobile-hide">
                                         <button class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
                                         <div class="clearfix"></div>
-                                    </div>
-                                    <div class="desk-hide mobile-back">
+                                    </div> -->
+                                    <!-- <div class="desk-hide mobile-back">
                                         <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-5" aria-hidden="true"></i> Back</button>
-                                    </div>
+                                    </div> -->
 
                                     <div class="add-container">
                                         <h5>Select categories your listing belongs to <span class="text-primary">*</span></h5>
@@ -907,7 +993,7 @@
                                     </div>
                                     <ul class="interested-options cat-select flex-row m-t-45">
                                         <li>
-                                            <input type="radio" class="radio" name="categories" data-name="Cereals &amp; Food Grains">
+                                            <input type="radio" class="radio level-two-toggle" name="categories" data-name="Cereals &amp; Food Grains">
                                             <div class="veg option flex-row">
                                                 <span class="fnb-icons cat-icon veg"></span>
                                             </div>
@@ -916,7 +1002,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <input type="radio" class="radio" name="categories" data-name="Meat &amp; Poultry">
+                                            <input type="radio" class="radio level-two-toggle" name="categories" data-name="Meat &amp; Poultry">
                                             <div class="meat option flex-row">
                                                 <span class="fnb-icons cat-icon meat"></span>
                                             </div>
@@ -925,7 +1011,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <input type="radio" class="radio" name="categories" data-name="Juices, Soups &amp; Soft Drinks">
+                                            <input type="radio" class="radio level-two-toggle" name="categories" data-name="Juices, Soups &amp; Soft Drinks">
                                             <div class="drinks option flex-row">
                                                 <span class="fnb-icons cat-icon drinks"></span>
                                             </div>
@@ -936,13 +1022,13 @@
                                     </ul>
                                 </div>
 
-                                <div class="sub-category">
-                                    <div class="mobile-back flex-row m-b-10">
+                                <div class="sub-category level-two">
+                                    <!-- <div class="mobile-back flex-row m-b-10">
                                         <div class="back">
                                              <button class="btn fnb-btn outline border-btn no-border sub-category-back"><i class="fa fa-arrow-left p-r-5" aria-hidden="true"></i> Back</button>
                                         </div>
                                         <button class="btn fnb-btn outline border-btn">save</button>
-                                    </div>
+                                    </div> -->
 
                                     <div class="instructions">
                                         <p class="instructions__title bat-color">Please choose the sub categories under "<span class="main-cat-name">Meat &amp; Poultry</span>"</p>
@@ -1352,6 +1438,389 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Areas of operation modal -->
+                <div class="modal fnb-modal area-modal fade" id="area-select" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog modal-lg" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header p-l-0 p-r-0 p-t-0 p-b-0">
+                                <!-- <div class="level-one mobile-hide ">
+                                    <button class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                </div> -->
+                                <div class="mobile-back">
+                                    <div class="back pull-left">
+                                        <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
+                                    </div>
+                                    <div class="pull-right">
+                                        <button class="btn fnb-btn outline border-btn">save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="">
+
+                                    <div class="instructions">
+                                        <h6 class="instructions__title bat-color">Select your area(s) of operation.</h6>
+                                    </div>
+                                    <div class="node-select flex-row">
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs flex-row mobile-hide" role="tablist">
+                                            <li role="presentation" class="active"><a href="#mumbai" aria-controls="mumbai" role="tab" data-toggle="tab">Mumbai</a></li>
+                                            <li role="presentation"><a href="#delhi" aria-controls="delhi" role="tab" data-toggle="tab">Delhi</a></li>
+                                            <li role="presentation"><a href="#bangalore" aria-controls="bangalore" role="tab" data-toggle="tab">Bangalore</a></li>
+                                            <li role="presentation"><a href="#pune" aria-controls="pune" role="tab" data-toggle="tab">Pune</a></li>
+                                            <li role="presentation"><a href="#hyderabad" aria-controls="hyderabad" role="tab" data-toggle="tab">Hyderabad</a></li>
+                                            <li role="presentation"><a href="#kolkata" aria-controls="kolkata" role="tab" data-toggle="tab">Kolkata</a></li>
+                                            <li role="presentation"><a href="#chennai" aria-controls="chennai" role="tab" data-toggle="tab">Chennai</a></li>
+                                            <li role="presentation"><a href="#jaipur" aria-controls="jaipur" role="tab" data-toggle="tab">Jaipur</a></li>
+                                            <li role="presentation"><a href="#lucknow" aria-controls="lucknow" role="tab" data-toggle="tab">Lucknow</a></li>
+                                        </ul>
+                                        <!-- Tab panes -->
+                                        <div class="tab-content">
+                                            <!-- mobile collapse -->
+                                            <div class="toggle-collapse desk-hide" data-toggle="collapse" data-target="#mumbai" aria-expanded="false" aria-controls="mumbai">
+                                                Mumbai <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane active collapse" id="mumbai">
+                                                <div class="highlight-color p-t-10 p-l-10 p-r-5 p-b-10 m-b-20 select-all">
+                                                    <label class="flex-row heavier">
+                                                        <input type="checkbox" class="checkbox all-cities" id="throughout_city">
+                                                        I operate throughout the city
+                                                    </label>
+                                                </div>
+                                                <ul class="nodes">
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                    <li>
+                                                        <label class="flex-row">
+                                                            <input type="checkbox" class="checkbox" for="adarsh">
+                                                            <p class="lighter nodes__text" id="adarsh">Adarsh nagar</p>
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                            <div class="toggle-collapse desk-hide" data-toggle="collapse" data-target="#delhi" aria-expanded="false" aria-controls="delhi">
+                                                Delhi <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane collapse" id="delhi">Delhi</div>
+
+                                            <div class="toggle-collapse desk-hide" data-toggle="collapse" data-target="#bangalore" aria-expanded="false" aria-controls="bangalore">
+                                                Bangalore <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane collapse" id="bangalore">Bangalore</div>
+
+                                            <div class="toggle-collapse desk-hide" data-toggle="collapse" data-target="#pune" aria-expanded="false" aria-controls="pune">
+                                                Pune <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </div>
+                                            <div role="tabpanel" class="tab-pane collapse" id="pune">Pune</div>
+
+                                            <div role="tabpanel" class="tab-pane" id="hyderabad">Hyderabad</div>
+                                            <div role="tabpanel" class="tab-pane" id="kolkata">Kolkata</div>
+                                            <div role="tabpanel" class="tab-pane" id="chennai">Chennai</div>
+                                            <div role="tabpanel" class="tab-pane" id="jaipur">Jaipur</div>
+                                            <div role="tabpanel" class="tab-pane" id="lucknow">Lucknow</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer mobile-hide">
+                                <div class="sub-category hidden">
+                                    <button class="btn fnb-btn outline full border-btn">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Areas of operation modal -->
+
             </div>
         </div>
         <div class="site-overlay"></div>
