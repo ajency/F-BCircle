@@ -1400,6 +1400,12 @@ input[type=radio].fnb-radio.disabled:before {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
 }
+.space-between {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .required:after {
   content: '*';
   font-size: 1.1em;
@@ -3229,6 +3235,165 @@ input[type=radio].fnb-radio.disabled:before {
   line-height: 20px;
   color: #e66960;
   margin-right: 8px;
+}
+.enquiry-modal .enquiry-success {
+  padding: 2.5em;
+}
+.enquiry-modal .enquiry-success .fa {
+  color: #6ac259;
+  font-size: 3.5em;
+}
+.enquiry-modal .enquiry-success__text {
+  padding-left: 1em;
+  line-height: 1.4;
+  padding-right: 8em;
+  font-size: 1.2em;
+}
+.enquiry-modal .suppliers-data {
+  padding: 2em;
+  background-color: #f3f3f3;
+  position: relative;
+  padding-top: 4em;
+}
+.enquiry-modal .suppliers-data .direction-down {
+  display: inline-block;
+}
+.enquiry-modal .suppliers-data:before {
+  background: -webkit-linear-gradient(135deg, #ffffff 16px, transparent 0), -webkit-linear-gradient(45deg, #ffffff 16px, transparent 0);
+  background: linear-gradient(-45deg, #ffffff 16px, transparent 0), linear-gradient(45deg, #ffffff 16px, transparent 0);
+  background-position: left-bottom;
+  background-repeat: repeat-x;
+  background-size: 32px 32px;
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 32px;
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+.enquiry-modal .seller-info {
+  border: 0;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
+  margin: 1em 0;
+}
+.enquiry-modal .seller-info p {
+  font-size: 1em;
+}
+.enquiry-modal .seller-info:last-child {
+  margin-bottom: 0;
+}
+.enquiry-modal .supplier-title {
+  max-width: 60%;
+}
+.enquiry-modal .suppliers-title-head {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.enquiry-modal .suppliers-title-head .main-heading {
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+}
+.enquiry-modal .rating {
+  width: 95px;
+}
+.enquiry-modal .rating .bg:after,
+.enquiry-modal .rating .value:after,
+.enquiry-modal .rating .bg:before,
+.enquiry-modal .rating .value:before {
+  font-size: 1.15em;
+}
+.enquiry-modal .featured__title {
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.enquiry-modal .location .map-icon {
+  background-size: 2000%;
+  padding-right: 0;
+  margin-right: -5px;
+  background-position: -27px -105px;
+}
+.enquiry-modal .core-cat {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.enquiry-modal .core-cat .fnb-cat li {
+  padding: 0.3em 1em;
+  margin-bottom: 0;
+}
+.enquiry-modal .core-cat .fnb-cat li a {
+  font-size: 0.9em;
+}
+.enquiry-modal .get-details {
+  -webkit-box-flex: 0.5;
+  -webkit-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  padding-left: 4em;
+}
+.enquiry-modal .seller-enquiry {
+  margin-top: 2em;
+}
+.enquiry-modal .seller-enquiry__title {
+  font-size: 1.2em;
+  margin-bottom: 0;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.enquiry-modal .seller-enquiry .verified-icon {
+  margin-left: 1em;
+  background-size: 2000%;
+  background-position: -196px -187px;
+  min-width: 29px;
+}
+.enquiry-modal .seller-enquiry .location {
+  margin: 0.5em 0;
+}
+.enquiry-modal .seller-enquiry .location .map-icon {
+  margin-right: -8px;
+  background-position: -35px -126px;
+}
+.enquiry-modal .seller-enquiry .location__title {
+  font-size: 1em;
+}
+.enquiry-modal .seller-enquiry .rat-view {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #a5a5a5;
+}
+.enquiry-modal .seller-enquiry .rat-view .eye-icon {
+  background-size: 2000%;
+  background-position: -105px -127px;
+}
+.enquiry-modal .seller-enquiry .rat-view .views__title {
+  font-size: 1em;
+}
+.enquiry-modal .rotator {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.enquiry-modal .rotator .direction-down {
+  -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
 }
 .search-section {
   position: relative;

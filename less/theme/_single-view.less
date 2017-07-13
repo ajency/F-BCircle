@@ -1940,6 +1940,142 @@
     	color: #e66960;
     	margin-right: 8px;
 	}
+	.enquiry-success{
+		padding: 2.5em;
+		.fa{
+			color: #6ac259;
+    		font-size: 3.5em;
+		}
+		&__text{
+			padding-left: 1em;
+    		line-height: 1.4;
+    		padding-right: 8em;
+    		font-size: 1.2em;
+		}
+	}
+	.suppliers-data{
+		padding: 2em;
+    	background-color: #f3f3f3;
+    	position: relative;
+    	padding-top: 4em;
+    	.direction-down{
+    		display: inline-block;
+    	}
+    	&:before{
+    		background: linear-gradient(-45deg, #ffffff 16px, transparent 0), linear-gradient(45deg, #ffffff 16px, transparent 0);
+		    background-position: left-bottom;
+		    background-repeat: repeat-x;
+		    background-size: 32px 32px;
+		    content: " ";
+		    display: block;
+		    position: absolute;
+		    top: 0px;
+		    left: 0px;
+		    width: 100%;
+		    height: 32px;
+		    transform: rotate(-180deg);
+    	}
+	}
+	.seller-info{
+		border: 0;
+		box-shadow: @high-shadow-1;
+		margin: 1em 0;
+		p{
+			font-size: 1em;
+		}
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+	.supplier-title{
+		max-width: 60%;
+	}
+	.suppliers-title-head{
+		justify-content: space-between;
+    	align-items: flex-start;
+    	.main-heading{
+    		font-size: 1.4em;
+    		margin-bottom: 0.3em;
+    	}
+	}
+	.rating{
+		width: 95px;
+		.bg,.value{
+			&:after,&:before{
+				font-size: 1.15em;
+			}
+		}
+	}
+	.featured{
+		&__title{
+			justify-content: flex-end;
+		}
+	}
+	.location{
+		.map-icon{
+			background-size: 2000%;
+    		padding-right: 0;
+    		margin-right: -5px;
+    		background-position: -27px -105px;
+		}
+	}
+	.core-cat{
+		flex: 1;
+		.fnb-cat{
+			li{
+				padding: 0.3em 1em;
+    			margin-bottom: 0;
+    			a{
+    				font-size: 0.9em;
+    			}
+			}
+		}
+	}
+	.get-details{
+		flex: 0.5;
+    	padding-left: 4em;
+	}
+	.seller-enquiry{
+		margin-top: 2em;
+		&__title{
+			font-size: 1.2em;
+			margin-bottom: 0;
+    		align-items: flex-start;
+		}
+		.verified-icon{
+			margin-left: 1em;
+    		background-size: 2000%;
+    		background-position: -196px -187px;
+    		min-width: 29px;
+		}
+		.location{
+			margin: 0.5em 0;
+			.map-icon{
+				margin-right: -8px;
+    			background-position: -35px -126px;
+			}
+			&__title{
+				font-size: 1em;
+			}
+		}
+		.rat-view{
+			justify-content: space-between;
+    		border-bottom: 1px solid #a5a5a5;
+    		.eye-icon{
+    			background-size: 2000%;
+    			background-position: -105px -127px;
+    		}
+    		.views__title{
+    			font-size: 1em;
+    		}
+		}
+	}
+	.rotator{
+		transform: rotate(-45deg);
+		.direction-down{
+			transform: scaleX(-1);
+		}
+	}
 }
 
 
