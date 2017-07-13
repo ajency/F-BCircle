@@ -53,11 +53,12 @@
 
   $('body').on('change', 'input:checkbox.all-cities', function() {
     if ($(this).is(':checked')) {
-      $(this).closest('.tab-pane').find('input:checkbox').prop('checked', true);
-      return console.log('checked!');
+      return $(this).closest('.tab-pane').find('input:checkbox').prop('checked', true);
     } else {
       return $(this).closest('.tab-pane').find('input:checkbox').prop('checked', false);
     }
   });
+
+  $('[data-toggle="tooltip"]').tooltip();
 
 }).call(this);

@@ -3916,9 +3916,11 @@ input[type=radio].fnb-radio.disabled:before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .note-row__text {
-  font-size: 0.6em;
   font-weight: 400;
   margin-bottom: 0;
 }
@@ -3941,9 +3943,12 @@ input[type=radio].fnb-radio.disabled:before {
             align-items: flex-start;
   }
   .note-row__text {
-    font-size: 0.7em;
+    font-size: 0.9em;
     margin-top: 5px;
-    margin-bottom: 0.8em;
+  }
+  .note-row__text--status {
+    margin-top: 15px;
+    margin-left: 15px;
   }
 }
 .get-started {

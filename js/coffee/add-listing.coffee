@@ -52,6 +52,7 @@ $('.sample-img').magnificPopup
 $('body').on 'change', 'input:checkbox.all-cities', ->
 	if $(this).is(':checked')
 		$(this).closest('.tab-pane').find('input:checkbox').prop('checked', true)
-		console.log 'checked!'
 	else
 		$(this).closest('.tab-pane').find('input:checkbox').prop('checked', false)
+
+$('[data-toggle="tooltip"]').tooltip()
