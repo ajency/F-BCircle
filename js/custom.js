@@ -310,4 +310,8 @@ $(function(){
 		    $(this).toggleClass('active');
 		});
 
+		// Tags call
+
+		$('.flexdatalist').flexdatalist();
+
 });
