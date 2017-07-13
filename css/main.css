@@ -4712,4 +4712,22 @@ input[type=radio].fnb-radio.disabled:before {
     padding: 0.6em 1.5em;
   }
 }
+.flexdatalist-multiple li {
+  float: none;
+}
+.flexdatalist-multiple li.value {
+  margin: 0.2em 0.6em 0.2em 0;
+  border: 1px solid #676767;
+  border-radius: 4px;
+  color: #4a4a4a;
+  font-size: 0.95em;
+  background-color: #f8fafc;
+}
+.flexdatalist-multiple li.value .fdl-remove {
+  color: #ec6d4b;
+}
+.flexdatalist-multiple .input-container {
+  display: block;
+  margin-top: 30px;
+}
 /*# sourceMappingURL=main.css.map */
