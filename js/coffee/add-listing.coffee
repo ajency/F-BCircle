@@ -47,3 +47,11 @@ $('.sample-img').magnificPopup
 		src: 'img/sample_listing.png'
 	type: 'image'
 	mainClass: 'mfp-fade'
+
+# All cities select
+$('body').on 'change', 'input:checkbox.all-cities', ->
+	if $(this).is(':checked')
+		$(this).closest('.tab-pane').find('input:checkbox').prop('checked', true)
+		console.log 'checked!'
+	else
+		$(this).closest('.tab-pane').find('input:checkbox').prop('checked', false)

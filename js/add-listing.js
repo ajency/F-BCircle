@@ -51,4 +51,13 @@
     mainClass: 'mfp-fade'
   });
 
+  $('body').on('change', 'input:checkbox.all-cities', function() {
+    if ($(this).is(':checked')) {
+      $(this).closest('.tab-pane').find('input:checkbox').prop('checked', true);
+      return console.log('checked!');
+    } else {
+      return $(this).closest('.tab-pane').find('input:checkbox').prop('checked', false);
+    }
+  });
+
 }).call(this);
