@@ -924,19 +924,32 @@
                 </button> -->
 
                 <!-- Modal -->
-                <div class="modal fnb-modal category-modal fade" id="category-select" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal fnb-modal category-modal multilevel-modal fade" id="category-select" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog modal-lg" role="document">
                         <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="level-one mobile-hide ">
+                                    <button class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                                </div>
+                                <div class="mobile-back flex-row">
+                                    <div class="back">
+                                        <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
+                                    </div>
+                                    <div class="level-two">
+                                        <button class="btn fnb-btn outline border-btn">save</button>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="modal-body">
 
-                                <div class="main-category m-l-30 m-r-30 m-b-30">
-                                    <div class="mobile-hide">
+                                <div class="main-category level-one m-l-30 m-r-30 m-b-30">
+                                    <!-- <div class="mobile-hide">
                                         <button class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
                                         <div class="clearfix"></div>
-                                    </div>
-                                    <div class="desk-hide mobile-back">
+                                    </div> -->
+                                    <!-- <div class="desk-hide mobile-back">
                                         <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-5" aria-hidden="true"></i> Back</button>
-                                    </div>
+                                    </div> -->
 
                                     <div class="add-container">
                                         <h5>Select categories your listing belongs to <span class="text-primary">*</span></h5>
@@ -946,7 +959,7 @@
                                     </div>
                                     <ul class="interested-options cat-select flex-row m-t-45">
                                         <li>
-                                            <input type="radio" class="radio" name="categories" data-name="Cereals &amp; Food Grains">
+                                            <input type="radio" class="radio level-two-toggle" name="categories" data-name="Cereals &amp; Food Grains">
                                             <div class="veg option flex-row">
                                                 <span class="fnb-icons cat-icon veg"></span>
                                             </div>
@@ -955,7 +968,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <input type="radio" class="radio" name="categories" data-name="Meat &amp; Poultry">
+                                            <input type="radio" class="radio level-two-toggle" name="categories" data-name="Meat &amp; Poultry">
                                             <div class="meat option flex-row">
                                                 <span class="fnb-icons cat-icon meat"></span>
                                             </div>
@@ -964,7 +977,7 @@
                                             </div>
                                         </li>
                                         <li>
-                                            <input type="radio" class="radio" name="categories" data-name="Juices, Soups &amp; Soft Drinks">
+                                            <input type="radio" class="radio level-two-toggle" name="categories" data-name="Juices, Soups &amp; Soft Drinks">
                                             <div class="drinks option flex-row">
                                                 <span class="fnb-icons cat-icon drinks"></span>
                                             </div>
@@ -975,13 +988,13 @@
                                     </ul>
                                 </div>
 
-                                <div class="sub-category">
-                                    <div class="mobile-back flex-row m-b-10">
+                                <div class="sub-category level-two">
+                                    <!-- <div class="mobile-back flex-row m-b-10">
                                         <div class="back">
                                              <button class="btn fnb-btn outline border-btn no-border sub-category-back"><i class="fa fa-arrow-left p-r-5" aria-hidden="true"></i> Back</button>
                                         </div>
                                         <button class="btn fnb-btn outline border-btn">save</button>
-                                    </div>
+                                    </div> -->
 
                                     <div class="instructions">
                                         <p class="instructions__title bat-color">Please choose the sub categories under "<span class="main-cat-name">Meat &amp; Poultry</span>"</p>

@@ -15,8 +15,6 @@
 
   $('body').on('click', 'input:radio[name=\'categories\']', function() {
     var cat_icon, cat_name;
-    $('.main-category').addClass('hidden');
-    $('.sub-category').addClass('shown');
     cat_name = $(this).data('name');
     $('.main-cat-name').html(cat_name);
     cat_icon = $(this).closest('li').find('.cat-icon').clone().addClass('m-r-15');
