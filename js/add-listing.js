@@ -43,4 +43,12 @@
     return $('.tips__steps.collapse').collapse('toggle');
   });
 
+  $('.sample-img').magnificPopup({
+    items: {
+      src: 'img/sample_listing.png'
+    },
+    type: 'image',
+    mainClass: 'mfp-fade'
+  });
+
 }).call(this);

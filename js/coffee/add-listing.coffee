@@ -41,3 +41,9 @@ $('.flexdatalist').flexdatalist()
 $('body').on 'click', '.tips', ->
 	$(this).toggleClass 'open'
 	$('.tips__steps.collapse').collapse('toggle')
+
+$('.sample-img').magnificPopup
+	items:
+		src: 'img/sample_listing.png'
+	type: 'image'
+	mainClass: 'mfp-fade'
