@@ -1063,11 +1063,11 @@
                                     </h5>
                                     <div class="seller-enquiry">
                                         <p class="sub-title heavier text-darker text-capitalise flex-row seller-enquiry__title"><span class="brand-name">Mystical the meat and fish store</span> <span class="fnb-icons verified-icon"></span></p>
-                                        <div class="location flex-row">
+                                        <div class="location flex-row mobile-hide">
                                             <span class="fnb-icons map-icon"></span>
                                             <p class="location__title m-b-0 text-lighter">Mumbai, Andheri</p>
                                         </div>
-                                        <div class="rat-view flex-row">
+                                        <div class="rat-view flex-row mobile-hide">
                                             <div class="rating">
                                                 <div class="bg"></div>
                                                 <div class="value" style="width: 80%;"></div>
@@ -1092,240 +1092,245 @@
                             <!-- col left ends -->
                             <!-- col right -->
                             <div class="detail-cols col-right enquiry-details__content">
-                                <p class="content-title text-darker m-b-0 lighter">Ensure that you provide the correct details as the business owner will use these details to contact you.</p>
-                                <!-- verify email and contact -->
-                                <!-- <div class="verification gap-separator">
-                                    <p class="content-title text-darker m-b-0 text-lighter desk-hide m-b-15">Verify your email and phone to contact the listing.</p>
-                                    <div class="verification__row flex-row">
-                                        <div class="verification__detail flex-row">
-                                            <div class="exclamation">
-                                                <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                
+                                <!-- level one starts -->
+
+                                <div class="level-one">
+                                    <p class="content-title text-darker m-b-0 lighter">Ensure that you provide the correct details as the business owner will use these details to contact you.</p>
+                                      <!-- form -->
+                                    <div class="formFields gap-separator row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group m-b-0">
+                                                <!-- <label class="m-b-0 lighter text-color xx-small required">Name</label> -->
+                                                <label class="m-b-0 text-lighter float-label required" for="name">Name</label>
+                                                <input type="text" class="form-control fnb-input float-input" id="name">
                                             </div>
-                                            <p class="text-darker">Please enter the code sent to <span class="email bolder">valenie@gmail.com</span> <a href="#" class="heavier secondary-link text-decor">Edit</a></p>
                                         </div>
-                                        <div class="flex-row verification__col">
-                                            <div class="verification__code">
-                                                <input type="text" class="form-control fnb-input" placeholder="Enter the code">
+                                        <div class="col-sm-6">
+                                            <div class="form-group m-b-0">
+                                                <label class="m-b-0 text-lighter float-label required" for="number">Phone</label>
+                                                <input type="number" class="form-control fnb-input float-input" id="number">
                                             </div>
-                                            <div class="verification__otp">
-                                                <p class="x-small text-lighter m-b-0">Didn't receive the code?</p>
-                                                <p class="x-small heavier m-b-0"><a href="#" class="dark-link"><i class="fa fa-refresh" aria-hidden="true"></i> Resend Email</a></p>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group m-b-0">
+                                                <label class="m-b-0 text-lighter float-label required" for="email">Email</label>
+                                                <input type="text" class="form-control fnb-input float-input" id="email">
+                                            </div>    
+                                        </div>
+                                        <div class="col-sm-6"></div>
+                                    </div>
+                                    <!-- form ends -->
+                                    <!-- describes best -->
+                                    <div class="describes gap-separator">
+                                        <p class="text-darker describes__title text-medium">What describes you the best? <span class="xx-small text-lighter">(Please select atleast one)</span></p>
+                                        <select class="fnb-select select-variant multi-select" multiple="multiple">
+                                            <option>I work in the F&amp;B industry</option>
+                                            <option>I am a resturant owner</option>
+                                            <option>I am a supplier to F&amp;B industry</option>
+                                            <option>I provide services to F&amp;B industry</option>
+                                            <option>I am a manufacturer</option>
+                                            <option>Others...</option>
+                                        </select>
+                                    </div>
+                                    <!-- describes best ends -->
+                                    <!-- looking for -->
+                                    <div class="looking-for gap-separator">
+                                        <a class="secondary-link text-decor desk-hide looking-for__toggle" data-toggle="collapse" href="#lookingfor" aria-expanded="false" aria-controls="lookingfor">Add a note</a>
+                                        <div class="collapse in" id="lookingfor">
+                                            <p class="text-darker describes__title text-medium">Tell business owner what you're looking for</p>
+                                            <div class="form-group">
+                                                <input type="text" class="form-control fnb-input" placeholder="Eg: The categories that you're interested in">
                                             </div>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <div class="verification__row flex-row">
-                                        <div class="verification__detail flex-row">
-                                            <div class="exclamation">
-                                                <i class="fa fa-exclamation" aria-hidden="true"></i>
-                                            </div>
-                                            <p class="text-darker">Please enter the code sent to <span class="email bolder">valenie@gmail.com</span> <a href="#" class="heavier secondary-link text-decor">Edit</a></p>
+                                    <!-- looking for ends -->
+                                    <!-- action -->
+                                    <div class="gap-separator">
+                                        <div class="send-action">
+                                            <button class="btn fnb-btn primary-btn full border-btn level-two-toggle">Send</button>
                                         </div>
-                                        <div class="flex-row verification__col">
-                                            <div class="verification__code">
-                                                <input type="text" class="form-control fnb-input" placeholder="Enter the code">
+                                    </div>
+                                    <!-- action ends -->
+                                </div>
+                                
+                                <!-- Level one ends -->
+
+                                <!-- Level two starts -->
+
+                                <div class="level-two">
+                                    <p class="content-title text-darker m-b-0 lighter mobile-hide">Verify your email and phone number to contact the listing.</p>
+                                    <!-- verify email and contact -->
+                                    <div class="verification gap-separator">
+                                        <p class="content-title text-darker m-b-0 text-lighter desk-hide m-b-15">Verify your email and phone number to contact the listing.</p>
+                                        <div class="verification__row flex-row">
+                                            <div class="verification__detail flex-row">
+                                                <div class="exclamation">
+                                                    <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                                </div>
+                                                <p class="text-darker verification__text">Please enter the code sent to <span class="email bolder">valenie@gmail.com</span> <a href="#" class="heavier secondary-link text-decor">Edit</a></p>
                                             </div>
-                                            <div class="verification__otp">
-                                                <p class="x-small text-lighter m-b-0">Didn't receive the code?</p>
-                                                <p class="x-small heavier m-b-0"><a href="#" class="dark-link"><i class="fa fa-refresh" aria-hidden="true"></i> Resend Email</a></p>
+                                            <div class="verification__col">
+                                                <div class="verification__code">
+                                                    <input type="text" class="form-control fnb-input" placeholder="Enter the code">
+                                                    <a href="#" class="secondary-link text-decor p-l-10 x-small">Submit</a>
+                                                    <p class="x-small text-lighter m-b-0 m-t-5 didnt-receive">Didn't receive the code? <a href="#" class="dark-link x-small heavier"><i class="fa fa-refresh" aria-hidden="true"></i> Resend Email</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="verification__row flex-row">
+                                            <div class="verification__detail flex-row">
+                                                <div class="exclamation">
+                                                    <i class="fa fa-exclamation" aria-hidden="true"></i>
+                                                </div>
+                                                <p class="text-darker verification__text">Please enter the code sent to <span class="email bolder">valenie@gmail.com</span> <a href="#" class="heavier secondary-link text-decor">Edit</a></p>
+                                            </div>
+                                            <div class="verification__col">
+                                                <div class="verification__code">
+                                                    <input type="text" class="form-control fnb-input" placeholder="Enter the code">
+                                                    <a href="#" class="secondary-link text-decor p-l-10 x-small">Submit</a>
+                                                    <p class="x-small text-lighter m-b-0 m-t-5 didnt-receive">Didn't receive the code? <a href="#" class="dark-link x-small heavier"><i class="fa fa-refresh" aria-hidden="true"></i> Resend Email</a></p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div> -->
-                                <!-- verify email and contact ends -->
-                                <!-- form -->
-                                <div class="formFields gap-separator row">
-                                    <div class="col-sm-6">
+                                    <!-- verify email and contact ends -->
+                                    <p class="content-title text-darker m-b-0 lighter">Ensure that you provide the correct details as the business owner will use these details to contact you.</p>
+                                      <!-- form -->
+                                    <div class="formFields gap-separator row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group m-b-0">
+                                                <!-- <label class="m-b-0 lighter text-color xx-small required">Name</label> -->
+                                                <label class="m-b-0 text-lighter float-label required" for="name">Name</label>
+                                                <input type="text" class="form-control fnb-input float-input" id="name" value="Suresh Sharma">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group m-b-0">
+                                                <label class="m-b-0 text-lighter float-label required" for="number">Phone</label>
+                                                <input type="number" class="form-control fnb-input float-input" id="number" value="9876543200">
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group m-b-0">
+                                                <label class="m-b-0 text-lighter float-label required" for="email">Email</label>
+                                                <input type="text" class="form-control fnb-input float-input" id="email" value="sunil773@gmail.com">
+                                            </div>    
+                                        </div>
+                                        <div class="col-sm-6"></div>
+                                    </div>
+                                    <!-- form ends -->
+
+                                    <!-- categories -->
+                                   <!--  <div class="categories-select gap-separator">
+                                        <p class="text-darker describes__title text-medium">Categories <span class="xx-small text-lighter">(Select from the list below or add other categories.)</span></p>
+                                        <ul class="categories__points flex-points flex-row flex-wrap">
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="chicken">
+                                                    <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="egg">
+                                                    <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="chicken">
+                                                    <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="egg">
+                                                    <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="chicken">
+                                                    <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="egg">
+                                                    <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="chicken">
+                                                    <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="egg">
+                                                    <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="flex-row">
+                                                    <input type="checkbox" class="checkbox" for="chicken">
+                                                    <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
+                                                </label>
+                                            </li>
+                                        </ul>
+                                    </div> -->
+                                    <!-- categories ends -->
+                                    <!-- Add categories -->
+                                    <div class="add-categories gap-separator">
+                                        <p class="text-darker describes__title text-medium">Add Categories</p>
                                         <div class="form-group m-b-0">
-                                            <!-- <label class="m-b-0 lighter text-color xx-small required">Name</label> -->
-                                            <label class="m-b-0 text-lighter float-label required" for="name">Name</label>
-                                            <input type="text" class="form-control fnb-input float-input" id="name">
+                                            <input type="text" class="form-control fnb-input flexdatalist" placeholder="Type to select categories" multiple='multiple' data-min-length='1'>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group m-b-0">
-                                            <label class="m-b-0 text-lighter float-label required" for="number">Phone</label>
-                                            <input type="number" class="form-control fnb-input float-input" id="number">
+                                    <!-- add categories ends -->
+                                    <!-- areas select -->
+                                    <div class="areas-select gap-separator">
+                                        <p class="text-darker describes__title heavier">Areas <span class="xx-small text-lighter">(Select your areas of interest)</span></p>
+                                        <ul class="areas-select__selection flex-row flex-wrap">
+                                            <li>
+                                                <select class="form-control fnb-select select-variant">
+                                                    <option>Select City</option>
+                                                    <option>Delhi</option>
+                                                    <option>Goa</option>
+                                                    <option>Mumbai</option>
+                                                    <option>Goa</option>
+                                                </select>
+                                            </li>
+                                            <li>
+                                                <select class="form-control fnb-select select-variant">
+                                                    <option class="required">Select Area(s)</option>
+                                                    <option>Delhi</option>
+                                                    <option>Goa</option>
+                                                    <option>Mumbai</option>
+                                                    <option>Goa</option>
+                                                </select>
+                                            </li>
+                                        </ul>
+                                        <div class="text-right m-t-10">
+                                            <a href="#" class="secondary-link text-decor heavier">+ Add more</a>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label class="m-b-0 text-lighter float-label required" for="email">Email</label>
-                                            <input type="text" class="form-control fnb-input float-input" id="email">
-                                        </div>    
+                                    <!-- areas select -->
+                                     <!-- action -->
+                                    <div class="gap-separator">
+                                        <div class="send-action">
+                                            <button class="btn fnb-btn primary-btn full border-btn level-two-toggle">Send</button>
+                                        </div>
                                     </div>
-                                    <div class="col-sm-6"></div>
+                                    <!-- action ends -->
                                 </div>
-                                <!-- form ends -->
-                                <!-- categories -->
-                                <div class="categories-select gap-separator">
-                                    <p class="text-darker describes__title text-medium">Categories <span class="xx-small text-lighter">(Select from the list below or add other categories.)</span></p>
-                                    <ul class="categories__points flex-points flex-row flex-wrap">
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="egg">
-                                                <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="egg">
-                                                <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="egg">
-                                                <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="egg">
-                                                <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- categories ends -->
-                                <!-- Add categories -->
-                                <div class="add-categories gap-separator">
-                                    <p class="text-darker describes__title text-medium">Add Categories</p>
-                                    <div class="form-group m-b-0">
-                                        <input type="text" class="form-control fnb-input flexdatalist" placeholder="Type to select categories" multiple='multiple' data-min-length='1'>
-                                    </div>
-                                </div>
-                                <!-- add categories ends -->
-                                <!-- areas select -->
-  <!--                               <div class="areas-select gap-separator">
-                                    <p class="text-darker describes__title heavier">Areas <span class="xx-small text-lighter">(Select your areas of interest)</span></p>
-                                    <ul class="areas-select__selection flex-row flex-wrap">
-                                        <li>
-                                            <select class="form-control fnb-select select-variant">
-                                                <option>Select City</option>
-                                                <option>Delhi</option>
-                                                <option>Goa</option>
-                                                <option>Mumbai</option>
-                                                <option>Goa</option>
-                                            </select>
-                                        </li>
-                                        <li>
-                                            <select class="form-control fnb-select select-variant">
-                                                <option class="required">Select Area(s)</option>
-                                                <option>Delhi</option>
-                                                <option>Goa</option>
-                                                <option>Mumbai</option>
-                                                <option>Goa</option>
-                                            </select>
-                                        </li>
-                                    </ul>
-                                    <div class="text-right m-t-10">
-                                        <a href="#" class="secondary-link text-decor heavier">+ Add more</a>
-                                    </div>
-                                </div> -->
-                                <!-- areas select -->
-                                <!-- describes best -->
-                                <div class="describes gap-separator">
-                                    <p class="text-darker describes__title text-medium">What describes you the best? <span class="xx-small text-lighter">(Please select atleast one)</span></p>
-                                    <select class="fnb-select select-variant multi-select" multiple="multiple">
-                                        <option>I work in the F&amp;B industry</option>
-                                        <option>I am a resturant owner</option>
-                                        <option>I am a supplier to F&amp;B industry</option>
-                                        <option>I provide services to F&amp;B industry</option>
-                                        <option>I am a manufacturer</option>
-                                        <option>Others...</option>
-                                    </select>
-       <!--                              <ul class="describes__points flex-points flex-row flex-wrap">
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="work-industry">
-                                                <p class="lighter describes__text flex-points__text text-color" id="work-industry">I work in the F&amp;B industry</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="resturant">
-                                                <p class="lighter describes__text flex-points__text text-color" id="resturant">I am a resturant owner</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="supplier">
-                                                <p class="lighter describes__text flex-points__text text-color" id="supplier">I am a supplier to F&amp;B industry</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="service-provider">
-                                                <p class="lighter describes__text flex-points__text text-color" id="service-provider">I provide services to F&amp;B industry</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="manufacturer">
-                                                <p class="lighter describes__text flex-points__text text-color" id="manufacturer">I am a manufacturer</p>
-                                            </label>
-                                        </li>
-                                        <li>
-                                            <label class="flex-row">
-                                                <input type="checkbox" class="checkbox" for="others">
-                                                <p class="lighter describes__text flex-points__text text-color" id="others">Others...</p>
-                                            </label>
-                                        </li>
-                                    </ul> -->
-                                </div>
-                                <!-- describes best ends -->
-                                <!-- looking for -->
-                                <div class="looking-for gap-separator">
-                                    <p class="text-darker describes__title text-medium">Tell business owner what you're looking for</p>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control fnb-input" placeholder="Eg: The categories that you're interested in">
-                                    </div>
-                                </div>
-                                <!-- looking for ends -->
-                                <!-- action -->
-                                <div class="gap-separator">
-                                    <div class="send-action">
-                                        <button class="btn fnb-btn primary-btn full border-btn">Send</button>
-                                    </div>
-                                </div>
-                                <!-- action ends -->
+                                <!-- level two ends -->
                             </div>
                             <!-- col right ends -->
-                            </div>
-
-
-
+                        </div>
                     </div>
                     <div class="modal-footer mobile-hide">
                         <div class="sub-category hidden">

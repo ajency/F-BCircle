@@ -1522,7 +1522,8 @@ input[type=radio].fnb-radio.disabled:before {
 .secondary-link {
   color: #27b7b0;
 }
-.secondary-link:hover {
+.secondary-link:hover,
+.secondary-link:active {
   color: #3cd5ce;
   text-decoration: none;
 }
@@ -3297,7 +3298,7 @@ input[type=radio].fnb-radio.disabled:before {
           transform: translateY(1.6em);
   display: block;
   cursor: text;
-  font-size: 1em;
+  font-size: 1.05em;
   color: #000;
   font-weight: 400;
 }
@@ -3305,6 +3306,7 @@ input[type=radio].fnb-radio.disabled:before {
   -webkit-transform: translateX(-2.3em) translateY(0.5em) scale(0.75);
       -ms-transform: translateX(-2.3em) translateY(0.5em) scale(0.75);
           transform: translateX(-2.3em) translateY(0.5em) scale(0.75);
+  font-weight: 600;
 }
 .verification-modal .float-label.focused {
   color: #9b9ea0;
@@ -3312,6 +3314,7 @@ input[type=radio].fnb-radio.disabled:before {
 .verification-modal .float-input {
   -webkit-transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
           transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
+  font-size: 1em;
 }
 .verification-modal .float-input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -3322,8 +3325,8 @@ input[type=radio].fnb-radio.disabled:before {
   color: #000;
 }
 .verification-modal .gap-separator {
-  padding-top: 0.8em;
-  padding-bottom: 0.8em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .verification-modal .flex-points li {
   -webkit-box-flex: 1;
@@ -3391,6 +3394,7 @@ input[type=radio].fnb-radio.disabled:before {
   border: 3px dashed #ffc1bd;
   margin-top: 1em;
   padding: 0.8em;
+  margin-bottom: 1.5em;
   background-color: #fffdfd;
 }
 .verification-modal .verification__col {
@@ -3404,7 +3408,7 @@ input[type=radio].fnb-radio.disabled:before {
   border-width: 2px;
 }
 .verification-modal .verification__row {
-  margin: 0.5em 0;
+  margin: 0.5em;
 }
 .verification-modal .verification__detail {
   -webkit-box-flex: 0.7;
@@ -3421,19 +3425,25 @@ input[type=radio].fnb-radio.disabled:before {
   -webkit-flex: 0.55;
       -ms-flex: 0.55;
           flex: 0.55;
-  margin: 0 15px;
+  margin-left: 2em;
 }
 .verification-modal .verification__code .fnb-input {
-  font-size: 0.9em;
+  font-size: 0.85em;
   background-color: #fff;
   border: 1px solid #ddd;
   text-indent: 22px;
+  width: 130px;
+  display: inline-block;
+  height: 33px;
 }
 .verification-modal .verification__otp {
   -webkit-box-flex: 0.6;
   -webkit-flex: 0.6;
       -ms-flex: 0.6;
           flex: 0.6;
+}
+.verification-modal .didnt-receive {
+  font-size: 0.8em;
 }
 .verification-modal .exclamation {
   width: 23px;
@@ -3606,6 +3616,12 @@ input[type=radio].fnb-radio.disabled:before {
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
+.verification-modal .level-two {
+  display: none;
+}
+.verification-modal .level-two.shown {
+  display: block;
+}
 @media screen and (max-width: 768px) {
   .verification-modal .modal-body {
     padding-top: 4em;
@@ -3626,7 +3642,7 @@ input[type=radio].fnb-radio.disabled:before {
   }
   .verification-modal .col-right {
     position: relative;
-    top: -3em;
+    top: -2.5em;
     background-color: #fff;
     margin: 0 1em;
     width: calc(100% - 2em);
@@ -3635,7 +3651,10 @@ input[type=radio].fnb-radio.disabled:before {
     width: 100%;
   }
   .verification-modal .intro-text {
-    font-size: 1.4em;
+    font-size: 1.3em;
+  }
+  .verification-modal .seller-enquiry {
+    margin-top: 0.2em;
   }
   .verification-modal .seller-enquiry .brand-name {
     overflow: hidden;
@@ -3679,6 +3698,10 @@ input[type=radio].fnb-radio.disabled:before {
   }
   .verification-modal .seller-info {
     margin: 1.5em 0;
+  }
+  .verification-modal .looking-for__toggle {
+    display: block;
+    margin-bottom: 0.6em;
   }
   .verification-modal .suppliers-data {
     padding-left: 1em;
@@ -3743,15 +3766,42 @@ input[type=radio].fnb-radio.disabled:before {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
   }
   .verification-modal .verification__col {
-    margin-top: 1em;
+    margin-top: 0.8em;
   }
   .verification-modal .verification__code {
     margin-left: 0;
+    text-align: center;
   }
   .verification-modal .verification hr {
-    margin: 1.5em 0;
+    margin: 0.8em 0;
+  }
+  .verification-modal .verification__detail p {
+    font-size: 0.85em;
+  }
+  .verification-modal .verification .fnb-input {
+    width: 100px;
+    font-size: 0.75em;
+    text-indent: 15px;
+  }
+  .verification-modal .verification .didnt-receive {
+    margin-top: 1em;
+  }
+  .verification-modal .exclamation {
+    font-size: 0.85em;
+    width: 20px;
+    height: 15px;
+    line-height: 18px;
+    margin-right: 8px;
+  }
+  .verification-modal .send-action {
+    text-align: center;
+  }
+  .verification-modal .send-action .fnb-btn {
+    width: 40%;
   }
 }
 .search-section {
