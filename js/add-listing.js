@@ -61,4 +61,18 @@
 
   $('[data-toggle="tooltip"]').tooltip();
 
+  $('body').on('click', '.add-highlight', function() {
+    var highlight_group, highlight_group_clone;
+    highlight_group = $(this).closest('.highlight-input-group');
+    highlight_group_clone = highlight_group.clone();
+    highlight_group_clone.find('.add-highlight').remove();
+    highlight_group_clone.find('.delete-highlight').removeClass('hidden');
+    highlight_group_clone.insertBefore(highlight_group);
+    return highlight_group.find('.highlight-input').val('');
+  });
+
+  $('body').on('click', '.delete-highlight', function() {
+    return $(this).closest('.highlight-input-group').remove();
+  });
+
 }).call(this);
