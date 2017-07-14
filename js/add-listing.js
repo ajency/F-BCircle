@@ -75,4 +75,13 @@
     return $(this).closest('.highlight-input-group').remove();
   });
 
+  $('body').on('click', '.add-another', function(e) {
+    var contact_group, contact_group_clone;
+    e.preventDefault();
+    contact_group = $(this).closest('.business-contact').find('.contact-group');
+    contact_group_clone = contact_group.clone();
+    contact_group_clone.removeClass('contact-group hidden');
+    return contact_group_clone.insertBefore(contact_group);
+  });
+
 }).call(this);

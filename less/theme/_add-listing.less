@@ -315,6 +315,36 @@
 
 .flexdatalist-multiple{
 	border-bottom: 1px solid #ddd !important;
+	li{
+		float: none;
+		&.value{
+			// padding: 0.3em 0.8em;
+			margin: 0.2em 0.6em 0.2em 0;
+			border: 1px solid #676767;
+			border-radius: 4px;
+			color: #4a4a4a;
+			font-size: 0.95em;
+			background-color: #f8fafc;
+			.fdl-remove{
+				color: @accent-primary;
+			}
+		}
+	}
+	.input-container{
+		display: block;
+		margin-top: 30px;
+	}
+}
+
+.flexdatalist-results{
+	border: 0;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	li{
+		&.active{
+			background-color: @accent-primary;
+			font-weight: 500;
+		}
+	}
 }
 
 
@@ -980,27 +1010,7 @@
 	}
 }
 
-.flexdatalist-multiple{
-	li{
-		float: none;
-		&.value{
-			// padding: 0.3em 0.8em;
-			margin: 0.2em 0.6em 0.2em 0;
-			border: 1px solid #676767;
-			border-radius: 4px;
-			color: #4a4a4a;
-			font-size: 0.95em;
-			background-color: #f8fafc;
-			.fdl-remove{
-				color: @accent-primary;
-			}
-		}
-	}
-	.input-container{
-		display: block;
-		margin-top: 30px;
-	}
-}
+
 
 
 
