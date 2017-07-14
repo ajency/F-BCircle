@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- Magnify css -->
     <link rel="stylesheet" type="text/css" href="css/magnify.css">
+    <!-- Multiselect -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-multiselect.min.css">
     <!-- tags css -->
     <link rel="stylesheet" type="text/css" href="css/jquery.flexdatalist.min.css">
     <!-- Main styles -->
@@ -933,18 +935,14 @@
 
         <!-- Enquiry modal -->
 
-        <div class="modal fnb-modal enquiry-modal category-modal multilevel-modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fnb-modal enquiry-modal multilevel-modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button class="close mobile-hide" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
-
                         <div class="mobile-back flex-row desk-hide">
                             <div class="back">
                                 <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
-                            </div>
-                            <div class="level-two">
-                                <button class="btn fnb-btn outline border-btn">save</button>
                             </div>
                         </div>
                     </div>
@@ -1094,10 +1092,10 @@
                             <!-- col left ends -->
                             <!-- col right -->
                             <div class="detail-cols col-right enquiry-details__content">
-                                <p class="content-title text-darker m-b-0 heavier">Ensure that you provide the correct details as the business owner will use these details to contact you.</p>
+                                <p class="content-title text-darker m-b-0 lighter">Ensure that you provide the correct details as the business owner will use these details to contact you.</p>
                                 <!-- verify email and contact -->
-                                <div class="verification gap-separator">
-                                    <p class="content-title text-darker m-b-0 heavier desk-hide m-b-15">Verify your email and phone to contact the listing.</p>
+                                <!-- <div class="verification gap-separator">
+                                    <p class="content-title text-darker m-b-0 text-lighter desk-hide m-b-15">Verify your email and phone to contact the listing.</p>
                                     <div class="verification__row flex-row">
                                         <div class="verification__detail flex-row">
                                             <div class="exclamation">
@@ -1133,24 +1131,27 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- verify email and contact ends -->
                                 <!-- form -->
                                 <div class="formFields gap-separator row">
                                     <div class="col-sm-6">
-                                        <div class="form-group p-t-10 p-b-10">
+                                        <div class="form-group m-b-0">
                                             <!-- <label class="m-b-0 lighter text-color xx-small required">Name</label> -->
-                                            <input type="text" class="form-control fnb-input" placeholder="Name">
+                                            <label class="m-b-0 text-lighter float-label required" for="name">Name</label>
+                                            <input type="text" class="form-control fnb-input float-input" id="name">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
-                                        <div class="form-group p-t-10 p-b-10">
-                                            <input type="number" class="form-control fnb-input" placeholder="Phone">
+                                        <div class="form-group m-b-0">
+                                            <label class="m-b-0 text-lighter float-label required" for="number">Phone</label>
+                                            <input type="number" class="form-control fnb-input float-input" id="number">
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control fnb-input" placeholder="Email">
+                                            <label class="m-b-0 text-lighter float-label required" for="email">Email</label>
+                                            <input type="text" class="form-control fnb-input float-input" id="email">
                                         </div>    
                                     </div>
                                     <div class="col-sm-6"></div>
@@ -1158,60 +1159,60 @@
                                 <!-- form ends -->
                                 <!-- categories -->
                                 <div class="categories-select gap-separator">
-                                    <p class="text-darker describes__title heavier">Categories <span class="xx-small text-lighter">(Select from the list below or add other categories.)</span></p>
+                                    <p class="text-darker describes__title text-medium">Categories <span class="xx-small text-lighter">(Select from the list below or add other categories.)</span></p>
                                     <ul class="categories__points flex-points flex-row flex-wrap">
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-color" id="chicken">Chicken</p>
+                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
                                             </label>
                                         </li>
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="egg">
-                                                <p class="lighter describes__text flex-points__text text-color" id="egg">Egg</p>
+                                                <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
                                             </label>
                                         </li>
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-color" id="chicken">Chicken</p>
+                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
                                             </label>
                                         </li>
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="egg">
-                                                <p class="lighter describes__text flex-points__text text-color" id="egg">Egg</p>
+                                                <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
                                             </label>
                                         </li>
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-color" id="chicken">Chicken</p>
+                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
                                             </label>
                                         </li>
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="egg">
-                                                <p class="lighter describes__text flex-points__text text-color" id="egg">Egg</p>
+                                                <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
                                             </label>
                                         </li>
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-color" id="chicken">Chicken</p>
+                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
                                             </label>
                                         </li>
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="egg">
-                                                <p class="lighter describes__text flex-points__text text-color" id="egg">Egg</p>
+                                                <p class="lighter describes__text flex-points__text text-darker" id="egg">Egg</p>
                                             </label>
                                         </li>
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="chicken">
-                                                <p class="lighter categories__text flex-points__text text-color" id="chicken">Chicken</p>
+                                                <p class="lighter categories__text flex-points__text text-darker" id="chicken">Chicken</p>
                                             </label>
                                         </li>
                                     </ul>
@@ -1219,8 +1220,8 @@
                                 <!-- categories ends -->
                                 <!-- Add categories -->
                                 <div class="add-categories gap-separator">
-                                    <p class="text-darker describes__title heavier">Add Categories</p>
-                                    <div class="form-group">
+                                    <p class="text-darker describes__title text-medium">Add Categories</p>
+                                    <div class="form-group m-b-0">
                                         <input type="text" class="form-control fnb-input flexdatalist" placeholder="Type to select categories" multiple='multiple' data-min-length='1'>
                                     </div>
                                 </div>
@@ -1254,9 +1255,17 @@
                                 </div> -->
                                 <!-- areas select -->
                                 <!-- describes best -->
-<!--                                 <div class="describes gap-separator">
-                                    <p class="text-darker describes__title heavier">What describes you the best? <span class="xx-small text-lighter">(Please select atleast one)</span></p>
-                                    <ul class="describes__points flex-points flex-row flex-wrap">
+                                <div class="describes gap-separator">
+                                    <p class="text-darker describes__title text-medium">What describes you the best? <span class="xx-small text-lighter">(Please select atleast one)</span></p>
+                                    <select class="fnb-select select-variant multi-select" multiple="multiple">
+                                        <option>I work in the F&amp;B industry</option>
+                                        <option>I am a resturant owner</option>
+                                        <option>I am a supplier to F&amp;B industry</option>
+                                        <option>I provide services to F&amp;B industry</option>
+                                        <option>I am a manufacturer</option>
+                                        <option>Others...</option>
+                                    </select>
+       <!--                              <ul class="describes__points flex-points flex-row flex-wrap">
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="work-industry">
@@ -1293,12 +1302,12 @@
                                                 <p class="lighter describes__text flex-points__text text-color" id="others">Others...</p>
                                             </label>
                                         </li>
-                                    </ul>
-                                </div> -->
+                                    </ul> -->
+                                </div>
                                 <!-- describes best ends -->
                                 <!-- looking for -->
                                 <div class="looking-for gap-separator">
-                                    <p class="text-darker describes__title heavier">Tell business owner what you're looking for</p>
+                                    <p class="text-darker describes__title text-medium">Tell business owner what you're looking for</p>
                                     <div class="form-group">
                                         <input type="text" class="form-control fnb-input" placeholder="Eg: The categories that you're interested in">
                                     </div>
@@ -1329,14 +1338,6 @@
 
         <!-- Enquiry ends -->
 
-
-
-
-
-
-
-
-
         <div class="site-overlay"></div>
     </div>
     <!-- jquery -->
@@ -1349,8 +1350,10 @@
     <!-- <script type="text/javascript" src="bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script> -->
     <!-- Magnify popup plugin -->
     <script type="text/javascript" src="js/magnify.min.js"></script>
-    <!-- jquery tags -->
+    <!-- jquery tags -->    
     <script type="text/javascript" src="js/flex-datalist/jquery.flexdatalist.min.js"></script>
+    <!-- multiselect -->
+    <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
     <!-- Read more -->
     <script type="text/javascript" src="js/readmore.min.js"></script>
     <!-- custom script -->

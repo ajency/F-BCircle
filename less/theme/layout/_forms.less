@@ -120,6 +120,68 @@
   }
 }
 
+// multiselect styling
+
+
+.multiselect.multiselect{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    border-radius: 0;
+    padding-left: 0;
+    min-width: 200px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 400;
+    color: @text-color;
+    box-shadow: none;
+    &:active,&:hover{
+      background-color: #ddd;
+      box-shadow: none;
+      &:hover{
+        background-color: transparent;
+        border-color: #ddd;
+      }
+    }
+    &.dropdown-toggle{
+      box-shadow: none;
+      background-color: transparent;
+    }
+}
+
+.multiselect-container{
+  border-radius: 0;
+  padding: 0.5em;
+  & > li{
+    margin-bottom: 0.5em;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.active{
+      a,a:hover{
+        color: #000;
+        background-color: transparent;
+        font-weight: 500;
+      }
+    }
+    & > a{
+      font-size: 0.95em;
+      color: @text-color;
+      outline: 0;
+      &:hover{
+        background-color: transparent;
+      }
+      label{
+        padding-left: 1.5em;
+      }
+    }
+  }
+}
+
+
+
 
 .switch {
   position: absolute;

@@ -326,4 +326,20 @@ $(function(){
 		  $('.mobile-back').removeClass('desk-level-two');
 		});
 
+		$('.float-input').on('focus', function() {
+		  $(this).siblings('.float-label').addClass('filled focused');
+		});
+
+		$('.float-input').on('blur', function() {
+		  $(this).siblings('.float-label').removeClass('focused');
+		  
+		  if (this.value === '') {
+		    $(this).siblings('.float-label').removeClass('filled')
+		  }
+		});
+
+		$('.multi-select').multiselect({
+            includeSelectAllOption: true
+        });
+
 });
