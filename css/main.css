@@ -710,6 +710,26 @@ input[type=radio].fnb-radio.disabled:before {
   }
 }
 @media (max-width: 767px) {
+  .multilevel-modal.fade .modal-dialog {
+    -webkit-transform: translate(75%, 0);
+        -ms-transform: translate(75%, 0);
+            transform: translate(75%, 0);
+  }
+  .multilevel-modal.in .modal-dialog {
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+  .multilevel-modal .modal-dialog {
+    margin: 0;
+    height: 100vh;
+  }
+  .multilevel-modal .modal-content {
+    height: 100vh;
+    padding-top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
   .multilevel-modal .modal-header .mobile-back {
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.11);
     margin: 0;
@@ -5224,26 +5244,6 @@ input[type=radio].fnb-radio.disabled:before {
   }
 }
 @media (max-width: 767px) {
-  .category-modal.fade .modal-dialog {
-    -webkit-transform: translate(75%, 0);
-        -ms-transform: translate(75%, 0);
-            transform: translate(75%, 0);
-  }
-  .category-modal.in .modal-dialog {
-    -webkit-transform: translate(0, 0);
-        -ms-transform: translate(0, 0);
-            transform: translate(0, 0);
-  }
-  .category-modal .modal-dialog {
-    margin: 0;
-    height: 100vh;
-  }
-  .category-modal .modal-content {
-    height: 100vh;
-    padding-top: 0;
-    overflow-y: auto;
-    overflow-x: hidden;
-  }
   .category-modal .interested-options .interested-label {
     margin: 15px auto 0;
   }
