@@ -68,3 +68,10 @@ $('body').on 'click', '.add-highlight', ->
 
 $('body').on 'click', '.delete-highlight', ->
 	$(this).closest('.highlight-input-group').remove()
+
+$('body').on 'click', '.add-another', (e)->
+	e.preventDefault()
+	contact_group = $(this).closest('.business-contact').find('.contact-group')
+	contact_group_clone = contact_group.clone()
+	contact_group_clone.removeClass 'contact-group hidden'
+	contact_group_clone.insertBefore(contact_group)
