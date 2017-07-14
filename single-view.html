@@ -933,11 +933,20 @@
 
         <!-- Enquiry modal -->
 
-        <div class="modal fnb-modal enquiry-modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal fnb-modal enquiry-modal category-modal multilevel-modal fade" id="enquiry-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <button class="close" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        <button class="close mobile-hide" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+
+                        <div class="mobile-back flex-row desk-hide">
+                            <div class="back">
+                                <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
+                            </div>
+                            <div class="level-two">
+                                <button class="btn fnb-btn outline border-btn">save</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="modal-body">
                         <!-- enquiry success -->
@@ -947,7 +956,7 @@
                         </div> -->
                         <!-- enquiry success ends -->
                         <!-- suppliers details -->
-                      <!--   <div class="suppliers-data">
+                        <!-- <div class="suppliers-data">
                             <p class="sub-title heavier text-darker">Dont miss out on these suppliers <img src="img/direction-down-2.png" class="img-responsive direction-down"></p>
 
                             <div class="seller-info bg-card filter-cards">
@@ -1048,14 +1057,14 @@
                                     <img src="img/direction-down.png" class="img-responsive direction-down">
                                 </h5> -->
                                 <!-- premium details -->
-                                <div>
-                                    <h5 class="bolder intro-text flex-row space-between">Send a<br> direct enquiry to...
-                                        <div class="rotator">
+                                <div class="send-enquiry">
+                                    <h5 class="bolder intro-text flex-row space-between">Send a<br class="mobile-hide"> direct enquiry to...
+                                        <div class="rotator mobile-hide">
                                             <img src="img/direction-down.png" class="img-responsive direction-down">
                                         </div>
                                     </h5>
                                     <div class="seller-enquiry">
-                                        <p class="sub-title heavier text-darker text-capitalise flex-row seller-enquiry__title">Mystical the meat and fish store <span class="fnb-icons verified-icon"></span></p>
+                                        <p class="sub-title heavier text-darker text-capitalise flex-row seller-enquiry__title"><span class="brand-name">Mystical the meat and fish store</span> <span class="fnb-icons verified-icon"></span></p>
                                         <div class="location flex-row">
                                             <span class="fnb-icons map-icon"></span>
                                             <p class="location__title m-b-0 text-lighter">Mumbai, Andheri</p>
@@ -1073,7 +1082,7 @@
                                     </div>
                                 </div>
                                 <!-- premium details ends -->
-                                <div class="h-i-w">
+                                <div class="h-i-w mobile-hide">
                                     <p class="sub-title bolder text-darker m-b-20">How it works</p>
                                     <ul class="points">
                                         <li><p class="m-b-0 points__container flex-row"><span class="points__number">1</span> <span>Submit your details.</span></p></li>
@@ -1087,7 +1096,8 @@
                             <div class="detail-cols col-right enquiry-details__content">
                                 <p class="content-title text-darker m-b-0 heavier">Ensure that you provide the correct details as the business owner will use these details to contact you.</p>
                                 <!-- verify email and contact -->
-    <!--                             <div class="verification gap-separator">
+                                <div class="verification gap-separator">
+                                    <p class="content-title text-darker m-b-0 heavier desk-hide m-b-15">Verify your email and phone to contact the listing.</p>
                                     <div class="verification__row flex-row">
                                         <div class="verification__detail flex-row">
                                             <div class="exclamation">
@@ -1095,12 +1105,14 @@
                                             </div>
                                             <p class="text-darker">Please enter the code sent to <span class="email bolder">valenie@gmail.com</span> <a href="#" class="heavier secondary-link text-decor">Edit</a></p>
                                         </div>
-                                        <div class="verification__code">
-                                            <input type="text" class="form-control fnb-input" placeholder="Enter the code">
-                                        </div>
-                                        <div class="verification__otp">
-                                            <p class="x-small text-lighter m-b-0">Didn't receive the code?</p>
-                                            <p class="x-small heavier m-b-0"><a href="#" class="dark-link"><i class="fa fa-refresh" aria-hidden="true"></i> Resend Email</a></p>
+                                        <div class="flex-row verification__col">
+                                            <div class="verification__code">
+                                                <input type="text" class="form-control fnb-input" placeholder="Enter the code">
+                                            </div>
+                                            <div class="verification__otp">
+                                                <p class="x-small text-lighter m-b-0">Didn't receive the code?</p>
+                                                <p class="x-small heavier m-b-0"><a href="#" class="dark-link"><i class="fa fa-refresh" aria-hidden="true"></i> Resend Email</a></p>
+                                            </div>
                                         </div>
                                     </div>
                                     <hr>
@@ -1109,17 +1121,19 @@
                                             <div class="exclamation">
                                                 <i class="fa fa-exclamation" aria-hidden="true"></i>
                                             </div>
-                                            <p class="text-darker">Please enter the code sent to <span class="phone bolder">+91 8908907676</span> <a href="#" class="heavier secondary-link text-decor">Edit</a></p>
+                                            <p class="text-darker">Please enter the code sent to <span class="email bolder">valenie@gmail.com</span> <a href="#" class="heavier secondary-link text-decor">Edit</a></p>
                                         </div>
-                                        <div class="verification__code">
-                                            <input type="text" class="form-control fnb-input" placeholder="Enter the code">
-                                        </div>
-                                        <div class="verification__otp">
-                                            <p class="x-small text-lighter m-b-0">Didn't receive the code?</p>
-                                            <p class="x-small heavier m-b-0"><a href="#" class="dark-link"><i class="fa fa-refresh" aria-hidden="true"></i> Resend SMS</a></p>
+                                        <div class="flex-row verification__col">
+                                            <div class="verification__code">
+                                                <input type="text" class="form-control fnb-input" placeholder="Enter the code">
+                                            </div>
+                                            <div class="verification__otp">
+                                                <p class="x-small text-lighter m-b-0">Didn't receive the code?</p>
+                                                <p class="x-small heavier m-b-0"><a href="#" class="dark-link"><i class="fa fa-refresh" aria-hidden="true"></i> Resend Email</a></p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                                 <!-- verify email and contact ends -->
                                 <!-- form -->
                                 <div class="formFields gap-separator row">
