@@ -4436,6 +4436,9 @@ input[type=radio].fnb-radio.disabled:before {
     font-size: 0.8em;
   }
 }
+.business-details .input-group-btn {
+  font-size: 1.5em;
+}
 @media screen and (max-width: 768px) {
   .fly-out [class*='col-'].col-xs-6 {
     width: 50%;

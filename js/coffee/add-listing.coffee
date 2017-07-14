@@ -56,3 +56,15 @@ $('body').on 'change', 'input:checkbox.all-cities', ->
 		$(this).closest('.tab-pane').find('input:checkbox').prop('checked', false)
 
 $('[data-toggle="tooltip"]').tooltip()
+
+# Add/Delete Highlights
+$('body').on 'click', '.add-highlight', ->
+	highlight_group = $(this).closest('.highlight-input-group')
+	highlight_group_clone = highlight_group.clone()
+	highlight_group_clone.find('.add-highlight').remove()
+	highlight_group_clone.find('.delete-highlight').removeClass('hidden')
+	highlight_group_clone.insertBefore(highlight_group)
+	highlight_group.find('.highlight-input').val('')
+
+$('body').on 'click', '.delete-highlight', ->
+	$(this).closest('.highlight-input-group').remove()
