@@ -34,6 +34,12 @@
 				}
 			}
 		}
+		.level-two{
+			display: none;
+			&.shown{
+				display: block;
+			}
+		}
 	}
 	@media(max-width: 767px){
 		&.fade .modal-dialog{
@@ -71,30 +77,29 @@
 					}
 				}
 			}
-			.level-two{
-				display: none;
-				&.shown{
-					display: block;
-				}
-			}
 		}
 		.modal-body{
 			padding-top: 4em;
 			.level-one{
 				margin: 0;
 			}
-			.level-two{
+			.levels{
 				position: absolute;
 				top: 70px;
 				transition: all 0.3s ease;
 				transform: translate(85%, 0);
 				opacity: 0;
 				background-color: #fff;
+				height: 100%;
+				overflow: hidden;
 				&.shown{
 					transform: translate(0, 0);
 					opacity: 1;
+					overflow: inherit;
 				}
 			}
 		}
 	}
 }
+
+

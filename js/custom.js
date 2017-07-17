@@ -360,10 +360,11 @@ $(function(){
 		});
 
 		// Bootstrap multiselect
-
-		$('.multi-select').multiselect({
-            includeSelectAllOption: true,
-            numberDisplayed: 1
-        });
+		if($('.multi-select').length){
+			$('.multi-select').multiselect({
+	            includeSelectAllOption: true,
+	            numberDisplayed: 1
+	        });
+		}
 
 });

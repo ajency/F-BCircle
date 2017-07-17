@@ -708,6 +708,12 @@ input[type=radio].fnb-radio.disabled:before {
     display: -ms-flexbox;
     display: flex;
   }
+  .multilevel-modal .level-two {
+    display: none;
+  }
+  .multilevel-modal .level-two.shown {
+    display: block;
+  }
 }
 @media (max-width: 767px) {
   .multilevel-modal.fade .modal-dialog {
@@ -748,19 +754,13 @@ input[type=radio].fnb-radio.disabled:before {
   .multilevel-modal .modal-header .mobile-back .fnb-btn.no-border .fa {
     color: #ec6d4b;
   }
-  .multilevel-modal .modal-header .level-two {
-    display: none;
-  }
-  .multilevel-modal .modal-header .level-two.shown {
-    display: block;
-  }
   .multilevel-modal .modal-body {
     padding-top: 4em;
   }
   .multilevel-modal .modal-body .level-one {
     margin: 0;
   }
-  .multilevel-modal .modal-body .level-two {
+  .multilevel-modal .modal-body .levels {
     position: absolute;
     top: 70px;
     -webkit-transition: all 0.3s ease;
@@ -770,12 +770,15 @@ input[type=radio].fnb-radio.disabled:before {
             transform: translate(85%, 0);
     opacity: 0;
     background-color: #fff;
+    height: 100%;
+    overflow: hidden;
   }
-  .multilevel-modal .modal-body .level-two.shown {
+  .multilevel-modal .modal-body .levels.shown {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
     opacity: 1;
+    overflow: inherit;
   }
 }
 .fnb-header .navbar {
@@ -3646,12 +3649,6 @@ input[type=radio].fnb-radio.disabled:before {
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
-.verification-modal .level-two {
-  display: none;
-}
-.verification-modal .level-two.shown {
-  display: block;
-}
 @media screen and (max-width: 768px) {
   .verification-modal p,
   .verification-modal label,
@@ -5471,14 +5468,6 @@ input[type=radio].fnb-radio.disabled:before {
 .category-modal .back-btn:active {
   outline: 0;
   border: 0;
-}
-@media (min-width: 768px) {
-  .category-modal .sub-category {
-    display: none;
-  }
-  .category-modal .sub-category.shown {
-    display: block;
-  }
 }
 @media (max-width: 767px) {
   .category-modal .interested-options .interested-label {
