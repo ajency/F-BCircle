@@ -500,7 +500,7 @@ span {
   padding-left: 5px;
 }
 .fnb-icons {
-  background-image: url('../img/sprite.png');
+  background-image: url('../img/sprite-na.png');
   height: 27px;
   width: 31px;
   display: block;
@@ -550,41 +550,37 @@ span {
   height: 50px;
   width: 50px;
   line-height: 50px;
-  box-shadow: 0px 0px 0px 2px rgba(236, 109, 75, 0.45);
+  box-shadow: 0px 0px 0px 2px rgba(27, 189, 148, 0.76);
   background-size: 700%;
 }
 .fnb-icons.veg {
-  background-position: -3px -341px;
+  background-position: -3px -482px;
 }
 .fnb-icons.drinks {
-  background-position: -581px -341px;
+  background-position: -230px -482px;
 }
 .fnb-icons.grocery {
-  background-position: -978px -341px;
+  background-position: -281px -484px;
 }
 .fnb-icons.meat {
-  background-position: -55px -344px;
+  background-position: -54px -483px;
 }
 .fnb-icons.wholesaler {
-  background-image: url('../img/sprite-na.png');
   background-position: -32px -544px;
   height: 100px;
   width: 100px;
 }
 .fnb-icons.retailer {
-  background-image: url('../img/sprite-na.png');
   background-position: -162px -544px;
   height: 100px;
   width: 100px;
 }
 .fnb-icons.manufacturer {
-  background-image: url('../img/sprite-na.png');
   background-position: -282px -544px;
   height: 100px;
   width: 100px;
 }
 .fnb-icons.contact {
-  background-image: url('../img/sprite-na.png');
   background-position: -425px -540px;
   height: 100px;
   width: 100px;
@@ -2808,7 +2804,7 @@ input[type=radio].fnb-radio.disabled:before {
           justify-content: center;
 }
 .interested-options .option .cat-icon {
-  box-shadow: 0px 0px 0px 4px rgba(236, 109, 75, 0.45);
+  box-shadow: 0px 0px 0px 4px rgba(28, 189, 149, 0.45);
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
@@ -2827,7 +2823,7 @@ input[type=radio].fnb-radio.disabled:before {
           filter: grayscale(0);
 }
 .interested-options .radio:checked + .option + .interested-label {
-  color: #ec6d4b;
+  color: #5cd6b7;
 }
 .interested-options .radio:focus {
   outline: 0;
