@@ -90,6 +90,7 @@
 }
 
 .primary-link{
+  color: @accent-primary;
   &:hover{
     color: lighten(@accent-primary,10%);
     text-decoration: none;
@@ -193,7 +194,7 @@
    .link-center{
       display: flex;
       justify-content: center;
-  } 
+  }
 }
 
 
@@ -203,8 +204,8 @@
   margin-left: 280px;
   position: fixed;
   // safari fix
-  @media only screen 
-  and (min-device-width: 320px) 
+  @media only screen
+  and (min-device-width: 320px)
   and (max-device-width: 568px)
   and (-webkit-min-device-pixel-ratio: 2) {
     cursor: pointer;

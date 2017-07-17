@@ -286,7 +286,12 @@
                         <div class="seller-info__footer p-t-25">
                             <div class="contact flex-row">
                                 <div class="contact__info">
-                                    <button class="btn fnb-btn primary-btn full border-btn show-info" data-toggle="collapse" href="#contact-data">Show contact info</button>
+                                    <!-- If logged in -->
+                                    <!-- <button class="btn fnb-btn primary-btn full border-btn show-info" data-toggle="collapse" href="#contact-data">Show contact info</button> -->
+
+                                    <!-- If not logged in -->
+                                    <button class="btn fnb-btn primary-btn full border-btn show-info" data-toggle="modal" data-target="#contact-modal" href="#contact-modal">Show contact info</button>
+
                                     <!-- <h1 class="m-b-0">20</h1> -->
                                     <p class="contact__title"><b>20</b> Contact Request</p>
                                 </div>
@@ -994,7 +999,7 @@
                                                 <li class="desk-hide"><a href="" class="fnb-cat__title">Meat Retailer</a></li>
                                                 <li class="cat-more more-show"><a href="" class="text-darker">+5 more</a></li>
                                             </ul>
-                                        </div> 
+                                        </div>
                                         <div class="get-details">
                                             <button class="btn fnb-btn outline full border-btn fullwidth">Get Details <i class="fa fa-arrow-right p-l-5" aria-hidden="true"></i></button>
                                         </div>
@@ -1039,13 +1044,13 @@
                                                 <li class="desk-hide"><a href="" class="fnb-cat__title">Meat Retailer</a></li>
                                                 <li class="cat-more more-show"><a href="" class="text-darker">+5 more</a></li>
                                             </ul>
-                                        </div> 
+                                        </div>
                                         <div class="get-details">
                                             <button class="btn fnb-btn outline full border-btn fullwidth">Get Details <i class="fa fa-arrow-right p-l-5" aria-hidden="true"></i></button>
                                         </div>
                                     </div>
                                 </div>
-                            </div>                            
+                            </div>
                         </div> -->
                         <!-- suppliers details ends -->
                         <div class="enquiry-details flex-row">
@@ -1152,7 +1157,7 @@
                                         <div class="form-group">
                                             <label class="m-b-0 text-lighter float-label required" for="email">Email</label>
                                             <input type="text" class="form-control fnb-input float-input" id="email">
-                                        </div>    
+                                        </div>
                                     </div>
                                     <div class="col-sm-6"></div>
                                 </div>
@@ -1227,7 +1232,7 @@
                                 </div>
                                 <!-- add categories ends -->
                                 <!-- areas select -->
-  <!--                               <div class="areas-select gap-separator">
+                                <!-- <div class="areas-select gap-separator">
                                     <p class="text-darker describes__title heavier">Areas <span class="xx-small text-lighter">(Select your areas of interest)</span></p>
                                     <ul class="areas-select__selection flex-row flex-wrap">
                                         <li>
@@ -1265,7 +1270,7 @@
                                         <option>I am a manufacturer</option>
                                         <option>Others...</option>
                                     </select>
-       <!--                              <ul class="describes__points flex-points flex-row flex-wrap">
+                                    <!-- <ul class="describes__points flex-points flex-row flex-wrap">
                                         <li>
                                             <label class="flex-row">
                                                 <input type="checkbox" class="checkbox" for="work-industry">
@@ -1322,9 +1327,7 @@
                                 <!-- action ends -->
                             </div>
                             <!-- col right ends -->
-                            </div>
-
-
+                        </div>
 
                     </div>
                     <div class="modal-footer mobile-hide">
@@ -1338,6 +1341,99 @@
 
         <!-- Enquiry ends -->
 
+
+        <!-- Contact Modal -->
+        <div class="modal fnb-modal contact-modal verification-modal multilevel-modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close mobile-hide" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
+                        <div class="mobile-back flex-row desk-hide">
+                            <div class="back">
+                                <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="enquiry-details flex-row">
+
+                            <div class="detail-cols extra-padding col-left col-left--full enquiry-details__intro flex-row">
+                                <!-- premium details -->
+                                <div class="send-enquiry">
+                                    <h5 class="intro-text flex-row space-between">
+                                        Please login to view the <br class="mobile-hide"> contact details of...
+                                    </h5>
+                                    <div class="seller-enquiry">
+                                        <p class="sub-title heavier text-darker text-capitalise flex-row seller-enquiry__title"><span class="brand-name">Mystical the meat and fish store</span> <span class="fnb-icons verified-icon"></span></p>
+                                        <div class="location flex-row">
+                                            <span class="fnb-icons map-icon"></span>
+                                            <p class="location__title m-b-0 text-lighter">Mumbai, Andheri</p>
+                                        </div>
+                                        <div class="rat-view flex-row">
+                                            <div class="rating">
+                                                <div class="bg"></div>
+                                                <div class="value" style="width: 80%;"></div>
+                                            </div>
+                                            <div class="views flex-row">
+                                                <span class="fnb-icons eye-icon"></span>
+                                                <p class="views__title text-lighter m-b-0"><span class="heavier">126</span> Views</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="m-t-50">
+                                        <a href="#" class="primary-link heavier">Log in if already registered</a>
+                                    </div>
+                                </div>
+                                <!-- premium details ends -->
+                            </div>
+
+                            <div class="detail-cols extra-padding col-right enquiry-details__content">
+                                <h5 class="intro-text">Give your details below
+                                </h5>
+
+                                <p class="content-title text-darker m-b-0 m-t-10 lighter">Ensure that you provide the correct details as the business owner will use these details to contact you.</p>
+
+                                <div class="formFields gap-separator row">
+                                    <div class="col-sm-12">
+                                        <div class="form-group m-b-0">
+                                            <!-- <label class="m-b-0 lighter text-color xx-small required">Name</label> -->
+                                            <label class="m-b-0 text-lighter float-label required" for="name">Name</label>
+                                            <input type="text" class="form-control fnb-input float-input" id="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group m-b-0">
+                                            <label class="m-b-0 text-lighter float-label required" for="number">Phone</label>
+                                            <input type="number" class="form-control fnb-input float-input" id="number">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <label class="m-b-0 text-lighter float-label required" for="email">Email</label>
+                                            <input type="text" class="form-control fnb-input float-input" id="email">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="gap-separator">
+                                    <div class="send-action">
+                                        <button class="btn fnb-btn primary-btn full border-btn">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="or-divider">
+                                OR
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Modal End -->
+
         <div class="site-overlay"></div>
     </div>
     <!-- jquery -->
@@ -1350,7 +1446,7 @@
     <!-- <script type="text/javascript" src="bower_components/ekko-lightbox/dist/ekko-lightbox.min.js"></script> -->
     <!-- Magnify popup plugin -->
     <script type="text/javascript" src="js/magnify.min.js"></script>
-    <!-- jquery tags -->    
+    <!-- jquery tags -->
     <script type="text/javascript" src="js/flex-datalist/jquery.flexdatalist.min.js"></script>
     <!-- multiselect -->
     <script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
