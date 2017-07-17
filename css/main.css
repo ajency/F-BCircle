@@ -3300,8 +3300,10 @@ input[type=radio].fnb-radio.disabled:before {
 .verification-modal .detail-cols {
   padding: 2.5em 2em;
 }
-.verification-modal .detail-cols.extra-padding {
-  padding: 3.5em 3em;
+@media (min-width: 768px) {
+  .verification-modal .detail-cols.extra-padding {
+    padding: 3.5em 3em;
+  }
 }
 .verification-modal .intro-text {
   margin: 0;
@@ -3672,6 +3674,13 @@ input[type=radio].fnb-radio.disabled:before {
     width: calc(100% - 2em);
     padding-bottom: 0;
   }
+  .verification-modal .col-right.contact {
+    padding-top: 3em;
+  }
+  .verification-modal .or-divider {
+    top: -20px;
+    left: 42%;
+  }
   .verification-modal .send-enquiry {
     width: 100%;
   }
@@ -3785,6 +3794,9 @@ input[type=radio].fnb-radio.disabled:before {
     padding: 1em;
     margin-bottom: 10px;
   }
+  .verification-modal .verification.vertical-margin {
+    margin: 20px 0;
+  }
   .verification-modal .verification__row {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3799,6 +3811,9 @@ input[type=radio].fnb-radio.disabled:before {
   .verification-modal .verification__code {
     margin-left: 0;
     text-align: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
   .verification-modal .verification hr {
     margin: 0.8em 0;

@@ -1227,7 +1227,7 @@
                                                 <div class="form-group m-b-0">
                                                     <label class="m-b-0 text-lighter float-label required" for="email">Email</label>
                                                     <input type="text" class="form-control fnb-input float-input" id="email" value="sunil773@gmail.com">
-                                                </div>    
+                                                </div>
                                             </div>
                                             <div class="col-sm-6"></div>
                                         </div>
@@ -1307,7 +1307,7 @@
                                             <p class="text-darker describes__title heavier">Areas <span class="xx-small text-lighter">(Select your areas of interest)</span></p>
                                             <ul class="areas-select__selection flex-row flex-wrap">
                                                 <li>
-                                                    <div class="required left-star flex-row"> 
+                                                    <div class="required left-star flex-row">
                                                         <select class="form-control fnb-select select-variant">
                                                             <option>Select City</option>
                                                             <option>Delhi</option>
@@ -1318,7 +1318,7 @@
                                                     </div>
                                                 </li>
                                                 <li>
-                                                    <div class="required left-star flex-row"> 
+                                                    <div class="required left-star flex-row">
                                                         <select class="form-control fnb-select select-variant">
                                                             <option class="required">Select Area(s)</option>
                                                             <option>Delhi</option>
@@ -1365,14 +1365,15 @@
                     <div class="modal-header">
                         <button class="close mobile-hide" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i></button>
                         <div class="mobile-back flex-row desk-hide">
-                            <div class="back">
-                                <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
+                            <div class="back ellipsis">
+                                <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i></button>
+                                <span class="m-b-0 ellipsis heavier back-text">Back to Mystical the meat and fish store</span>
                             </div>
                         </div>
                     </div>
                     <div class="modal-body">
                         <!-- Contact Details -->
-                        <div class="enquiry-details flex-row hidden">
+                        <div class="level-one enquiry-details flex-row">
                             <div class="detail-cols extra-padding col-left col-left--full enquiry-details__intro flex-row">
                                 <div class="send-enquiry">
                                     <h5 class="intro-text flex-row space-between">
@@ -1380,11 +1381,11 @@
                                     </h5>
                                     <div class="seller-enquiry">
                                         <p class="sub-title heavier text-darker text-capitalise flex-row seller-enquiry__title"><span class="brand-name">Mystical the meat and fish store</span> <span class="fnb-icons verified-icon"></span></p>
-                                        <div class="location flex-row">
+                                        <div class="location flex-row mobile-hide">
                                             <span class="fnb-icons map-icon"></span>
                                             <p class="location__title m-b-0 text-lighter">Mumbai, Andheri</p>
                                         </div>
-                                        <div class="rat-view flex-row">
+                                        <div class="rat-view flex-row mobile-hide">
                                             <div class="rating">
                                                 <div class="bg"></div>
                                                 <div class="value" style="width: 80%;"></div>
@@ -1396,13 +1397,13 @@
                                         </div>
                                     </div>
 
-                                    <div class="m-t-50">
+                                    <div class="m-t-50 mobile-hide">
                                         <a href="#" class="primary-link heavier">Log in if already registered</a>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="detail-cols extra-padding col-right enquiry-details__content">
+                            <div class="detail-cols extra-padding contact col-right enquiry-details__content">
                                 <h5 class="intro-text">Give your details below
                                 </h5>
 
@@ -1431,22 +1432,23 @@
 
                                 <div class="gap-separator">
                                     <div class="send-action">
-                                        <button class="btn fnb-btn primary-btn full border-btn">Submit</button>
+                                        <button class="btn fnb-btn primary-btn full border-btn level-two-toggle">Submit</button>
                                     </div>
+                                </div>
+
+                                <div class="or-divider">
+                                    OR
                                 </div>
                             </div>
 
-                            <div class="or-divider">
-                                OR
-                            </div>
                         </div>
                         <!-- Contact Details End -->
 
                         <!-- Verify Details -->
-                        <div class="verify-details detail-cols hidden">
+                        <div class="level-two levels verify-details detail-cols">
                             <h6 class="intro-text">Verify your email &amp; number to contact Mystical the meat &amp; fish store
                             </h6>
-                            <div class="verification gap-separator">
+                            <div class="verification vertical-margin gap-separator">
                                 <p class="content-title text-darker m-b-0 text-lighter desk-hide m-b-15">Verify your email and phone number to contact the listing.</p>
                                 <div class="verification__row flex-row">
                                     <div class="verification__detail flex-row">
@@ -1481,7 +1483,7 @@
                                 </div>
                             </div>
 
-                            <div class="details-confirm">
+                            <div class="details-confirm mobile-hide">
                                 <h6 class="m-t-40 m-b-0 text-medium">Give your details below
                                 </h6>
                                 <div class="formFields gap-separator row">
@@ -1504,15 +1506,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="text-center">
-                                    <button class="btn fnb-btn primary-btn full border-btn">Submit</button>
-                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <button class="btn fnb-btn primary-btn full border-btn">Submit</button>
                             </div>
                         </div>
                         <!-- Verify Details End -->
 
                         <!-- Thank you -->
-                        <div class="thankyou-msg">
+                        <div class="thankyou-msg hidden">
                             <div class="enquiry-success">
                                 <div class="flex-row align-top">
                                     <i class="fa fa-check-circle" aria-hidden="true"></i>

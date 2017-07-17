@@ -1813,8 +1813,10 @@
 	}
 	.detail-cols{
 		padding: 2.5em 2em;
-		&.extra-padding{
-			padding: 3.5em 3em;
+		@media(min-width: 768px){
+			&.extra-padding{
+				padding: 3.5em 3em;
+			}
 		}
 	}
 	.intro-text{
@@ -1865,7 +1867,7 @@
 			&__text{
 				font-size: 0.88em;
 			}
-		}		
+		}
 	}
 	.gap-separator{
 		padding-top: 1.5em;
@@ -2173,6 +2175,13 @@
     		margin: 0 1em;
     		width: calc(~'100% - 2em');
     		padding-bottom: 0;
+    		&.contact{
+    			padding-top: 3em;
+    		}
+		}
+		.or-divider{
+			top: -20px;
+			left: 42%;
 		}
 		.send-enquiry{
 			width: 100%;
@@ -2276,6 +2285,9 @@
     		border-width: 1.5px;
     		padding: 1em;
     		margin-bottom: 10px;
+    		&.vertical-margin{
+    			margin: 20px 0;
+    		}
     		&__row{
     			flex-direction: column;
     			margin-left: 0;
@@ -2287,6 +2299,7 @@
     		&__code{
     			margin-left: 0;
     			text-align: center;
+    			flex: 1;
     		}
     		hr{
     			margin: 0.8em 0;
