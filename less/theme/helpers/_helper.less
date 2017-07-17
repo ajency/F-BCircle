@@ -170,8 +170,16 @@
   &:after{
     content: '*';
     font-size: 1.1em;
+    display: inline-block;
     padding-left: 0.3em;
     color: @danger;
+  }
+  &.left-star{
+    position: relative;
+    &:after{
+      position: absolute;
+      left: -5px;
+    }
   }
 }
 

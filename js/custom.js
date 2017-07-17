@@ -340,6 +340,7 @@ $(function(){
 		  }
 		});	
 
+		// value checking floating label 
 
 		function checkForInput(element) {
 		  // element is passed to the function ^
@@ -347,9 +348,9 @@ $(function(){
 		  const $label = $(element).siblings('label');
 
 		  if ($(element).val().length > 0) {
-		    $label.addClass('filled');
+		    $label.addClass('filled lab-color');
 		  } else {
-		    $label.removeClass('filled');
+		    $label.removeClass('filled lab-color');
 		  }
 		}
 
@@ -358,7 +359,7 @@ $(function(){
 		  checkForInput(this);
 		});
 
-
+		// Bootstrap multiselect
 
 		$('.multi-select').multiselect({
             includeSelectAllOption: true,
