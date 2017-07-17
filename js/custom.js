@@ -381,7 +381,7 @@ $(function(){
 	        // $('.flexdatalist-multiple .value').remove();
 	    });
 
-		$('.enquiry-modal').on('hidden.bs.modal', function (e) {
+		$('.verification-modal').on('hidden.bs.modal', function (e) {
 		  	$('.content-data').removeClass('hidden');
   			$('.success-stuff').addClass('hidden');
 		});
