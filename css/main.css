@@ -1580,6 +1580,16 @@ input[type=radio].fnb-radio.disabled:before {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.flex-end {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.align-top {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
 .required:after {
   content: '*';
   font-size: 1.1em;
@@ -1642,6 +1652,10 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .gray-border {
   border: 1px solid #d8d8d8;
+}
+.scale-down {
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
 }
 .slide-nav {
   -webkit-box-pack: end;
@@ -3393,6 +3407,9 @@ input[type=radio].fnb-radio.disabled:before {
   font-size: 0.95em;
   margin-bottom: 0;
 }
+.verification-modal .verification__detail p.larger {
+  font-size: 1.1em;
+}
 .verification-modal .verification__code {
   -webkit-box-flex: 0.55;
       -ms-flex: 0.55;
@@ -3416,7 +3433,7 @@ input[type=radio].fnb-radio.disabled:before {
 .verification-modal .didnt-receive {
   font-size: 0.8em;
 }
-.verification-modal .exclamation {
+.verification-modal .verify-exclamation {
   width: 23px;
   height: 20px;
   font-size: 1em;
@@ -3440,6 +3457,9 @@ input[type=radio].fnb-radio.disabled:before {
   line-height: 1.4;
   padding-right: 8em;
   font-size: 1.2em;
+}
+.verification-modal .enquiry-success__sub-text {
+  padding-left: 1em;
 }
 .verification-modal .suppliers-data {
   padding: 2em;
@@ -3544,7 +3564,7 @@ input[type=radio].fnb-radio.disabled:before {
   margin-left: 1em;
   background-size: 2000%;
   background-position: -196px -187px;
-  width: 29px;
+  max-width: 29px;
 }
 .verification-modal .seller-enquiry .location {
   margin: 0.5em 0;
@@ -3582,6 +3602,12 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .verification-modal .level-two.shown {
   display: block;
+}
+.verification-modal .vendor-contact-details {
+  margin: 0 2em 2em;
+  padding: 1em 2em;
+  border: 1px solid #fbddd5;
+  background-color: #f9f9f9;
 }
 @media screen and (max-width: 768px) {
   .verification-modal .modal-body {

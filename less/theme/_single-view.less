@@ -1966,6 +1966,9 @@
     		p{
     			font-size: 0.95em;
     			margin-bottom: 0;
+    			&.larger{
+    				font-size: 1.1em;
+    			}
     		}
     	}
     	&__code{
@@ -1988,7 +1991,7 @@
 	.didnt-receive{
 		font-size: 0.8em;
 	}
-	.exclamation{
+	.verify-exclamation{
 		width: 23px;
     	height: 20px;
     	font-size: 1em;
@@ -2011,6 +2014,9 @@
     		line-height: 1.4;
     		padding-right: 8em;
     		font-size: 1.2em;
+		}
+		&__sub-text{
+			padding-left: 1em;
 		}
 	}
 	.suppliers-data{
@@ -2106,7 +2112,7 @@
 			margin-left: 1em;
     		background-size: 2000%;
     		background-position: -196px -187px;
-    		width: 29px;
+    		max-width: 29px;
 		}
 		.location{
 			margin: 0.5em 0;
@@ -2141,6 +2147,13 @@
 		&.shown{
 			display: block;
 		}
+	}
+
+	.vendor-contact-details{
+		margin: 0 2em 2em;
+		padding: 1em 2em;
+		border: 1px solid lighten(@accent-primary, 30%);
+		background-color: @highlight;
 	}
 }
 
