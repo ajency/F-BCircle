@@ -1860,11 +1860,12 @@
 	    transform: translateY(1.6em);
 	    display: block;
 	    cursor: text;
-    	font-size: 1em;
+    	font-size: 1.05em;
     	color: #000;
     	font-weight: 400;
     	&.filled{
     		transform: translateX(-2.3em) translateY(0.5em) scale(0.75);
+    		font-weight: 600;
     	}
     	&.focused{
 			color: @text-lighter;
@@ -1872,6 +1873,7 @@
 	}
 	.float-input{
 		transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
+		font-size: 1em;
 		&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	      color: #000;
 	    }
@@ -1880,8 +1882,8 @@
 	    }
 	}
 	.gap-separator{
-		padding-top: 0.8em;
-    	padding-bottom: 0.8em;
+		padding-top: 1em;
+    	padding-bottom: 1em;
 	}
 	.flex-points{
 		li{
@@ -1947,6 +1949,7 @@
 		border: 3px dashed #ffc1bd;
     	margin-top: 1em;
     	padding: 0.8em;
+    	margin-bottom: 1.5em;
     	background-color: #fffdfd;
     	&__col{
     		flex: 1;
@@ -1956,7 +1959,7 @@
     		border-width: 2px;
     	}
     	&__row{
-    		margin: 0.5em 0;
+    		margin: 0.5em;
     	}
     	&__detail{
     		flex: 0.7;
@@ -1967,17 +1970,23 @@
     	}
     	&__code{
     		flex: 0.55;
-    		margin: 0 15px;
+    		margin-left: 2em;
     		.fnb-input{
-    			font-size: 0.9em;
+    			font-size: 0.85em;
     			background-color: #fff;
     			border: 1px solid #ddd;
     			text-indent: 22px;
+    			width: 130px;
+    			display: inline-block;
+    			height: 33px;
     		}
     	}
     	&__otp{
     		flex: 0.6;
     	}
+	}
+	.didnt-receive{
+		font-size: 0.8em;
 	}
 	.exclamation{
 		width: 23px;
@@ -2127,6 +2136,12 @@
 			transform: scaleX(-1);
 		}
 	}
+	.level-two{
+		display: none;
+		&.shown{
+			display: block;
+		}
+	}
 }
 
 
@@ -2148,7 +2163,7 @@
 		}
 		.col-right{
 			position: relative;
-    		top: -3em;
+    		top: -2.5em;
     		background-color: #fff;
     		margin: 0 1em;
     		width: calc(~'100% - 2em');
@@ -2157,9 +2172,10 @@
 			width: 100%;
 		}
 		.intro-text{
-			font-size: 1.4em;
+			font-size: 1.3em;
 		}
 		.seller-enquiry{
+			margin-top: 0.2em;
 			.brand-name{
 				overflow: hidden;
     			text-overflow: ellipsis;
@@ -2200,6 +2216,12 @@
 		}
 		.seller-info{
 			margin: 1.5em 0;
+		}
+		.looking-for{
+			&__toggle{
+				display: block;
+    			margin-bottom: 0.6em;
+			}
 		}
 		.suppliers-data{
 			padding-left: 1em;
@@ -2242,16 +2264,45 @@
     		margin-bottom: 10px;
     		&__row{
     			flex-direction: column;
+    			margin-left: 0;
+    			margin-right: 0;
     		}
     		&__col{
-    			margin-top: 1em;
+    			margin-top: 0.8em;
     		}
     		&__code{
     			margin-left: 0;
+    			text-align: center;
     		}
     		hr{
-    			margin: 1.5em 0;
+    			margin: 0.8em 0;
     		}
+    		&__detail{
+    			p{
+    				font-size: 0.85em;
+    			}
+    		}
+    		.fnb-input{
+    			width: 100px;
+    			font-size: 0.75em;
+    			text-indent: 15px;
+    		}
+    		.didnt-receive{
+    			margin-top: 1em;
+    		}
+		}
+		.exclamation{
+			font-size: 0.85em;
+    		width: 20px;
+    		height: 15px;
+    		line-height: 18px;
+    		margin-right: 8px;
+		}
+		.send-action{
+			text-align: center;
+			.fnb-btn{
+				width: 40%;
+			}
 		}
 	}
 }

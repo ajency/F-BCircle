@@ -237,6 +237,7 @@ $(function(){
 			var advAdd = $('.advertisement').detach();
 			$('.adv-after').append(advAdd);
 
+			$('#lookingfor').removeClass('in');
 
 			// $('.recent-updates__content').append(detailbtn);
 
@@ -320,6 +321,7 @@ $(function(){
 		  $('.mobile-back').addClass('desk-level-two');
 		});
 
+
 		$('body').on('hidden.bs.modal', '.multilevel-modal', function() {
 		  $('.level-one').removeClass('hidden');
 		  $('.level-two').removeClass('shown');
@@ -336,10 +338,31 @@ $(function(){
 		  if (this.value === '') {
 		    $(this).siblings('.float-label').removeClass('filled')
 		  }
+		});	
+
+
+		function checkForInput(element) {
+		  // element is passed to the function ^
+		  
+		  const $label = $(element).siblings('label');
+
+		  if ($(element).val().length > 0) {
+		    $label.addClass('filled');
+		  } else {
+		    $label.removeClass('filled');
+		  }
+		}
+
+		// The lines below are executed on page load
+		$('.float-input').each(function() {
+		  checkForInput(this);
 		});
 
+
+
 		$('.multi-select').multiselect({
-            includeSelectAllOption: true
+            includeSelectAllOption: true,
+            numberDisplayed: 1
         });
 
 });
