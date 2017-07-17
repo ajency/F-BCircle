@@ -334,17 +334,17 @@ $(function(){
 
 		$('.float-input').on('blur', function() {
 		  $(this).siblings('.float-label').removeClass('focused');
-		  
+
 		  if (this.value === '') {
 		    $(this).siblings('.float-label').removeClass('filled')
 		  }
-		});	
+		});
 
-		// value checking floating label 
+		// value checking floating label
 
 		function checkForInput(element) {
 		  // element is passed to the function ^
-		  
+
 		  const $label = $(element).siblings('label');
 
 		  if ($(element).val().length > 0) {
@@ -367,18 +367,20 @@ $(function(){
 	        });
 		}
 
-		
+
   		$('.cat-add-data').on('change:flexdatalist', function () {
 	        value = $('.cat-add-data').val();
 	        console.log('Changed to: ' + value);
 	        // updateValue($(this));
-	        $('.categories__points').append('<li><label class="flex-row"><input type="checkbox" class="checkbox" for="chicken-re"><p class="text-medium categories__text flex-points__text text-color" id="chicken-re">'+ value +'</p></label></li>');
+	        if( $(this).val().length != 0 ) {
+	        	$('.categories__points').append('<li><label class="flex-row"><input type="checkbox" class="checkbox" for="chicken-re"><p class="text-medium categories__text flex-points__text text-color" id="chicken-re">'+ value +'</p></label></li>');
+	        }
 	        $(this).val('');
 	        // $(this).val('');
 	        // $('.flexdatalist-multiple .value').remove();
 	    });
 
-		
+
 
 
 
