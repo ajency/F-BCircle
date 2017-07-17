@@ -367,6 +367,7 @@ $(function(){
 	        });
 		}
 
+		// Category add
 
   		$('.cat-add-data').on('change:flexdatalist', function () {
 	        value = $('.cat-add-data').val();
@@ -380,7 +381,15 @@ $(function(){
 	        // $('.flexdatalist-multiple .value').remove();
 	    });
 
+		$('.enquiry-modal').on('hidden.bs.modal', function (e) {
+		  	$('.content-data').removeClass('hidden');
+  			$('.success-stuff').addClass('hidden');
+		});
 
+  		$('.success-toggle').click(function(){
+  			$('.content-data').addClass('hidden');
+  			$('.success-stuff').removeClass('hidden');
+  		});
 
 
 
