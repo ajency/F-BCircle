@@ -3389,6 +3389,16 @@ input[type=radio].fnb-radio.disabled:before {
   -webkit-flex: 1 0 33.33%;
       -ms-flex: 1 0 33.33%;
           flex: 1 0 33.33%;
+  max-width: 33.33%;
+}
+.verification-modal .add-more-cat__input {
+  display: none;
+}
+.verification-modal .add-more-cat.expand-more li {
+  display: inline-block !important;
+}
+.verification-modal .add-more-cat.expand-more .add-more-cat__input {
+  display: block;
 }
 .verification-modal .send-action .fnb-btn {
   width: 25%;

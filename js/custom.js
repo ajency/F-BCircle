@@ -367,4 +367,26 @@ $(function(){
 	        });
 		}
 
+		
+  		$('.cat-add-data').on('change:flexdatalist', function () {
+	        value = $('.cat-add-data').val();
+	        console.log('Changed to: ' + value);
+	        // updateValue($(this));
+	        $('.categories__points').append('<li><label class="flex-row"><input type="checkbox" class="checkbox" for="chicken-re"><p class="text-medium categories__text flex-points__text text-color" id="chicken-re">'+ value +'</p></label></li>');
+	        $(this).val('');
+	        // $(this).val('');
+	        // $('.flexdatalist-multiple .value').remove();
+	    });
+
+		
+
+
+
+
+
+
+
+
+
+
 });

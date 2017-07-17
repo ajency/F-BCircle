@@ -1875,6 +1875,20 @@
 	.categories__points{
 		li{
 			flex: 1 0 33.33%;
+			max-width: 33.33%;
+		}
+	}
+	.add-more-cat{
+		&__input{
+			display: none;
+		}
+		&.expand-more{
+			li{
+				display: inline-block !important;
+			}
+			.add-more-cat__input{
+				display: block;
+			}
 		}
 	}
 	.send-action{
