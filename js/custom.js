@@ -237,6 +237,7 @@ $(function(){
 			var advAdd = $('.advertisement').detach();
 			$('.adv-after').append(advAdd);
 
+			$('#lookingfor').removeClass('in');
 
 			// $('.recent-updates__content').append(detailbtn);
 
@@ -310,16 +311,60 @@ $(function(){
 		    $(this).toggleClass('active');
 		});
 
+		// Tags call
+
+		$('.flexdatalist').flexdatalist();
+
 		$('body').on('click', '.level-two-toggle', function() {
 		  $('.level-one').addClass('hidden');
 		  $('.level-two').addClass('shown');
 		  $('.mobile-back').addClass('desk-level-two');
 		});
 
+
 		$('body').on('hidden.bs.modal', '.multilevel-modal', function() {
 		  $('.level-one').removeClass('hidden');
 		  $('.level-two').removeClass('shown');
 		  $('.mobile-back').removeClass('desk-level-two');
 		});
+
+		$('.float-input').on('focus', function() {
+		  $(this).siblings('.float-label').addClass('filled focused');
+		});
+
+		$('.float-input').on('blur', function() {
+		  $(this).siblings('.float-label').removeClass('focused');
+		  
+		  if (this.value === '') {
+		    $(this).siblings('.float-label').removeClass('filled')
+		  }
+		});	
+
+		// value checking floating label 
+
+		function checkForInput(element) {
+		  // element is passed to the function ^
+		  
+		  const $label = $(element).siblings('label');
+
+		  if ($(element).val().length > 0) {
+		    $label.addClass('filled lab-color');
+		  } else {
+		    $label.removeClass('filled lab-color');
+		  }
+		}
+
+		// The lines below are executed on page load
+		$('.float-input').each(function() {
+		  checkForInput(this);
+		});
+
+		// Bootstrap multiselect
+		if($('.multi-select').length){
+			$('.multi-select').multiselect({
+	            includeSelectAllOption: true,
+	            numberDisplayed: 1
+	        });
+		}
 
 });
