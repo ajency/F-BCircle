@@ -261,7 +261,7 @@ $(function(){
 
 		// remaning number click reveal
 
-		$('.more-show').click(function(){
+		$('.more-show').click(function(event){
 			event.preventDefault();
 			$(this).addClass('hidden');
 			$('.line').addClass('hidden');
@@ -370,11 +370,11 @@ $(function(){
 		// Category add
 
   		$('.cat-add-data').on('change:flexdatalist', function () {
-	        value = $('.cat-add-data').val();
-	        console.log('Changed to: ' + value);
+	        value = $(this).val();
+	        // console.log('Changed to: ' + value);
 	        // updateValue($(this));
 	        if( $(this).val().length != 0 ) {
-	        	$('.categories__points').append('<li><label class="flex-row"><input type="checkbox" class="checkbox" for="chicken-re"><p class="text-medium categories__text flex-points__text text-color" id="chicken-re">'+ value +'</p></label></li>');
+	        	$(this).closest('.categories-select').find('.categories__points').append('<li><label class="flex-row"><input type="checkbox" class="checkbox" for="chicken-re"><p class="text-medium categories__text flex-points__text text-color" id="chicken-re">'+ value +'</p></label></li>');
 	        }
 	        $(this).val('');
 	        // $(this).val('');
