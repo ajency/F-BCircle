@@ -25,7 +25,7 @@
 	.modal-content{
 		border: 0;
 	}
-	@media(min-width: 768px){
+	@media(min-width: 769px){
 		.modal-header{
 			.mobile-back{
 				display: none;
@@ -41,7 +41,7 @@
 			}
 		}
 	}
-	@media(max-width: 767px){
+	@media(max-width: @mobile){
 		&.fade .modal-dialog{
 			transform: translate(75%,0);
 		}
@@ -51,6 +51,7 @@
 		.modal-dialog{
 			margin: 0;
 			height: 100vh;
+			width: 100%;
 		}
 		.modal-content{
 			height: 100vh;
@@ -102,4 +103,12 @@
 	}
 }
 
-
+@media screen and (min-width: 650px) and (max-width: @mobile){
+	.multilevel-modal{
+		.modal-body{
+			.levels{
+				transform: translate(200%, 0);
+			}
+		}
+	}
+}

@@ -2398,6 +2398,20 @@
 }
 
 
-
+@media screen and (min-width: 650px) and (max-width: @mobile){
+	.suppliers-data{
+		.cat-holder{
+			align-items: flex-start;
+		}
+		.filter-cards{
+			.fnb-cat li{
+				display: block;
+				&:last-child{
+					display: none;
+				}
+			}
+		}
+	}
+}
 
 
