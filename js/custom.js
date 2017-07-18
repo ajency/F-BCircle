@@ -365,6 +365,12 @@ $(function(){
 	            includeSelectAllOption: true,
 	            numberDisplayed: 1
 	        });
+	        // different select init
+	        $('.default-area-select').multiselect({
+	            includeSelectAllOption: true,
+	            numberDisplayed: 1,
+	            nonSelectedText: 'Select Area(s)'
+	        });
 		}
 
 		// Category add
@@ -397,13 +403,13 @@ $(function(){
 		    area_group = $(this).closest('.areas-select').find('.area-append');
 		    area_group_clone = area_group.clone();
 		    area_group_clone.removeClass('area-append hidden');
-		    area_group_clone.find('.areas-appended').multiselect('refresh');
+		    area_group_clone.find('.areas-appended').addClass('newly-created');
+		    area_group_clone.find('.newly-created').multiselect({
+		    	includeSelectAllOption: true,
+	            numberDisplayed: 1,
+	            nonSelectedText: 'Select Area(s)'
+		    });
 		    area_group_clone.insertBefore(area_group);
-		    // $('.areas-appended').multiselect('rebuild');
-		    // $('.areas-appended').multiselect({
-		    // 	includeSelectAllOption: true,
-	     //        numberDisplayed: 1
-		    // });
   		});
 
 
