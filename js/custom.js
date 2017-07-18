@@ -397,7 +397,13 @@ $(function(){
 		    area_group = $(this).closest('.areas-select').find('.area-append');
 		    area_group_clone = area_group.clone();
 		    area_group_clone.removeClass('area-append hidden');
-		    return area_group_clone.insertBefore(area_group);
+		    area_group_clone.find('.areas-appended').multiselect('refresh');
+		    area_group_clone.insertBefore(area_group);
+		    // $('.areas-appended').multiselect('rebuild');
+		    // $('.areas-appended').multiselect({
+		    // 	includeSelectAllOption: true,
+	     //        numberDisplayed: 1
+		    // });
   		});
 
 
