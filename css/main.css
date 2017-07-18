@@ -3502,7 +3502,7 @@ input[type=radio].fnb-radio.disabled:before {
 .verification-modal .enquiry-success {
   padding: 2.5em;
 }
-.verification-modal .enquiry-success .fa {
+.verification-modal .enquiry-success .fa-check-circle {
   color: #6ac259;
   font-size: 3.5em;
 }
