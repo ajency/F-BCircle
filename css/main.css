@@ -3933,7 +3933,7 @@ input[type=radio].fnb-radio.disabled:before {
   .verification-modal .deal-text p {
     font-size: 0.8em;
   }
-  .verification-modal .exclamation {
+  .verification-modal .verify-exclamation {
     font-size: 0.85em;
     width: 23px;
     height: 15px;
@@ -3978,6 +3978,10 @@ input[type=radio].fnb-radio.disabled:before {
         -ms-transform: translateX(-2.5em) translateY(0.5em) scale(0.75);
             transform: translateX(-2.5em) translateY(0.5em) scale(0.75);
     font-size: 1.1em;
+  }
+  .verification-modal .vendor-contact-details {
+    margin: 0 1.5em 2em;
+    padding: 1em 1em;
   }
 }
 @media screen and (min-width: 650px) and (max-width: 768px) {
