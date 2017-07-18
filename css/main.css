@@ -3440,6 +3440,12 @@ input[type=radio].fnb-radio.disabled:before {
   padding-left: 0.2em;
   cursor: pointer;
 }
+.verification-modal .categories__points {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
 .verification-modal .categories__points li {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 33.33%;
@@ -3594,6 +3600,13 @@ input[type=radio].fnb-radio.disabled:before {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
+}
+.verification-modal .suppliers-data .categories__points .checkbox:before {
+  height: 16px;
+  width: 15px;
+}
+.verification-modal .suppliers-data .areas-select__selection {
+  background-color: #fff;
 }
 .verification-modal .seller-info {
   border: 0;
