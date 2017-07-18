@@ -1092,7 +1092,7 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .multiselect-selected-text {
   font-size: 1.05em;
-  color: rgba(107, 107, 107, 0.67);
+  color: #6b6b6b;
 }
 .multiselect-container {
   border-radius: 0;
