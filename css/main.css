@@ -3521,6 +3521,7 @@ input[type=radio].fnb-radio.disabled:before {
       -ms-flex: 0.55;
           flex: 0.55;
   margin-left: 3em;
+  text-align: right;
 }
 .verification-modal .verification__code .fnb-input {
   font-size: 0.85em;
