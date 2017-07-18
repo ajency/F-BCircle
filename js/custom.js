@@ -391,7 +391,14 @@ $(function(){
   			$('.success-stuff').removeClass('hidden');
   		});
 
-
+  		$('.add-areas').click(function(e){
+  			var area_group, area_group_clone;
+		    e.preventDefault();
+		    area_group = $(this).closest('.areas-select').find('.area-append');
+		    area_group_clone = area_group.clone();
+		    area_group_clone.removeClass('area-append hidden');
+		    return area_group_clone.insertBefore(area_group);
+  		});
 
 
 
