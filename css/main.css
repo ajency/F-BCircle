@@ -1130,15 +1130,15 @@ input[type=radio].fnb-radio.disabled:before {
   transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
   -webkit-transform: translateY(1.6em);
           transform: translateY(1.6em);
-  display: block;
+  display: inline-block;
   cursor: text;
   font-size: 1.05em;
   color: #000;
   font-weight: 400;
 }
 .float-label.filled {
-  -webkit-transform: translateX(-2.3em) translateY(0.5em) scale(0.75);
-          transform: translateX(-2.3em) translateY(0.5em) scale(0.75);
+  -webkit-transform: translateX(-0.5em) translateY(0.5em) scale(0.75);
+          transform: translateX(-0.5em) translateY(0.5em) scale(0.75);
   font-weight: 600;
 }
 .float-label.lab-color {
@@ -3502,7 +3502,7 @@ input[type=radio].fnb-radio.disabled:before {
 .verification-modal .enquiry-success {
   padding: 2.5em;
 }
-.verification-modal .enquiry-success .fa {
+.verification-modal .enquiry-success .fa-check-circle {
   color: #6ac259;
   font-size: 3.5em;
 }
