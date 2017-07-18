@@ -181,7 +181,7 @@
 		&:checked{
 			& + .option{
 				.business-icon{
-					box-shadow: 0px 0px 0px 3px rgba(236, 109, 75, 0.45);
+					box-shadow: 0px 0px 0px 3px rgba(0, 182, 170, 0.45);
 					// filter: grayscale(0);
 				}
 				.fa{
@@ -190,7 +190,7 @@
 					top: -10px;
 					right: -10px;
 					background-color: #fff;
-					color: @accent-primary;
+					color: @accent-secondary;
 					font-size: 1.2em;
 					height: 20px;
 					width: 25px;
@@ -198,11 +198,16 @@
 				}
 			}
 			& + .option + .business-label{
-				color: @accent-primary;
+				color: @accent-secondary;
 			}
 		}
 		&:focus{
 			outline: 0;
+		}
+		&:hover{
+			& + .option + .business-label{
+				color: @accent-secondary;
+			}
 		}
 	}
 	.business-label{
@@ -219,7 +224,7 @@
 	padding: 10px;
 	position: relative;
 	.cat-label{
-		color: @accent-primary;
+		color: @accent-secondary;
 		font-weight: 500;
 		margin-left: 10px;
 	}
