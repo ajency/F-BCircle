@@ -23,6 +23,9 @@
     	font-weight: 400;
     	margin-bottom: 0;
 	}
+	&.top-head{
+		align-items: center;
+	}
 }
 
 @media screen and (max-width: @mobile){
@@ -45,7 +48,11 @@
     			margin-left: 15px;
     		}
 		}
-
+		&.top-head{
+			align-items: flex-start;
+    		margin-top: 15px;
+    		margin-bottom: 5px;
+		}
 	}
 }
 
@@ -62,8 +69,11 @@
 			// color: #797979;
 			font-weight: 500;
 			margin-top: -10px;
+			color: #000;
 			span{
 				font-size: 2em;
+				display: inline-block;
+    			margin-bottom: -8px;
 			}
 		}
 		li{
