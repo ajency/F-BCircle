@@ -2046,7 +2046,7 @@ input[type=radio].fnb-radio.disabled:before {
   color: #ffc12b;
   content: "\f005 \f005 \f005 \f005 \f005";
 }
-@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .rating {
     width: 125px;
   }
