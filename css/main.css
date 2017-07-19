@@ -2046,6 +2046,15 @@ input[type=radio].fnb-radio.disabled:before {
   color: #ffc12b;
   content: "\f005 \f005 \f005 \f005 \f005";
 }
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+  .rating {
+    width: 125px;
+  }
+  .rating .bg,
+  .rating .value {
+    height: 30px;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .seller-info .contact__date .contact__title {
     margin-bottom: 2em;
@@ -3352,7 +3361,7 @@ input[type=radio].fnb-radio.disabled:before {
   font-size: 1.1em;
   font-weight: 500;
   border-radius: 50%;
-  border: 1px solid #d8d8d8;
+  border: 2.5px solid #d8d8d8;
   margin: auto;
 }
 .verification-modal .detail-cols {
@@ -3741,7 +3750,7 @@ input[type=radio].fnb-radio.disabled:before {
   margin: 0 2em 2em;
   padding: 1em 2em;
   border: 1px solid #fbddd5;
-  background-color: #f9f9f9;
+  background-color: #fffcf8;
 }
 @media screen and (max-width: 768px) {
   .verification-modal p,
