@@ -5217,6 +5217,10 @@ input[type=radio].fnb-radio.disabled:before {
   padding: 15px;
   font-size: 1.05em;
 }
+.operation-hours label .fnb-radio {
+  margin-right: 12px;
+  top: 2px;
+}
 .inputfile {
   width: 0.1px;
   height: 0.1px;
@@ -5249,6 +5253,15 @@ input[type=radio].fnb-radio.disabled:before {
 }
 .hours-section {
   width: 100%;
+}
+.hours-section .fnb-select {
+  width: 70%;
+}
+.hours-section.open-2 {
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .flexdatalist-multiple {
   border-bottom: 1px solid #ddd !important;
@@ -5490,7 +5503,7 @@ input[type=radio].fnb-radio.disabled:before {
     padding-right: 0;
   }
   .hours-section.open-2 .closed-label {
-    padding-left: 0;
+    padding: 0;
     -webkit-box-align: baseline;
     -webkit-align-items: baseline;
         -ms-flex-align: baseline;
