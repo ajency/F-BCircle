@@ -478,15 +478,27 @@
 	}
 }
 
-@media screen and (max-width: @mobile) and (orientation: landscape){
+@media screen and (min-width: 650px) and (max-width: @mobile){
 	.business-cats{
 		.interested-options{
 			li{
-				flex: 1 0 
+				flex: 1 0 33.33%;
 			}	
 		}
 	}
 }
+
+@media screen and (max-width: @mobile) and (orientation: landscape){
+	.business-cats{
+		.interested-options{
+			li{
+				flex: 1 0 33.33%;
+			}	
+		}
+	}
+}
+
+
 
 
 @media screen and (max-width: @xs-mobile){

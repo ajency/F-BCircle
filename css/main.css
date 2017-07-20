@@ -5388,12 +5388,20 @@ input[type=radio].fnb-radio.disabled:before {
     max-width: 100%;
   }
 }
+@media screen and (min-width: 650px) and (max-width: 768px) {
+  .business-cats .interested-options li {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 33.33%;
+        -ms-flex: 1 0 33.33%;
+            flex: 1 0 33.33%;
+  }
+}
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .business-cats .interested-options li {
     -webkit-box-flex: 1;
-    -webkit-flex: 1 0;
-        -ms-flex: 1 0;
-            flex: 1 0;
+    -webkit-flex: 1 0 33.33%;
+        -ms-flex: 1 0 33.33%;
+            flex: 1 0 33.33%;
   }
 }
 @media screen and (max-width: 320px) {
