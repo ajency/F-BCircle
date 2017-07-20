@@ -5569,6 +5569,14 @@ input[type=radio].fnb-radio.disabled:before {
     top: 2px;
   }
 }
+@media screen and (min-width: 769px) {
+  .premium-plan {
+    padding-left: 30px;
+  }
+  .premium-plan .fnb-select {
+    padding-left: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .plan {
     padding: 1em;
