@@ -5514,8 +5514,12 @@ input[type=radio].fnb-radio.disabled:before {
     padding-right: 0;
   }
   .hours-section .fnb-select {
-    font-size: 1em;
+    font-size: 0.8em;
     opacity: 0.7;
+    width: 80%;
+  }
+  .no-padding {
+    padding: 0;
   }
 }
 @media screen and (max-width: 320px) {
