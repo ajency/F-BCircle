@@ -75,3 +75,13 @@ $('body').on 'click', '.add-another', (e)->
 	contact_group_clone = contact_group.clone()
 	contact_group_clone.removeClass 'contact-group hidden'
 	contact_group_clone.insertBefore(contact_group)
+
+$('body').on 'click', '.review-submit', (e)->
+	e.preventDefault()
+	$('.status-changer').text('Processing').removeClass('text-primary').addClass('text-secondary')
+	$(this).addClass('hidden')
+
+
+
+
+

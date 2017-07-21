@@ -84,4 +84,10 @@
     return contact_group_clone.insertBefore(contact_group);
   });
 
+  $('body').on('click', '.review-submit', function(e) {
+    e.preventDefault();
+    $('.status-changer').text('Processing').removeClass('text-primary').addClass('text-secondary');
+    return $(this).addClass('hidden');
+  });
+
 }).call(this);
