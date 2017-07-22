@@ -2145,11 +2145,17 @@
 			margin-bottom: 0;
     		align-items: flex-start;
 		}
-		.verified-icon{
-			margin-left: 1em;
-    		background-size: 2000%;
-    		background-position: -196px -187px;
-    		max-width: 29px;
+		@media screen and (min-width: 769px){
+			.brand-name{
+				font-size: 1.1em;
+			}
+			.verified-icon{
+				margin-left: 1em;
+	    		// background-size: 2000%;
+	    		// background-position: -196px -187px;
+	    		// max-width: 29px;
+	    		transform: scale(0.75);
+			}			
 		}
 		.location{
 			margin: 0.5em 0;

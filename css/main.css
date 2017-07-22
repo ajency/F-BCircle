@@ -695,6 +695,9 @@ input[type=radio].fnb-radio.disabled:before {
   border: 0;
 }
 @media (min-width: 769px) {
+  .multilevel-modal {
+    text-align: center;
+  }
   .multilevel-modal .modal-header .mobile-back {
     display: none;
   }
@@ -704,19 +707,17 @@ input[type=radio].fnb-radio.disabled:before {
     display: -ms-flexbox;
     display: flex;
   }
-  .multilevel-modal.in {
-    display: -webkit-box !important;
-    display: -webkit-flex !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .multilevel-modal.in:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -4px;
+  }
+  .multilevel-modal.in .modal-dialog {
+    display: inline-block;
+    text-align: left;
+    vertical-align: middle;
   }
 }
 .multilevel-modal .level-two {
@@ -3714,11 +3715,16 @@ input[type=radio].fnb-radio.disabled:before {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-.verification-modal .seller-enquiry .verified-icon {
-  margin-left: 1em;
-  background-size: 2000%;
-  background-position: -196px -187px;
-  max-width: 29px;
+@media screen and (min-width: 769px) {
+  .verification-modal .seller-enquiry .brand-name {
+    font-size: 1.1em;
+  }
+  .verification-modal .seller-enquiry .verified-icon {
+    margin-left: 1em;
+    -webkit-transform: scale(0.75);
+        -ms-transform: scale(0.75);
+            transform: scale(0.75);
+  }
 }
 .verification-modal .seller-enquiry .location {
   margin: 0.5em 0;
