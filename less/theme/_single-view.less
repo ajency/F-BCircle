@@ -2353,6 +2353,8 @@
     			.fnb-btn{
     				padding: 0.8em 1.8em;
     				font-size: 0.9em;
+    				width: 45%;
+    				margin: 0 auto;
     			}
 			}
 		}
@@ -2381,8 +2383,8 @@
     			margin: 0.8em 0;
     		}
     		&__detail{
-    			p{
-    				font-size: 0.85em;
+    			p.larger{
+    				font-size: 1em;
     			}
     		}
     		.fnb-input{
@@ -2466,6 +2468,33 @@
 		}
 	}
 }
+
+
+
+@media screen and (orientation:landscape)
+and (min-device-width: 319px) 
+and (max-device-width: 650px) {
+	.verification-modal{
+		.verification__row{
+			flex-direction: row;
+		}
+		.verification__code{
+			text-align: right;
+		}
+		.suppliers-data{
+			.cat-holder{
+				flex-direction: row;
+    			padding-bottom: 0.8em;
+			}
+			.get-details{
+				.fnb-btn{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
 
 
 @media screen and (min-width: 650px) and (max-width: @mobile){

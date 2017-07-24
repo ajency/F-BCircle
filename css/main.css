@@ -3946,6 +3946,8 @@ input[type=radio].fnb-radio.disabled:before {
   .verification-modal .cat-holder .get-details .fnb-btn {
     padding: 0.8em 1.8em;
     font-size: 0.9em;
+    width: 45%;
+    margin: 0 auto;
   }
   .verification-modal .verification {
     margin: -15px;
@@ -3979,8 +3981,8 @@ input[type=radio].fnb-radio.disabled:before {
   .verification-modal .verification hr {
     margin: 0.8em 0;
   }
-  .verification-modal .verification__detail p {
-    font-size: 0.85em;
+  .verification-modal .verification__detail p.larger {
+    font-size: 1em;
   }
   .verification-modal .verification .fnb-input {
     width: 110px;
@@ -4051,6 +4053,29 @@ input[type=radio].fnb-radio.disabled:before {
   }
   .verification-modal .vendor-contact-details .vendor-label {
     font-size: 1em;
+  }
+}
+@media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 650px) {
+  .verification-modal .verification__row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .verification-modal .verification__code {
+    text-align: right;
+  }
+  .verification-modal .suppliers-data .cat-holder {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding-bottom: 0.8em;
+  }
+  .verification-modal .suppliers-data .get-details .fnb-btn {
+    width: 100%;
   }
 }
 @media screen and (min-width: 650px) and (max-width: 768px) {
