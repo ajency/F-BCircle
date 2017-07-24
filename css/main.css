@@ -3602,6 +3602,10 @@ input[type=radio].fnb-radio.disabled:before {
 .verification-modal .enquiry-success__sub-text {
   padding-left: 1em;
 }
+.verification-modal .enquiry-success .thanks-text {
+  font-size: 1.35em;
+  padding-left: 0.7em;
+}
 .verification-modal .suppliers-data {
   padding: 2em;
   background-color: #f3f3f3;
