@@ -3776,6 +3776,9 @@ input[type=radio].fnb-radio.disabled:before {
   border: 1px solid #fbddd5;
   background-color: #fffcf8;
 }
+.verification-modal .vendor-contact-details .vendor-label {
+  font-size: 1.15em;
+}
 @media screen and (max-width: 768px) {
   .verification-modal p,
   .verification-modal label,
@@ -3867,6 +3870,13 @@ input[type=radio].fnb-radio.disabled:before {
     margin-bottom: 0;
     font-size: 1.1em;
   }
+  .verification-modal .enquiry-success .thanks-text {
+    font-size: 1.25em;
+    margin-bottom: 0.5em;
+  }
+  .verification-modal .contact-success .owner-detail .fa {
+    font-size: 1em;
+  }
   .verification-modal .seller-info {
     margin: 1.5em 0;
   }
@@ -3883,6 +3893,12 @@ input[type=radio].fnb-radio.disabled:before {
   .verification-modal .suppliers-data {
     padding-left: 1em;
     padding-right: 1em;
+  }
+  .verification-modal .suppliers-data .cat-holder {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .verification-modal .suppliers-title-head {
     -webkit-box-orient: vertical;
@@ -4032,6 +4048,9 @@ input[type=radio].fnb-radio.disabled:before {
   .verification-modal .vendor-contact-details {
     margin: 0 1.5em 2em;
     padding: 1em 1em;
+  }
+  .verification-modal .vendor-contact-details .vendor-label {
+    font-size: 1em;
   }
 }
 @media screen and (min-width: 650px) and (max-width: 768px) {
