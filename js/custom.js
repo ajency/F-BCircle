@@ -30,6 +30,11 @@ $(function(){
 			    $(".trans-header").removeClass("change");
 			    $('.sticky-bottom').removeClass('active');
 			}
+			if (scroll >= 10) {
+			    $('.preview-header').addClass('active');
+			} else {
+			    $('.preview-header').removeClass('active');
+			}
 		});
 
 		// Check if height is equal or greater then actual scroll
@@ -39,6 +44,9 @@ $(function(){
 	    if(scrollHeader  > 100) {
 	        $(".trans-header").addClass("change");
 	    }
+	    // calculate sticky preview height
+		var previewHeight = $('.preview-header').outerHeight();
+		$('.header-shifter').css('height',previewHeight);
 	}
 
 
@@ -312,9 +320,9 @@ $(function(){
 		});
 
 		// Tags call
-
-		$('.flexdatalist').flexdatalist();
-
+		if($('.flexdatalist').length){
+			$('.flexdatalist').flexdatalist();
+		}
 		$('body').on('click', '.level-two-toggle', function() {
 		  $('.level-one').addClass('hidden');
 		  $('.level-two').addClass('shown');

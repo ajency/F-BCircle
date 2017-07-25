@@ -113,6 +113,10 @@
     </header>
     <!-- header ends -->
     <!-- content -->
+    <div class="preview-header text-color mobile-hide">
+        <i class="fa fa-binoculars bino" aria-hidden="true"></i> Do you want to see a preview of your listing? <a href="#" class="secondary-link preview-header__link">Preview</a>
+    </div>
+    <div class="header-shifter"></div>
     <div class="container">
         <div class="row p-t-30 mobile-flex breadcrums-container mobile-hide">
             <div class="col-sm-8 flex-col">
@@ -251,6 +255,8 @@
                                     </div>
                                 </div>
                                 <div class="fly-out__content">
+                                    <div class="preview-header text-color desk-hide"> Do you want to see a preview of your listing? <a href="#" class="secondary-link preview-header__link">Preview</a>
+                                    </div>
                                     <p class="note-row__text--status text-medium desk-hide">
                                         The current status of your listing is <span class="text-primary bolder">Draft</span> <i class="fa fa-info-circle text-color m-l-5" data-toggle="tooltip" data-placement="top" title="Info about draft status"></i>
                                     </p>
@@ -409,7 +415,83 @@
                                         <!-- Business Categories -->
                                         <div class="business-cats tab-pane fade" id="business-cats">
                                             <h5 class="no-m-t">Business Categories</h5>
-                                            <div class="m-t-30 add-container c-gap">
+                                            <div class="m-t-30 c-gap">
+                                                <label>List of all the categories for your listing</label>
+                                                <div class="single-category gray-border">
+                                                    <div class="row flex-row categoryContainer">
+                                                        <div class="col-sm-4 flex-row">
+                                                            <span class="fnb-icons cat-icon meat"></span>
+                                                            <div class="branch-row">
+                                                                <div class="cat-label">Meat &amp; Poultry</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-2">
+                                                            <strong class="branch">Mutton</strong>
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                            <ul class="fnb-cat small flex-row">
+                                                                <li><span class="fnb-cat__title">Al Kabeer <span class="fa fa-times remove"></span></span>
+                                                                </li>
+                                                                <li><span class="fnb-cat__title">Pandiyan <span class="fa fa-times remove"></span></span>
+                                                                </li>
+                                                                <li><span class="fnb-cat__title">Ezzy <span class="fa fa-times remove"></span></span>
+                                                                </li>
+                                                                <li><span class="fnb-cat__title">Royco <span class="fa fa-times remove"></span></span>
+                                                                </li>
+                                                                <li><span class="fnb-cat__title">Venkys <span class="fa fa-times remove"></span></span>
+                                                                </li>
+                                                                <li class="more-show desk-hide"><span class="fnb-cat__title text-secondary">+10 more</span></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="delete-cat">
+                                                        <span class="fa fa-times remove"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="m-t-20">
+                                                    <a href="#category-select" data-toggle="modal" data-target="#category-select" class="dark-link heavier">+ Add/Edit more categories</a>
+                                                </div>
+                                            </div>
+                                            <div class="m-t-50 c-gap">
+                                                <label class="required">Core categories of your listing</label>
+                                                <div class="text-lighter m-t-5">
+                                                    Note: Core categories will be displayed prominently on the listing. Maximum 10 core categories allowed
+                                                    <br> Please select your core categories from the following categories.
+                                                </div>
+                                                <div class="m-t-20">
+                                                    <!-- <input type="text" class="form-control fnb-input flexdatalist" placeholder="+ Add more core categories" multiple="multiple" data-min-length="0" value="Al Kabeer, Pandiyan, Ezzy, Royco, Venkys" data-selection-required="1" list="core_categories">
+                                                    <datalist id="core_categories">
+                                                        <option value="Al Kabeer">Al Kabeer</option>
+                                                        <option value="Pandiyan">Pandiyan</option>
+                                                        <option value="Ezzy">Ezzy</option>
+                                                        <option value="Royco">Royco</option>
+                                                    </datalist> -->
+                                                    <ul class="fnb-cat small core-selector flex-row">
+                                                        <li><input type="checkbox" class="checkbox core-cat-select" id="cat-label" checked=""><label class="core-selector__label m-b-0" for="cat-label"><span class="fnb-cat__title text-medium">Al Kabeer </span></label></span>
+                                                        </li>
+                                                        <li><input type="checkbox" class="checkbox core-cat-select" id="cat-label-2"><label class="core-selector__label m-b-0" for="cat-label-2"><span class="fnb-cat__title text-medium">Pandiyan </span></label></span>
+                                                        </li>
+                                                        <li><input type="checkbox" class="checkbox core-cat-select" id="cat-label-3"><label class="core-selector__label m-b-0" for="cat-label-3"><span class="fnb-cat__title text-medium">Ezzy </span></label></span>
+                                                        </li>
+                                                        <li><input type="checkbox" class="checkbox core-cat-select" id="cat-label-4"><label class="core-selector__label m-b-0" for="cat-label-4"><span class="fnb-cat__title text-medium">Royco </span></label></span>
+                                                        </li>
+                                                        <li><input type="checkbox" class="checkbox core-cat-select" id="cat-label-5"><label class="core-selector__label m-b-0" for="cat-label-5"><span class="fnb-cat__title text-medium">Venkys </span></label></span>
+                                                        </li>
+                                                        <!-- 
+                                                        <li class="more-show desk-hide"><span class="fnb-cat__title text-secondary">+10 more</span></li> -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="m-t-40 c-gap">
+                                                <label>List some brands that you deal with</label>
+                                                <!-- <div class="text-lighter m-t-5">
+                                                    Ex: Albertsons, America's Choice, Bashas
+                                                </div> -->
+                                                <div class="m-t-5">
+                                                    <input type="text" class="form-control fnb-input" placeholder="+ Add brands you deal with">
+                                                </div>
+                                            </div>
+                                            <!-- <div class="m-t-30 add-container c-gap">
                                                 <label>Select categories your listing belongs to <span class="text-primary">*</span></label>
                                                 <div class="text-lighter m-t-5">
                                                     One category at a time
@@ -443,69 +525,8 @@
                                                         Juices, Soups &amp; Soft Drinks
                                                     </div>
                                                 </li>
-                                            </ul>
-                                            <div class="m-t-50 c-gap">
-                                                <label>List some brands that you deal with</label>
-                                                <!-- <div class="text-lighter m-t-5">
-                                                    Ex: Albertsons, America's Choice, Bashas
-                                                </div> -->
-                                                <div class="m-t-5">
-                                                    <input type="text" class="form-control fnb-input" placeholder="+ Add brands you deal with">
-                                                </div>
-                                            </div>
-                                            <div class="m-t-50 c-gap">
-                                                <label>Core categories of your listing</label>
-                                                <div class="text-lighter m-t-5">
-                                                    Note: Core categories will be displayed prominently on the listing.
-                                                    <br> Maximum 10 core categories allowed
-                                                </div>
-                                                <div class="m-t-20">
-                                                    <input type="text" class="form-control fnb-input flexdatalist" placeholder="+ Add more core categories" multiple="multiple" data-min-length="0" value="Al Kabeer, Pandiyan, Ezzy, Royco, Venkys" data-selection-required="1" list="core_categories">
-                                                    <datalist id="core_categories">
-                                                        <option value="Al Kabeer">Al Kabeer</option>
-                                                        <option value="Pandiyan">Pandiyan</option>
-                                                        <option value="Ezzy">Ezzy</option>
-                                                        <option value="Royco">Royco</option>
-                                                    </datalist>
-                                                </div>
-                                            </div>
-                                            <div class="m-t-50 c-gap">
-                                                <label>List of all the categories for your listing</label>
-                                                <div class="single-category gray-border">
-                                                    <div class="row flex-row categoryContainer">
-                                                        <div class="col-sm-4 flex-row">
-                                                            <span class="fnb-icons cat-icon veg"></span>
-                                                            <div class="branch-row">
-                                                                <div class="cat-label">Meat &amp; Poultry</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-2">
-                                                            <strong class="branch">Mutton</strong>
-                                                        </div>
-                                                        <div class="col-sm-6">
-                                                            <ul class="fnb-cat small flex-row">
-                                                                <li><span class="fnb-cat__title">Al Kabeer <span class="fa fa-times remove"></span></span>
-                                                                </li>
-                                                                <li><span class="fnb-cat__title">Pandiyan <span class="fa fa-times remove"></span></span>
-                                                                </li>
-                                                                <li><span class="fnb-cat__title">Ezzy <span class="fa fa-times remove"></span></span>
-                                                                </li>
-                                                                <li><span class="fnb-cat__title">Royco <span class="fa fa-times remove"></span></span>
-                                                                </li>
-                                                                <li><span class="fnb-cat__title">Venkys <span class="fa fa-times remove"></span></span>
-                                                                </li>
-                                                                <li class="more-show desk-hide"><span class="fnb-cat__title text-secondary">+10 more</span></li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                    <div class="delete-cat">
-                                                        <span class="fa fa-times remove"></span>
-                                                    </div>
-                                                </div>
-                                                <div class="m-t-20">
-                                                    <a href="#category-select" data-toggle="modal" data-target="#category-select" class="dark-link heavier">+ Add/Edit more categories</a>
-                                                </div>
-                                            </div>
+                                            </ul> -->
+                                            
                                         </div>
                                         <!-- Business Categories End -->
                                         <!-- Business Details -->
@@ -946,10 +967,23 @@
                                             </div>
                                         </div>
                                         <!-- Go Premium End -->
+                                        <!-- Submit for review section                     -->
+                                        <div class="m-t-50 c-gap">
+                                           <div class="review-note flex-row space-between">
+                                                <div class="review-note__text flex-row">
+                                                    <i class="fa fa-list-alt" aria-hidden="true"></i>     
+                                                    <p class="review-note__title">If you don't want to continue editing your listing, you can submit it for review now.</p>
+                                                </div>
+                                               <div class="review-note__submit">
+                                                   <a href="#" class="primary-link sub-title">Submit for review</a>
+                                               </div>
+                                           </div>
+                                        </div>
+                                        <!-- content navigation -->
                                         <div class="gs-form__footer flex-row m-t-40">
                                             <button class="btn fnb-btn outline no-border gs-prev"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
-                                            <button class="btn fnb-btn primary-btn full save-btn center">Save &amp; Continue</button>
-                                            <button class="btn fnb-btn outline no-border gs-next">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+                                            <button class="btn fnb-btn primary-btn full save-btn gs-next">Save &amp; Next</button>
+                                            <!-- <button class="btn fnb-btn outline no-border ">Next <i class="fa fa-arrow-right" aria-hidden="true"></i></button> -->
                                         </div>
                                     </div>
                                 </div>
@@ -1815,7 +1849,8 @@
     </div>
     <!-- content ends -->
     <!-- jquery -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
     <!-- BS Script -->
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <!-- Smooth Mouse scroll -->
