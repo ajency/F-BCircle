@@ -4054,6 +4054,9 @@ input[type=radio].fnb-radio.disabled:before {
   .verification-modal .vendor-contact-details .vendor-label {
     font-size: 1em;
   }
+  .verification-modal .log-link {
+    margin: 0.5em 0;
+  }
 }
 @media screen and (orientation: landscape) and (min-device-width: 319px) and (max-device-width: 650px) {
   .verification-modal .verification__row {
