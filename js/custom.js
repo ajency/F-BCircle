@@ -420,7 +420,11 @@ $(function(){
 		    area_group_clone.insertBefore(area_group);
   		});
 
-
+		$('input[type=radio][name=plan-select]').change(function() {
+		  if ($(this).is(':checked')) {
+		    $(this).closest('.pricing-table__cards').addClass('active').siblings().removeClass('active');
+		  }
+		});
 
 
 
