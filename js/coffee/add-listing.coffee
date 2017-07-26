@@ -79,6 +79,7 @@ $('body').on 'click', '.add-another', (e)->
 $('body').on 'click', '.review-submit', (e)->
 	e.preventDefault()
 	$('.status-changer').text('Processing').removeClass('text-primary').addClass('text-secondary')
+	$('.draft-status').attr('data-original-title','Listing is under process')
 	$(this).addClass('hidden')
 
 

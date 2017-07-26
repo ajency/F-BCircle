@@ -87,6 +87,7 @@
   $('body').on('click', '.review-submit', function(e) {
     e.preventDefault();
     $('.status-changer').text('Processing').removeClass('text-primary').addClass('text-secondary');
+    $('.draft-status').attr('data-original-title', 'Listing is under process');
     return $(this).addClass('hidden');
   });
 
