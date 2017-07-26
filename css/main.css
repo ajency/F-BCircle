@@ -611,7 +611,10 @@ span {
   background-position: -588px -13px;
 }
 input[type=checkbox] {
-  margin-right: 8px;
+  margin-right: 10px;
+  -webkit-appearance: none;
+  outline: 0;
+  width: 15px;
   position: relative;
 }
 input[type=checkbox]:before {
@@ -625,11 +628,9 @@ input[type=checkbox]:before {
   color: #dcdcdc;
   font-size: 1.35em;
   cursor: pointer;
-}
-@media screen and (min-width: 1024px) {
-  input[type=checkbox]:before {
-    top: -4px;
-  }
+  top: -10px;
+  width: 20px;
+  text-align: center;
 }
 input[type=checkbox]:checked:before {
   content: "\f046";
@@ -641,6 +642,9 @@ input[type=checkbox].disabled {
 input[type=checkbox].disabled:before {
   content: '\f10c';
   color: #ccc;
+}
+input[type=checkbox]:focus {
+  outline: 0;
 }
 @media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
   input[type=checkbox] {
@@ -5820,7 +5824,7 @@ input[type=radio].fnb-radio.disabled:before {
     font-size: 0.9em;
   }
   .payment-modes .checkbox {
-    top: 2px;
+    top: -2px;
   }
 }
 .premium-points {
