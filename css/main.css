@@ -5719,6 +5719,16 @@ input[type=radio].fnb-radio.disabled:before {
     font-size: 0.8em;
   }
 }
+input[type='checkbox'].remove-addr {
+  margin-right: 10px;
+  vertical-align: middle;
+  height: 20px;
+  float: left;
+  top: 8px;
+}
+input[type='checkbox'].remove-addr:checked + .another-address {
+  display: none;
+}
 @media screen and (max-width: 768px) {
   .location-hours iframe {
     height: 250px;
