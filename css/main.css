@@ -5081,6 +5081,7 @@ input[type=radio].fnb-radio.disabled:before {
   }
   .preview-header.active {
     top: 0;
+    font-size: 1em;
   }
 }
 .preview-header__link {
