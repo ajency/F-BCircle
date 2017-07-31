@@ -1177,6 +1177,9 @@ input[type=radio].fnb-radio.disabled:before {
   /* Firefox 19+ */
   color: #000;
 }
+.toggle__check {
+  width: inherit;
+}
 .switch {
   position: absolute;
   left: 2px;
