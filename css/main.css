@@ -1051,7 +1051,7 @@ input[type=radio].fnb-radio.disabled:before {
   width: 100%;
   height: 100%;
   opacity: 0;
-  z-index: 6;
+  z-index: 2;
 }
 .toggle__check:checked ~ .track {
   box-shadow: inset 0 0 0 20px #32bbb4;
@@ -1177,7 +1177,7 @@ input[type=radio].fnb-radio.disabled:before {
   /* Firefox 19+ */
   color: #000;
 }
-.toggle__check {
+input[type="checkbox"].toggle__check {
   width: inherit;
 }
 .switch {
@@ -5080,7 +5080,7 @@ input[type=radio].fnb-radio.disabled:before {
   .preview-header {
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
   }
   .preview-header.active {
     top: 0;
