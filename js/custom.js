@@ -425,6 +425,12 @@ $(function(){
 		    $(this).closest('.pricing-table__cards').addClass('active').siblings().removeClass('active');
 		  }
 		});
+		$(document).on("click", '.verify-click', function(){
+			event.preventDefault();
+			var test = $(this).closest('.test-row').find('.fnb-input').val();
+			console.log(test);
+		});
+
 
 
 

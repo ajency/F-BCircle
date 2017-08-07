@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/dropify.css">
     <!-- tags css -->
     <link rel="stylesheet" type="text/css" href="css/jquery.flexdatalist.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.fileuploader.css">
     <!-- Main styles -->
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -366,7 +367,7 @@
                                             </div>
                                             <div class="m-t-40 business-phone business-contact">
                                                 <label>Enter your business phone number <span class="text-primary">*</span></label>
-                                                <div class="row p-t-10 p-b-10">
+                                                <div class="row p-t-10 p-b-10 test-row">
                                                     <div class="col-sm-5">
                                                         <input type="tel" class="form-control fnb-input p-l-5" value="+91 9344567888">
                                                     </div>
@@ -374,7 +375,7 @@
                                                         <div class="verified flex-row">
                                                             <!-- <span class="fnb-icons verified-icon"></span>
                                                             <p class="c-title">Verified</p> -->
-                                                            <a href="#" class="dark-link">Verify now</a>
+                                                            <a href="#" class="dark-link verify-click">Verify now</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4 col-xs-8">
@@ -388,13 +389,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="row p-t-10 p-b-10 no-m-b contact-group hidden">
+                                                <div class="row p-t-10 p-b-10 no-m-b test-row contact-group hidden">
                                                     <div class="col-sm-5">
                                                         <input type="tel" class="form-control fnb-input p-l-5" value="">
                                                     </div>
                                                     <div class="col-sm-3 col-xs-4">
                                                         <div class="verified flex-row">
-                                                            <a href="#" class="dark-link">Verify now</a>
+                                                            <a href="#" class="dark-link verify-click">Verify now</a>
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-4 col-xs-8">
@@ -929,13 +930,16 @@
                                             </div>
                                             <div class="m-t-50 upload-container c-gap">
                                                 <label>Do you have some files which you would like to upload for the listing?</label>
-                                                <div class="m-t-20">
+                                                <<!-- div class="m-t-20">
                                                     <input type="file" name="file-2[]" id="file-2" class="inputfile inputfile-2" data-multiple-caption="{count} files selected" multiple />
                                                     <label for="file-2" class="btn fnb-btn outline full border-btn"><i class="fa fa-upload" aria-hidden="true"></i> <span>Upload File</span></label>
                                                 </div>
                                                 <div class="m-t-10 text-lighter">
                                                     Only .jpg, .jpeg &amp; .pdf with a maximum size of 1mb is allowed
-                                                </div>
+                                                </div> -->
+                                                    <input type="text" id="custom_file_name">
+        
+                                            <input type="file" name="files">
                                             </div>
                                         </div>
                                         <!-- Photos End -->
@@ -1962,6 +1966,7 @@
     <script type="text/javascript" src="js/dropify.js"></script>
     <!-- jquery tags -->
     <script type="text/javascript" src="js/flex-datalist/jquery.flexdatalist.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fileuploader.min.js"></script>
     <!-- Custom file input -->
     <script type="text/javascript" src="js/jquery.custom-file-input.js"></script>
     <!-- Add listing -->
