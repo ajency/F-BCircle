@@ -1,0 +1,51 @@
+@import "_var";
+@import "components/_buttons";
+// @import "layout/_forms";
+// @import "components/_radio";
+
+body{
+	color: #777;
+}
+a{
+	color: @accent-primary;
+}
+.form-group{
+	margin-bottom: 20px;
+}
+.flex{
+	display: flex;
+}
+.flex-space-between{
+	justify-content: space-between;
+}
+
+.nav.side-menu>li.active, .nav.side-menu>li.current-page {
+	border-right: 5px solid lighten(@accent-primary, 0%);
+}
+.nav.side-menu>li.active>a{
+	background: @accent-primary;
+	background: darken(@grey-darker, 15%);
+}
+
+.nav-md ul.nav.child_menu li{
+	&:before{
+		background: @accent-primary;
+	}
+	&:after{
+		border-color: @accent-primary;
+	}
+}
+
+.left_col {
+	background: darken(@grey-darker, 10%);
+}
+.nav_title{
+	background: darken(@grey-darker, 10%);
+}
+.dt-link{
+	text-decoration: underline;
+	color: @text-color;
+}
+.text-success{
+	color: @success;
+}

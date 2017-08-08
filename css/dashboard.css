@@ -1,0 +1,124 @@
+.fnb-btn {
+  font-size: 1.05em;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 4px;
+}
+.fnb-btn.outline {
+  background-color: #fff;
+  color: #ec6d4b;
+  border: 1px solid;
+}
+.fnb-btn.outline:hover,
+.fnb-btn.outline:active {
+  background-color: #ec6d4b;
+  color: #fff;
+  border: 2px solid;
+}
+.fnb-btn.half-border {
+  border-bottom: 2px solid;
+}
+.fnb-btn.half-border:hover {
+  border: 1px solid;
+  border-bottom: 2px solid;
+}
+.fnb-btn.border-btn {
+  border: 2px solid;
+}
+.fnb-btn.mini {
+  padding: 6px 20px;
+}
+.fnb-btn.primary-btn {
+  background-color: #ec6d4b;
+  color: #fff;
+}
+.fnb-btn.primary-btn:hover {
+  background-color: #fff;
+  color: #ec6d4b;
+  border: 2px solid;
+}
+.fnb-btn.full {
+  padding: 0.85em 1.8em;
+}
+.fnb-btn:active,
+.fnb-btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0;
+}
+.fnb-btn.bnw {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid;
+}
+.fnb-btn.fullwidth {
+  display: block;
+  width: 100%;
+}
+.fnb-btn.no-border {
+  border: 0;
+  background-color: transparent;
+}
+.fnb-btn.no-border:hover,
+.fnb-btn.no-border:active {
+  background-color: transparent;
+  border: 0;
+  color: #ec6d4b;
+}
+.fnb-btn.alternate {
+  background-color: #159f70;
+  color: #fff;
+  border: 2px solid #159f70;
+}
+.fnb-btn.alternate:hover {
+  background-color: transparent;
+  color: #159f70;
+}
+body {
+  color: #777;
+}
+a {
+  color: #ec6d4b;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.flex-space-between {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.nav.side-menu > li.active,
+.nav.side-menu > li.current-page {
+  border-right: 5px solid #ec6d4b;
+}
+.nav.side-menu > li.active > a {
+  background: #ec6d4b;
+  background: #413f3f;
+}
+.nav-md ul.nav.child_menu li:before {
+  background: #ec6d4b;
+}
+.nav-md ul.nav.child_menu li:after {
+  border-color: #ec6d4b;
+}
+.left_col {
+  background: #4e4c4c;
+}
+.nav_title {
+  background: #4e4c4c;
+}
+.dt-link {
+  text-decoration: underline;
+  color: #6b6b6b;
+}
+.text-success {
+  color: #11a44a;
+}
