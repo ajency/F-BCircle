@@ -90,6 +90,15 @@ function init_DataTables() {
 		  }
 		]
 	});
+	$('#datatable-locations').DataTable({
+		"order": [[ 7, 'desc' ]],
+		"columnDefs": [
+		  {
+		  	"targets": 'no-sort',
+		  	"orderable": false
+		  }
+		]
+	});
 };
 
 function init_Multiselect() {
