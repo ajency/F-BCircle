@@ -119,6 +119,8 @@ function init_Multiselect() {
 
 	      var search = selected.join("|");
 
+	      // var col = $(this).closest('th')
+
 	      $('#datatable-categories').DataTable().column(5).search(
 	        search, true, false
 	      ).draw();

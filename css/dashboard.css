@@ -82,6 +82,15 @@ body {
 a {
   color: #ec6d4b;
 }
+a:hover {
+  color: #e7481d;
+}
+.text-success {
+  color: #11a44a;
+}
+.btn-link {
+  color: #ec6d4b;
+}
 .form-group {
   margin-bottom: 20px;
 }
@@ -109,19 +118,30 @@ a {
 .nav-md ul.nav.child_menu li:after {
   border-color: #ec6d4b;
 }
+.site_title {
+  padding-left: 0;
+  text-align: center;
+  color: #ec6d4b !important;
+}
 .left_col {
   background: #4e4c4c;
 }
 .nav_title {
   background: #4e4c4c;
 }
+.breadcrumb {
+  margin-bottom: 0;
+  padding: 8px 0;
+}
 .dt-link {
   text-decoration: underline;
   color: #6b6b6b;
 }
-.text-success {
-  color: #11a44a;
-}
-.btn-link {
-  color: #ec6d4b;
+.table > tbody > tr > td,
+.table > tbody > tr > th,
+.table > tfoot > tr > td,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > thead > tr > th {
+  padding: 10px 8px;
 }

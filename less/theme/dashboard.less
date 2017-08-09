@@ -8,6 +8,15 @@ body{
 }
 a{
 	color: @accent-primary;
+	&:hover{
+		color: darken(@accent-primary, 10%);
+	}
+}
+.text-success{
+	color: @success;
+}
+.btn-link{
+	color: @accent-primary;
 }
 .form-group{
 	margin-bottom: 20px;
@@ -36,20 +45,34 @@ a{
 	}
 }
 
+.site_title{
+	padding-left: 0;
+	text-align: center;
+	color: @accent-primary !important;
+}
+
 .left_col {
 	background: darken(@grey-darker, 10%);
 }
 .nav_title{
 	background: darken(@grey-darker, 10%);
 }
+.breadcrumb{
+	margin-bottom: 0;
+	padding: 8px 0;
+}
 .dt-link{
 	text-decoration: underline;
 	color: @text-color;
 }
-.text-success{
-	color: @success;
-}
 
-.btn-link{
-	color: @accent-primary;
+.table{
+	&>tbody>tr>td,
+	&>tbody>tr>th,
+	&>tfoot>tr>td,
+	&>tfoot>tr>th,
+	&>thead>tr>td,
+	&>thead>tr>th{
+		padding: 10px 8px;
+	}
 }
