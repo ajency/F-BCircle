@@ -11,11 +11,12 @@
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-multiselect.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Datatables -->
     <link href="../plugins/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="../plugins/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../plugins/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet"> -->
 
     <!-- Custom Theme Style -->
     <link href="../css/dashboard-default.min.css" rel="stylesheet">
@@ -133,7 +134,13 @@
                           <th class="no-sort">isParent</th>
                           <th class="no-sort">isBranch</th>
                           <th class="no-sort">isNode</th>
-                          <th>Parent</th>
+                          <th>
+                              Parent
+                              <select multiple class="form-control multi-dd">
+                                <option value="meat">Meat</option>
+                                <option value="sea foods">Sea Foods</option>
+                              </select>
+                          </th>
                           <th>Branch</th>
                           <th>Node</th>
                           <th>Published on</th>
@@ -145,11 +152,11 @@
                       <tbody>
                         <tr>
                           <td><a href="#"><i class="fa fa-pencil"></i></a></td>
-                          <td><a href="#" class="dt-link">Meat</a></td>
-                          <td><i class="fa fa-check text-success"></i></td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td>-</td>
+                          <td><a href="#" class="dt-link">Meat</a> <img src="../img/meat.png" width="20" alt="" class="img-circle"></td>
+                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
+                          <td class="text-center">-</td>
+                          <td class="text-center">-</td>
+                          <td>Sea Foods</td>
                           <td>-</td>
                           <td>-</td>
                           <td>2017/06/05</td>
@@ -159,9 +166,9 @@
                         <tr>
                           <td><a href="#"><i class="fa fa-pencil"></i></a></td>
                           <td><a href="#" class="dt-link">Chicken Distributors</a></td>
-                          <td>-</td>
-                          <td><i class="fa fa-check text-success"></i></td>
-                          <td>-</td>
+                          <td class="text-center">-</td>
+                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
+                          <td class="text-center">-</td>
                           <td>Meat</td>
                           <td>-</td>
                           <td>-</td>
@@ -172,9 +179,9 @@
                         <tr>
                           <td><a href="#"><i class="fa fa-pencil"></i></a></td>
                           <td><a href="#" class="dt-link">Venky's</a></td>
-                          <td>-</td>
-                          <td>-</td>
-                          <td><i class="fa fa-check text-success"></i></td>
+                          <td class="text-center">-</td>
+                          <td class="text-center">-</td>
+                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
                           <td>Meat</td>
                           <td>Chicken Distributors</td>
                           <td>-</td>
@@ -185,9 +192,9 @@
                         <tr>
                           <td><a href="#"><i class="fa fa-pencil"></i></a></td>
                           <td><a href="#" class="dt-link">Milk Products</a></td>
-                          <td><i class="fa fa-check text-success"></i></td>
-                          <td>-</td>
-                          <td>-</td>
+                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
+                          <td class="text-center">-</td>
+                          <td class="text-center">-</td>
                           <td>-</td>
                           <td>-</td>
                           <td>-</td>
@@ -198,9 +205,9 @@
                         <tr>
                           <td><a href="#"><i class="fa fa-pencil"></i></a></td>
                           <td><a href="#" class="dt-link">Sea Foods</a></td>
-                          <td><i class="fa fa-check text-success"></i></td>
-                          <td>-</td>
-                          <td>-</td>
+                          <td class="text-center"><i class="fa fa-check text-success"></i></td>
+                          <td class="text-center">-</td>
+                          <td class="text-center">-</td>
                           <td>-</td>
                           <td>-</td>
                           <td>-</td>
@@ -965,11 +972,13 @@
     <script src="../js/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/bootstrap-multiselect.js"></script>
     <!-- Datatables -->
     <script src="../plugins/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="../plugins/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="../plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../plugins/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <!-- <script src="../plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script> -->
+    <!-- <script src="../plugins/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script> -->
 
     <!-- Custom Theme Scripts -->
     <script src="../js/dashboard.js"></script>

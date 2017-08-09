@@ -92,7 +92,33 @@ function init_DataTables() {
 	});
 };
 
+function init_Multiselect() {
+	$('.multi-dd').multiselect({
+		buttonContainer: '<span></span>',
+        buttonClass: '',
+		templates: {
+            button: '<span class="multiselect dropdown-toggle" data-toggle="dropdown"><i class="fa fa-filter"></i></span>'
+        },
+	    onChange: function(element, checked) {
+
+	      var categories = $('.multi-dd option:selected');
+
+	      var selected = [];
+	      $(categories).each(function(index, city) {
+	        selected.push($(this).val());
+	      });
+
+	      var search = selected.join("|");
+
+	      $('#datatable-categories').DataTable().column(5).search(
+	        search, true, false
+	      ).draw();
+	    }
+  	});
+};
+
 $(document).ready(function() {
 	init_DataTables();
 	init_sidebar();
+	init_Multiselect();
 });
