@@ -77,7 +77,7 @@
   color: #159f70;
 }
 body {
-  color: #777;
+  color: #555;
   background: #4e4c4c;
 }
 a {
@@ -143,6 +143,12 @@ a:hover {
 .dt-link {
   text-decoration: underline;
   color: #6b6b6b;
+}
+.row-actions {
+  text-align: right;
+}
+.row-actions a {
+  padding: 0 10px;
 }
 .table > tbody > tr > td,
 .table > tbody > tr > th,

@@ -144,8 +144,14 @@ function init_Multiselect() {
   	});
 };
 
+function init_addEmailType(){
+	$('.add_email_type').on('click', function() {
+	});
+}
+
 $(document).ready(function() {
 	init_DataTables();
 	init_sidebar();
 	init_Multiselect();
+	init_addEmailType()
 });
