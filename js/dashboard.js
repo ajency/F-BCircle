@@ -21,13 +21,12 @@ function init_sidebar() {
 			contentHeight = bodyHeight < leftColHeight ? leftColHeight : bodyHeight;
 
 		// normalize content
-		contentHeight -= $NAV_MENU.height() + footerHeight;
+		contentHeight -= $NAV_MENU.height() + footerHeight +25;
 
 		$RIGHT_COL.css('min-height', contentHeight);
 	};
 
   	$SIDEBAR_MENU.find('a').on('click', function(ev) {
-	  console.log('clicked - sidebar_menu');
         var $li = $(this).parent();
 
         if ($li.is('.active')) {
@@ -44,8 +43,10 @@ function init_sidebar() {
             {
 				if ( $BODY.is( ".nav-sm" ) )
 				{
-					$SIDEBAR_MENU.find( "li" ).removeClass( "active active-sm" );
-					$SIDEBAR_MENU.find( "li ul" ).slideUp();
+					if (!$li.parent().is('.child_menu')) {
+						$SIDEBAR_MENU.find( "li" ).removeClass( "active active-sm" );
+						$SIDEBAR_MENU.find( "li ul" ).slideUp();
+					}
 				}
 			}
             $li.addClass('active');
@@ -81,24 +82,39 @@ function init_sidebar() {
 // /Sidebar
 
 function init_DataTables() {
-	$('#datatable-categories').DataTable({
+	var cat_table = $('#datatable-categories').DataTable({
 		"order": [[ 9, 'desc' ]],
 		"columnDefs": [
 		  {
 		  	"targets": 'no-sort',
 		  	"orderable": false
+		  },
+		  {
+		  	"targets": [0,2,3,4,5,6,7,8,9,10],
+		  	"searchable": false
 		  }
 		]
 	});
-	$('#datatable-locations').DataTable({
+	cat_table.columns().iterator( 'column', function (ctx, idx) {
+		$( cat_table.column(idx).header() ).append('<span class="sort-icon"/>');
+	} );
+
+	var loc_table = $('#datatable-locations').DataTable({
 		"order": [[ 7, 'desc' ]],
 		"columnDefs": [
 		  {
 		  	"targets": 'no-sort',
 		  	"orderable": false
-		  }
+		  },
+  		  {
+  		  	"targets": [0,2,3,4,5,6,7,8],
+  		  	"searchable": false
+  		  }
 		]
 	});
+	loc_table.columns().iterator( 'column', function (ctx, idx) {
+		$( loc_table.column(idx).header() ).append('<span class="sort-icon"/>');
+	} );
 };
 
 function init_Multiselect() {

@@ -78,6 +78,7 @@
 }
 body {
   color: #777;
+  background: #4e4c4c;
 }
 a {
   color: #ec6d4b;
@@ -125,6 +126,7 @@ a:hover {
 }
 .left_col {
   background: #4e4c4c;
+  z-index: 999 !important;
 }
 .nav_title {
   background: #4e4c4c;
@@ -132,6 +134,11 @@ a:hover {
 .breadcrumb {
   margin-bottom: 0;
   padding: 8px 0;
+}
+@media (max-width: 767px) {
+  .page-title .title_left {
+    width: 100%;
+  }
 }
 .dt-link {
   text-decoration: underline;
@@ -144,4 +151,36 @@ a:hover {
 .table > thead > tr > td,
 .table > thead > tr > th {
   padding: 10px 8px;
+}
+.dataTable .sorting,
+.dataTable .sorting_asc,
+.dataTable .sorting_desc {
+  padding-right: 0 !important;
+}
+.dataTable .sorting:after,
+.dataTable .sorting_asc:after,
+.dataTable .sorting_desc:after {
+  content: '';
+  display: none !important;
+}
+.dataTable .sorting .sort-icon:before {
+  content: "\f0dc";
+  opacity: 0.5;
+}
+.dataTable .sorting_asc .sort-icon:before {
+  content: "\f0de";
+}
+.dataTable .sorting_desc .sort-icon:before {
+  content: "\f0dd";
+}
+.dataTable .sort-icon {
+  display: inline-block;
+  padding-left: 5px;
+  font: normal normal normal 14px/1 FontAwesome;
+}
+.dataTable select.form-control.multi-dd {
+  display: none;
+}
+.multiselect-container.dropdown-menu {
+  left: -75px;
 }

@@ -44,9 +44,9 @@
                     <ul class="nav child_menu">
                         <li><a>Configuration<span class="fa fa-chevron-down"></span></a>
                           <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.html">Categories</a>
+                            <li class="sub_menu"><a href="categories.html">Categories</a>
                             </li>
-                            <li><a href="#level2_1" class="active">Locations</a>
+                            <li><a href="locations.html" class="active">Locations</a>
                             </li>
                           </ul>
                         </li>
@@ -101,6 +101,14 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
+
+            <ol class="breadcrumb">
+              <li><a href="#">Admin Control Panel</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Configuration</a></li>
+              <li class="active">Locations</li>
+            </ol>
+
             <div class="page-title">
               <div class="title_left">
                 <h3>Manage Locations <button class="btn btn-link btn-sm" data-toggle="modal" data-target="#add_location_modal">+ Add new</button> <!-- <small>Some examples to get you started</small> --></h3>
@@ -131,9 +139,21 @@
                         <tr>
                           <th class="no-sort"></th>
                           <th>Name</th>
-                          <th class="no-sort">isCity</th>
-                          <th class="no-sort">isArea</th>
-                          <th>
+                          <th class="no-sort text-center">
+                            isCity
+                            <select multiple class="form-control multi-dd">
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                          </th>
+                          <th class="no-sort text-center">
+                            isArea
+                            <select multiple class="form-control multi-dd">
+                              <option value="yes">Yes</option>
+                              <option value="no">No</option>
+                            </select>
+                          </th>
+                          <th class="no-sort">
                               City
                               <select multiple class="form-control multi-dd">
                                 <option value="goa">Goa</option>
@@ -142,7 +162,14 @@
                           <th>Area</th>
                           <th>Published on</th>
                           <th>Last Updated on</th>
-                          <th>Status</th>
+                          <th class="no-sort">
+                            Status
+                            <select multiple class="form-control multi-dd">
+                              <option value="Published">Published</option>
+                              <option value="Draft">Draft</option>
+                              <option value="Archived">Archived</option>
+                            </select>
+                          </th>
                         </tr>
                       </thead>
 

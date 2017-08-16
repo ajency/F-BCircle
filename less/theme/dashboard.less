@@ -5,6 +5,7 @@
 
 body{
 	color: #777;
+	background: darken(@grey-darker, 10%);
 }
 a{
 	color: @accent-primary;
@@ -53,6 +54,7 @@ a{
 
 .left_col {
 	background: darken(@grey-darker, 10%);
+	z-index: 999 !important;
 }
 .nav_title{
 	background: darken(@grey-darker, 10%);
@@ -61,6 +63,12 @@ a{
 	margin-bottom: 0;
 	padding: 8px 0;
 }
+.page-title .title_left{
+	@media(max-width: 767px){
+		width: 100%;
+	}
+}
+
 .dt-link{
 	text-decoration: underline;
 	color: @text-color;
@@ -75,4 +83,50 @@ a{
 	&>thead>tr>th{
 		padding: 10px 8px;
 	}
+}
+
+.dataTable{
+	.sorting, .sorting_asc, .sorting_desc{
+		padding-right: 0 !important;
+		&:after{
+			content: '';
+			display: none !important;
+		}
+	}
+	.sorting{
+		.sort-icon{
+			&:before{
+				content: "\f0dc";
+				opacity: 0.5;
+			}
+		}
+	}
+	.sorting_asc{
+		.sort-icon{
+			&:before{
+				content: "\f0de";
+			}
+		}
+	}
+	.sorting_desc{
+		.sort-icon{
+			&:before{
+				content: "\f0dd";
+			}
+		}
+	}
+	.sort-icon{
+		display: inline-block;
+		padding-left: 5px;
+		// width: 16px;
+		// height: 16px;
+		font: normal normal normal 14px/1 FontAwesome;
+	}
+	select.form-control.multi-dd{
+		display: none;
+	}
+}
+
+.multiselect-container.dropdown-menu{
+	left: -75px;
 }
