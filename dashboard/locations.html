@@ -160,6 +160,7 @@
                               </select>
                           </th>
                           <th>Area</th>
+                          <th class="text-center">Sort Order</th>
                           <th>Published on</th>
                           <th>Last Updated on</th>
                           <th class="no-sort">
@@ -181,6 +182,7 @@
                           <td class="text-center">-</td>
                           <td>-</td>
                           <td>-</td>
+                          <td class="text-center">1</td>
                           <td>2017/06/05</td>
                           <td>2017/06/05</td>
                           <td>Published</td>
@@ -192,6 +194,7 @@
                           <td class="text-center"><i class="fa fa-check text-success"></i></td>
                           <td>Goa</td>
                           <td>-</td>
+                          <td class="text-center">4</td>
                           <td>-</td>
                           <td>2017/06/12</td>
                           <td>Draft</td>
@@ -203,6 +206,7 @@
                           <td class="text-center">-</td>
                           <td>-</td>
                           <td>-</td>
+                          <td class="text-center">2</td>
                           <td>2017/06/05</td>
                           <td>2017/07/31</td>
                           <td>Archived</td>
@@ -214,6 +218,7 @@
                           <td class="text-center"><i class="fa fa-check text-success"></i></td>
                           <td>Goa</td>
                           <td>-</td>
+                          <td class="text-center">3</td>
                           <td>2017/06/05</td>
                           <td>2017/06/20</td>
                           <td>Published</td>
@@ -225,6 +230,7 @@
                           <td class="text-center">-</td>
                           <td>-</td>
                           <td>-</td>
+                          <td class="text-center">1</td>
                           <td>2017/06/05</td>
                           <td>2017/05/05</td>
                           <td>Published</td>
@@ -282,7 +288,14 @@
                       </div>
 
                       <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label>Sort Order  <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control fnb-input" name="" value="1" min="1">
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
                           <div class="form-group">
                             <label>Status <span class="text-danger">*</span></label>
                             <select class="form-control fnb-select">
