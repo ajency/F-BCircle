@@ -119,6 +119,9 @@ a:hover {
 .nav-md ul.nav.child_menu li:after {
   border-color: #ec6d4b;
 }
+.nav li li li.current-page {
+  background: rgba(255, 255, 255, 0.05);
+}
 .site_title {
   padding-left: 0;
   text-align: center;
@@ -189,4 +192,14 @@ a:hover {
 }
 .multiselect-container.dropdown-menu {
   left: -75px;
+}
+.form-control.no-edit {
+  padding: 0;
+  border: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  height: auto;
+  font-size: inherit;
+  pointer-events: none;
+  resize: none;
 }
