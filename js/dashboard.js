@@ -77,11 +77,11 @@ function init_sidebar() {
 	});
 
 	setContentHeight();
-
 };
-// /Sidebar
+// /Sidebar End
 
 function init_DataTables() {
+	//Categories Table
 	var cat_table = $('#datatable-categories').DataTable({
 		"order": [[ 9, 'desc' ]],
 		"columnDefs": [
@@ -89,16 +89,23 @@ function init_DataTables() {
 		  	"targets": 'no-sort',
 		  	"orderable": false
 		  },
-		  {
-		  	"targets": [0,2,3,4,5,6,7,8,9,10],
-		  	"searchable": false
-		  }
+		  // {
+		  // 	"targets": [0,2,3,4,5,6,7,8,9,10],
+		  // 	"searchable": false
+		  // }
 		]
 	});
 	cat_table.columns().iterator( 'column', function (ctx, idx) {
 		$( cat_table.column(idx).header() ).append('<span class="sort-icon"/>');
 	} );
+	$('#catNameSearch').on( 'keyup', function () {
+	    cat_table
+	        .columns( 1 )
+	        .search( this.value )
+	        .draw();
+	} );
 
+	// Location Table
 	var loc_table = $('#datatable-locations').DataTable({
 		"order": [[ 7, 'desc' ]],
 		"columnDefs": [
@@ -106,17 +113,53 @@ function init_DataTables() {
 		  	"targets": 'no-sort',
 		  	"orderable": false
 		  },
-  		  {
-  		  	"targets": [0,2,3,4,5,6,7,8],
-  		  	"searchable": false
-  		  }
+  		  // {
+  		  // 	"targets": [0,2,3,4,5,6,7,8],
+  		  // 	"searchable": false
+  		  // }
 		]
 	});
 	loc_table.columns().iterator( 'column', function (ctx, idx) {
 		$( loc_table.column(idx).header() ).append('<span class="sort-icon"/>');
 	} );
+	$('#locationNameSearch').on( 'keyup', function () {
+	    loc_table
+	        .columns( 1 )
+	        .search( this.value )
+	        .draw();
+	} );
+
+	// Approval Table
+	var approval_table = $('#datatable-listing_approval').DataTable({
+		"order": [[ 3, 'desc' ]],
+		// "dom": 'lrtip',
+		// "scrollX": true,
+		"columnDefs": [
+		  {
+		  	"targets": 'no-sort',
+		  	"orderable": false
+		  },
+  		  // {
+  		  // 	"targets": [1,2,3,4,5,6,7,8],
+  		  // 	"searchable": false
+  		  // }
+		]
+	});
+	approval_table.columns().iterator( 'column', function (ctx, idx) {
+		$( approval_table.column(idx).header() ).append('<span class="sort-icon"/>');
+	} );
+	$('#listingNameSearch').on( 'keyup', function () {
+	    approval_table
+	        .columns( 0 )
+	        .search( this.value )
+	        .draw();
+	} );
+
+	var customSrch = $('.customDtSrch').detach();
+	$('.dataTables_filter').after(customSrch);
 };
 
+// Multiselect filter on Datatables
 function init_Multiselect() {
 	$('.multi-dd').multiselect({
 		buttonContainer: '<span></span>',
@@ -135,15 +178,17 @@ function init_Multiselect() {
 
 	      var search = selected.join("|");
 
-	      // var col = $(this).closest('th')
+	      var col = $(this)[0]['$select'].closest('th').data('col')
 
-	      $('#datatable-categories').DataTable().column(5).search(
+	      $('#datatable-categories, #datatable-locations, #datatable-listing_approval').DataTable().column(col).search(
 	        search, true, false
 	      ).draw();
 	    }
   	});
 };
+// Multiselect filter on Datatables End
 
+// Email Notifications - Edit Emails
 function init_addEmailType(){
 	$('.edit_email_type').on('click', function() {
 		$(this).closest('tr').find('textarea').removeClass('no-edit');
@@ -156,10 +201,22 @@ function init_addEmailType(){
 		$(this).closest('td').find('.edit_email_type').removeClass('hidden');
 	});
 }
+// Email Notifications - Edit Emails End
+
+function init_daterangepicker_submission() {
+	// var max = moment();
+
+	if( typeof ($.fn.daterangepicker) === 'undefined'){ return; }
+
+	$('#submissionDate').daterangepicker({
+		maxDate: moment()
+	});
+}
 
 $(document).ready(function() {
 	init_DataTables();
 	init_sidebar();
 	init_Multiselect();
-	init_addEmailType()
+	init_addEmailType();
+	init_daterangepicker_submission();
 });

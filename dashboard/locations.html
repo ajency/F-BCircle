@@ -50,7 +50,13 @@
                             </li>
                           </ul>
                         </li>
-                        <li><a href="#level1_2">Moderation</a>
+                        <li><a>Moderation<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li class="sub_menu"><a href="listing_approval.html">Listing Approval</a>
+                            </li>
+                            <li><a href="#">Manage Listings</a>
+                            </li>
+                          </ul>
                         </li>
                     </ul>
                   </li>
@@ -137,26 +143,28 @@
                 <div class="x_panel">
                   <div class="x_content">
 
+                    <input type="text" name="" placeholder="Search by Name" id="locationNameSearch" class="form-control pull-right customDtSrch" style="max-width: 200px;">
+
                     <table id="datatable-locations" class="table table-striped  nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
                           <th class="no-sort"></th>
                           <th>Name</th>
-                          <th class="no-sort text-center">
+                          <th class="no-sort text-center" data-col="2">
                             isCity
                             <select multiple class="form-control multi-dd">
                               <option value="yes">Yes</option>
                               <option value="no">No</option>
                             </select>
                           </th>
-                          <th class="no-sort text-center">
+                          <th class="no-sort text-center" data-col="3">
                             isArea
                             <select multiple class="form-control multi-dd">
                               <option value="yes">Yes</option>
                               <option value="no">No</option>
                             </select>
                           </th>
-                          <th class="no-sort">
+                          <th class="no-sort" data-col="4">
                               City
                               <select multiple class="form-control multi-dd">
                                 <option value="goa">Goa</option>
@@ -166,7 +174,7 @@
                           <th class="text-center">Sort Order</th>
                           <th>Published on</th>
                           <th>Last Updated on</th>
-                          <th class="no-sort">
+                          <th class="no-sort" data-col="9">
                             Status
                             <select multiple class="form-control multi-dd">
                               <option value="Published">Published</option>

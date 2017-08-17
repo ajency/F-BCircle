@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Manage Locations - F&amp;B Circle Admin Control</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-multiselect.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="../plugins/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="../plugins/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet"> -->
+    <!-- bootstrap-daterangepicker -->
+    <link href="../plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../css/dashboard-default.min.css" rel="stylesheet">
+    <link href="../css/dashboard.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><!-- <i class="fa fa-cogs"></i> --> <span>F&amp;BCircle.in</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <ul class="nav side-menu">
+                  <li class="active"><a><i class="fa fa-building"></i> Business <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu" style="display: block">
+                        <li><a>Configuration<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li class="sub_menu"><a href="categories.html">Categories</a>
+                            </li>
+                            <li class="current-page"><a href="locations.html">Locations</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a>Moderation<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu" style="display: block">
+                            <li class="sub_menu current-page"><a href="listing_approval.html">Listing Approval</a>
+                            </li>
+                            <li class=""><a href="#">Manage Listings</a>
+                            </li>
+                          </ul>
+                        </li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-briefcase"></i> Jobs </a>
+                    <!-- <ul class="nav child_menu">
+                      <li><a href="form.html">General Form</a></li>
+                      <li><a href="form_advanced.html">Advanced Components</a></li>
+                    </ul> -->
+                  </li>
+                  <li><a><i class="fa fa-user"></i> Users </a>
+                  </li>
+                  <li><a><i class="fa fa-envelope"></i> Emails <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="email_notifications.html">Notifications</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <!-- /sidebar menu -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <!-- <img src="images/img.jpg" alt=""> -->Admin
+                    <span class=" fa fa-angle-down"></span>
+                  </a>
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                    <li><a href="javascript:;"> Profile</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                  </ul>
+                </li>
+
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+
+            <ol class="breadcrumb">
+              <li><a href="#">Admin Control Panel</a></li>
+              <li><a href="#">Business</a></li>
+              <li><a href="#">Moderation</a></li>
+              <li class="active">Listing Approval</li>
+            </ol>
+
+            <div class="page-title">
+              <div class="title_left">
+                <h3>Listing Approval <!-- <small>Some examples to get you started</small> --></h3>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_content">
+
+                    <div class="row">
+                      <div class="col-sm-3">
+                        <label>Date of Submission</label>
+                        <a href="#" class="btn btn-link btn-sm">Clear</a>
+                        <div class="form-group">
+                          <input type="text" id="submissionDate" name="" class="form-control">
+                          <!-- <button class="btn btn-sm fnb-btn">Apply</button> -->
+                        </div>
+                      </div>
+                      <div class="col-sm-6"></div>
+                      <div class="col-sm-3">
+                        <input type="text" name="" placeholder="Search by Name" id="listingNameSearch" class="form-control pull-right customDtSrch" style="max-width: 200px;">
+                      </div>
+                    </div>
+
+
+                    <table id="datatable-listing_approval" class="table table-striped" cellspacing="0" width="100%">
+                      <thead>
+                        <tr>
+                          <th style="min-width: 98px;">Listing Name</th>
+                          <th class="no-sort" data-col="1">
+                            City
+                            <select multiple class="form-control multi-dd">
+                              <option value="Panjim">Panjim</option>
+                              <option value="Margao">Margao</option>
+                            </select>
+                          </th>
+                          <th class="no-sort">
+                            Node Categories
+                          </th>
+                          <th class="">
+                            Date of Submission
+                          </th>
+                          <th class="">
+                              Last Updated on
+                          </th>
+                          <th class="no-sort" data-col="5">
+                            Last Updated by
+                            <select multiple class="form-control multi-dd">
+                              <option value="External User">External User</option>
+                              <option value="Internal User">Internal User</option>
+                            </select>
+                          </th>
+                          <th style="min-width: 150px;">Duplicates<br>(Number,Email,Name)</th>
+                          <th class="no-sort" data-col="7">
+                            Premium Request
+                            <select multiple class="form-control multi-dd">
+                              <option value="Yes">Yes</option>
+                              <option value="No">No</option>
+                            </select>
+                          </th>
+                          <th class="no-sort" data-col="8">
+                            Status
+                            <select multiple class="form-control multi-dd">
+                              <option value="Published">Published</option>
+                              <option value="Draft">Draft</option>
+                              <option value="Archived">Archived</option>
+                              <option value="Pending Review">Pending Review</option>
+                              <option value="Rejected">Rejected</option>
+                            </select>
+                          </th>
+                        </tr>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td><a href="#">AVK Suppliers</a></td>
+                          <td>Panjim</td>
+                          <td>Boneless Chicken, Frozen Chicken</td>
+                          <td>2017/06/05</td>
+                          <td>2017/06/05</td>
+                          <td>External User</td>
+                          <td>1,2,1</td>
+                          <td>No</td>
+                          <td>Pending Review</td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Mz Wholesalers</a></td>
+                          <td>Margao</td>
+                          <td>Unsalted Butter, Pasteurized Butter</td>
+                          <td>2017/06/04</td>
+                          <td>2017/06/05</td>
+                          <td>External User</td>
+                          <td>0,0,0</td>
+                          <td>Yes</td>
+                          <td>Rejected</td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Kusumkar Dist</a></td>
+                          <td>Bandra</td>
+                          <td>Boneless Chicken, Frozen Chicken</td>
+                          <td>2017/06/04</td>
+                          <td>2017/06/05</td>
+                          <td>Internal User</td>
+                          <td>0,0,0</td>
+                          <td>No</td>
+                          <td>Published</td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">Bhatt Suppliers</a></td>
+                          <td>Ahmedabad</td>
+                          <td>Peda, Burfi, Rabri, Rasgulla, Rasmalai</td>
+                          <td>2017/06/04</td>
+                          <td>2017/06/05</td>
+                          <td>External User</td>
+                          <td>0,0,0</td>
+                          <td>No</td>
+                          <td>Published</td>
+                        </tr>
+                        <tr>
+                          <td><a href="#">ROC</a></td>
+                          <td>Panjim</td>
+                          <td>Pork Ham, Pork Meat, Pork Chops</td>
+                          <td>2017/06/04</td>
+                          <td>2017/06/05</td>
+                          <td>External User</td>
+                          <td>0,0,0</td>
+                          <td>No</td>
+                          <td>Published</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Add Category Modal -->
+            <div class="modal fade" id="add_location_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <form>
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                      <h4 class="modal-title">Add New Location</h4>
+                    </div>
+                    <div class="modal-body">
+                      <label>Type of Location <span class="text-danger">*</span></label>
+                      <div class="form-group ">
+                        <label class="radio-inline">
+                          <input type="radio" name="locationType" id="city" value="option1"> City
+                        </label>
+                        <label class="radio-inline">
+                          <input type="radio" name="locationType" id="area" value="option2" checked=""> Area
+                        </label>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label>Select the City <span class="text-danger">*</span></label>
+                            <select class="form-control fnb-select">
+                              <option value="">City Name</option>
+                              <option value="">City Name</option>
+                              <option value="">City Name</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label>Area Name  <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control fnb-input" name="" placeholder="Enter a Area name">
+                      </div>
+
+                      <div class="form-group">
+                        <label>Area url  <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control fnb-input" name="" placeholder="Enter the Area url">
+                      </div>
+
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label>Sort Order  <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control fnb-input" name="" value="1" min="1">
+                          </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                          <div class="form-group">
+                            <label>Status <span class="text-danger">*</span></label>
+                            <select class="form-control fnb-select">
+                              <option value="">Published</option>
+                              <option value="">Draft</option>
+                              <option value="">Archived</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn fnb-btn outline no-border" data-dismiss="modal">Cancel</button>
+                      <button type="submit" class="btn primary-btn fnb-btn border-btn">Save</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            Footer
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../js/bootstrap.min.js"></script>
+
+    <script src="../js/bootstrap-multiselect.js"></script>
+    <!-- Datatables -->
+    <script src="../plugins/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../plugins/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- <script src="../plugins/datatables.net-responsive/js/dataTables.responsive.min.js"></script> -->
+    <!-- <script src="../plugins/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script> -->
+    <!-- bootstrap-daterangepicker -->
+    <script src="../plugins/moment/min/moment.min.js"></script>
+    <script src="../plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../js/dashboard.js"></script>
+
+  </body>
+</html>

@@ -137,30 +137,32 @@
                 <div class="x_panel">
                   <div class="x_content">
 
+                    <input type="text" name="" placeholder="Search by Name" id="catNameSearch" class="form-control pull-right customDtSrch" style="max-width: 200px;">
+
                     <table id="datatable-categories" class="table table-striped  nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
                           <th class="no-sort"></th>
                           <th>Name</th>
-                          <th class="no-sort text-center">isParent
+                          <th class="no-sort text-center" data-col="2">isParent
                             <select multiple class="form-control multi-dd">
                               <option value="yes">Yes</option>
                               <option value="no">No</option>
                             </select>
                           </th>
-                          <th class="no-sort text-center">isBranch
+                          <th class="no-sort text-center" data-col="3">isBranch
                             <select multiple class="form-control multi-dd">
                               <option value="yes">Yes</option>
                               <option value="no">No</option>
                             </select>
                           </th>
-                          <th class="no-sort text-center">isNode
+                          <th class="no-sort text-center" data-col="4">isNode
                             <select multiple class="form-control multi-dd">
                               <option value="yes">Yes</option>
                               <option value="no">No</option>
                             </select>
                           </th>
-                          <th class="no-sort">
+                          <th class="no-sort" data-col="5">
                               Parent
                               <select multiple class="form-control multi-dd">
                                 <option value="meat">Meat</option>
@@ -171,7 +173,7 @@
                           <th class="no-sort">Node</th>
                           <th>Published on</th>
                           <th>Last Updated on</th>
-                          <th class="no-sort">Status
+                          <th class="no-sort" data-col="10">Status
                             <select multiple class="form-control multi-dd">
                               <option value="published">Published</option>
                               <option value="draft">Draft</option>

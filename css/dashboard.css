@@ -190,6 +190,9 @@ a:hover {
 .dataTable select.form-control.multi-dd {
   display: none;
 }
+.dataTables_filter {
+  display: none;
+}
 .multiselect-container.dropdown-menu {
   left: -75px;
 }
