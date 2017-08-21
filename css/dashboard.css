@@ -17,6 +17,17 @@
   color: #fff;
   border: 2px solid;
 }
+.fnb-btn.s-outline {
+  background-color: #fff;
+  color: #27b7b0;
+  border: 1px solid;
+}
+.fnb-btn.s-outline:hover,
+.fnb-btn.s-outline:active {
+  background-color: #27b7b0;
+  color: #fff;
+  border: 2px solid;
+}
 .fnb-btn.half-border {
   border-bottom: 2px solid;
 }
@@ -53,6 +64,17 @@
   color: #fff;
   border: 1px solid;
 }
+.fnb-btn.grey {
+  background-color: rgba(173, 167, 167, 0.52);
+  color: rgba(0, 0, 0, 0.74);
+  border-color: #ada7a7;
+}
+.fnb-btn.grey:hover,
+.fnb-btn.grey:active {
+  background-color: rgba(173, 167, 167, 0.52);
+  color: rgba(0, 0, 0, 0.74);
+  border-color: #ada7a7;
+}
 .fnb-btn.fullwidth {
   display: block;
   width: 100%;
@@ -75,6 +97,11 @@
 .fnb-btn.alternate:hover {
   background-color: transparent;
   color: #159f70;
+}
+.fnb-btn.white-border {
+  border: 1px solid #fff;
+  color: #fff;
+  background-color: transparent;
 }
 a {
   color: #ec6d4b;
@@ -342,8 +369,42 @@ a:hover {
 .dataTables_filter {
   display: none;
 }
+.dataTables_wrapper > .row {
+  overflow: auto!important;
+}
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+  background-color: #ec6d4b;
+  border-color: #ec6d4b;
+}
+.daterangepicker td.active,
+.daterangepicker td.active:hover {
+  background-color: #ec6d4b;
+}
+.range_inputs .applyBtn {
+  background-color: #27b7b0;
+  border-color: #27b7b0;
+}
 .multiselect-container.dropdown-menu {
   left: -75px;
+}
+.multiselect.multiselect {
+  border: 0;
+  width: auto;
+  display: inline;
+}
+.form-inline .multiselect-container label.checkbox {
+  padding: 3px 20px;
+}
+.form-inline .multiselect-container li a label.checkbox input[type=checkbox] {
+  margin-right: 5px;
+}
+.form-inline .multiselect-container li a label.checkbox input[type=checkbox]:before {
+  top: -8px;
 }
 .form-control.no-edit {
   padding: 0;

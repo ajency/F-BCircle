@@ -332,9 +332,44 @@ a{
 .dataTables_filter{
 	display: none;
 }
+.dataTables_wrapper>.row {
+    overflow: auto!important;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+	background-color: @accent-primary;
+	border-color: @accent-primary;
+}
+.daterangepicker td.active,
+.daterangepicker td.active:hover{
+	background-color: @accent-primary;
+}
+.range_inputs{
+	.applyBtn{
+		background-color: @accent-secondary;
+		border-color: @accent-secondary;
+	}
+}
 
-.multiselect-container.dropdown-menu{
-	left: -75px;
+.multiselect-container{
+	&.dropdown-menu{
+		left: -75px;
+	}
+}
+.multiselect{
+	&.multiselect{
+		border: 0;
+		width: auto;
+		display: inline;
+	}
+}
+.form-inline .multiselect-container label.checkbox{
+	padding: 3px 20px;
+}
+.form-inline .multiselect-container li a label.checkbox input[type=checkbox]{
+	margin-right: 5px;
+	&:before{
+		top: -8px;
+	}
 }
 
 .form-control{
