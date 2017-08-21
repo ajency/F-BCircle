@@ -262,7 +262,7 @@ $(function(){
 		// mobile side-menu
 
 		$('.sideMenu').click(function(){
-			$('.m-side-bar').addClass('active');
+			$('.m-side-bar, .left_col').addClass('active');
 			$('.site-overlay').addClass('active');
 			$('body').addClass('blocked');
 		});
@@ -297,9 +297,9 @@ $(function(){
 
 		$(document).mouseup(function(e) {
 		  var Click_todo;
-		  Click_todo = jQuery('.m-side-bar');
+		  Click_todo = jQuery('.m-side-bar, .left_col');
 		  if (!Click_todo.is(e.target) && Click_todo.has(e.target).length === 0) {
-		    jQuery('.m-side-bar,.site-overlay').removeClass('active');
+		    jQuery('.m-side-bar,.site-overlay, .left_col').removeClass('active');
 		    jQuery('body').removeClass('blocked');
 		  }
 		});

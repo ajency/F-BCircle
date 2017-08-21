@@ -76,10 +76,6 @@
   background-color: transparent;
   color: #159f70;
 }
-body {
-  color: #555;
-  background: #4e4c4c;
-}
 a {
   color: #ec6d4b;
 }
@@ -105,6 +101,156 @@ a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.site_title {
+  padding-left: 0;
+  text-align: center;
+  color: #ec6d4b !important;
+}
+.left_col {
+  background: #4e4c4c;
+  z-index: 999 !important;
+  width: 230px;
+}
+.x_panel {
+  width: 100%;
+  padding: 10px 17px;
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #E6E9ED;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+  column-break-inside: avoid;
+  opacity: 1;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+.nav > li > a {
+  position: relative;
+  display: block;
+  padding: 13px 15px 12px;
+}
+.nav > li > a:focus {
+  text-decoration: none;
+  background: transparent;
+}
+.nav li li li.current-page {
+  background: none;
+}
+.nav li li.current-page a {
+  color: #fff;
+}
+.nav li.current-page {
+  background: rgba(255, 255, 255, 0.05);
+}
+.nav.side-menu > li {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+.nav.side-menu > li > a {
+  margin-bottom: 6px;
+  color: #E7E7E7;
+  font-weight: 400;
+}
+.nav.side-menu > li > a:hover {
+  color: #F2F5F7 !important;
+  text-decoration: none;
+  background: transparent;
+}
+.nav.side-menu > li.current-page {
+  border-right: 5px solid #1ABB9C;
+}
+.nav.side-menu > li.active > a {
+  text-shadow: rgba(0, 0, 0, 0.25) 0 -1px 0;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+          box-shadow: rgba(0, 0, 0, 0.25) 0 1px 0, inset rgba(255, 255, 255, 0.16) 0 1px 0;
+}
+.nav.child_menu {
+  display: none;
+}
+.nav.child_menu li {
+  padding-left: 36px;
+}
+.nav.child_menu li:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.nav.child_menu li li:hover {
+  background: none;
+}
+.nav.child_menu li li a.active {
+  color: #fff;
+}
+.nav.child_menu li li.active {
+  background: none;
+}
+.nav.child_menu li a:hover {
+  background-color: transparent;
+}
+.nav.child_menu li.active {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.nav.child_menu > li > a {
+  color: #E7E7E7;
+}
+.nav-md ul.nav.child_menu li:before {
+  bottom: auto;
+  content: "";
+  height: 8px;
+  left: 23px;
+  margin-top: 18px;
+  position: absolute;
+  right: auto;
+  width: 8px;
+  z-index: 1;
+  border-radius: 50%;
+}
+.nav-md ul.nav.child_menu li:after {
+  border-left: 1px solid #425668;
+  bottom: 0;
+  content: "";
+  left: 27px;
+  position: absolute;
+  top: 0;
+}
+.nav-md ul.nav.child_menu li:last-child::after {
+  bottom: 50%;
+}
+.nav-md .col-md-3.left_col {
+  min-height: 100%;
+  width: 230px;
+  padding: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.nav-md .right_col {
+  padding: 10px 20px 0;
+  margin-left: 230px;
+  background: #F7F7F7;
+}
+@media (max-width: 767px) {
+  .nav-md .col-md-3.left_col {
+    width: 280px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate3d(-500px, 0, 0);
+            transform: translate3d(-500px, 0, 0);
+    -webkit-transition: all 0.8s cubic-bezier(0.44, -0.25, 0.75, 1);
+    transition: all 0.8s cubic-bezier(0.44, -0.25, 0.75, 1);
+  }
+  .nav-md .col-md-3.left_col .left_col {
+    width: 280px;
+  }
+  .nav-md .col-md-3.left_col.active {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .nav-md .right_col {
+    margin-left: 0;
+  }
+}
 .nav.side-menu > li.active,
 .nav.side-menu > li.current-page {
   border-right: 5px solid #ec6d4b;
@@ -122,14 +268,17 @@ a:hover {
 .nav li li li.current-page {
   background: rgba(255, 255, 255, 0.05);
 }
-.site_title {
-  padding-left: 0;
-  text-align: center;
-  color: #ec6d4b !important;
+.top_nav {
+  display: block;
+  margin-left: 230px;
 }
-.left_col {
-  background: #4e4c4c;
-  z-index: 999 !important;
+.nav_menu {
+  float: left;
+  background: #EDEDED;
+  border-bottom: 1px solid #D9DEE4;
+  margin-bottom: 10px;
+  width: 100%;
+  position: relative;
 }
 .nav_title {
   background: #4e4c4c;
@@ -205,4 +354,5 @@ a:hover {
   font-size: inherit;
   pointer-events: none;
   resize: none;
+  background-color: transparent;
 }
