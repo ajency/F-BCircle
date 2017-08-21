@@ -35,19 +35,18 @@
     }
     .fnb-select{
     	color: @text-color;
+    	font-size: 1.05em;
     }
     .fnb-input{
     	border-bottom: 0;
     	padding-left: 0.5em;
-    	font-size: 1.2em;
-    	font-weight: 300;
+    	font-size: 1.05em;
+    	font-weight: 400;
     	color: @text-color;
     	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-	      font-weight: 400;
 	      color: @text-color;
 	    }
 	    &::-moz-placeholder { /* Firefox 19+ */
-	      font-weight: 400;
 	      color: @text-color;
 	    }
     }
@@ -212,7 +211,7 @@
 		border-bottom: 1px solid #eee;
 	}
 	.element-title{
-		font-size: 1.2em;
+		font-size: 1.1em;
 		margin: 0;
 	}
 }
@@ -243,7 +242,7 @@
 	}
 	.search-input{
 		border-bottom: 0;
-    	font-size: 1.15em;
+    	font-size: 1.05em;
     	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 	      color: @text-color;
 	    }
@@ -259,6 +258,7 @@
 		.sub-title{
 			margin-bottom: 0.8em;
 			font-weight: 400;
+			font-size: 1.05em;
 			span{
 				white-space: nowrap;
     			text-overflow: ellipsis;
@@ -277,7 +277,7 @@
 			}
 		}
 		.rating{
-			width: 117px;
+			width: 104px;
 			.bg,.value{
 				&:before{
 					font-size: 1.25em;
@@ -321,6 +321,40 @@
 	}
 }
 
+.business-listing{
+	&__title{
+		line-height: 1.5;
+	}
+}
+
+.boost-row{
+	margin: 0.5em 0;
+    padding: 0.5em;
+    &__title{
+    	font-size: 0.88em;
+    	flex: 1;
+    }
+    .s-outline{
+    	padding: 0.5em 1em;
+    	font-size: 0.9em;
+    	.fa{
+    		transform: rotate(-45deg);
+    	}
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1399px){
+	.boost-row{
+	    &__title{
+	    	font-size: 0.85em;
+	    	padding-right: 5px;
+	    }
+	    .s-outline{
+	    	padding: 0.5em 0.6em;
+	    }
+	}
+}
+
 
 // filter cards
 
@@ -346,19 +380,24 @@
     	align-items: inherit;
 	}
 	.flex-cols{
-		flex: 1 0 50%;
-		max-width: 50%;
+		flex: 1 0 55%;
+		max-width: 55%;
 		display: flex;
     	flex-direction: column;
     	justify-content: space-between;
 		&.body-right{
-			padding-left: 5em;
+			padding-left: 7em;
+			flex: 1 0 45%;
+    		max-width: 45%;
 		}
 	}
 	.location{
 		.map-icon{
 			width: 26px;
 		}
+	}
+	.seller-info__title{
+		font-size: 1.35em;
 	}
 	.main-heading{
 		margin-top: 0;
@@ -375,7 +414,7 @@
 			margin-left: 0;
     		margin-right: 0.5em;
 			a{
-				font-size: 1em;
+				font-size: 0.95em;
 			}
 		}
 		.cat-more{
@@ -404,7 +443,8 @@
 	}
 	.cities .remain__number{
 		font-weight: 400;
-		font-size: 1.1em;
+		font-size: 1em;
+		padding-left: 0;
 	}
 	.enquiries{
 		&__count{
@@ -431,10 +471,24 @@
 		&__content{
 			flex: 1
 		}
+		.update-icon{
+			display: inline-block;
+    		vertical-align: middle;
+    		padding-right: 5px;
+		}
 	}
-	.recent-data{
-		font-size: 1.1em;
+	.verified{
+		.c-title{
+			font-size: 1em;
+		}
 	}
+	.operations__title{
+		margin-top: 2em;
+	}
+}
+
+.power-seller{
+	margin-left: auto;
 }
 
 .featured{
@@ -471,6 +525,13 @@
 		margin-top: 0;
 		&:last-child{
 			margin-bottom: 0;
+		}
+		.seller-info{
+			.verified-icon{
+				width: 28px;
+				background-size: auto;
+				background-position: -265px -249px;
+			}
 		}
 	}
 	.filter-sidebar{
@@ -536,12 +597,18 @@
 			flex-direction: column;
 		}
 		&__footer{
-			padding-top: 0.5em;
+			margin: 0 -15px;
+    		padding: 8px 15px 0;
+    		border-top: 1px solid #ddd;
+		}
+		.seller-info__title{
+			font-size: 1.15em;
 		}
 		.flex-cols{
 			max-width: 100%;
 			&.body-right{
 				padding-left: 0;
+				max-width: 100%;
 			}
 		}
 		.main-heading{
@@ -552,6 +619,14 @@
 		}
 		.stats{
 			margin-top: 0;
+			padding: 0;
+		}
+		.rat-pub{
+			flex-direction: column;
+    		align-items: flex-end;
+    		.rating-view{
+    			padding-right: 0;
+    		}
 		}
 		.fnb-cat{
 			li{
@@ -574,8 +649,9 @@
 			}
 		}
 		.published-date{
-			font-size: 0.9em;
-    		padding-left: 1em;
+			font-size: 0.85em;
+    		padding-left: 0.8em;
+    		text-align: right;
 		}
 		.cat-holder{
 			margin-top: 0;
@@ -591,6 +667,7 @@
 			&__title{
 				margin-bottom: 5px;
 				font-size: 1em;
+				margin-top: 0;
 			}
 			&__container{
 				display: flex;
@@ -609,7 +686,7 @@
 		.recent-updates{
 			margin-bottom: 0.5em;
 			&__text{
-				flex: 0.5;
+				flex: 0.6;
 				.sub-title{
 					font-size: 1.05em;
 					i{
@@ -625,6 +702,11 @@
     					transition: all 0.5s ease;
     					vertical-align: middle;
 					}
+				}
+				.arrowDown{
+					padding: 0 5px;
+    				font-size: 1.2em;
+    				transition: all 0.5s ease;
 				}
 				&.active{
 					.sub-title{
@@ -685,6 +767,32 @@
 	}
 	.advertisement{
 		margin-bottom: 1.5em;
+	}
+	.list-title-container{
+		display: flex;
+	}
+	.businessListing{
+		display: flex;
+    	align-items: center;
+    	.bl-top{
+    		display: flex;
+    		align-items: center;
+    		flex: 1;
+    		padding-right: 10px;
+    	}
+    	img{
+    		width: 20%;
+    	}
+    	.business-listing__content{
+    		font-size: 0.9em;
+    		text-align: left;
+    		margin-bottom: 0;
+    		padding-left: 8px;
+    	}
+    	.fnb-btn{
+    		padding: 0.5em 1em;
+    		font-size: 0.85em;
+    	}
 	}
 }
 
