@@ -30,6 +30,27 @@ a{
 	justify-content: space-between;
 }
 
+/* Vertical Align modal */
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+
 .site_title{
 	padding-left: 0;
 	text-align: center;
@@ -335,6 +356,40 @@ a{
 .dataTables_wrapper>.row {
     overflow: auto!important;
 }
+.dataTable{
+	min-height: 355px;
+}
+
+/* Datatable Select Row */
+table.dataTable tbody td.select-checkbox,
+table.dataTable thead th.select-checkbox{
+	display: none;
+}
+table.dataTable tbody > tr.selected,
+table.dataTable tbody > tr > .selected {
+    // background-color: rgba(236, 109, 75, 0.15);
+    background-color: fade(@accent-primary, 15%);
+}
+table.dataTable tbody td.select-checkbox:before,
+table.dataTable thead th.select-checkbox:before{
+	border-color: @grey-darker;
+}
+table.dataTable tr.selected td.select-checkbox:before,
+table.dataTable tr th.selected.select-checkbox:before {
+	border-color: transparent;
+}
+table.dataTable tr.selected td.select-checkbox:after,
+table.dataTable tr th.selected.select-checkbox:after {
+	color: @accent-primary;
+	content: "\f046";
+	font-family: FontAwesome;
+	// font-size: 0.9em;
+	text-shadow: none;
+	margin-top: -10px;
+	margin-left: -5px;
+}
+/* Datatable Select Row End */
+
 .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
 	background-color: @accent-primary;
 	border-color: @accent-primary;

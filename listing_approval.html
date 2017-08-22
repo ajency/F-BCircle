@@ -13,6 +13,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- Datatables -->
     <link href="plugins/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/datatables-select/css/select.dataTables.css" rel="stylesheet">
+    <!-- <link href="plugins/datatables-select/css/select.bootstrap.min.css" rel="stylesheet"> -->
     <link href="css/bootstrap-multiselect.min.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
     <link href="plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
@@ -239,8 +241,9 @@
                 <table id="datatable-listing_approval" class="table table-striped" cellspacing="0" width="100%">
                   <thead>
                     <tr>
+                      <th></th>
                       <th style="min-width: 98px;">Listing Name</th>
-                      <th class="no-sort" data-col="1">
+                      <th class="no-sort" data-col="2">
                         City
                         <select multiple class="form-control multi-dd">
                           <option value="Panjim">Panjim</option>
@@ -256,7 +259,7 @@
                       <th class="">
                           Last Updated on
                       </th>
-                      <th class="no-sort" data-col="5">
+                      <th style="min-width: 85px;" class="no-sort" data-col="6">
                         Last Updated by
                         <select multiple class="form-control multi-dd">
                           <option value="External User">External User</option>
@@ -264,14 +267,14 @@
                         </select>
                       </th>
                       <th style="min-width: 150px;">Duplicates<br><small>(Number,Email,Name)</small></th>
-                      <th class="no-sort" data-col="7">
+                      <th class="no-sort" data-col="8">
                         Premium Request
                         <select multiple class="form-control multi-dd">
                           <option value="Yes">Yes</option>
                           <option value="No">No</option>
                         </select>
                       </th>
-                      <th class="no-sort" data-col="8">
+                      <th class="no-sort" data-col="9">
                         Status
                         <select multiple class="form-control multi-dd">
                           <option value="Published">Published</option>
@@ -286,6 +289,7 @@
 
                   <tbody>
                     <tr>
+                      <td></td>
                       <td><a href="#">AVK Suppliers</a></td>
                       <td>Panjim</td>
                       <td>
@@ -303,9 +307,10 @@
                       <td>External User</td>
                       <td>1,2,1</td>
                       <td>No</td>
-                      <td>Pending Review</td>
+                      <td>Pending Review <a href="#updateStatusModal" data-target="#updateStatusModal" data-toggle="modal"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
+                      <td></td>
                       <td><a href="#">Mz Wholesalers</a></td>
                       <td>Margao</td>
                       <td>Unsalted Butter, Pasteurized Butter</td>
@@ -314,9 +319,10 @@
                       <td>External User</td>
                       <td>0,0,0</td>
                       <td>Yes</td>
-                      <td>Rejected</td>
+                      <td>Rejected <a href="#updateStatusModal" data-target="#updateStatusModal" data-toggle="modal"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
+                      <td></td>
                       <td><a href="#">Kusumkar Dist</a></td>
                       <td>Bandra</td>
                       <td>Boneless Chicken, Frozen Chicken</td>
@@ -325,9 +331,10 @@
                       <td>Internal User</td>
                       <td>0,0,0</td>
                       <td>No</td>
-                      <td>Published</td>
+                      <td>Published <a href="#updateStatusModal" data-target="#updateStatusModal" data-toggle="modal"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
+                      <td></td>
                       <td><a href="#">Bhatt Suppliers</a></td>
                       <td>Ahmedabad</td>
                       <td>Peda, Burfi, Rabri, Rasgulla, Rasmalai</td>
@@ -336,9 +343,10 @@
                       <td>External User</td>
                       <td>0,0,0</td>
                       <td>No</td>
-                      <td>Published</td>
+                      <td>Published <a href="#updateStatusModal" data-target="#updateStatusModal" data-toggle="modal"><i class="fa fa-pencil"></i></a></td>
                     </tr>
                     <tr>
+                      <td></td>
                       <td><a href="#">ROC</a></td>
                       <td>Panjim</td>
                       <td>Pork Ham, Pork Meat, Pork Chops</td>
@@ -347,7 +355,7 @@
                       <td>External User</td>
                       <td>0,0,0</td>
                       <td>No</td>
-                      <td>Published</td>
+                      <td>Published <a href="#updateStatusModal" data-target="#updateStatusModal" data-toggle="modal"><i class="fa fa-pencil"></i></a></td>
                     </tr>
 
                   </tbody>
@@ -856,6 +864,30 @@
             </div>
         </div>
 
+        <div class="modal fade" tabindex="-1" role="dialog" id="updateStatusModal">
+          <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h5 class="modal-title">Update Status</h5>
+              </div>
+              <div class="modal-body">
+                <label>Status of AVK Suppliers</label>
+                <select class="form-control fnb-select">
+                  <option value="Published">Published</option>
+                  <option value="Draft">Draft</option>
+                  <option value="Archived">Archived</option>
+                  <option value="Pending Review">Pending Review</option>
+                  <option value="Rejected">Rejected</option>
+                </select>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn fnb-btn primary-btn mini">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -879,6 +911,7 @@
     <!-- Datatables -->
     <script src="plugins/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="plugins/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="plugins/datatables-select/js/dataTables.select.min.js"></script>
 
     <!-- bootstrap-daterangepicker -->
     <script src="plugins/moment/min/moment.min.js"></script>
