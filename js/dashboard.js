@@ -179,7 +179,7 @@ function init_DataTables() {
 
 	$('#listingNameSearch').on( 'keyup', function () {
 	    approval_table
-	        .columns( 0 )
+	        .columns( 1 )
 	        .search( this.value )
 	        .draw();
 	} );
