@@ -218,8 +218,10 @@ function init_Multiselect() {
 	      // Show/hide first column for Listing Approval table
 	      if (selected == "Pending Review"){
 	      	$(".select-checkbox").css("display", "table-cell");
+	      	$(".bulk-status-update").removeClass('hidden');
 	      }else{
 	      	$(".select-checkbox").css("display", "none");
+	      	$(".bulk-status-update").addClass('hidden');
 	      }
 	    }
   	});

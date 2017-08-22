@@ -183,7 +183,6 @@
               <div class="x_content">
 
                 <div class="row">
-
                   <div class="col-sm-3">
                     <label>Date of Submission</label>
                     <a href="#" class="btn btn-link btn-sm">Clear</a>
@@ -232,6 +231,32 @@
                     <button class="btn primary-btn border-btn fnb-btn">Apply Filters</button>
                   </div>
                   <div class="clearfix"></div>
+                </div>
+
+                <div class="m-t-10">
+                  <label class="flex-row flex-end">
+                      <input type="checkbox" class="checkbox" for="draft_status">
+                      <div class="text-medium m-b-0" id="draft_status">Display Listings having Draft status</div>
+                  </label>
+                </div>
+
+                <div class="bulk-status-update m-t-10 hidden">
+                  <hr>
+                  <label>Bulk Status Update</label>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <select class="form-control fnb-select">
+                        <option value="Published">Published</option>
+                        <option value="Draft">Draft</option>
+                        <option value="Archived">Archived</option>
+                        <option value="Pending Review" selected>Pending Review</option>
+                        <option value="Rejected">Rejected</option>
+                      </select>
+                    </div>
+                    <div class="col-sm-2">
+                      <button class="btn primary-btn border-btn fnb-btn">Update</button>
+                    </div>
+                  </div>
                 </div>
 
                 <input type="text" name="" placeholder="Search by Name" id="listingNameSearch" class="form-control fnb-input pull-right customDtSrch" style="max-width: 200px;">
