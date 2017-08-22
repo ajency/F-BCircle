@@ -157,6 +157,8 @@ function init_DataTables() {
 
 	var customSrch = $('.customDtSrch').detach();
 	$('.dataTables_filter').after(customSrch);
+
+	$('[data-toggle="tooltip"]').tooltip()
 };
 
 // Multiselect filter on Datatables
