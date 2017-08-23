@@ -256,7 +256,7 @@
                   </div>
                 </div>
 
-                <input type="text" name="" placeholder="Search by Name" id="listingNameSearch" class="form-control fnb-input pull-right customDtSrch" style="max-width: 200px;">
+                <input type="text" name="" placeholder="Search by Name" id="listingNameSearch" class="form-control fnb-input pull-right customDtSrch">
 
                 <hr>
 
@@ -420,10 +420,10 @@
                         </div>
                         <div class="mobile-back flex-row">
                             <div class="back">
-                                <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back</button>
+                                <button class="btn fnb-btn outline border-btn no-border" data-dismiss="modal"><i class="fa fa-arrow-left p-r-10" aria-hidden="true"></i> Back to Category</button>
                             </div>
                             <div class="level-two">
-                                <button class="btn fnb-btn outline border-btn">Done</button>
+                                <a href="#" data-dismiss="modal" class="mobile-hide btn fnb-btn text-color m-l-5 cat-cancel text-color">✕</a>
                             </div>
                         </div>
                     </div>
@@ -479,17 +479,23 @@
                                 </div>
                                 <button class="btn fnb-btn outline border-btn">save</button>
                             </div> -->
-                            <div class="instructions">
-                                <p class="instructions__title bat-color">Please choose the sub categories under "<span class="main-cat-name">Meat &amp; Poultry</span>"</p>
-                                <div class="cat-name flex-row">
-                                    <span class="fnb-icons cat-icon meat m-r-15"></span>
-                                    <h5 class="cat-title bat-color main-cat-name">Meat &amp; Poultry</h5>
+
+                            <div class="instructions flex-row space-between">
+                                <div class="cat-name flex-row"><img class="import-icon cat-icon m-r-15" src="http://icons.iconarchive.com/icons/xaml-icon-studio/agriculture/256/Fruits-Vegetables-icon.png">
+                                    <div>
+                                        <p class="instructions__title bat-color default-size">Please choose the sub categories under "<span class="main-cat-name">Vegetables</span>"</p>
+                                        <h5 class="sub-title cat-title bat-color main-cat-name">Vegetables</h5>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="category-select" class="btn fnb-btn outline border-btn re-save" type="button" data-dismiss="modal">save</button>
                                 </div>
                             </div>
+
                             <div class="node-select flex-row">
                                 <!-- Nav tabs -->
-                                <ul class="nav nav-tabs flex-row mobile-hide" role="tablist">
-                                    <li role="presentation" class="active"><a href="#chicken" aria-controls="chicken" role="tab" data-toggle="tab">Chicken</a></li>
+                                <ul class="nav nav-tabs flex-row mobile-hide categ-list" role="tablist">
+                                    <!-- <li role="presentation" class="active"><a href="#chicken" aria-controls="chicken" role="tab" data-toggle="tab">Chicken</a></li>
                                     <li role="presentation"><a href="#mutton" aria-controls="mutton" role="tab" data-toggle="tab">Mutton</a></li>
                                     <li role="presentation"><a href="#pork" aria-controls="pork" role="tab" data-toggle="tab">Pork</a></li>
                                     <li role="presentation"><a href="#beef" aria-controls="beef" role="tab" data-toggle="tab">Beef</a></li>
@@ -497,10 +503,10 @@
                                     <li role="presentation"><a href="#rabbit" aria-controls="rabbit" role="tab" data-toggle="tab">Rabbit meat</a></li>
                                     <li role="presentation"><a href="#sheep" aria-controls="sheep" role="tab" data-toggle="tab">Sheep meat</a></li>
                                     <li role="presentation"><a href="#cured" aria-controls="cured" role="tab" data-toggle="tab">Cured meat</a></li>
-                                    <li role="presentation"><a href="#knuckle" aria-controls="knuckle" role="tab" data-toggle="tab">Knuckle meat</a></li>
+                                    <li role="presentation"><a href="#knuckle" aria-controls="knuckle" role="tab" data-toggle="tab">Knuckle meat</a></li> -->
                                 </ul>
                                 <!-- Tab panes -->
-                                <div class="tab-content">
+                                <div class="tab-content cat-dataHolder mobile-categories relative">
                                     <!-- mobile collapse -->
                                     <div class="toggle-collapse desk-hide" data-toggle="collapse" data-target="#chicken" aria-expanded="false" aria-controls="chicken">
                                         Chicken <i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -821,6 +827,11 @@
                                     <div role="tabpanel" class="tab-pane" id="cured">Cured</div>
                                     <div role="tabpanel" class="tab-pane" id="knuckle">Knuckle</div>
                                 </div>
+                            </div>
+
+                            <div class="footer-actions mobile-hide text-right">
+                                <button class="btn fnb-btn outline border-btn grey" type="button" data-dismiss="modal">Cancel</button>
+                                <button id="category-select" class="btn fnb-btn outline border-btn" type="button" data-dismiss="modal">Save</button>
                             </div>
                         </div>
                     </div>

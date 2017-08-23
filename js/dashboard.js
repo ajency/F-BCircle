@@ -266,6 +266,11 @@ function init_daterangepicker_submission() {
 	});
 }
 
+$myGroup = $('.cat-dataHolder');
+$myGroup.on('show.bs.collapse', '.collapse', function() {
+	$myGroup.find('.collapse.in').collapse('hide');
+});
+
 $(document).ready(function() {
 	init_DataTables();
 	init_sidebar();

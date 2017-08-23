@@ -49,6 +49,11 @@ a{
   text-align: left;
   vertical-align: middle;
 }
+@media screen and (max-width: 450px){
+	.modal-dialog{
+		width: 90%;
+	}
+}
 
 .fnb-select{
 	&.w-border{
@@ -266,7 +271,8 @@ a{
 	}
 }
 .nav li li li.current-page{
-	background: rgba(255,255,255,.05);
+	// background: rgba(255,255,255,.05);
+	background: darken(@grey-darker, 15%);
 }
 
 .nav_title {
@@ -463,5 +469,11 @@ table.dataTable tr th.selected.select-checkbox:after {
 		pointer-events: none;
 		resize: none;
 		background-color: transparent;
+	}
+}
+
+@media screen and (max-width: 768px){
+	.branch-row{
+		padding-left: 0;
 	}
 }

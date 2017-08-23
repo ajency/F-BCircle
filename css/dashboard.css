@@ -148,6 +148,11 @@ a:hover {
   text-align: left;
   vertical-align: middle;
 }
+@media screen and (max-width: 450px) {
+  .modal-dialog {
+    width: 90%;
+  }
+}
 .fnb-select.w-border {
   border: 1px solid #d8d8d8;
 }
@@ -326,7 +331,7 @@ a:hover {
   border-color: #ec6d4b;
 }
 .nav li li li.current-page {
-  background: rgba(255, 255, 255, 0.05);
+  background: #413f3f;
 }
 .top_nav {
   display: block;
@@ -484,4 +489,9 @@ table.dataTable tr th.selected.select-checkbox:after {
   pointer-events: none;
   resize: none;
   background-color: transparent;
+}
+@media screen and (max-width: 768px) {
+  .branch-row {
+    padding-left: 0;
+  }
 }
