@@ -199,6 +199,31 @@ $('body').on("change", ".status-select", function() {
 	}
 });
 
+$('body').on("change", "input[type=radio][name=categoryType]", function() {
+    if (this.value == 'parent_cat') {
+        $('.select-parent-cat, .select-branch-cat').addClass('hidden')
+        $('.parent_cat_icon').removeClass('hidden')
+    }
+    else if (this.value == 'branch_cat') {
+        $('.select-parent-cat').removeClass('hidden')
+        $('.select-branch-cat, .parent_cat_icon').addClass('hidden')
+    }
+    else if (this.value == 'node_cat') {
+        $('.select-parent-cat, .select-branch-cat').removeClass('hidden')
+        $('.parent_cat_icon').addClass('hidden')
+    }
+});
+
+$('body').on("change", "input[type=radio][name=locationType]", function() {
+    if (this.value == 'city_type') {
+        $('.select_city').addClass('hidden')
+    }
+    else if (this.value == 'area_type') {
+        $('.select_city').removeClass('hidden')
+        // $('.select-branch-cat, .parent_cat_icon').addClass('hidden')
+    }
+});
+
 // Multiselect filter on Datatables
 function init_Multiselect() {
 	$('.multi-dd').multiselect({
@@ -247,6 +272,10 @@ function init_addEmailType(){
 		$(this).closest('tr').find('textarea').removeClass('no-edit');
 		$(this).closest('td').find('.edit-actions').removeClass('hidden');
 		$('.edit_email_type').addClass('hidden');
+		if (typeof autosize !== 'undefined') {
+			var ta = $('textarea');
+			autosize.update(ta);
+		}
 	});
 	$('.save_email_type, .cancel_email_type').on('click', function() {
 		$(this).closest('tr').find('textarea').addClass('no-edit');
@@ -266,6 +295,7 @@ function init_daterangepicker_submission() {
 	});
 }
 
+// Category select modal on mobile
 $myGroup = $('.cat-dataHolder');
 $myGroup.on('show.bs.collapse', '.collapse', function() {
 	$myGroup.find('.collapse.in').collapse('hide');
