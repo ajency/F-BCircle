@@ -206,6 +206,7 @@ a:hover {
 }
 .nav li.current-page {
   background: rgba(255, 255, 255, 0.05);
+  background: #444242;
 }
 .nav.side-menu > li {
   position: relative;
@@ -331,7 +332,7 @@ a:hover {
   border-color: #ec6d4b;
 }
 .nav li li li.current-page {
-  background: #413f3f;
+  background: #444242;
 }
 .top_nav {
   display: block;
