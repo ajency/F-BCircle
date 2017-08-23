@@ -145,6 +145,19 @@ a:hover {
   text-align: left;
   vertical-align: middle;
 }
+.fnb-select.w-border {
+  border: 1px solid #d8d8d8;
+}
+@media screen and (max-width: 450px) {
+  .fnb-breadcrums .main-name {
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .customDtSrch {
+    max-width: 200px;
+  }
+}
 .site_title {
   padding-left: 0;
   text-align: center;
@@ -382,6 +395,9 @@ a:hover {
 }
 .dataTable select.form-control.multi-dd {
   display: none;
+}
+.dataTable.no-wrap thead th {
+  white-space: nowrap;
 }
 .dataTables_filter {
   display: none;
