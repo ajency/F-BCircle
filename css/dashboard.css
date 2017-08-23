@@ -357,7 +357,9 @@ a:hover {
   text-align: right;
 }
 .row-actions a {
-  padding: 0 10px;
+  padding: 10px;
+  display: inline-block;
+  font-size: 1.2em;
 }
 .table > tbody > tr > td,
 .table > tbody > tr > th,

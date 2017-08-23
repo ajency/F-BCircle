@@ -230,15 +230,17 @@ function init_Multiselect() {
 
 // Email Notifications - Edit Emails
 function init_addEmailType(){
+	autosize($('textarea'));
+
 	$('.edit_email_type').on('click', function() {
 		$(this).closest('tr').find('textarea').removeClass('no-edit');
 		$(this).closest('td').find('.edit-actions').removeClass('hidden');
-		$(this).addClass('hidden');
+		$('.edit_email_type').addClass('hidden');
 	});
 	$('.save_email_type, .cancel_email_type').on('click', function() {
 		$(this).closest('tr').find('textarea').addClass('no-edit');
 		$(this).closest('td').find('.edit-actions').addClass('hidden');
-		$(this).closest('td').find('.edit_email_type').removeClass('hidden');
+		$('.edit_email_type').removeClass('hidden');
 	});
 }
 // Email Notifications - Edit Emails End
