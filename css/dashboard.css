@@ -103,6 +103,9 @@
   color: #fff;
   background-color: transparent;
 }
+body {
+  background: #4e4c4c;
+}
 a {
   color: #ec6d4b;
 }

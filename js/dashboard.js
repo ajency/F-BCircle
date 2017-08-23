@@ -190,6 +190,15 @@ function init_DataTables() {
 	$('[data-toggle="tooltip"]').tooltip()
 };
 
+$('body').on("change", ".status-select", function() {
+	var status_option = $(this);
+	if (status_option.find('option:selected').val() == 'Published'){
+		status_option.parent().find('.notify-user-msg').removeClass('hidden');
+	} else {
+		status_option.parent().find('.notify-user-msg').addClass('hidden');
+	}
+});
+
 // Multiselect filter on Datatables
 function init_Multiselect() {
 	$('.multi-dd').multiselect({
@@ -230,7 +239,9 @@ function init_Multiselect() {
 
 // Email Notifications - Edit Emails
 function init_addEmailType(){
-	autosize($('textarea'));
+	if (typeof autosize !== 'undefined') {
+		autosize($('textarea'));
+	}
 
 	$('.edit_email_type').on('click', function() {
 		$(this).closest('tr').find('textarea').removeClass('no-edit');
