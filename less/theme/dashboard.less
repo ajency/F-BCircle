@@ -121,8 +121,10 @@ a{
 			}
 		}
 		&.current-page {
-			background: rgba(255, 255, 255, 0.05);
-			background: darken(@grey-darker, 14%);
+			// background: rgba(255, 255, 255, 0.05);
+			// background: darken(@grey-darker, 14%);
+			background: @accent-primary;
+			font-weight: 600;
 		}
 	}
 	&.side-menu {
@@ -273,7 +275,8 @@ a{
 }
 .nav li li li.current-page{
 	// background: rgba(255,255,255,.05);
-	background: darken(@grey-darker, 14%);
+	// background: darken(@grey-darker, 14%);
+	background: @accent-primary;
 }
 
 .nav_title {
