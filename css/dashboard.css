@@ -168,7 +168,7 @@ div.tagsinput.no-edit {
 div.tagsinput.no-edit span.tag a {
   display: none;
 }
-div.tagsinput.no-edit span + div {
+div.tagsinput.no-edit input {
   display: none;
 }
 .tags_clear {
